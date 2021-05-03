@@ -11,6 +11,8 @@ public class UnitSelectionComponent : MonoBehaviour
     Vector3 mousePosition1;
 
     public GameObject selectionCirclePrefab;
+    public GameObject EnemyselectionCirclePrefab;
+
 
     void Update()
     {
@@ -60,6 +62,26 @@ public class UnitSelectionComponent : MonoBehaviour
                     if (selectableObject.selectionCircle == null)
                     {
                         selectableObject.selectionCircle = Instantiate(selectionCirclePrefab);
+                        selectableObject.selectionCircle.transform.SetParent(selectableObject.transform, false);
+                        selectableObject.selectionCircle.transform.eulerAngles = new Vector3(90, 0, 0);
+                    }
+                }
+                else
+                {
+                    if (selectableObject.selectionCircle != null)
+                    {
+                        Destroy(selectableObject.selectionCircle.gameObject);
+                        selectableObject.selectionCircle = null;
+                    }
+                }
+            }
+            foreach (var selectableObject in FindObjectsOfType<EnemyUnitComponent>())
+            {
+                if (IsWithinSelectionBounds(selectableObject.gameObject))
+                {
+                    if (selectableObject.selectionCircle == null)
+                    {
+                        selectableObject.selectionCircle = Instantiate(EnemyselectionCirclePrefab);
                         selectableObject.selectionCircle.transform.SetParent(selectableObject.transform, false);
                         selectableObject.selectionCircle.transform.eulerAngles = new Vector3(90, 0, 0);
                     }

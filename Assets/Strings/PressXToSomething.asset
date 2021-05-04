@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13cca8ca58db5c439e7c15e51c6daa5, type: 3}
+  m_Name: PressXToSomething
+  m_EditorClassIdentifier: 
+  stringsEn:
+  - Press I to hide
+  - Press I to open or close the door
+  - Press I to open the chest
+  - Press I to pick the item
+  - Press I to charge the mobile
+  - 'You need the item: '
+  - 'You opened the path with: '
+  - Press I to use the cold drinks machine
+  stringsEs:
+  - Presiona I para esconderte
+  - Presiona I para abrir o cerrar la puerta
+  - Pressiona I para abrir el cofre
+  - Pressiona I para recoger el objeto
+  - Pressiona I para cargar el mobil
+  - 'Te falta el item: '
+  - 'Te has abierto el camino con:'
+  - Pressiona I para usar la maquina expendedora

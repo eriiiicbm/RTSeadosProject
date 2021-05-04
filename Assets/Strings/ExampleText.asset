@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13cca8ca58db5c439e7c15e51c6daa5, type: 3}
+  m_Name: ExampleText
+  m_EditorClassIdentifier: 
+  stringsEn:
+  - An explorer who goes through the forest, one day he comes across a cave. He decides
+    to go inside and comes across something that amazes him. It is nothing more and
+    nothing less than a cave painting on the walls inside the cave. Very happy with
+    the find, he decides to photograph the walls. But as soon as he clicks on the
+    capture button on the camera, he is absorbed by the paintings, thus being trapped
+    in them.
+  - '[SPACE] TO SKIP'
+  stringsEs:
+  - "Un explorador que va por el bosque, un dia se encuentra con una cueva. Decide
+    entrar y se encuentra con algo que lo deja sorprendido. No es nada m\xE1s ni
+    nada menos que una pintura rupestre en las paredes del interior de la cueva.
+    Muy contento con el hallazgo, decide fotografiar las paredes. Pero nada m\xE1s
+    hacer click en el bot\xF3n de captura de la c\xE1mara, es absorvido por las pinturas,
+    quedando as\xED, atrapado en ellas."
+  - '[ESPACIO] PARA SALTAR EL TEXTO'

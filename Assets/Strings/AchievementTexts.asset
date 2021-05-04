@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13cca8ca58db5c439e7c15e51c6daa5, type: 3}
+  m_Name: AchievementTexts
+  m_EditorClassIdentifier: 
+  stringsEn:
+  - You are a ghostbuster
+  - Charging Up
+  - Lights Out
+  - Stay hydrated
+  - Oh, that hurts
+  - Say Cheese
+  - Ghost Hunter Rise
+  - Hoarder!
+  - Hiding from the white....ghost
+  - I swear that is real money
+  - I see you know the key
+  stringsEs:
+  - Eres un cazafantasmas
+  - Ponte las pilas
+  - Luces fuera
+  - Mantente hidratado
+  - Oh, eso duele
+  - Di PATATA
+  - Maestro Cazafantasmas
+  - Acaparador
+  - Escondete de los blancos .... fantasmas
+  - Te juro que es real por Dieguito Maradona
+  - Veo que conoces la llave

@@ -8,7 +8,7 @@ public class CameraScript : MonoBehaviour
     public float borderMoveSpeed = 1.2f;
     public float screenOffset = .005f;
     // ZOOM
-    public float zoomSpeed = 4f;
+    public float zoomSpeed = 6f;
     public Vector2 zoomLimits;
 
     Camera myCam;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerManager : MonoBehaviour {
 
@@ -9,6 +10,8 @@ public class PlayerManager : MonoBehaviour {
     bool isDragging = false;
     Vector3 mousePositon;
 
+    public GameObject Target;
+    private float raycastLength = 500;
 
     private void OnGUI()
     {
@@ -78,6 +81,18 @@ public class PlayerManager : MonoBehaviour {
                     foreach (var selectableObj in selectedUnits)
                     {
                         selectableObj.MoveUnit(hit.point);
+                        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                        if (Physics.Raycast(ray, out hit, raycastLength))
+                        {
+                            if (hit.collider.name == "Terrain")
+                            {
+                                    GameObject TargetObj = Instantiate(Target, hit.point, Quaternion.identity) as GameObject;
+                                    TargetObj.name = "Target Instantiated";
+                                
+                            }
+                        }
+                        Debug.DrawRay(ray.origin, ray.direction * raycastLength, Color.yellow);
                     }
                 }
                 else if (hit.transform.CompareTag("EnemyUnit"))
@@ -122,5 +137,9 @@ public class PlayerManager : MonoBehaviour {
         var camera = Camera.main;
         var viewportBounds = ScreenHelper.GetViewportBounds(camera, mousePositon, Input.mousePosition);
         return viewportBounds.Contains(camera.WorldToViewportPoint(transform.position));
+    }
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log("He clicado");
     }
 }

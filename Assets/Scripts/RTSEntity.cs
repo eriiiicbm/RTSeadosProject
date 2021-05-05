@@ -18,6 +18,8 @@ public class RTSEntity : ScriptableObject
     [SerializeField] private Sprite preview;
     [SerializeField] private GameObject prefab;
     [Header("Movement stuff")]
+    [SerializeField] private int moral;
+
     [SerializeField] private float velocity;
     [SerializeField] private Transform currentTarget;
 

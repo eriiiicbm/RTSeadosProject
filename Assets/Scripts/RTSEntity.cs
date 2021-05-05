@@ -11,6 +11,7 @@ public class RTSEntity : ScriptableObject
     string entityName;
     [SerializeField] private int maxHealth;
     [SerializeField] private float expirationVelocity;
+    [SerializeField] private List<int> prices;
     //TODO borrar
     [SerializeField] private int health;
     [SerializeField] private string description;
@@ -43,10 +44,14 @@ public class RTSEntity : ScriptableObject
     [Header("Name  stuff")]
     [SerializeField] private TextStrings nameText;
     [SerializeField] private int namePosition;
+    [HideInInspector] [SerializeField] UnitStates unitState;
+    [HideInInspector] [SerializeField] EmotionalStates emotionalState;
+    [HideInInspector] [SerializeField] ResourcesType typeOfResourceThatCanHave;
 
     public string EntityName { get => entityName; set => entityName = value; }
     public int MaxHealth { get => maxHealth; set => maxHealth = value; }
     public float ExpirationVelocity { get => expirationVelocity; set => expirationVelocity = value; }
+    public List<int> Prices { get => prices; set => prices = value; }
     public int Health { get => health; set => health = value; }
     public string Description { get => description; set => description = value; }
     public Sprite Preview { get => preview; set => preview = value; }
@@ -70,4 +75,7 @@ public class RTSEntity : ScriptableObject
     public int DescriptionPosition { get => descriptionPosition; set => descriptionPosition = value; }
     public TextStrings NameText { get => nameText; set => nameText = value; }
     public int NamePosition { get => namePosition; set => namePosition = value; }
+    public UnitStates UnitState { get => unitState; set => unitState = value; }
+    public EmotionalStates EmotionalState { get => emotionalState; set => emotionalState = value; }
+    public ResourcesType TypeOfResourceThatCanHave { get => typeOfResourceThatCanHave; set => typeOfResourceThatCanHave = value; }
 }

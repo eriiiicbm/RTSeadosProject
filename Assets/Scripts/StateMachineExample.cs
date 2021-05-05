@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class StateMachineExample : MonoBehaviour ,HelloDear
+public class StateMachineExample : MonoBehaviour
 {
-    HelloDear hello;
-
     public void Hello()
     {
         Debug.Log("Hello");
@@ -40,11 +38,6 @@ public class StateMachineExample : MonoBehaviour ,HelloDear
         StartCoroutine(nameof(IdleState));
         this.currentHealth = this.health;
         agent.speed = moveSpeed;
-        hello = this;
-        if (hello != null)
-        {
-            hello.Hello();
-        }
     }
 
 
@@ -218,10 +211,4 @@ public class StateMachineExample : MonoBehaviour ,HelloDear
 
         yield return new WaitForEndOfFrame();
     }
-}
-
-
-}
-public interface HelloDear{
-    void Hello();
 }

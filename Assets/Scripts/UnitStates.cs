@@ -1,0 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public enum  UnitStates
+{
+Idle,Follow,Dead,Escape,Attack
+}
+public enum EmotionalStates {
+Neutral,Aggressive, Pasive
+}
+

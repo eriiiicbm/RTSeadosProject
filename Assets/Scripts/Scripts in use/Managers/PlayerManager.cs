@@ -9,19 +9,26 @@ public class PlayerManager : MonoBehaviour {
     List<UnitController> selectedUnits = new List<UnitController>();
     bool isDragging = false;
     Vector3 mousePositon;
+    GameObject TargetObj;
 
     public GameObject Target;
     private float raycastLength = 500;
+    string name = "Target Instantiated";
 
     private void OnGUI()
     {
         if(isDragging)
         {
             var rect = ScreenHelper.GetScreenRect(mousePositon, Input.mousePosition);
-            ScreenHelper.DrawScreenRect(rect, new Color(0.8f, 0.8f, 0.95f, 0.1f));
-            ScreenHelper.DrawScreenRectBorder(rect, 1, Color.blue);
+            ScreenHelper.DrawScreenRect(rect, new Color(0.3f, 0.8f, 0.3f, 0.1f));
+            ScreenHelper.DrawScreenRectBorder(rect, 0.6f, Color.green);
         }
         
+    }
+
+    private void Start()
+    {
+
     }
 
     // Update is called once per frame
@@ -78,22 +85,34 @@ public class PlayerManager : MonoBehaviour {
                 //Debug.Log(hit.transform.tag);
                 if (hit.transform.CompareTag("Ground"))
                 {
-                    foreach (var selectableObj in selectedUnits)
+
+                    GameObject go = GameObject.Find(name);
+
+                    if (TargetObj)
+                    {
+                        Debug.Log("exists");
+                        Destroy(go.gameObject);
+                        Debug.Log(name + "has been destroyed.");
+
+                    }
+                foreach (var selectableObj in selectedUnits)
                     {
                         selectableObj.MoveUnit(hit.point);
-                        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                        if (Physics.Raycast(ray, out hit, raycastLength))
-                        {
-                            if (hit.collider.name == "Terrain")
-                            {
-                                    GameObject TargetObj = Instantiate(Target, hit.point, Quaternion.identity) as GameObject;
-                                    TargetObj.name = "Target Instantiated";
-                                
-                            }
-                        }
-                        Debug.DrawRay(ray.origin, ray.direction * raycastLength, Color.yellow);
                     }
+
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    if (Physics.Raycast(ray, out hit, raycastLength))
+                    {
+                        if (hit.collider.name == "Terrain")
+                        {
+                            TargetObj = Instantiate(Target, hit.point, Quaternion.identity) as GameObject;
+                            TargetObj.name = "Target Instantiated";
+
+                        }
+                    }
+                    Debug.DrawRay(ray.origin, ray.direction * raycastLength, Color.yellow);
+
                 }
                 else if (hit.transform.CompareTag("EnemyUnit"))
                 {
@@ -137,9 +156,5 @@ public class PlayerManager : MonoBehaviour {
         var camera = Camera.main;
         var viewportBounds = ScreenHelper.GetViewportBounds(camera, mousePositon, Input.mousePosition);
         return viewportBounds.Contains(camera.WorldToViewportPoint(transform.position));
-    }
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        Debug.Log("He clicado");
     }
 }

@@ -221,7 +221,7 @@ public class StateMachineExample : MonoBehaviour ,HelloDear
 }
 
 
-}
+
 public interface HelloDear{
     void Hello();
 }

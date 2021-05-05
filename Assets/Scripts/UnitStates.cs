@@ -9,4 +9,7 @@ Idle,Follow,Dead,Escape,Attack
 public enum EmotionalStates {
 Neutral,Aggressive, Pasive
 }
+public enum ResourcesType {
+    SubstanceX,Wood,Ingredients,Stone
+}
 

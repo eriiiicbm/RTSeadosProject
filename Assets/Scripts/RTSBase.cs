@@ -11,7 +11,7 @@ public class RTSBase : MonoBehaviour
     string description;
     Sprite preview;
     GameObject prefab;
-
+    public RTSEntity rtsEntity;
 
     public void Start()
     {

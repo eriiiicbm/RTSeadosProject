@@ -13,6 +13,6 @@ public enum ResourcesType {
     SubstanceX,Wood,Ingredients,Stone
 }
 public enum EntityType {
-    Building,Unit,MeleeUnit,Fridge,Villager,HealingUnit,DistanceUnit
+    Building,Unit,MeleeUnit,Fridge,Villager,HealingUnit,DistanceUnit,Tower
 }
 

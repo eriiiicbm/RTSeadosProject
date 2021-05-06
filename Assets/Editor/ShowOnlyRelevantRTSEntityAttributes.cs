@@ -146,6 +146,11 @@ public class ShowIfAttributeDrawer
                 excludedProperties.Remove("proyectile");
 
                 break;
+            case EntityType.Tower:
+                excludedProperties.Remove("proyectile");
+                excludedProperties.Add("moral");
+  
+                break;
         }
         DrawPropertiesExcluding(serializedObject, excludedProperties.ToArray());
         serializedObject.ApplyModifiedProperties();

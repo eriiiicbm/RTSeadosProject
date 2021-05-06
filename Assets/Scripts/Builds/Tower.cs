@@ -6,9 +6,10 @@ public class Tower : Building, FireBuilding
 {
     float atackRange;
     float atackTimer;
+    float damege;
     float currentTime;
     float throwForce = 5;
-    GameObject proyectil;
+    GameObject proyectils;
 
     public void detectEnemy(float atackRange)
     {
@@ -24,7 +25,13 @@ public class Tower : Building, FireBuilding
 
     public void fire(Transform currentTarget)
     {
-        GetComponent<Rigidbody>().AddForce(transform.position - currentTarget.position * throwForce);
+        Vector3 direction = transform.position - currentTarget.position;
+        GameObject proyectil = Instantiate(proyectils);
+        proyectil.transform.position = transform.position;
+        proyectil.transform.Rotate(direction);
+        proyectil.GetComponent<Proyectil>().damage = damege;
+
+        proyectil.GetComponent<Rigidbody>().AddForce(direction * throwForce, ForceMode.Impulse);
     }
 
     // Start is called before the first frame update
@@ -32,6 +39,8 @@ public class Tower : Building, FireBuilding
     {
         atackRange = rtsEntity.AttackRange;
         atackTimer = rtsEntity.AttackTimer;
+        damege = rtsEntity.Damage;
+        proyectils = rtsEntity.Proyectile;
     }
 
     // Update is called once per frame

@@ -81,4 +81,5 @@ public class RTSEntity : ScriptableObject
     public UnitStates UnitState { get => unitState; set => unitState = value; }
     public EmotionalStates EmotionalState { get => emotionalState; set => emotionalState = value; }
     public ResourcesType TypeOfResourceThatCanHave { get => typeOfResourceThatCanHave; set => typeOfResourceThatCanHave = value; }
+    public GameObject Proyectile { get => proyectile; set => proyectile = value; }
 }

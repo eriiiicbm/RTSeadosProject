@@ -9,6 +9,7 @@ public class RTSEntity : ScriptableObject
     //todo idioma descricpion 
     [Header("Generic stuff")]
     string entityName;
+    [SerializeField] public EntityType entityType;
     [SerializeField] private int maxHealth;
     [SerializeField] private float expirationVelocity;
     [SerializeField] private List<int> prices;
@@ -32,7 +33,6 @@ public class RTSEntity : ScriptableObject
     [SerializeField] private float attackTimer;
     [Header("Crafting stuff")]
     [SerializeField] private float craftRadious;
-    [SerializeField] private Renderer buildRendered;
    // [SerializeField] private MyEvent onCraftCompleted;
     [SerializeField] private GameObject craftCompletedGO;
     [SerializeField] private GameObject craftUnCompletedGO;
@@ -66,8 +66,7 @@ public class RTSEntity : ScriptableObject
     public float AttackRange { get => attackRange; set => attackRange = value; }
     public float AttackTimer { get => attackTimer; set => attackTimer = value; }
     public float CraftRadious { get => craftRadious; set => craftRadious = value; }
-    public Renderer BuildRendered { get => buildRendered; set => buildRendered = value; }
-    public GameObject CraftCompletedGO { get => craftCompletedGO; set => craftCompletedGO = value; }
+     public GameObject CraftCompletedGO { get => craftCompletedGO; set => craftCompletedGO = value; }
     public GameObject CraftUnCompletedGO { get => craftUnCompletedGO; set => craftUnCompletedGO = value; }
     public Renderer BuildRenderer { get => buildRenderer; set => buildRenderer = value; }
     public int BuildTime { get => buildTime; set => buildTime = value; }

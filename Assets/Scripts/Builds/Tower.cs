@@ -7,8 +7,8 @@ public class Tower : Building, FireBuilding
     float atackRange;
     float atackTimer;
     float currentTime;
-    float nextFire;
     float throwForce = 5;
+    GameObject proyectil;
 
     public void detectEnemy(float atackRange)
     {

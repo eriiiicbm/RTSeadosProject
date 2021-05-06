@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RTSBase : MonoBehaviour
 {
-
+   protected UnitStates currentState;
     int health;
     string entityName;
     int maxHealth;
@@ -15,7 +15,7 @@ public class RTSBase : MonoBehaviour
 
     public void Start()
     {
-        
+        currentState = UnitStates.Idle;
     }
 
     void SetColor() { }
@@ -40,4 +40,16 @@ public class RTSBase : MonoBehaviour
             yield return new WaitForSeconds(.05f);
         }
     }
+    void GoToNextState()
+    {
+        string methodName = this.currentState.ToString() + "State";
+        Debug.Log("STATE METHOD NAME " + methodName);
+        SendMessage(methodName);
+    }
+    public virtual IEnumerator IdleState() {
+        Debug.LogError("OverrideThisMethod before use it");
+        yield return new WaitForEndOfFrame();
+    }
+    
+
 }

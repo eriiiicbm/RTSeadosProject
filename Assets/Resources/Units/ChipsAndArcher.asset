@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf636b8228f3d346be8a0d449de608e, type: 3}
   m_Name: ChipsAndArcher
   m_EditorClassIdentifier: 
-  entityType: 6
+  entityType: 7
   maxHealth: 0
   expirationVelocity: 0
   prices: 

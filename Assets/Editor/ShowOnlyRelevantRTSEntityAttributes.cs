@@ -83,6 +83,7 @@ public class ShowIfAttributeDrawer
         excludedProperties.Add("craftUnCompletedGO");
         excludedProperties.Add("effectRadious");
         excludedProperties.Add("recoverySpeed");
+        excludedProperties.Add("proyectile");
 
         switch ((EntityType)rTSEntity.entityType)
         {
@@ -139,6 +140,11 @@ public class ShowIfAttributeDrawer
                 excludedProperties.Remove("craftUnCompletedGO");
                 excludedProperties.Remove("craftUnCompletedGO");
                 excludedProperties.Remove("craftUnCompletedGO");
+
+                break;
+            case EntityType.DistanceUnit:
+                excludedProperties.Remove("proyectile");
+
                 break;
         }
         DrawPropertiesExcluding(serializedObject, excludedProperties.ToArray());

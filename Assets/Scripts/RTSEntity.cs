@@ -31,6 +31,8 @@ public class RTSEntity : ScriptableObject
     [SerializeField] private float damage;
     [SerializeField] private float attackRange;
     [SerializeField] private float attackTimer;
+    [Header("Proyectile stuff")]
+    [SerializeField] private GameObject proyectile;
     [Header("Crafting stuff")]
     [SerializeField] private float craftRadious;
    // [SerializeField] private MyEvent onCraftCompleted;

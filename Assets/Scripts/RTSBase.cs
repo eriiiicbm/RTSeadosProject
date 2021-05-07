@@ -5,20 +5,22 @@ using UnityEngine;
 public class RTSBase : MonoBehaviour
 {
    protected UnitStates currentState;
-    int health;
     string entityName;
     int maxHealth;
     string description;
     Sprite preview;
+    float health;
     GameObject prefab;
     public RTSEntity rtsEntity;
 
-    public int Health { get => health; set => health = value; }
     public int MaxHealth { get => maxHealth; set => maxHealth = value; }
+
+    public float Health { get => health; set => health = value; }
 
     public void Start()
     {
         currentState = UnitStates.Idle;
+        health = maxHealth;
     }
 
     void SetColor() { }
@@ -27,20 +29,30 @@ public class RTSBase : MonoBehaviour
         transform.Find("Highlight").gameObject.SetActive(isSelected);
 
     }
-    void TakeDamage(UnitController enemy, float damage)
+    public void TakeDamage(UnitCombat enemy, float damage)
     {
+        health = health - damage;
         StartCoroutine(Flasher(GetComponent<Renderer>().material.color));
+
 
     }
     IEnumerator Flasher(Color defaultColor)
     {
         var renderer = GetComponent<Renderer>();
-        for (int i = 0; i < 2; i++)
+        if (health != 0)
         {
-            renderer.material.color = Color.gray;
-            yield return new WaitForSeconds(.05f);
-            renderer.material.color = defaultColor;
-            yield return new WaitForSeconds(.05f);
+            for (int i = 0; i < 2; i++)
+            {
+                renderer.material.color = Color.gray;
+                yield return new WaitForSeconds(.05f);
+                renderer.material.color = defaultColor;
+                yield return new WaitForSeconds(.05f);
+            }
+        }
+        else
+        {
+            Destroy(this.transform.parent.gameObject);
+
         }
     }
     void GoToNextState()

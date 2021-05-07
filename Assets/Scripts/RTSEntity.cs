@@ -14,7 +14,6 @@ public class RTSEntity : ScriptableObject
     [SerializeField] private float expirationVelocity;
     [SerializeField] private List<int> prices;
     //TODO borrar
-    [SerializeField] private int health;
     [SerializeField] private string description;
     [SerializeField] private Sprite preview;
     [SerializeField] private GameObject prefab;
@@ -56,7 +55,6 @@ public class RTSEntity : ScriptableObject
     public int MaxHealth { get => maxHealth; set => maxHealth = value; }
     public float ExpirationVelocity { get => expirationVelocity; set => expirationVelocity = value; }
     public List<int> Prices { get => prices; set => prices = value; }
-    public int Health { get => health; set => health = value; }
     public string Description { get => description; set => description = value; }
     public Sprite Preview { get => preview; set => preview = value; }
     public GameObject Prefab { get => prefab; set => prefab = value; }

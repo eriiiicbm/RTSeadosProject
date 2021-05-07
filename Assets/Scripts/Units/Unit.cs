@@ -12,6 +12,7 @@ public class Unit : NetworkBehaviour
    [SerializeField] private UnitMovement unitMovement;
    [SerializeField] private UnityEvent onSelected;
    [SerializeField] private UnityEvent onDeselected;
+   [SerializeField] private Targeter targeter;
    [SerializeField] public  static  event Action<Unit> ServerOnUnitSpawned;
    [SerializeField] public  static  event Action<Unit> ServerOnUnitDespawned;
   [SerializeField] public  static  event Action<Unit> AuthorityOnUnitSpawned;
@@ -20,6 +21,9 @@ public class Unit : NetworkBehaviour
    public UnitMovement GetUnitMovement()
    {
       return unitMovement;
+   }  public Targeter GetTargeter()
+   {
+      return targeter;
    }
 
    #region Server

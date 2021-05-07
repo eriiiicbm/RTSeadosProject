@@ -21,7 +21,7 @@ public class PlayerManager : MonoBehaviour {
         {
             var rect = ScreenHelper.GetScreenRect(mousePositon, Input.mousePosition);
             ScreenHelper.DrawScreenRect(rect, new Color(0.3f, 0.8f, 0.3f, 0.1f));
-            ScreenHelper.DrawScreenRectBorder(rect, 0.6f, Color.green);
+            ScreenHelper.DrawScreenRectBorder(rect, 1f, Color.green);
         }
         
     }

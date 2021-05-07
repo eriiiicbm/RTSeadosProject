@@ -13,6 +13,9 @@ public class RTSBase : MonoBehaviour
     GameObject prefab;
     public RTSEntity rtsEntity;
 
+    public int Health { get => health; set => health = value; }
+    public int MaxHealth { get => maxHealth; set => maxHealth = value; }
+
     public void Start()
     {
         currentState = UnitStates.Idle;

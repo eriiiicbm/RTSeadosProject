@@ -1,4 +1,14 @@
-﻿ 
+﻿/* 
+    ------------------- Code Monkey -------------------
+
+    Thank you for downloading the Code Monkey Utilities
+    I hope you find them useful in your projects
+    If you have any questions use the contact form
+    Cheers!
+
+               unitycodemonkey.com
+    --------------------------------------------------
+ */
  
 //#define SOUND_MANAGER // Has Sound_Manager in project
 //#define CURSOR_MANAGER // Has Cursor_Manager in project

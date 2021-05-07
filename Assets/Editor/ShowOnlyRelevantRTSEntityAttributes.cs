@@ -70,20 +70,7 @@ public class ShowIfAttributeDrawer
     }
     void ExcludeProperties(RTSEntity rTSEntity, List<string> excludedProperties)
         {
-        excludedProperties.Add("craftRadious");
-        excludedProperties.Add("craftCompletedGO");
-        excludedProperties.Add("craftUnCompletedGO");
-        excludedProperties.Add("buildRenderer");
-        excludedProperties.Add("buildTime");
-        excludedProperties.Add("canCraft");
-        excludedProperties.Add("productionUnits");
-        excludedProperties.Add("craftUnCompletedGO");
-        excludedProperties.Add("craftUnCompletedGO");
-        excludedProperties.Add("craftUnCompletedGO");
-        excludedProperties.Add("craftUnCompletedGO");
-        excludedProperties.Add("effectRadious");
-        excludedProperties.Add("recoverySpeed");
-        excludedProperties.Add("proyectile");
+    
 
         switch ((EntityType)rTSEntity.entityType)
         {
@@ -114,8 +101,8 @@ public class ShowIfAttributeDrawer
                     excludedProperties.Add("damage");
                     excludedProperties.Add("attackRange");
                     excludedProperties.Add("attackTimer");
- 
-
+                excludedProperties.Remove("craftUnCompletedGO");
+       
 
                 break; 
  case EntityType.HealingUnit:
@@ -149,7 +136,10 @@ public class ShowIfAttributeDrawer
             case EntityType.Tower:
                 excludedProperties.Remove("proyectile");
                 excludedProperties.Add("moral");
-  
+                 excludedProperties.Remove("craftUnCompletedGO");
+                excludedProperties.Remove("craftUnCompletedGO");
+                excludedProperties.Remove("craftUnCompletedGO");
+                excludedProperties.Remove("craftUnCompletedGO");
                 break;
         }
         DrawPropertiesExcluding(serializedObject, excludedProperties.ToArray());

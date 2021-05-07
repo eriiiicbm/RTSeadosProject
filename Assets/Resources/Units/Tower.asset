@@ -12,33 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf636b8228f3d346be8a0d449de608e, type: 3}
   m_Name: Tower
   m_EditorClassIdentifier: 
-  entityType: 0
-  maxHealth: 0
+  entityType: 7
+  maxHealth: 10
   expirationVelocity: 0
-  prices: 
-  health: 0
+  prices: 00000000
   description: 
   preview: {fileID: 0}
-  prefab: {fileID: 0}
+  prefab: {fileID: 3722049469362960980, guid: 95d74b3e50c21bf4bb579498ce47d32c, type: 3}
   moral: 0
-  velocity: 0
+  velocity: 6
   currentTarget: {fileID: 0}
   effectRadious: 0
   recoverySpeed: 0
-  damage: 0
-  attackRange: 0
-  attackTimer: 0
-  proyectile: {fileID: 0}
-  craftRadious: 0
+  damage: 5
+  attackRange: 10
+  attackTimer: 5
+  proyectile: {fileID: 38072651166725387, guid: 71f67b6ff977a714696981bb46ccdcb2,
+    type: 3}
+  craftRadious: 5
   craftCompletedGO: {fileID: 0}
   craftUnCompletedGO: {fileID: 0}
   buildRenderer: {fileID: 0}
-  buildTime: 0
+  buildTime: 10
   canCraft: 0
-  productionUnits: {fileID: 0}
-  descriptionText: {fileID: 0}
+  productionUnits:
+  - {fileID: 0}
+  descriptionText: {fileID: 11400000, guid: 799334ba04ee30a4499b2fa3ed3445dc, type: 2}
   descriptionPosition: 0
-  nameText: {fileID: 0}
+  nameText: {fileID: 11400000, guid: 799334ba04ee30a4499b2fa3ed3445dc, type: 2}
   namePosition: 0
   unitState: 0
   emotionalState: 0

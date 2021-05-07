@@ -22,7 +22,7 @@ public class Proyectil : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<RTSBase>() != null)
         {
-
+            collision.gameObject.GetComponent<RTSBase>().TakeDamage(collision.gameObject.GetComponent<RTSBase>(), damage);
         }
     }
 }

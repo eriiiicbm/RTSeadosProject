@@ -29,7 +29,7 @@ public class RTSBase : MonoBehaviour
         transform.Find("Highlight").gameObject.SetActive(isSelected);
 
     }
-    public void TakeDamage(UnitCombat enemy, float damage)
+    public void TakeDamage(RTSBase enemy, float damage)
     {
         health = health - damage;
         StartCoroutine(Flasher(GetComponent<Renderer>().material.color));

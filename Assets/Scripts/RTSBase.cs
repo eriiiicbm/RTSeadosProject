@@ -23,7 +23,7 @@ public class RTSBase : MonoBehaviour
         health = maxHealth;
     }
 
-    void SetColor() { }
+    public virtual void SetColor() { }
     void SetSelected(bool isSelected)
     {
         transform.Find("Highlight").gameObject.SetActive(isSelected);

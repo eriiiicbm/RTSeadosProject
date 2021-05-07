@@ -41,6 +41,7 @@ public class Tower : Building, FireBuilding
         atackTimer = rtsEntity.AttackTimer;
         damege = rtsEntity.Damage;
         proyectils = rtsEntity.Proyectile;
+        throwForce = rtsEntity.Velocity;
     }
 
     // Update is called once per frame

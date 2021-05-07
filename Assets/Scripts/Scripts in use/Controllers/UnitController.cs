@@ -85,7 +85,7 @@ public class UnitController : MonoBehaviour {
         }
         else
         {
-            Destroy(this.transform.parent.gameObject);
+            Destroy(this.transform.gameObject);
         }
     }
 }

@@ -8,8 +8,9 @@ public class Health : NetworkBehaviour
 {
     [SerializeField] private int maxHealth = 100;
     // Start is called before the first frame update
-    [SyncVar] private int currentHealth;
+    [SyncVar(hook = nameof(HandleHealthUpdated))] private int currentHealth;
     public event Action ServerOnDie;
+    public event Action<int, int> ClientOnHealthUpdated;
     #region Server
 
     public override void OnStartServer()
@@ -46,7 +47,11 @@ public class Health : NetworkBehaviour
 
     #region Client
 
-    
+    private void HandleHealthUpdated(int oldHealth, int newHealth)
+    {
+        ClientOnHealthUpdated?.Invoke(newHealth,maxHealth);
+    }
+
 
     #endregion
 }

@@ -37,9 +37,9 @@ public class Building : RTSBase
     void Start()
     {
         craftRadius = rtsEntity.CraftRadious;
-        craftCompletedGO = rtsEntity.CraftCompletedGO;
-        craftUncompletedGO = rtsEntity.CraftUnCompletedGO;
-        buildRenderer = rtsEntity.BuildRenderer;
+        craftCompletedGO = rtsEntity.Prefab.transform.Find("estructure").gameObject;
+        craftUncompletedGO = rtsEntity.Prefab.transform.Find("plataform").gameObject;
+        buildRenderer = craftCompletedGO.GetComponent<MeshRenderer>();
         buildTime = rtsEntity.BuildTime;
 
         if (buildTime <= 0)

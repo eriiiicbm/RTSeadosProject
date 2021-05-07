@@ -9,7 +9,7 @@ public class ProductionBuilding : Building
     // Start is called before the first frame update
     void Start()
     {
-        
+        productionUnits = rtsEntity.ProductionUnits;
     }
 
     // Update is called once per frame
@@ -17,4 +17,6 @@ public class ProductionBuilding : Building
     {
         
     }
+
+
 }

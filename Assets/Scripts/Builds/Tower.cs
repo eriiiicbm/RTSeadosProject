@@ -47,10 +47,13 @@ public class Tower : Building, FireBuilding
     // Update is called once per frame
     void Update()
     {
-        if(Time.deltaTime >= currentTime)
+        if (rtsEntity.Prefab.transform.Find("plataform").gameObject.activeInHierarchy)
         {
-            detectEnemy(atackRange);
-            currentTime = Time.deltaTime + atackTimer;
+            if (Time.deltaTime >= currentTime)
+            {
+                detectEnemy(atackRange);
+                currentTime = Time.deltaTime + atackTimer;
+            }
         }
     }
 }

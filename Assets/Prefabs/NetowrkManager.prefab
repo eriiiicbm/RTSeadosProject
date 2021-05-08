@@ -46,14 +46,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
-  PersistNetworkManagerToOfflineScene: 0
+  PersistNetworkManagerToOfflineScene: 1
   runInBackground: 1
   autoStartServerBuild: 1
   serverTickRate: 30
   serverBatching: 1
   serverBatchInterval: 0
-  offlineScene: 
-  onlineScene: 
+  offlineScene: Assets/Scenes/TestScenes/Scene_Menu.unity
+  onlineScene: Assets/Scenes/TestScenes/TestRTS1.unity
   transport: {fileID: 9221100780923022495}
   networkAddress: localhost
   maxConnections: 100
@@ -67,7 +67,11 @@ MonoBehaviour:
   spawnPrefabs:
   - {fileID: 2945097168342303928, guid: a82cfb78cc5d6b44eaa934b3f39ad0a6, type: 3}
   - {fileID: 9204646711515341837, guid: b478ef1ac320bd64b954a0367ff3b040, type: 3}
+  - {fileID: 7539810284731429127, guid: d95d925bfd420f346936e26b22a50b77, type: 3}
+  - {fileID: 208676947061185419, guid: 6acc45fcfad359f46bbfd9336a245bc2, type: 3}
   unitSpawnerPrefab: {fileID: 9204646711515341837, guid: b478ef1ac320bd64b954a0367ff3b040,
+    type: 3}
+  gameOverHandler: {fileID: 1713432240769239484, guid: 6acc45fcfad359f46bbfd9336a245bc2,
     type: 3}
 --- !u!114 &9221100780923022495
 MonoBehaviour:

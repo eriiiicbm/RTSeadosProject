@@ -218,27 +218,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetowrkManager
       objectReference: {fileID: 0}
-    - target: {fileID: 9221100780923022492, guid: 98d4a46d89f11b340b2512124c5125e4,
-        type: 3}
-      propertyPath: onlineScene
-      value: Assets/Scenes/TestScenes/TestRTS1.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221100780923022492, guid: 98d4a46d89f11b340b2512124c5125e4,
-        type: 3}
-      propertyPath: offlineScene
-      value: Assets/Scenes/TestScenes/Scene_Menu.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221100780923022492, guid: 98d4a46d89f11b340b2512124c5125e4,
-        type: 3}
-      propertyPath: spawnPrefabs.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221100780923022492, guid: 98d4a46d89f11b340b2512124c5125e4,
-        type: 3}
-      propertyPath: spawnPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 7539810284731429127, guid: d95d925bfd420f346936e26b22a50b77,
-        type: 3}
     - target: {fileID: 9221100780923022493, guid: 98d4a46d89f11b340b2512124c5125e4,
         type: 3}
       propertyPath: m_RootOrder

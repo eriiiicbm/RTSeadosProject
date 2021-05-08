@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 7078126508423308701}
   - component: {fileID: 2173315365610084719}
   - component: {fileID: 5075247943184553536}
-  - component: {fileID: 514591010831719782}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -112,19 +111,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &514591010831719782
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8963987357223031252}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9204646711515341837
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,8 +125,10 @@ GameObject:
   - component: {fileID: 8474296378270901045}
   - component: {fileID: 5932287218148224970}
   - component: {fileID: 5492621791847526945}
+  - component: {fileID: 1093562689933996729}
+  - component: {fileID: 2600134888425079750}
   m_Layer: 0
-  m_Name: UnitSpawner
+  m_Name: UnitBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,6 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  health: {fileID: 5932287218148224970}
   unitPrefab: {fileID: 2945097168342303928, guid: a82cfb78cc5d6b44eaa934b3f39ad0a6,
     type: 3}
   unitSpawnPoint: {fileID: 6357760454964167407}
@@ -242,6 +231,34 @@ MonoBehaviour:
   health: {fileID: 5932287218148224970}
   healtBarParent: {fileID: 5330378774246082402}
   healthBarImage: {fileID: 3316730657595815724}
+--- !u!114 &1093562689933996729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204646711515341837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f3314d23a03954f9c98179c5b3cc98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  health: {fileID: 5932287218148224970}
+--- !u!65 &2600134888425079750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204646711515341837}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.9733917, z: 1.3073235}
+  m_Center: {x: 0, y: 0.48669583, z: 0.064379215}
 --- !u!1001 &3551442451857751198
 PrefabInstance:
   m_ObjectHideFlags: 0

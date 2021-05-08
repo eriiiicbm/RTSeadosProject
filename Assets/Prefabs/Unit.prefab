@@ -109,11 +109,11 @@ GameObject:
   - component: {fileID: 8602236678262387823}
   - component: {fileID: 5845392694001653418}
   - component: {fileID: 6034545494692776108}
+  - component: {fileID: 2362907055178248377}
   - component: {fileID: 216917175679862320}
   - component: {fileID: 2956566950262087117}
   - component: {fileID: 5087048794542079138}
   - component: {fileID: 8779938643762913406}
-  - component: {fileID: 2362907055178248377}
   - component: {fileID: 117947463019330689}
   m_Layer: 0
   m_Name: Unit
@@ -234,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  health: {fileID: 2362907055178248377}
   unitMovement: {fileID: 8602236678262387823}
   onSelected:
     m_PersistentCalls:
@@ -266,6 +267,21 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   targeter: {fileID: 5087048794542079138}
+--- !u!114 &2362907055178248377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2945097168342303928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f59580a10a24cc4eb1ce8e2bf929e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  maxHealth: 100
 --- !u!65 &216917175679862320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -330,21 +346,6 @@ MonoBehaviour:
   fireRange: 11
   fireRate: 1
   rotationSpeed: 180
---- !u!114 &2362907055178248377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2945097168342303928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f59580a10a24cc4eb1ce8e2bf929e25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  maxHealth: 100
 --- !u!114 &117947463019330689
 MonoBehaviour:
   m_ObjectHideFlags: 0

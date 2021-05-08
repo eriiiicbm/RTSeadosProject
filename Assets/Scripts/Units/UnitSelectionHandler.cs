@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mirror;
@@ -19,7 +20,16 @@ public class UnitSelectionHandler : MonoBehaviour
     void Start()
     {
         mainCamera=Camera.main;
-    //    player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
+        Unit.AuthorityOnUnitDespawned += AuthorityHandleUnitDespwned;
+        //    player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
+    }
+
+   
+
+    private void OnDestroy()
+    {
+        Unit.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespwned;
+
     }
 
     // Update is called once per frame
@@ -117,5 +127,10 @@ public class UnitSelectionHandler : MonoBehaviour
             }
         }
 
+    }
+    private void AuthorityHandleUnitDespwned(Unit unit)
+    {
+        SelectedUnits.Remove(unit);
+        
     }
 }

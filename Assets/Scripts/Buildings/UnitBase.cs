@@ -7,6 +7,7 @@ using UnityEngine;
 public class UnitBase : NetworkBehaviour
 {
  [SerializeField] private Health health = null;
+ [SerializeField] public  static  event Action<int> ServerOnPlayerDie;
  [SerializeField] public  static  event Action<UnitBase> ServerOnBaseSpawned;
  [SerializeField] public  static  event Action<UnitBase> ServerOnBaseDespawned;
  
@@ -29,6 +30,7 @@ public class UnitBase : NetworkBehaviour
  [Server]
  private void ServerHandleDie()
  {
+     ServerOnPlayerDie?.Invoke(connectionToClient.connectionId);
      NetworkServer.Destroy(gameObject);    }
  // Start is called before the first frame update
  void Start()

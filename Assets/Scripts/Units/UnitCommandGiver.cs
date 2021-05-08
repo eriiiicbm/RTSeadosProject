@@ -6,23 +6,32 @@ using UnityEngine.InputSystem;
 
 public class UnitCommandGiver : MonoBehaviour
 {
-    [SerializeField] private UnitSelectionHandler unitSelectionHandler;
+ 
+    [SerializeField] private UnitSelectionHandler unitSelectionHandler = null;
     [SerializeField] private LayerMask layerMask = new LayerMask();
 
-    // Start is called before the first frame update
     private Camera mainCamera;
 
-    void Start()
+    private void Start()
     {
         mainCamera = Camera.main;
+
+        GameOverHandler.ClientOnGameOver += ClientHandleGameOver;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        if (!Mouse.current.rightButton.wasPressedThisFrame) return;
+        GameOverHandler.ClientOnGameOver -= ClientHandleGameOver;
+    }
+
+    private void Update()
+    {
+        if (!Mouse.current.rightButton.wasPressedThisFrame) { return; }
+
         Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask)) return;
+
+        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask)) { return; }
+
         if (hit.collider.TryGetComponent<Targetable>(out Targetable target))
         {
             if (target.hasAuthority)
@@ -34,23 +43,29 @@ public class UnitCommandGiver : MonoBehaviour
             TryTarget(target);
             return;
         }
-        TryMove(hit.point);
 
+        TryMove(hit.point);
+    }
+
+    private void TryMove(Vector3 point)
+    {
+        foreach (Unit unit in unitSelectionHandler.SelectedUnits)
+        {
+            unit.GetUnitMovement().CmdMove(point);
+        }
     }
 
     private void TryTarget(Targetable target)
     {
-        foreach (var unit in unitSelectionHandler.SelectedUnits)
+        foreach (Unit unit in unitSelectionHandler.SelectedUnits)
         {
             unit.GetTargeter().CmdSetTarget(target.gameObject);
         }
     }
 
-    private void TryMove(Vector3 point)
+    private void ClientHandleGameOver(string winnerName)
     {
-        foreach (var unit in unitSelectionHandler.SelectedUnits)
-        {
-            unit.GetUnitMovement().CmdMove(point);
-        }
+        enabled = false;
     }
+
 }

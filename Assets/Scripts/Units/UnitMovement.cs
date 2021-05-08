@@ -14,6 +14,19 @@ namespace _Project.Scripts
 //        
 
         #region Server
+        public override void OnStartServer()
+        {
+            GameOverHandler.ServerOnGameOver += ServerHandleGameOver;
+
+        }
+
+     
+
+        public override void OnStopServer()
+        {
+
+            GameOverHandler.ServerOnGameOver -= ServerHandleGameOver;  }
+
 
         [ServerCallback]
         private void Update()
@@ -59,7 +72,11 @@ namespace _Project.Scripts
             navMeshAgent.SetDestination(hit.position);
             Debug.Log("Moving");
         }
-
+        [Server]
+        private void ServerHandleGameOver()
+        {
+           navMeshAgent.ResetPath();
+        }
         #endregion
 
         /*     #region Client

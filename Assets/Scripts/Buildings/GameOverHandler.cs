@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mirror;
+using Telepathy;
 using UnityEngine;
 
 public class GameOverHandler : NetworkBehaviour
 {
+  public static event Action  ServerOnGameOver;
   public static event Action<string> ClientOnGameOver;
   private List<UnitBase> bases = new List<UnitBase>();
   #region Server
@@ -40,6 +42,7 @@ bases.Add(unitBase);  }
 
     int playerId = bases[0].connectionToClient.connectionId;
     RpcGameOver($"Player {playerId}");
+    ServerOnGameOver?.Invoke();
     Debug.Log("Game Over");
   }
 

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5da0b1f7cf0d86a48ab784503af179df
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {instanceID: 0}
+  - sm: {instanceID: 0}
+  - achievementsUI: {instanceID: 0}
+  - text: {fileID: 11400000, guid: 799334ba04ee30a4499b2fa3ed3445dc, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

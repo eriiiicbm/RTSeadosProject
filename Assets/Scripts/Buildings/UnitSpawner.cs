@@ -20,7 +20,7 @@ public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
     [Server]
     private void ServerHandleDie()
     {
-//NetworkServer.Destroy(gameObject);
+ NetworkServer.Destroy(gameObject);
 }
 
     public override void OnStopServer()

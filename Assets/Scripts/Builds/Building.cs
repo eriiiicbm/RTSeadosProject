@@ -8,10 +8,10 @@ public class Building : RTSBase
     public MyEvent onCrafted;
     public MyEvent onCraftCompleted;
 
-    public GameObject craftCompletedGO;
-    public GameObject craftUncompletedGO;
-    public Renderer buildRenderer;
-    public int buildTime;
+    GameObject craftCompletedGO;
+    GameObject craftUncompletedGO;
+    Renderer buildRenderer;
+    int buildTime;
 
     bool _canCraft = false;
     public bool canCraft
@@ -37,7 +37,7 @@ public class Building : RTSBase
     void Start()
     {
         craftRadius = rtsEntity.CraftRadious;
-        craftCompletedGO = rtsEntity.Prefab.transform.Find("estructure").gameObject;
+        craftCompletedGO = rtsEntity.Prefab.transform.Find("FinalEstructure").gameObject;
         craftUncompletedGO = rtsEntity.Prefab.transform.Find("plataform").gameObject;
         buildRenderer = craftCompletedGO.GetComponent<MeshRenderer>();
         buildTime = rtsEntity.BuildTime;

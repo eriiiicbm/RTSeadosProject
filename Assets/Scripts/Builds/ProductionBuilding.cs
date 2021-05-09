@@ -20,9 +20,13 @@ public class ProductionBuilding : Building
     {
         if (unitsQueue.Count <= 0)
             return;
-        /*if (CivilizationMetrics.singleton[entity.faction].troops >= CivilizationMetrics.singleton[entity.faction].maxTroops)
+        /*if (unitsQueue.Dequeue().GetComponent<Unit>().prices[1]> recurces[1] || unitsQueue.Dequeue().GetComponent<Unit>().prices[2] > recurces[2])
+            return;
+        if (CivilizationMetrics.singleton[entity.faction].troops >= CivilizationMetrics.singleton[entity.faction].maxTroops)
             return;
 
+        recurces[1] -= unitsQueue.Dequeue().GetComponent<Unit>().prices[1]
+        recurces[2] -= unitsQueue.Dequeue().GetComponent<Unit>().prices[2]
         CivilizationMetrics.singleton[entity.faction].troops++;
         var go = unitsQueue.Dequeue();
         var pos = RandomInsideDonut(instanceRadius);

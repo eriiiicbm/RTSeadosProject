@@ -1002,9 +1002,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1217621561}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: IncreaseLevel
-        m_Mode: 1
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ChangeLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3124,7 +3124,7 @@ PrefabInstance:
         type: 3}
       propertyPath: subLevels.Array.data[0]
       value: 
-      objectReference: {fileID: 1805044733}
+      objectReference: {fileID: 0}
     - target: {fileID: 3595525095369809615, guid: 401ceeae27ec3fb45a2d70e060b60093,
         type: 3}
       propertyPath: m_Name
@@ -5034,6 +5034,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!20 &1252593741
 Camera:
   m_ObjectHideFlags: 0
@@ -6059,9 +6079,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1217621561}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: IncreaseLevel
-        m_Mode: 1
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ChangeLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6676,7 +6696,7 @@ GameObject:
   - component: {fileID: 1590123004}
   - component: {fileID: 1590123003}
   m_Layer: 5
-  m_Name: Text
+  m_Name: MultiplayerButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6713,7 +6733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17b7c4e89afe22e49a1b46b526209fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numText: 11
+  numText: 17
   textStrings: {fileID: 11400000, guid: 2c3854d9a46c65c4e9192e309b35c888, type: 2}
 --- !u!114 &1590123004
 MonoBehaviour:
@@ -7889,36 +7909,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788349426}
   m_CullTransparentMesh: 0
---- !u!1 &1805044732
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1805044733}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1805044733
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805044732}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.378342, y: 2.4204721, z: -2.0890265}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1812165963
 PrefabInstance:
   m_ObjectHideFlags: 0

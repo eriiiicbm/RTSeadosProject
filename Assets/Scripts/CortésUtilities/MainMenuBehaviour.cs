@@ -28,6 +28,11 @@ public class MainMenuBehaviour : MonoBehaviour
         Time.timeScale = 1;
        GameManager._instance.IncreaseLevel() ;
 
+    }  
+    public void LoadMultiplayerLobby()
+    {
+        GameManager._instance.ChangeLevel(2) ;
+
     }
     private void OnLevelWasLoaded(int level)
     {
@@ -144,7 +149,7 @@ public class MainMenuBehaviour : MonoBehaviour
     private void Start()
     {
         //Destroy(GameObject.Find("Main Camera").gameObject);
-        StartCoroutine("StartStuff");
+        StartCoroutine(nameof(StartStuff));
         GameManager._instance.FixBugButtons();
         OnLanguageChanged();
 
@@ -210,8 +215,9 @@ public class MainMenuBehaviour : MonoBehaviour
         SetSEVolume(PlayerPrefs.GetFloat("seAudioVolume") / 100);
         if (!isPauseMenu)
         {
-         
+           
             mainButton.onClick.AddListener(LoadLevelFromSave);
+                mainButton.transform.parent.Find("Multiplayer").GetComponent<Button>().onClick.AddListener(LoadMultiplayerLobby);
 
         }  yield return new WaitForEndOfFrame();
 

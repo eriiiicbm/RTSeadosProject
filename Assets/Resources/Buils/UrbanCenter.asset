@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: UrbanCenter
   m_EditorClassIdentifier: 
   entityType: 0
-  maxHealth: 0
+  maxHealth: 3000
   expirationVelocity: 0
-  prices: 
+  prices: e8030000
   description: 
   preview: {fileID: 0}
-  prefab: {fileID: 0}
+  prefab: {fileID: 6860597628955110165, guid: 439da96688641d64db856588504a6eb9, type: 3}
   moral: 0
   velocity: 0
   currentTarget: {fileID: 0}
@@ -28,11 +28,11 @@ MonoBehaviour:
   attackRange: 0
   attackTimer: 0
   proyectile: {fileID: 0}
-  craftRadious: 0
+  craftRadious: 5
   craftCompletedGO: {fileID: 0}
   craftUnCompletedGO: {fileID: 0}
   buildRenderer: {fileID: 0}
-  buildTime: 0
+  buildTime: 10
   canCraft: 0
   productionUnits: []
   descriptionText: {fileID: 0}

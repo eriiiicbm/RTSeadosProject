@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf636b8228f3d346be8a0d449de608e, type: 3}
   m_Name: NuggetViager
   m_EditorClassIdentifier: 
-  entityType: 0
-  maxHealth: 0
-  expirationVelocity: 0
-  prices: 
+  entityType: 4
+  maxHealth: 20
+  expirationVelocity: 2
+  prices: 050000000a000000
   description: 
   preview: {fileID: 0}
-  prefab: {fileID: 0}
-  moral: 0
-  velocity: 0
+  prefab: {fileID: 4134074402336445218, guid: 06e6a74ba84993f48aa4f75cb8c54991, type: 3}
+  moral: 30
+  velocity: 3
   currentTarget: {fileID: 0}
   effectRadious: 0
   recoverySpeed: 0

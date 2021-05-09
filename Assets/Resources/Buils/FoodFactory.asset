@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: FoodFactory
   m_EditorClassIdentifier: 
   entityType: 0
-  maxHealth: 0
+  maxHealth: 1000
   expirationVelocity: 0
-  prices: 
+  prices: c8000000
   description: 
   preview: {fileID: 0}
-  prefab: {fileID: 0}
+  prefab: {fileID: 6508101106659302983, guid: 1def9626f1305574ba187a81c11f8807, type: 3}
   moral: 0
   velocity: 0
   currentTarget: {fileID: 0}
@@ -28,11 +28,11 @@ MonoBehaviour:
   attackRange: 0
   attackTimer: 0
   proyectile: {fileID: 0}
-  craftRadious: 0
+  craftRadious: 5
   craftCompletedGO: {fileID: 0}
   craftUnCompletedGO: {fileID: 0}
   buildRenderer: {fileID: 0}
-  buildTime: 0
+  buildTime: 10
   canCraft: 0
   productionUnits: []
   descriptionText: {fileID: 0}

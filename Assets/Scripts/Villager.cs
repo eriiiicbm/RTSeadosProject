@@ -10,7 +10,6 @@ public class Villager : Unit
     float pickRate;
     float range;
 
-    //
     void Start()
     {
         base.Start();

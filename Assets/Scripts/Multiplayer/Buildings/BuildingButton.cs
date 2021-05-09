@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    [SerializeField] private Building building;
+    [SerializeField] private BuildingN building;
     [SerializeField] private Image iconImage;
     [SerializeField] private TMP_Text priceText;
     [SerializeField] private LayerMask floorMask = new LayerMask();

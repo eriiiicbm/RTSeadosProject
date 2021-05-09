@@ -12,7 +12,7 @@ using Random = UnityEngine.Random;
 public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
 {
     [SerializeField] private Health health = null;
-    [SerializeField] private Unit unitPrefab = null;
+    [SerializeField] private UnitN unitPrefab = null;
     [SerializeField] private Transform unitSpawnPoint = null;
     [SerializeField] private TMP_Text remainingUnitsText = null;
     [SerializeField] private Image unitProgressImage = null;

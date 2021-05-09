@@ -7,7 +7,7 @@ using Mirror;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Unit : NetworkBehaviour
+public class UnitN : NetworkBehaviour
 {
    [SerializeField] private Health health = null;
    [SerializeField] private int resourceCost = 10;
@@ -15,10 +15,10 @@ public class Unit : NetworkBehaviour
    [SerializeField] private UnityEvent onSelected;
    [SerializeField] private UnityEvent onDeselected;
    [SerializeField] private Targeter targeter;
-   [SerializeField] public  static  event Action<Unit> ServerOnUnitSpawned;
-   [SerializeField] public  static  event Action<Unit> ServerOnUnitDespawned;
-  [SerializeField] public  static  event Action<Unit> AuthorityOnUnitSpawned;
-   [SerializeField] public  static  event Action<Unit> AuthorityOnUnitDespawned;
+   [SerializeField] public  static  event Action<UnitN> ServerOnUnitSpawned;
+   [SerializeField] public  static  event Action<UnitN> ServerOnUnitDespawned;
+  [SerializeField] public  static  event Action<UnitN> AuthorityOnUnitSpawned;
+   [SerializeField] public  static  event Action<UnitN> AuthorityOnUnitDespawned;
 
    public int GetResourceCost()
    {

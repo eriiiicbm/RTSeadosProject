@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
-public class Building : NetworkBehaviour
+public class BuildingN : NetworkBehaviour
 {
  [SerializeField] private GameObject buildingPreview;
  [SerializeField] private Sprite icon;
  [SerializeField] private int price=100;
  [SerializeField] private int id=-1;
- [SerializeField] public  static  event Action<Building> ServerOnBuildingSpawned;
- [SerializeField] public  static  event Action<Building> ServerOnBuildingDespawned;
- [SerializeField] public  static  event Action<Building> AuthorityOnBuildingSpawned;
- [SerializeField] public  static  event Action<Building> AuthorityOnBuildingDespawned;
+ [SerializeField] public  static  event Action<BuildingN> ServerOnBuildingSpawned;
+ [SerializeField] public  static  event Action<BuildingN> ServerOnBuildingDespawned;
+ [SerializeField] public  static  event Action<BuildingN> AuthorityOnBuildingSpawned;
+ [SerializeField] public  static  event Action<BuildingN> AuthorityOnBuildingDespawned;
 
  public GameObject getBuildingPreview()
  {

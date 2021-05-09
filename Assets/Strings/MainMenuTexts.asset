@@ -30,6 +30,7 @@ MonoBehaviour:
   - Main Menu
   - Continue Game
   - Reset
+  - Multiplayer
   stringsEs:
   - 'Calidad: '
   - 'Volumen General: '
@@ -48,3 +49,4 @@ MonoBehaviour:
   - Menu Principal
   - Continuar
   - Resetear nivel actual
+  - Multijugador

@@ -18,19 +18,19 @@ public class UnitSelectionHandler : MonoBehaviour
     private RTSPlayer player;
     private Camera mainCamera;
 
-    public List<Unit> SelectedUnits { get; } = new List<Unit>();
+    public List<UnitN> SelectedUnits { get; } = new List<UnitN>();
 
     private void Start()
     {
         mainCamera = Camera.main;
 
-        Unit.AuthorityOnUnitDespawned += AuthorityHandleUnitDespawned;
+        UnitN.AuthorityOnUnitDespawned += AuthorityHandleUnitDespawned;
         GameOverHandler.ClientOnGameOver += ClientHandleGameOver;
     }
 
     private void OnDestroy()
     {
-        Unit.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespawned;
+        UnitN.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespawned;
         GameOverHandler.ClientOnGameOver -= ClientHandleGameOver;
     }
 
@@ -60,7 +60,7 @@ public class UnitSelectionHandler : MonoBehaviour
     {
         if (!Keyboard.current.leftShiftKey.isPressed)
         {
-            foreach (Unit selectedUnit in SelectedUnits)
+            foreach (UnitN selectedUnit in SelectedUnits)
             {
                 selectedUnit.Deselect();
             }
@@ -99,13 +99,13 @@ public class UnitSelectionHandler : MonoBehaviour
 
             if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask)) { return; }
 
-            if (!hit.collider.TryGetComponent<Unit>(out Unit unit)) { return; }
+            if (!hit.collider.TryGetComponent<UnitN>(out UnitN unit)) { return; }
 
             if (!unit.hasAuthority) { return; }
 
             SelectedUnits.Add(unit);
 
-            foreach (Unit selectedUnit in SelectedUnits)
+            foreach (UnitN selectedUnit in SelectedUnits)
             {
                 selectedUnit.Select();
             }
@@ -116,7 +116,7 @@ public class UnitSelectionHandler : MonoBehaviour
         Vector2 min = unitSelectionArea.anchoredPosition - (unitSelectionArea.sizeDelta / 2);
         Vector2 max = unitSelectionArea.anchoredPosition + (unitSelectionArea.sizeDelta / 2);
 
-        foreach (Unit unit in player.GetMyUnits())
+        foreach (UnitN unit in player.GetMyUnits())
         {
             if (SelectedUnits.Contains(unit)) { continue; }
 
@@ -133,7 +133,7 @@ public class UnitSelectionHandler : MonoBehaviour
         }
     }
 
-    private void AuthorityHandleUnitDespawned(Unit unit)
+    private void AuthorityHandleUnitDespawned(UnitN unit)
     {
         SelectedUnits.Remove(unit);
     }

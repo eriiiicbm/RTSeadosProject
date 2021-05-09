@@ -18,6 +18,7 @@ public class Tower : Building, FireBuilding
         if (hit.collider != null) return;
         if (hit.collider.GetComponent<RTSBase>() != null) return;
 
+
         RTSBase enemy = hit.collider.GetComponent<RTSBase>();
 
         fire(hit.collider.gameObject.transform);
@@ -37,6 +38,8 @@ public class Tower : Building, FireBuilding
     // Start is called before the first frame update
     void Start()
     {
+        base.Start();
+
         atackRange = rtsEntity.AttackRange;
         atackTimer = rtsEntity.AttackTimer;
         damege = rtsEntity.Damage;

@@ -6,17 +6,24 @@ public class ProductionBuilding : Building
 {
     GameObject[] productionUnits;
     float craftTime;
-
+    GameObject curretProduction;
     Queue<GameObject> unitsQueue = new Queue<GameObject>();
+    public Vector2 instanceRadius;
 
     // Start is called before the first frame update
     void Start()
     {
+        base.Start();
+
         productionUnits = rtsEntity.ProductionUnits;
+        craftTime = rtsEntity.AttackTimer;
+        curretProduction = productionUnits[0];
+        //unitsQueue
+
         InvokeRepeating("InstantiateUnit", craftTime, craftTime);
     }
 
-    public void InstantiateUnit()
+    public void intProduction()
     {
         if (unitsQueue.Count <= 0)
             return;
@@ -28,11 +35,21 @@ public class ProductionBuilding : Building
         recurces[1] -= unitsQueue.Dequeue().GetComponent<Unit>().prices[1]
         recurces[2] -= unitsQueue.Dequeue().GetComponent<Unit>().prices[2]
         CivilizationMetrics.singleton[entity.faction].troops++;
-        var go = unitsQueue.Dequeue();
+        curretProduction = unitsQueue.Dequeue();*/
+    }
+
+    public void InstantiateUnit()
+    {
+        /*if(curretProduction.GetComponent<Unit>().time > 0)
+        {
+            curretProduction.GetComponent<Unit>().time--;
+            return;
+        }*/
+
         var pos = RandomInsideDonut(instanceRadius);
-        Instantiate(go,
+        Instantiate(curretProduction,
             new Vector3(pos.x + transform.position.x, 0, pos.y + transform.position.z),
-            go.transform.rotation);*/
+            curretProduction.transform.rotation);
     }
 
     public void AddUnitToQueue(int unit)

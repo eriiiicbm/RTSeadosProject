@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Building : RTSBase
 {
-    public float craftRadius;
+    float craftRadius;
     public MyEvent onCrafted;
     public MyEvent onCraftCompleted;
 
     GameObject craftCompletedGO;
     GameObject craftUncompletedGO;
     Renderer buildRenderer;
-    int buildTime;
+    public int buildTime;
 
     bool _canCraft = false;
     public bool canCraft
@@ -36,6 +36,8 @@ public class Building : RTSBase
     }
     void Start()
     {
+        base.Start();
+
         craftRadius = rtsEntity.CraftRadious;
         craftCompletedGO = rtsEntity.Prefab.transform.Find("FinalEstructure").gameObject;
         craftUncompletedGO = rtsEntity.Prefab.transform.Find("plataform").gameObject;

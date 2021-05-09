@@ -10,7 +10,7 @@ using UnityEngine.Events;
 public class Unit : NetworkBehaviour
 {
    [SerializeField] private Health health = null;
-
+   [SerializeField] private int resourceCost = 10;
    [SerializeField] private UnitMovement unitMovement;
    [SerializeField] private UnityEvent onSelected;
    [SerializeField] private UnityEvent onDeselected;
@@ -19,6 +19,11 @@ public class Unit : NetworkBehaviour
    [SerializeField] public  static  event Action<Unit> ServerOnUnitDespawned;
   [SerializeField] public  static  event Action<Unit> AuthorityOnUnitSpawned;
    [SerializeField] public  static  event Action<Unit> AuthorityOnUnitDespawned;
+
+   public int GetResourceCost()
+   {
+      return resourceCost;
+   }
 
    public UnitMovement GetUnitMovement()
    {

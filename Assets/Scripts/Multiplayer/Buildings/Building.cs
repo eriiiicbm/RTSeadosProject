@@ -18,14 +18,14 @@ public class Building : NetworkBehaviour
  public GameObject getBuildingPreview()
  {
   return buildingPreview;
- }public Sprite getIcon()
+ }public Sprite GetIcon()
  {
   return icon;
  }
- public int getId()
+ public int GetId()
  {
   return id;
- } public int getPrice()
+ } public int GetPrice()
  {
   return price;
  }

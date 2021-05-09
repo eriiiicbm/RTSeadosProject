@@ -14,6 +14,7 @@ public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     [SerializeField] private Image iconImage;
     [SerializeField] private TMP_Text priceText;
     [SerializeField] private LayerMask floorMask = new LayerMask();
+    private BoxCollider buildingCollider;
     private Camera mainCamera;
     private RTSPlayer player;
     private GameObject buildingPreviewInstance;
@@ -22,8 +23,9 @@ public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     private void Start()
     {
         mainCamera = Camera.main;
-        iconImage.sprite = building.getIcon();
-        priceText.text = building.getPrice().ToString();
+        iconImage.sprite = building.GetIcon();
+        priceText.text = building.GetPrice().ToString();
+        buildingCollider = building.GetComponent<BoxCollider>();
     }
 
     private void Update()
@@ -48,6 +50,11 @@ public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
             return;
         }
 
+        if (player.GetResources() < building.GetPrice())
+        {
+            return;
+        }
+
         buildingPreviewInstance = Instantiate(building.getBuildingPreview());
         buildingRendererInstance = buildingPreviewInstance.GetComponentInChildren<Renderer>();
         buildingPreviewInstance.SetActive(false);
@@ -63,7 +70,7 @@ public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, floorMask))
         {
-            player.CmdTryPlaceBuilding(building.getId(),hit.point);
+            player.CmdTryPlaceBuilding(building.GetId(), hit.point);
         }
 
         Destroy(buildingPreviewInstance);
@@ -74,12 +81,17 @@ public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, floorMask))
         {
-return;        }
+            return;
+        }
 
         buildingPreviewInstance.transform.position = hit.point;
         if (!buildingPreviewInstance.activeSelf)
         {
             buildingPreviewInstance.SetActive(true);
         }
+
+        Color color = player.CanPlaceBuilding(buildingCollider, hit.point) ? Color.green : Color.red;
+        Debug.Log($"color{color.ToString()}]");
+        buildingRendererInstance.material.SetColor("_Color", color);
     }
 }

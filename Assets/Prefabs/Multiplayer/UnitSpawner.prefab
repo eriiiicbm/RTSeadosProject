@@ -262,6 +262,16 @@ PrefabInstance:
       propertyPath: aimAtPoint
       value: 
       objectReference: {fileID: 5173592464688572154}
+    - target: {fileID: 6840276071924771225, guid: 7240b5cb8af9f10449d2d0d9d41f1022,
+        type: 3}
+      propertyPath: colorRenderers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840276071924771225, guid: 7240b5cb8af9f10449d2d0d9d41f1022,
+        type: 3}
+      propertyPath: colorRenderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 2674375427244538279}
     - target: {fileID: 7176492517504389412, guid: 7240b5cb8af9f10449d2d0d9d41f1022,
         type: 3}
       propertyPath: m_IsActive
@@ -446,6 +456,12 @@ GameObject:
 --- !u!4 &5173592464688572154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3578213812839130930, guid: 60274c2d93a63d2488c72ebf9e9d1335,
+    type: 3}
+  m_PrefabInstance: {fileID: 8530966059556684232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2674375427244538279 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6014942297756268655, guid: 60274c2d93a63d2488c72ebf9e9d1335,
     type: 3}
   m_PrefabInstance: {fileID: 8530966059556684232}
   m_PrefabAsset: {fileID: 0}

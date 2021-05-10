@@ -12,8 +12,7 @@ public class Villager : Unit
 
     void Start()
     {
-        base.Start();
-
+ 
         buildRate = 10;
         pickRate = 10;
         range = rtsEntity.AttackRange;

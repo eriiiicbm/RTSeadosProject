@@ -13,7 +13,6 @@ public class ProductionBuilding : Building
     // Start is called before the first frame update
     void Start()
     {
-        base.Start();
 
         productionUnits = rtsEntity.ProductionUnits;
         craftTime = rtsEntity.AttackTimer;

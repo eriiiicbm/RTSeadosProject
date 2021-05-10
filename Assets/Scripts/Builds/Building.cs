@@ -36,7 +36,6 @@ public class Building : RTSBase
     }
     void Start()
     {
-        base.Start();
 
         craftRadius = rtsEntity.CraftRadious;
         craftCompletedGO = rtsEntity.Prefab.transform.Find("FinalEstructure").gameObject;

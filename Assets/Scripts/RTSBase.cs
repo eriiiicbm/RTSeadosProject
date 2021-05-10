@@ -7,35 +7,74 @@ using UnityEngine;
 public class RTSBase : NetworkBehaviour
 {
    protected UnitStates currentState;
-    string entityName;
-    int maxHealth;
-    string description;
-    Sprite preview;
-   // [SyncVar(hook = nameof(HandleHealthUpdated))]
-    public float health;
+    [SerializeField] protected string entityName;
+    [SerializeField] protected int maxHealth;
+    [SerializeField] protected string description;
+    [SerializeField] protected Sprite preview;
+    [SerializeField] protected GameObject prefab;
+    [SerializeField] public RTSEntity rtsEntity;
+    [SyncVar(hook = nameof(HandleHealthUpdated))]
+    private float currentHealth;
+
     public event Action ServerOnDie;
-    public event Action<int, int> ClientOnHealthUpdated;
-    private int currentHealth;
-    GameObject prefab;
-    public RTSEntity rtsEntity;
 
-    public int MaxHealth { get => maxHealth; set => maxHealth = value; }
+    public event Action<float, float> ClientOnHealthUpdated;
+ 
+    #region Server
 
-    public float Health { get => health; set => health = value; }
-
-    public void Start()
+    public override void OnStartServer()
     {
-        currentState = UnitStates.Idle;
-        maxHealth = rtsEntity.MaxHealth;
-        entityName = rtsEntity.name;
-        preview = rtsEntity.Preview;
-        prefab = rtsEntity.Prefab;
-       
-        health = maxHealth;
-        GoToNextState();
+        currentHealth = maxHealth;
+
+        UnitBase.ServerOnPlayerDie += ServerHandlePlayerDie;
+            currentState = UnitStates.Idle;
+            maxHealth = rtsEntity.MaxHealth;
+            entityName = rtsEntity.name;
+            preview = rtsEntity.Preview;
+            prefab = rtsEntity.Prefab;
+            currentHealth = maxHealth;
+            GoToNextState();
+      
     }
 
-    public virtual void SetColor() { }
+    public override void OnStopServer()
+    {
+        UnitBase.ServerOnPlayerDie -= ServerHandlePlayerDie;
+    }
+
+    [Server]
+    private void ServerHandlePlayerDie(int connectionId)
+    {
+        if (connectionToClient.connectionId != connectionId) { return; }
+
+        DealDamage(currentHealth);
+    }
+    [ContextMenu("c")]
+    [Server]
+    public void DealDamage(float damageAmount)
+    {
+        if (currentHealth == 0) { return; }
+
+        currentHealth = Mathf.Max(currentHealth - damageAmount, 0);
+
+        if (currentHealth != 0) { return; }
+
+        ServerOnDie?.Invoke();
+    }
+
+    #endregion
+
+    #region Client
+
+    private void HandleHealthUpdated(float oldHealth, float newHealth)
+    {
+        ClientOnHealthUpdated?.Invoke(newHealth, maxHealth);
+    }
+
+    #endregion
+    public int MaxHealth { get => maxHealth; set => maxHealth = value; }
+    public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
+
     void SetSelected(bool isSelected)
     {
         transform.Find("Highlight").gameObject.SetActive(isSelected);
@@ -43,15 +82,15 @@ public class RTSBase : NetworkBehaviour
     }
     public void TakeDamage(RTSBase enemy, float damage)
     {
-        health = health - damage;
-        StartCoroutine(Flasher(GetComponent<Renderer>().material.color));
+       // currentHealth = currentHealth - damage;
+  //      StartCoroutine(Flasher(GetComponent<Renderer>().material.color));
 
 
     }
     IEnumerator Flasher(Color defaultColor)
     {
         var renderer = GetComponent<Renderer>();
-        if (health != 0)
+        if (currentHealth != 0)
         {
             for (int i = 0; i < 2; i++)
             {

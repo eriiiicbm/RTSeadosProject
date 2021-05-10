@@ -412,6 +412,29 @@ PrefabInstance:
       propertyPath: offlineScene
       value: Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity
       objectReference: {fileID: 0}
+    - target: {fileID: 9221100780923022492, guid: 98d4a46d89f11b340b2512124c5125e4,
+        type: 3}
+      propertyPath: unitSpawnerPrefab
+      value: 
+      objectReference: {fileID: 8706463502434392613, guid: a18ce2f05311c5f49b276f0be5c11546,
+        type: 3}
+    - target: {fileID: 9221100780923022492, guid: 98d4a46d89f11b340b2512124c5125e4,
+        type: 3}
+      propertyPath: spawnPrefabs.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221100780923022492, guid: 98d4a46d89f11b340b2512124c5125e4,
+        type: 3}
+      propertyPath: spawnPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 2945097168342303928, guid: cf67cc1f3acf9ee43b9b257d85f3bc1e,
+        type: 3}
+    - target: {fileID: 9221100780923022492, guid: 98d4a46d89f11b340b2512124c5125e4,
+        type: 3}
+      propertyPath: spawnPrefabs.Array.data[7]
+      value: 
+      objectReference: {fileID: 8706463502434392613, guid: a18ce2f05311c5f49b276f0be5c11546,
+        type: 3}
     - target: {fileID: 9221100780923022493, guid: 98d4a46d89f11b340b2512124c5125e4,
         type: 3}
       propertyPath: m_RootOrder

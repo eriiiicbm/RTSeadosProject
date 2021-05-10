@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
-public class TeamColorSetterv2 : NetworkBehaviour
+public class TeamColorSetter : NetworkBehaviour
 {
  [SerializeField] private Renderer[] colorRenderers = new Renderer[0];
  [SyncVar(hook   =nameof(HandleTeamColorUpdated))]

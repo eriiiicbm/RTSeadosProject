@@ -11,15 +11,14 @@ public class FridgeHouse : Building, Fridege
     public void recoverUnits()
     {
         foreach (var unit in units) {
-            if(unit.MaxHealth>unit.Health)
-            unit.Health++;
+            if(unit.MaxHealth>unit.CurrentHealth)
+            unit.CurrentHealth++;
         }    }
 
     // Start is called before the first frame update
       private void Start()
     {
-        base.Start();
-
+ 
         efectRadius = rtsEntity.EffectRadious;   
         recoverVelocity = rtsEntity.RecoverySpeed;        
     }

@@ -1,7 +1,11 @@
+using _Project.Scripts;
+using Mirror;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class Unit : RTSBase
 {
@@ -10,25 +14,161 @@ public class Unit : RTSBase
     public NavMeshAgent navAgent;
     public float expirationVelocity;
     public int[] prices;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private int resourceCost = 10;
+    [SerializeField] private UnitMovement unitMovement;
+    [SerializeField] private UnityEvent onSelected;
+    [SerializeField] private UnityEvent onDeselected;
+    [SerializeField] private Targeter targeter;
+    [SerializeField] public static event Action<Unit> ServerOnUnitSpawned;
+    [SerializeField] public static event Action<Unit> ServerOnUnitDespawned;
+    [SerializeField] public static event Action<Unit> AuthorityOnUnitSpawned;
+    [SerializeField] public static event Action<Unit> AuthorityOnUnitDespawned;
+    [SerializeField] private NavMeshAgent navMeshAgent;
+    [SerializeField] private float chaseRange = 10f;
+     
+    public int GetResourceCost()
     {
-        navAgent = GetComponent<NavMeshAgent>();
+        return resourceCost;
+    }
+
+    public UnitMovement GetUnitMovement()
+    {
+        return unitMovement;
+    }
+    public Targeter GetTargeter()
+    {
+        return targeter;
+    }
+
+    #region Server
+
+    public override void OnStartServer()
+    {
+        base.OnStartServer();
+        GameOverHandler.ServerOnGameOver += ServerHandleGameOver;
+
+        ServerOnUnitSpawned?.Invoke(this);
+        ServerOnDie += ServerHandleDie;
 
     }
 
-    // Update is called once per frame
-    public void Update()
+    public override void OnStopServer()
     {
+        base.OnStopServer();
+        GameOverHandler.ServerOnGameOver -= ServerHandleGameOver;
 
-        if (currentTarget != null)
+        ServerOnUnitDespawned?.Invoke(this);
+        ServerOnDie -= ServerHandleDie;
+
+    }
+    [Server]
+    private void ServerHandleDie()
+    {
+        NetworkServer.Destroy(gameObject);
+    }
+    #endregion
+    #region Client
+
+    public override void OnStartAuthority()
+    {
+        base.OnStartAuthority();
+        AuthorityOnUnitSpawned?.Invoke(this);
+    }
+
+    public override void OnStopClient()
+    {
+        base.OnStopAuthority();
+
+        if (!hasAuthority)
         {
-            navAgent.destination = currentTarget.position;
-
-            var distance = (transform.position - currentTarget.position).magnitude;
-
+            return;
         }
+        AuthorityOnUnitDespawned?.Invoke(this);
     }
+
+    [Client]
+    public void Select()
+    {
+        if (!hasAuthority)
+        {
+            return;
+        }
+        onSelected?.Invoke();
+    }
+
+    [Client]
+    public void Deselect()
+    {
+        if (!hasAuthority)
+        {
+            return;
+        }
+        onDeselected?.Invoke();
+
+    }
+
+    [ServerCallback]
+    private void Update()
+    {
+        Targetable target = targeter.GetTarget();
+
+        if (target != null)
+        {
+            if ((target.transform.position - transform.position).sqrMagnitude > chaseRange * chaseRange)
+            {
+                navMeshAgent.SetDestination(target.transform.position);
+            }
+            else if (navMeshAgent.hasPath)
+            {
+                navMeshAgent.ResetPath();
+            }
+
+            return;
+        }
+
+        if (!navMeshAgent.hasPath)
+        {
+            return;
+        }
+
+        if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
+        {
+            return;
+        }
+
+        navMeshAgent.ResetPath();
+    }
+
+    [Command]
+    public void CmdMove(Vector3 position)
+    {
+        ServerMove(position);
+    }
+    [Server]
+    private void ServerHandleGameOver()
+    {
+        navMeshAgent.ResetPath();
+
+
+    }
+    [Server]
+    public void ServerMove(Vector3 position)
+    {
+        targeter.ClearTarget();
+        if (!NavMesh.SamplePosition(position, out NavMeshHit hit, 1f, NavMesh.AllAreas))
+        {
+            return;
+        }
+
+        navMeshAgent.SetDestination(hit.position);
+        Debug.Log("Moving");
+    }
+    #endregion
+
+
+     
+
+    
 
     void MoveUnit(Vector3 dest)
     {

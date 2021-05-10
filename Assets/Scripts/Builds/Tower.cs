@@ -38,7 +38,6 @@ public class Tower : Building, FireBuilding
     // Start is called before the first frame update
     void Start()
     {
-        base.Start();
 
         atackRange = rtsEntity.AttackRange;
         atackTimer = rtsEntity.AttackTimer;

@@ -16,8 +16,8 @@ public class ProductionBuilding : Building
 
         productionUnits = rtsEntity.ProductionUnits;
         craftTime = rtsEntity.AttackTimer;
-        curretProduction = productionUnits[0];
-        //unitsQueue
+        unitsQueue = rtsEntity.UnitsQueue;
+        curretProduction = unitsQueue.Dequeue();
 
         InvokeRepeating("InstantiateUnit", craftTime, craftTime);
     }
@@ -58,7 +58,9 @@ public class ProductionBuilding : Building
 
     public static Vector2 RandomInsideDonut(Vector2 donutRadius)
     {
-        var p = Random.Range(donutRadius.x, donutRadius.y);
+        var p = Random.
+            
+            s.y);
         var a = Random.Range(0, 360);
 
         return new Vector2(Mathf.Sin(a * Mathf.Deg2Rad), Mathf.Cos(a * Mathf.Deg2Rad)) * p;

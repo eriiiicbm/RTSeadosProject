@@ -40,7 +40,8 @@ public class Villager : Unit
             return;
         if (Vector3.Distance(transform.position, building.transform.position) > range)
         {
-            base.currentTarget.position = building.transform.position;
+            base.MoveUnit(building.transform.position);
+            currentState = UnitStates.Building;
             return;
         }
         if (building.buildTime <= 0)

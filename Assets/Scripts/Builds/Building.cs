@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,12 +8,14 @@ public class Building : RTSBase
     float craftRadius;
     public MyEvent onCrafted;
     public MyEvent onCraftCompleted;
-
     GameObject craftCompletedGO;
     GameObject craftUncompletedGO;
     Renderer buildRenderer;
     public int buildTime;
-
+    [SerializeField] private GameObject buildingPreview;
+    [SerializeField] private Sprite icon;
+    [SerializeField] private int price=100;
+    [SerializeField] private int id=-1;
     bool _canCraft = false;
     public bool canCraft
     {
@@ -34,20 +37,75 @@ public class Building : RTSBase
             return Sphere.Length;
         }
     }
-    void Start()
-    {
+    
+   
+     [SerializeField] public  static  event Action<Building> ServerOnBuildingSpawned;
+     [SerializeField] public  static  event Action<Building> ServerOnBuildingDespawned;
+     [SerializeField] public  static  event Action<Building> AuthorityOnBuildingSpawned;
+     [SerializeField] public  static  event Action<Building> AuthorityOnBuildingDespawned;
+    
+     public GameObject getBuildingPreview()
+     {
+      return buildingPreview;
+     }public Sprite GetIcon()
+     {
+      return icon;
+     }
+     public int GetId()
+     {
+      return id;
+     } public int GetPrice()
+     {
+      return price;
+     }
+    
+     #region Server
+    
+     public override void OnStartServer()
+     {
+         base.OnStartServer();
+    ServerOnBuildingSpawned?.Invoke(this);   
+    craftRadius = rtsEntity.CraftRadious;
+  //comentado porque si no peta
+    //  craftCompletedGO = rtsEntity.Prefab.transform.Find("FinalEstructure").gameObject;
+   // craftUncompletedGO = rtsEntity.Prefab.transform.Find("plataform").gameObject;
+   // buildRenderer = craftCompletedGO.GetComponent<MeshRenderer>();
+    buildTime = rtsEntity.BuildTime;
 
-        craftRadius = rtsEntity.CraftRadious;
-        craftCompletedGO = rtsEntity.Prefab.transform.Find("FinalEstructure").gameObject;
-        craftUncompletedGO = rtsEntity.Prefab.transform.Find("plataform").gameObject;
-        buildRenderer = craftCompletedGO.GetComponent<MeshRenderer>();
-        buildTime = rtsEntity.BuildTime;
+    if (buildTime <= 0)
+        return;
+   // craftUncompletedGO.SetActive(false);
+    //craftCompletedGO.SetActive(true);
+     }
+    
+     public override void OnStopServer()
+     {
+         base.OnStopServer();
 
-        if (buildTime <= 0)
-            return;
-        craftUncompletedGO.SetActive(false);
-        craftCompletedGO.SetActive(true);
-    }
+      ServerOnBuildingDespawned?.Invoke(this); }
+    
+     #endregion
+    
+     #region Client
+    
+     public override void OnStartAuthority()
+     {
+         base.OnStartAuthority();
+      AuthorityOnBuildingSpawned?.Invoke(this);
+     }
+    
+     public override void OnStopClient()
+     {
+         base.OnStopClient();
+      if (  !hasAuthority)
+      {return;
+      }
+      AuthorityOnBuildingDespawned?.Invoke(this);
+     }
+    
+    
+     #endregion
+ 
 
     void SetBuild()
     {

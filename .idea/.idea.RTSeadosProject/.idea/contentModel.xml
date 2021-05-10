@@ -515,12 +515,19 @@
             </e>
           </e>
           <e p="MultiplayerV2" t="Include">
+            <e p="BuildingButtonv2.cs" t="Include" />
+            <e p="GameOverHandlerv2.cs" t="Include" />
+            <e p="HealthDisplayv2.cs" t="Include" />
+            <e p="Minimapv2.cs" t="Include" />
             <e p="Networking" t="Include">
               <e p="RTSNetworkManagerv2.cs" t="Include" />
               <e p="RTSPlayerv2.cs" t="Include" />
               <e p="TeamColorSetterv2.cs" t="Include" />
             </e>
+            <e p="ResourcesDisplayv2.cs" t="Include" />
             <e p="UnitBasev2.cs" t="Include" />
+            <e p="UnitSelectionHandlerv2.cs" t="Include" />
+            <e p="UnitSpawnerv2.cs" t="Include" />
           </e>
           <e p="Proyectil.cs" t="Include" />
           <e p="RTSBase.cs" t="Include" />

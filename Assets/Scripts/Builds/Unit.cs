@@ -45,7 +45,7 @@ public class Unit : RTSBase
     public override void OnStartServer()
     {
         base.OnStartServer();
-        GameOverHandler.ServerOnGameOver += ServerHandleGameOver;
+        GameOverHandlerv2.ServerOnGameOver += ServerHandleGameOver;
 
         ServerOnUnitSpawned?.Invoke(this);
         ServerOnDie += ServerHandleDie;
@@ -55,7 +55,7 @@ public class Unit : RTSBase
     public override void OnStopServer()
     {
         base.OnStopServer();
-        GameOverHandler.ServerOnGameOver -= ServerHandleGameOver;
+        GameOverHandlerv2.ServerOnGameOver -= ServerHandleGameOver;
 
         ServerOnUnitDespawned?.Invoke(this);
         ServerOnDie -= ServerHandleDie;

@@ -13,6 +13,7 @@ public class RTSPlayerv2 : NetworkBehaviour
     [SerializeField] private List<Unit> myUnits = new List<Unit>();
     [SerializeField] private List<Building> myBuildings = new List<Building>();
     private Color teamColor = new Color();
+
     [SyncVar(hook = nameof(ClientHandleResourcesUpdated))]
     private int resources = 500;
 
@@ -70,6 +71,7 @@ public class RTSPlayerv2 : NetworkBehaviour
     {
         teamColor = newTeamColor;
     }
+
     [Server]
     public void SetResources(int newResources)
     {
@@ -80,8 +82,8 @@ public class RTSPlayerv2 : NetworkBehaviour
     {
         Unit.ServerOnUnitSpawned += ServerHandleUnitSpawned;
         Unit.ServerOnUnitDespawned += ServerHandleUnitDespawned;
-      //todo j Building.ServerOnBuildingSpawned += ServerHandleBuildingSpawned;
-     //todo j   Building.ServerOnBuildingDespawned += ServerHandleBuildingDespawned;
+        Building.ServerOnBuildingSpawned += ServerHandleBuildingSpawned;
+        Building.ServerOnBuildingDespawned += ServerHandleBuildingDespawned;
     }
 
 
@@ -89,8 +91,8 @@ public class RTSPlayerv2 : NetworkBehaviour
     {
         Unit.ServerOnUnitSpawned -= ServerHandleUnitSpawned;
         Unit.ServerOnUnitDespawned -= ServerHandleUnitDespawned;
-        //todo j  Building.ServerOnBuildingSpawned -= ServerHandleBuildingSpawned;
-        //todo j  Building.ServerOnBuildingDespawned -= ServerHandleBuildingDespawned;
+        Building.ServerOnBuildingSpawned -= ServerHandleBuildingSpawned;
+        Building.ServerOnBuildingDespawned -= ServerHandleBuildingDespawned;
     }
 
     [Command]
@@ -99,7 +101,7 @@ public class RTSPlayerv2 : NetworkBehaviour
         Building buildingToPlace = null;
         foreach (var building in buildings)
         {
-            //todo j   if (building.GetId() == buildingId)
+            if (building.GetId() == buildingId)
             {
                 buildingToPlace = building;
                 break;
@@ -111,7 +113,7 @@ public class RTSPlayerv2 : NetworkBehaviour
             return;
         }
 
-        //todo j     if (resources < buildingToPlace.GetPrice())
+        if (resources < buildingToPlace.GetPrice())
         {
             return;
         }
@@ -124,7 +126,7 @@ public class RTSPlayerv2 : NetworkBehaviour
             return;
         }
 
-        //todo j    SetResources(resources - buildingToPlace.GetPrice());
+        SetResources(resources - buildingToPlace.GetPrice());
         GameObject buildingInstance =
             Instantiate(buildingToPlace.gameObject, point, buildingToPlace.transform.rotation);
         NetworkServer.Spawn(buildingInstance, connectionToClient);
@@ -184,8 +186,8 @@ public class RTSPlayerv2 : NetworkBehaviour
         Unit.AuthorityOnUnitSpawned += AuthorityHandleUnitSpawned;
         Unit.AuthorityOnUnitDespawned += AuthorityHandleUnitDespawned;
 
-        //todo j     Building.AuthorityOnBuildingSpawned += AuthorityHandleBuildingSpawned;
-        //todo j      Building.AuthorityOnBuildingDespawned += AuthorityHandleBuildingDespawned;
+        Building.AuthorityOnBuildingSpawned += AuthorityHandleBuildingSpawned;
+        Building.AuthorityOnBuildingDespawned += AuthorityHandleBuildingDespawned;
     }
 
     public override void OnStopClient()
@@ -197,8 +199,8 @@ public class RTSPlayerv2 : NetworkBehaviour
 
         Unit.AuthorityOnUnitSpawned -= AuthorityHandleUnitSpawned;
         Unit.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespawned;
-        //todo j     Building.AuthorityOnBuildingSpawned -= AuthorityHandleBuildingSpawned;
-        //todo j    Building.AuthorityOnBuildingDespawned -= AuthorityHandleBuildingDespawned;
+        Building.AuthorityOnBuildingSpawned -= AuthorityHandleBuildingSpawned;
+        Building.AuthorityOnBuildingDespawned -= AuthorityHandleBuildingDespawned;
     }
 
     private void ClientHandleResourcesUpdated(int oldResources, int newResources)

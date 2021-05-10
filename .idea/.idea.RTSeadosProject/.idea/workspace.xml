@@ -4,8 +4,22 @@
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitBasev2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitBasev2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Unitv2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Unitv2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builds/ProductionBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builds/ProductionBuilding.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builds/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builds/Unit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Villager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Villager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,21 +39,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/UnitSelectionHandlerv2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Multiplayer/Minimap.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/MyNetworkManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MyNetworkPlayer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/FPOverwrite.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Units/PlayerMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Networking/NetworkManagerTest.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Targetable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Units/UnitFiring.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Units/UnitProjectile.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Combat/HealthDisplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/GameOverDisplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Networking/RTSNetworkManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/GameOverHandler.cs" />
@@ -60,19 +66,37 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Networking/RTSNetworkManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Networking/TeamColorSetter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Minimap.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/BuildingN.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/UnitSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/BuildingButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Networking/RTSPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitN.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitCommandGiver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitSelectionHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/MainMenuBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/ProductionBuilding.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Villager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/BuildingButton1.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Minimap.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Minimapv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Resources/ResourcesDisplay.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/ResourcesDisplayv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/BuildingButtonv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/UnitSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/UnitSelectionHandlerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/HealthDisplay.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/GameOverHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/GameOverHandler1.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/GameOverHandlerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Unit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/UnitSpawnerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />
@@ -127,7 +151,7 @@
       <workItem from="1620041410872" duration="7875000" />
       <workItem from="1620295180237" duration="10491000" />
       <workItem from="1620383364278" duration="13319000" />
-      <workItem from="1620465042074" duration="34516000" />
+      <workItem from="1620465042074" duration="42362000" />
     </task>
     <servers />
   </component>

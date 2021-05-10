@@ -15,7 +15,7 @@ public class RTSEntity : ScriptableObject
     [SerializeField] private float expirationVelocity;
     [SerializeField] private float damageMoral;
     [SerializeField] private List<int> prices;
-    //TODO borrar
+     //TODO borrar
     [SerializeField] private string description;
     [SerializeField] private Sprite preview;
     [SerializeField] private GameObject prefab;
@@ -43,6 +43,7 @@ public class RTSEntity : ScriptableObject
     [SerializeField] private int buildTime;
     [SerializeField] private bool canCraft;
     [SerializeField] private GameObject[] productionUnits;
+    [SerializeField] private Queue<GameObject>[] unitsQueue;
     [Header("Description  stuff")]
     [SerializeField] private TextStrings descriptionText;
     [SerializeField] private int descriptionPosition;

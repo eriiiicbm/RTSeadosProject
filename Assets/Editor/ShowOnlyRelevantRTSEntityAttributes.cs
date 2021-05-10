@@ -76,6 +76,7 @@ public class ShowIfAttributeDrawer
         excludedProperties.Add("buildRenderer");
         excludedProperties.Add("currentProduction");
         excludedProperties.Add("damageMoral");
+        excludedProperties.Add("unitsQueue");
 
         switch ((EntityType)rTSEntity.entityType)
         {
@@ -120,6 +121,8 @@ public class ShowIfAttributeDrawer
                     excludedProperties.Add("attackRange");
                     excludedProperties.Add("attackTimer");
                 excludedProperties.Add("canCraft");
+                excludedProperties.Remove("unitsQueue");
+
 
 
 

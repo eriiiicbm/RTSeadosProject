@@ -52,7 +52,7 @@ MonoBehaviour:
   serverTickRate: 30
   serverBatching: 1
   serverBatchInterval: 0
-  offlineScene: Assets/Scenes/TestScenes/Scene_Menu.unity
+  offlineScene: Assets/Scenes/TestScenes/Scene_MenuMultiplayer.unity
   onlineScene: Assets/Scenes/TestScenes/TestRTS1.unity
   transport: {fileID: 9221100780923022495}
   networkAddress: localhost

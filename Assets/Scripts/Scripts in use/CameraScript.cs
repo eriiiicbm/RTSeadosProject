@@ -11,6 +11,7 @@ public class CameraScript : MonoBehaviour
     public float zoomSpeed = 6f;
     public Vector2 zoomLimits;
 
+    public GameObject cameraFocus;
     Camera myCam;
     private void Start()
     {
@@ -22,6 +23,7 @@ public class CameraScript : MonoBehaviour
         // Zoom code 
         var zoom = Input.GetAxis("Mouse ScrollWheel");
         myCam.orthographicSize -= zoom * zoomSpeed;
+
         myCam.orthographicSize = Mathf.Clamp(myCam.orthographicSize,
             zoomLimits.x, zoomLimits.y);
 

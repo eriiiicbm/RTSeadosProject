@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class RTSPlayerv2 : NetworkBehaviour
 {
-    [SerializeField] private Transform cameraTransform;
+ /*   [SerializeField] private Transform cameraTransform;
     [SerializeField] private BuildingN[] buildings = new BuildingN[0];
     [SerializeField] private LayerMask buildingBlockLayer = new LayerMask();
     [SerializeField] private float buildingRangeLimit = 5;
@@ -16,8 +16,7 @@ public class RTSPlayerv2 : NetworkBehaviour
     private Color teamColor = new Color();
 
 
-    [SyncVar(hook = nameof(ClientHandleResourcesUpdated))]
-    public event Action ServerOnDie;
+     public event Action ServerOnDie;
     public event Action<int, int> ClientOnHealthUpdated;
 
     private int resources = 500;
@@ -232,5 +231,6 @@ public class RTSPlayerv2 : NetworkBehaviour
         myUnits.Remove(unit);
     }
 
-    #endregion
+    #endregion*/
+
 }

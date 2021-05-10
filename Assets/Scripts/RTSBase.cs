@@ -11,7 +11,8 @@ public class RTSBase : NetworkBehaviour
     int maxHealth;
     string description;
     Sprite preview;
-     [SyncVar(hook = nameof(HandleHealthUpdated))]
+   // [SyncVar(hook = nameof(HandleHealthUpdated))]
+    public float health;
     public event Action ServerOnDie;
     public event Action<int, int> ClientOnHealthUpdated;
     private int currentHealth;

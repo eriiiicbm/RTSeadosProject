@@ -11,8 +11,9 @@ Neutral,Aggressive, Pasive
 }
 public enum ResourcesType {
     SubstanceX,Wood,Ingredients,Stone
-}
+} 
 public enum EntityType {
-    Building,Unit,MeleeUnit,Fridge,Villager,HealingUnit,DistanceUnit,Tower
+    Building,UnitCombat,MeleeUnit,Fridge,Villager,Priest,DistanceUnit,Tower,PortableFridge,Hero
+
 }
 

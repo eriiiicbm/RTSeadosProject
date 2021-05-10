@@ -9,9 +9,11 @@ public class RTSEntity : ScriptableObject
     //todo idioma descricpion 
     [Header("Generic stuff")]
     string entityName;
+    [SerializeField] private bool isMoralUp;
     [SerializeField] public EntityType entityType;
     [SerializeField] private int maxHealth;
     [SerializeField] private float expirationVelocity;
+    [SerializeField] private float damageMoral;
     [SerializeField] private List<int> prices;
     //TODO borrar
     [SerializeField] private string description;
@@ -44,6 +46,8 @@ public class RTSEntity : ScriptableObject
     [Header("Description  stuff")]
     [SerializeField] private TextStrings descriptionText;
     [SerializeField] private int descriptionPosition;
+    [Header("Villager stuff")]
+    [SerializeField] private GameObject currentProduction;
     [Header("Name  stuff")]
     [SerializeField] private TextStrings nameText;
     [SerializeField] private int namePosition;

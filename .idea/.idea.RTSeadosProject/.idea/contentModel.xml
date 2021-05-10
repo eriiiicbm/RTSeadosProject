@@ -500,11 +500,11 @@
             <e p="Networking" t="Include">
               <e p="RTSNetworkManager.cs" t="Include" />
               <e p="RTSPlayer.cs" t="Include" />
-              <e p="TeamColorSetter.cs" t="Include" />
             </e>
             <e p="Resources" t="Include">
               <e p="ResourcesDisplay.cs" t="Include" />
             </e>
+            <e p="TeamColorSetter.cs" t="Include" />
             <e p="Units" t="Include">
               <e p="UnitCommandGiver.cs" t="Include" />
               <e p="UnitFiring.cs" t="Include" />
@@ -513,6 +513,14 @@
               <e p="UnitProjectile.cs" t="Include" />
               <e p="UnitSelectionHandler.cs" t="Include" />
             </e>
+          </e>
+          <e p="MultiplayerV2" t="Include">
+            <e p="Networking" t="Include">
+              <e p="RTSNetworkManagerv2.cs" t="Include" />
+              <e p="RTSPlayerv2.cs" t="Include" />
+              <e p="TeamColorSetterv2.cs" t="Include" />
+            </e>
+            <e p="UnitBasev2.cs" t="Include" />
           </e>
           <e p="Proyectil.cs" t="Include" />
           <e p="RTSBase.cs" t="Include" />

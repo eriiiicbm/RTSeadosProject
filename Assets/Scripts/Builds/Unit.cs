@@ -66,6 +66,62 @@ public class Unit : RTSBase
     {
         NetworkServer.Destroy(gameObject);
     }
+    [ServerCallback]
+    private void Update()
+    {
+        Targetable target = targeter.GetTarget();
+
+        if (target != null)
+        {
+            if ((target.transform.position-transform.position).sqrMagnitude> chaseRange*chaseRange)
+            {
+                navMeshAgent.SetDestination(target.transform.position);
+            }
+            else if (navMeshAgent.hasPath)
+            {
+                navMeshAgent.ResetPath();
+            }
+
+            return;
+        }
+
+        if (!navMeshAgent.hasPath)
+        {
+            return;
+        }
+
+        if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
+        {
+            return;
+        }
+
+        navMeshAgent.ResetPath();
+    }
+
+    [Command]
+    public void CmdMove(Vector3 position)
+    {
+        ServerMove(position);
+    }
+    [Server]
+    private void ServerHandleGameOver()
+    {
+        navMeshAgent.ResetPath();
+
+          
+    }
+    [Server]
+    public void ServerMove(Vector3 position)
+    {
+        targeter.ClearTarget();
+        if (!NavMesh.SamplePosition(position, out NavMeshHit hit, 1f, NavMesh.AllAreas))
+        {
+            return;
+        }
+
+        navMeshAgent.SetDestination(hit.position);
+        Debug.Log("Moving");
+    }
     #endregion
     #region Client
 
@@ -107,11 +163,10 @@ public class Unit : RTSBase
 
     }
 
-    void MoveUnit(Vector3 dest)
-    {
-        currentTarget = null;
-        navAgent.destination = dest;
-    }
+   
+
+    #endregion
+    
     void SetNewTarget(Transform target)
     {
         currentTarget = target;
@@ -128,7 +183,7 @@ public class Unit : RTSBase
         {
             switch (currentState)
             {
-                case EntityType.
+        //        case EntityType.
             }
 
             yield return 0;

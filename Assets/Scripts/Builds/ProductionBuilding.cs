@@ -58,12 +58,12 @@ public class ProductionBuilding : Building
 
     public static Vector2 RandomInsideDonut(Vector2 donutRadius)
     {
-        var p = Random.
+        //     var p = Random.
             
-            s.y);
+  //          s.y);
         var a = Random.Range(0, 360);
 
-        return new Vector2(Mathf.Sin(a * Mathf.Deg2Rad), Mathf.Cos(a * Mathf.Deg2Rad)) * p;
-
+    //    return new Vector2(Mathf.Sin(a * Mathf.Deg2Rad), Mathf.Cos(a * Mathf.Deg2Rad)) * p;
+    return Vector2.down;
     }
 }

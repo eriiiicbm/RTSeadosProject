@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: New RTSEntity
   m_EditorClassIdentifier: 
   isMoralUp: 0
-  entityType: 9
+  entityType: 0
   maxHealth: 0
   expirationVelocity: 0
   damageMoral: 0

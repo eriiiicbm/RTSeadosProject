@@ -1,15 +1,20 @@
+using Mirror;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RTSBase : MonoBehaviour
+public class RTSBase : NetworkBehaviour
 {
    protected UnitStates currentState;
     string entityName;
     int maxHealth;
     string description;
     Sprite preview;
-    float health;
+     [SyncVar(hook = nameof(HandleHealthUpdated))]
+    public event Action ServerOnDie;
+    public event Action<int, int> ClientOnHealthUpdated;
+    private int currentHealth;
     GameObject prefab;
     public RTSEntity rtsEntity;
 
@@ -20,7 +25,13 @@ public class RTSBase : MonoBehaviour
     public void Start()
     {
         currentState = UnitStates.Idle;
+        maxHealth = rtsEntity.MaxHealth;
+        entityName = rtsEntity.name;
+        preview = rtsEntity.Preview;
+        prefab = rtsEntity.Prefab;
+       
         health = maxHealth;
+        GoToNextState();
     }
 
     public virtual void SetColor() { }

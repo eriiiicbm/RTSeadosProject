@@ -122,6 +122,8 @@ public class ShowIfAttributeDrawer
                     excludedProperties.Add("attackTimer");
                 excludedProperties.Add("canCraft");
                 excludedProperties.Remove("unitsQueue");
+                excludedProperties.Remove("proyectile");
+                excludedProperties.Remove("currentTarget");
 
 
 

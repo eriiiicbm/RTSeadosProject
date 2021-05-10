@@ -13,7 +13,7 @@ public class TeamColorSetter : NetworkBehaviour
 
  public override void OnStartServer()
  {
-  RTSPlayer player = connectionToClient.identity.GetComponent<RTSPlayer>();
+  RTSPlayerv2 player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
   teamColor = player.GetTeamColor();
  }
 

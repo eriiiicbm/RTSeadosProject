@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6280296467146063287}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.63, z: 0}
+  m_LocalPosition: {x: 0, y: 2.14, z: 0}
   m_LocalScale: {x: 6.655963, y: 2.8569813, z: 9.145142}
   m_Children: []
   m_Father: {fileID: 8107315917932222487}
@@ -116,7 +116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8107315917932222487
 Transform:
   m_ObjectHideFlags: 0
@@ -153,16 +153,10 @@ MonoBehaviour:
   preview: {fileID: 0}
   prefab: {fileID: 0}
   rtsEntity: {fileID: 11400000, guid: 7e94bce888b34a44b949c950d3964309, type: 2}
-  onCrafted:
-    m_PersistentCalls:
-      m_Calls: []
-  onCraftCompleted:
-    m_PersistentCalls:
-      m_Calls: []
   buildTime: 0
   buildingPreview: {fileID: 0}
   icon: {fileID: 0}
-  price: 100
+  price: 
   id: -1
   instanceRadius: {x: 0, y: 0}
 --- !u!208 &-6666800497835596082
@@ -205,7 +199,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -270,8 +264,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7089160540832803695}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.73, z: 0}
-  m_LocalScale: {x: 6.655963, y: 0.678533, z: 9.145142}
+  m_LocalPosition: {x: 0, y: 0.86, z: 0}
+  m_LocalScale: {x: 6.655963, y: 0.28837654, z: 9.145142}
   m_Children: []
   m_Father: {fileID: 8107315917932222487}
   m_RootOrder: 0

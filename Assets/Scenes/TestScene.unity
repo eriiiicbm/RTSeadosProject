@@ -281,11 +281,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -2190466256865862728, guid: 439da96688641d64db856588504a6eb9,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 606073891416072410, guid: 439da96688641d64db856588504a6eb9,
         type: 3}
       propertyPath: m_RootOrder
@@ -344,7 +339,7 @@ PrefabInstance:
     - target: {fileID: 6046784619768616984, guid: 439da96688641d64db856588504a6eb9,
         type: 3}
       propertyPath: sceneId
-      value: 1937191440
+      value: 456368084
       objectReference: {fileID: 0}
     - target: {fileID: 6860597628955110165, guid: 439da96688641d64db856588504a6eb9,
         type: 3}
@@ -1334,15 +1329,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -4869814790846945302, guid: ae0b58e4514b7c64096a99cc6e3a6992,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1364895951796288527, guid: ae0b58e4514b7c64096a99cc6e3a6992,
         type: 3}
       propertyPath: sceneId
-      value: 1979354347
+      value: 4133047813
       objectReference: {fileID: 0}
     - target: {fileID: 1401749852686590897, guid: ae0b58e4514b7c64096a99cc6e3a6992,
         type: 3}
@@ -1698,25 +1688,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -5512880886791292580, guid: 1def9626f1305574ba187a81c11f8807,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6508101106659302983, guid: 1def9626f1305574ba187a81c11f8807,
         type: 3}
       propertyPath: m_Name
       value: FoodFactory
       objectReference: {fileID: 0}
-    - target: {fileID: 7089160540832803695, guid: 1def9626f1305574ba187a81c11f8807,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7701452074724262831, guid: 1def9626f1305574ba187a81c11f8807,
         type: 3}
       propertyPath: sceneId
       value: 2219949663
+      objectReference: {fileID: 0}
+    - target: {fileID: 7701452074724262831, guid: 1def9626f1305574ba187a81c11f8807,
+        type: 3}
+      propertyPath: m_AssetId
+      value: 1def9626f1305574ba187a81c11f8807
       objectReference: {fileID: 0}
     - target: {fileID: 8107315917932222487, guid: 1def9626f1305574ba187a81c11f8807,
         type: 3}
@@ -1842,15 +1827,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3665851795659153058, guid: 06aab8909717c664eb21bd5a36a0d573,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4670438877592385709, guid: 06aab8909717c664eb21bd5a36a0d573,
         type: 3}
       propertyPath: sceneId
-      value: 1740429703
+      value: 4056687504
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06aab8909717c664eb21bd5a36a0d573, type: 3}
@@ -1870,7 +1850,7 @@ PrefabInstance:
     - target: {fileID: -6339227908851626311, guid: 95d74b3e50c21bf4bb579498ce47d32c,
         type: 3}
       propertyPath: sceneId
-      value: 2309923249
+      value: 3059338054
       objectReference: {fileID: 0}
     - target: {fileID: 1308741075413695542, guid: 95d74b3e50c21bf4bb579498ce47d32c,
         type: 3}
@@ -1931,11 +1911,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018726195243185155, guid: 95d74b3e50c21bf4bb579498ce47d32c,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d74b3e50c21bf4bb579498ce47d32c, type: 3}
@@ -2239,7 +2214,7 @@ PrefabInstance:
     - target: {fileID: 7058467304536522169, guid: e5950ebad5966e446bce262cf41e122c,
         type: 3}
       propertyPath: sceneId
-      value: 284140274
+      value: 2152336151
       objectReference: {fileID: 0}
     - target: {fileID: 8045332559654146344, guid: e5950ebad5966e446bce262cf41e122c,
         type: 3}

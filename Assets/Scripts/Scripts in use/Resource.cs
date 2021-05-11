@@ -5,6 +5,7 @@ using UnityEngine;
 public class Resource : MonoBehaviour
 {
     public int maxResources = 500;
+    public ResourcesType currentResourceType;
     int ResourcesQuantity;
     public int resourcesQuantity
     {

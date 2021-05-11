@@ -24,9 +24,9 @@ public class ProductionBuilding : Building
 
     public void intProduction()
     {
-        if (unitsQueue.Count <= 0)
+        /*if (unitsQueue.Count <= 0)
             return;
-        /*if (unitsQueue.Dequeue().GetComponent<Unit>().prices[1]> recurces[1] || unitsQueue.Dequeue().GetComponent<Unit>().prices[2] > recurces[2])
+        if (unitsQueue.Dequeue().GetComponent<Unit>().prices[1]> recurces[1] || unitsQueue.Dequeue().GetComponent<Unit>().prices[2] > recurces[2])
             return;
         if (CivilizationMetrics.singleton[entity.faction].troops >= CivilizationMetrics.singleton[entity.faction].maxTroops)
             return;

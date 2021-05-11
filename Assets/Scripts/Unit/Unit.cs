@@ -181,14 +181,29 @@ public class Unit : RTSBase
     {
         while (rtsEntity.Moral > 5)
         {
-            switch (currentState)
-            {
-        //        case EntityType.
-            }
+            rtsEntity.Velocity = rtsEntity.Velocity * 0.5f;
+
+            if (rtsEntity.Damage != null) rtsEntity.Damage = rtsEntity.Damage * 0.75f;
+
+            if (rtsEntity.DamageMoral != null) rtsEntity.DamageMoral = rtsEntity.DamageMoral * 0.5f;
+
+            if (rtsEntity.EffectRadious != null) rtsEntity.EffectRadious = rtsEntity.EffectRadious * 0.75f;
+            if (rtsEntity.RecoverySpeed != null) rtsEntity.RecoverySpeed = rtsEntity.RecoverySpeed * 0.75f;
 
             yield return 0;
         }
         yield return new WaitForEndOfFrame();
     }
 
+    public IEnumerator MoveState()
+    {
+        while (currentState == UnitStates.Follow)
+        {
+
+            yield return 0;
+
+        }
+        yield return new WaitForEndOfFrame();
+
+    }
 }

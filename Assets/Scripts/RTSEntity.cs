@@ -90,4 +90,5 @@ public class RTSEntity : ScriptableObject
     public MyEvent OnCraftCompleted { get => onCraftCompleted; set => onCraftCompleted = value; }
     public Queue<GameObject> UnitsQueue { get => unitsQueue; set => unitsQueue = value; }
     public int Moral { get => moral; set => moral = value; }
+    public float DamageMoral { get => damageMoral; set => damageMoral = value; }
 }

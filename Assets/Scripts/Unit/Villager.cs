@@ -13,12 +13,11 @@ public class Villager : Unit
     void Start()
     {
  
-        buildRate = 10;
-        pickRate = 10;
+        buildRate = rtsEntity.AttackTimer;
         range = rtsEntity.AttackRange;
 
         InvokeRepeating("build", buildRate, buildRate);
-        //InvokeRepeating("recolect", pickRate, pickRate);
+        InvokeRepeating("recolect", pickRate, pickRate);
     }
 
     // Update is called once per frame
@@ -27,9 +26,20 @@ public class Villager : Unit
 
        
     }
-    public void recolect() {
-       
 
+    [HideInInspector]
+    public Resource resource;
+    public void recolect() {
+        if (resource == null)
+            return;
+        if (Vector3.Distance(transform.position, resource.transform.position) > range)
+        {
+            base.CmdMove(resource.transform.position);
+            return;
+        }
+        transform.LookAt(resource.transform.position);
+        resource.resourcesQuantity -= 10;
+        //CivilizationMetrics.singleton[movileEntity.entity.faction].resources += 10;
     }
 
     [HideInInspector]
@@ -65,6 +75,17 @@ public class Villager : Unit
     }
     public IEnumerator PickResourcesState() {
         while (currentState == UnitStates.PickResources)
+        {
+
+            yield return 0;
+
+        }
+        yield return new WaitForEndOfFrame();
+
+    }
+    public IEnumerator BuildState()
+    {
+        while (currentState == UnitStates.Building)
         {
 
             yield return 0;

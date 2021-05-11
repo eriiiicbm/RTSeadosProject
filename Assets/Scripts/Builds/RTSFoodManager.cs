@@ -6,7 +6,7 @@ public class RTSFoodManager : MonoBehaviour
 {
     public static void UnitTakeDamage(UnitCombat attackingController, UnitCombat attackedController)
     {
-        var damage = attackedController.rtsEntity.Damage;
+        var damage = attackedController.damage;
 
         attackedController.TakeDamage(attackedController, damage);
     }

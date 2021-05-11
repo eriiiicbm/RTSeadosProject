@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class UnitCombat : Unit
 {
-    float damage;
+    public float damage;
     float attackDistance;
     float attackSpeed;
+    float attackTimer;
     // Start is called before the first frame update
     void Start()
     {
         attackSpeed = rtsEntity.AttackTimer;
-
+        attackDistance = rtsEntity.AttackRange;
+        damage = rtsEntity.Damage;
+        attackTimer = rtsEntity.AttackTimer;
     }
 
     // Update is called once per frame
@@ -26,7 +29,7 @@ public class UnitCombat : Unit
 
             var distance = (transform.position - currentTarget.position).magnitude;
 
-            if (distance <= rtsEntity.AttackRange)
+            if (distance <= attackDistance)
             {
                 Attack();
             }
@@ -34,7 +37,7 @@ public class UnitCombat : Unit
     }
     void Attack()
     {
-        if (attackSpeed >= rtsEntity.AttackTimer)
+        if (attackSpeed >= attackTimer)
         {
             RTSFoodManager.UnitTakeDamage(this, currentTarget.GetComponent<UnitCombat>());
             attackSpeed = 0;

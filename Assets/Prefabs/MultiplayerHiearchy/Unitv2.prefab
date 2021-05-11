@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 8779938643762913406}
   - component: {fileID: 1079602043218900889}
   - component: {fileID: 4543389441489971279}
+  - component: {fileID: 2428869027809912019}
   m_Layer: 8
   m_Name: Unitv2
   m_TagString: Untagged
@@ -303,7 +304,7 @@ MonoBehaviour:
   rtsEntity: {fileID: 11400000, guid: e305453b6e5e4484ca02320dc953151e, type: 2}
   currentTarget: {fileID: 0}
   expirationVelocity: 0
-  prices: 
+  prices: 02000000020000000200000002000000
   resourceCost: 10
   onSelected:
     m_PersistentCalls:
@@ -339,6 +340,25 @@ MonoBehaviour:
   navMeshAgent: {fileID: 5845392694001653418}
   chaseRange: 10
   damage: 20
+--- !u!114 &2428869027809912019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2945097168342303928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285172905838fd04d8b13ed8e21c9a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  colorRenderers:
+  - {fileID: 5280774239738187183}
+  - {fileID: 3087068816634849799}
+  - {fileID: 4315295950989093155}
+  - {fileID: 1699655808569319097}
 --- !u!1 &3034618548353542273
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,6 +889,12 @@ PrefabInstance:
 --- !u!4 &566696192644998614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7a7dc42acb5b1b4408f0753f465b29a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 24759155903857213}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1699655808569319097 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 7a7dc42acb5b1b4408f0753f465b29a1,
     type: 3}
   m_PrefabInstance: {fileID: 24759155903857213}
   m_PrefabAsset: {fileID: 0}

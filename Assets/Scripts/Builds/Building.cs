@@ -14,7 +14,7 @@ public class Building : RTSBase
     public int buildTime;
     [SerializeField] private GameObject buildingPreview;
     [SerializeField] private Sprite icon;
-    [SerializeField] private List<int> price= new List<int>();
+    [SerializeField] private List<int> price = new List<int>() { 1,1,1,1};
     [SerializeField] private int id=-1;
     bool _canCraft = false;
     public bool canCraft
@@ -132,4 +132,5 @@ public class Building : RTSBase
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, craftRadius);
     }
+
 }

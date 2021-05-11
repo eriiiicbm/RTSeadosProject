@@ -50,7 +50,7 @@ public class BuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             return;
         }
 
-        if (player.CheckIfUserHasResources(building.GetPrice()))
+        if (!player.CheckIfUserHasResources(building.GetPrice()))
         {
             return;
         }

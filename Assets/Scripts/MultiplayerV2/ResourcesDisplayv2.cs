@@ -24,7 +24,8 @@ public class ResourcesDisplayv2 : MonoBehaviour
             player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
             if (player!=null)
             {
-                ClientHandleResourcesUpdated(player.GetResources());
+                //todo update the cliuenthandleresources to update all the ui
+                 ClientHandleResourcesUpdated(player.GetAllResources());
                 player.ClientOnResourcesUpdated += ClientHandleResourcesUpdated;
             }
         }
@@ -35,8 +36,8 @@ public class ResourcesDisplayv2 : MonoBehaviour
         player.ClientOnResourcesUpdated -= ClientHandleResourcesUpdated;
     }
 
-    private void ClientHandleResourcesUpdated(int resources)
+    private void ClientHandleResourcesUpdated(List<int> resources)
     {
-        resourceText.text = $"Resources: {resources}";
+        resourceText.text = $"Resources Wood: {resources[3]}";
     }
 }

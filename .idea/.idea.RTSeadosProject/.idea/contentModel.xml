@@ -506,9 +506,11 @@
             <e p="Units" t="Include">
               <e p="UnitCommandGiver.cs" t="Include" />
               <e p="UnitFiring.cs" t="Include" />
+              <e p="UnitFiringv2.cs" t="Include" />
               <e p="UnitMovement.cs" t="Include" />
               <e p="UnitN.cs" t="Include" />
               <e p="UnitProjectile.cs" t="Include" />
+              <e p="UnitProjectilev2.cs" t="Include" />
               <e p="UnitSelectionHandler.cs" t="Include" />
             </e>
           </e>

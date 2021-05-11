@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf636b8228f3d346be8a0d449de608e, type: 3}
+  m_Name: NuggetWarriior
+  m_EditorClassIdentifier: 
+  isMoralUp: 0
+  entityType: 2
+  maxHealth: 25
+  expirationVelocity: 2.5
+  damageMoral: 0
+  prices: 050000000a0000002300000000000000
+  description: 
+  preview: {fileID: 0}
+  prefab: {fileID: 5651458107991866868, guid: 2cfe77dacd0414843af2b33b0c4092b5, type: 3}
+  moral: 30
+  velocity: 3
+  currentTarget: {fileID: 0}
+  effectRadious: 0
+  recoverySpeed: 0
+  damage: 10
+  attackRange: 1
+  attackTimer: 8
+  proyectile: {fileID: 0}
+  craftRadious: 0
+  onCrafted:
+    m_PersistentCalls:
+      m_Calls: []
+  onCraftCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  craftCompletedGO: {fileID: 0}
+  craftUnCompletedGO: {fileID: 0}
+  buildRenderer: {fileID: 0}
+  buildTime: 5
+  canCraft: 0
+  productionUnits: []
+  descriptionText: {fileID: 0}
+  descriptionPosition: 0
+  currentProduction: {fileID: 0}
+  nameText: {fileID: 0}
+  namePosition: 0
+  unitState: 0
+  emotionalState: 0
+  typeOfResourceThatCanHave: 0

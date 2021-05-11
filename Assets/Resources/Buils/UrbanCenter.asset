@@ -17,7 +17,7 @@ MonoBehaviour:
   maxHealth: 3000
   expirationVelocity: 0
   damageMoral: 0
-  prices: e8030000
+  prices: 0000000000000000e803000000000000
   description: 
   preview: {fileID: 0}
   prefab: {fileID: 6860597628955110165, guid: 439da96688641d64db856588504a6eb9, type: 3}
@@ -31,6 +31,12 @@ MonoBehaviour:
   attackTimer: 0
   proyectile: {fileID: 0}
   craftRadious: 5
+  onCrafted:
+    m_PersistentCalls:
+      m_Calls: []
+  onCraftCompleted:
+    m_PersistentCalls:
+      m_Calls: []
   craftCompletedGO: {fileID: 0}
   craftUnCompletedGO: {fileID: 0}
   buildRenderer: {fileID: 0}

@@ -7,13 +7,14 @@ public class FridgeHouse : Building, Fridege
     float efectRadius;
     float recoverVelocity;
     bool inTrigger;
-    List<RTSBase> units = new List<RTSBase>();
+    List<Unit> units = new List<Unit>();
     public void recoverUnits()
     {
         foreach (var unit in units) {
             if(unit.MaxHealth>unit.CurrentHealth)
             unit.CurrentHealth++;
-        }    }
+        }
+    }
 
     // Start is called before the first frame update
       private void Start()
@@ -30,7 +31,7 @@ public class FridgeHouse : Building, Fridege
     }
     private void OnTriggerEnter(Collider other)
     {
-        RTSBase rtsaBase = other.GetComponent<RTSBase>();
+        Unit rtsaBase = other.GetComponent<Unit>();
         units.Add(rtsaBase);
     }
     private void OnTriggerStay(Collider other)
@@ -40,7 +41,7 @@ public class FridgeHouse : Building, Fridege
     }
     private void OnTriggerExit(Collider other)
     {
-        RTSBase rtsaBase = other.GetComponent<RTSBase>();
+        Unit rtsaBase = other.GetComponent<Unit>();
         units.Remove(rtsaBase);
 
     }

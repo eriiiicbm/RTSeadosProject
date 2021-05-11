@@ -13,6 +13,7 @@ public class Unit : RTSBase
     public Transform currentTarget;
      public float expirationVelocity;
     public int[] prices;
+    float time;
     [SerializeField] private int resourceCost = 10;
      [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
@@ -54,6 +55,8 @@ public class Unit : RTSBase
 
         ServerOnUnitDespawned?.Invoke(this);
         ServerOnDie -= ServerHandleDie;
+
+        time = rtsEntity.BuildTime;
 
     }
     [Server]

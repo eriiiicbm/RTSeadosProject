@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf636b8228f3d346be8a0d449de608e, type: 3}
   m_Name: ChipsAndArcher
   m_EditorClassIdentifier: 
-  entityType: 7
+  isMoralUp: 0
+  entityType: 6
   maxHealth: 0
   expirationVelocity: 0
+  damageMoral: 0
   prices: 
-  health: 0
   description: 
   preview: {fileID: 0}
   prefab: {fileID: 0}
@@ -30,14 +31,22 @@ MonoBehaviour:
   attackTimer: 0
   proyectile: {fileID: 0}
   craftRadious: 0
+  onCrafted:
+    m_PersistentCalls:
+      m_Calls: []
+  onCraftCompleted:
+    m_PersistentCalls:
+      m_Calls: []
   craftCompletedGO: {fileID: 0}
   craftUnCompletedGO: {fileID: 0}
   buildRenderer: {fileID: 0}
   buildTime: 0
   canCraft: 0
-  productionUnits: {fileID: 0}
+  productionUnits:
+  - {fileID: 0}
   descriptionText: {fileID: 0}
   descriptionPosition: 0
+  currentProduction: {fileID: 0}
   nameText: {fileID: 0}
   namePosition: 0
   unitState: 0

@@ -13,6 +13,9 @@ public class CameraScript : MonoBehaviour
 
     public GameObject cameraFocus;
     Camera myCam;
+
+    int min = -16, max = 39;
+    float margin = 0; 
     private void Start()
     {
         myCam = GetComponent<Camera>();
@@ -26,7 +29,29 @@ public class CameraScript : MonoBehaviour
 
         myCam.orthographicSize = Mathf.Clamp(myCam.orthographicSize,
             zoomLimits.x, zoomLimits.y);
+            
 
+        if(zoom < 0 && margin != min && margin != min) { 
+            cameraFocus.gameObject.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
+
+            if (margin > -16)
+            {
+                margin--;
+            }
+        }
+
+        if(zoom > 0 && margin != max && margin != max)
+        {
+            cameraFocus.gameObject.transform.localScale -= new Vector3(0.25f, 0.25f, 0.25f);
+
+            if(margin < 39) {
+                margin++;
+            }
+
+
+        }
+
+        Debug.Log(margin);
 
         // Camera movement per border
         Vector3 Speed = new Vector3();

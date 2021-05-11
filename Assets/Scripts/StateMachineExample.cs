@@ -47,7 +47,7 @@ public class StateMachineExample : MonoBehaviour
 
         while (this.currentState == UnitStates.Idle)
         {
-            this.currentState = GetDistance() < followRange ? UnitStates.Follow : UnitStates.Idle;
+            //   this.currentState = GetDistance() < followRange ? UnitStates.Follow : UnitStates.Idle;
 
             yield return new WaitForSeconds(1);
         }

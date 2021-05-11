@@ -515,6 +515,7 @@
           <e p="MultiplayerV2" t="Include">
             <e p="Buildings" t="Include">
               <e p="BuildingButtonv2.cs" t="Include" />
+              <e p="ResourceGeneratorv2.cs" t="Include" />
               <e p="UnitBasev2.cs" t="Include" />
               <e p="UnitSpawnerv2.cs" t="Include" />
             </e>

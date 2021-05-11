@@ -112,7 +112,7 @@ MonoBehaviour:
   buildings:
   - {fileID: 8625160522924693162, guid: a18ce2f05311c5f49b276f0be5c11546, type: 3}
   - {fileID: 7158041827773910725, guid: 05444f3a8c42111448905051658d48ad, type: 3}
-  - {fileID: 1882303561625002681, guid: 6c9f4711e10fadc4a96a9ff60a0f6ab5, type: 3}
+  - {fileID: 8917135491928365060, guid: 6c9f4711e10fadc4a96a9ff60a0f6ab5, type: 3}
   buildingBlockLayer:
     serializedVersion: 2
     m_Bits: 1

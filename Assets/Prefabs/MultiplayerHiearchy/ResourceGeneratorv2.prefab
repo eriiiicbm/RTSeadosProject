@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87580fdfa7185494c84f1af6d35b00fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
+  health: {fileID: 8917135491928365060}
   healtBarParent: {fileID: 6640312099135495522}
   healthBarImage: {fileID: 4312490320759500076}
 --- !u!114 &8212091913458923630
@@ -77,21 +77,15 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   entityName: 
-  maxHealth: 0
+  maxHealth: 21
   description: 
   preview: {fileID: 21300000, guid: eb5f6e2757c821940b69cf1456f7865a, type: 3}
-  prefab: {fileID: 0}
+  prefab: {fileID: 1080679924113744, guid: a4b57f17790d9634ea5fd0fe80b214fd, type: 3}
   rtsEntity: {fileID: 11400000, guid: 2946ca4bbb2132b46ba4f6357b3ec5d8, type: 2}
-  onCrafted:
-    m_PersistentCalls:
-      m_Calls: []
-  onCraftCompleted:
-    m_PersistentCalls:
-      m_Calls: []
   buildTime: 0
   buildingPreview: {fileID: 7082407524689027495}
   icon: {fileID: 21300000, guid: eb5f6e2757c821940b69cf1456f7865a, type: 3}
-  price: 01000000010000000100000064000000
+  price: 0100000001000000010000000100000001000000
   id: 2
   resourcesPerInterval: 10
   interval: 2

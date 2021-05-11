@@ -12,7 +12,8 @@ public class FridgeHouse : Building, Fridege
     {
         foreach (var unit in units) {
             if(unit.MaxHealth>unit.CurrentHealth)
-            unit.CurrentHealth++;
+            unit.CurrentHealth += recoverVelocity;
+            StartCoroutine(Wait(0.5f));
         }
     }
 
@@ -27,7 +28,6 @@ public class FridgeHouse : Building, Fridege
     // Update is called once per frame
     void Update()
     {
-      
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -44,6 +44,11 @@ public class FridgeHouse : Building, Fridege
         Unit rtsaBase = other.GetComponent<Unit>();
         units.Remove(rtsaBase);
 
+    }
+
+    IEnumerator Wait(float duration)
+    {
+        yield return new WaitForSeconds(duration);  
     }
 
 }

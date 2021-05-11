@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf636b8228f3d346be8a0d449de608e, type: 3}
   m_Name: WareHouse
   m_EditorClassIdentifier: 
+  isMoralUp: 0
   entityType: 0
   maxHealth: 500
   expirationVelocity: 0
-  prices: 19000000
+  damageMoral: 0
+  prices: 00000000000000001900000000000000
   description: 
   preview: {fileID: 0}
   prefab: {fileID: 8045332559654146344, guid: e5950ebad5966e446bce262cf41e122c, type: 3}
@@ -29,6 +31,12 @@ MonoBehaviour:
   attackTimer: 0
   proyectile: {fileID: 0}
   craftRadious: 2.5
+  onCrafted:
+    m_PersistentCalls:
+      m_Calls: []
+  onCraftCompleted:
+    m_PersistentCalls:
+      m_Calls: []
   craftCompletedGO: {fileID: 0}
   craftUnCompletedGO: {fileID: 0}
   buildRenderer: {fileID: 0}
@@ -37,6 +45,7 @@ MonoBehaviour:
   productionUnits: []
   descriptionText: {fileID: 0}
   descriptionPosition: 0
+  currentProduction: {fileID: 0}
   nameText: {fileID: 0}
   namePosition: 0
   unitState: 0

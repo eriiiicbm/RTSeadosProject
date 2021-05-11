@@ -7,7 +7,6 @@ public class Villager : Unit
     ResourcesType currentResourceType;
     int resourceQuantity=0;
     float buildRate;
-    float pickRate;
     float range;
 
     void Start()
@@ -17,14 +16,7 @@ public class Villager : Unit
         range = rtsEntity.AttackRange;
 
         InvokeRepeating("build", buildRate, buildRate);
-        InvokeRepeating("recolect", pickRate, pickRate);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-       
+        InvokeRepeating("recolect", buildRate, buildRate);
     }
 
     [HideInInspector]
@@ -39,7 +31,22 @@ public class Villager : Unit
         }
         transform.LookAt(resource.transform.position);
         resource.resourcesQuantity -= 10;
-        //CivilizationMetrics.singleton[movileEntity.entity.faction].resources += 10;
+
+        switch (resource.currentResourceType)
+        {
+            case ResourcesType.Ingredients:
+                //CivilizationMetrics.singleton[movileEntity.entity.faction].resources += 10;
+                return;
+            case ResourcesType.Stone:
+                //CivilizationMetrics.singleton[movileEntity.entity.faction].resources += 10;
+                return;
+            case ResourcesType.SubstanceX:
+                //CivilizationMetrics.singleton[movileEntity.entity.faction].resources += 10;
+                return;
+            case ResourcesType.Wood:
+                //CivilizationMetrics.singleton[movileEntity.entity.faction].resources += 10;
+                return;
+        }
     }
 
     [HideInInspector]

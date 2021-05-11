@@ -35,6 +35,7 @@ public class UnitCombat : Unit
             }
         }
     }
+    [ContextMenu("Force Attack")]
     void Attack()
     {
         if (attackSpeed >= attackTimer)

@@ -36,6 +36,7 @@ public class ResourceGenerator : NetworkBehaviour
         if (timer<=0)
         {
             player.SetResources(player.GetResources()+resourcesPerInterval);
+            
             timer += interval;
         }
     }

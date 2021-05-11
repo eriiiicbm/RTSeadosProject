@@ -139,6 +139,8 @@ public class ShowIfAttributeDrawer
                 excludedProperties.Add("buildTime");
                 excludedProperties.Add("productionUnits");
                 excludedProperties.Remove("damageMoral");
+                excludedProperties.Add("onCrafted");
+                excludedProperties.Add("onCraftCompleted");
 
                 break;
             case EntityType.Villager:
@@ -148,10 +150,10 @@ public class ShowIfAttributeDrawer
                //todo cambiar nombre a attackrange en este caso
                 excludedProperties.Add("productionUnits");
                 excludedProperties.Add("proyectile");
-                excludedProperties.Add("buildTime");
                 excludedProperties.Add("canCraft");
                 excludedProperties.Add("craftRadious");
-
+                excludedProperties.Add("onCrafted");
+                excludedProperties.Add("onCraftCompleted");
 
                 //todo cambiar nombre a  Attacktimer
                 break;
@@ -161,8 +163,8 @@ public class ShowIfAttributeDrawer
                 excludedProperties.Add("craftRadious");
                 excludedProperties.Add("productionUnits");
                 excludedProperties.Add("recoverySpeed");
-                excludedProperties.Add("buildTime");
-
+                excludedProperties.Add("onCrafted");
+                excludedProperties.Add("onCraftCompleted");
 
                 break;
             case EntityType.Tower:
@@ -184,12 +186,13 @@ public class ShowIfAttributeDrawer
                 excludedProperties.Add("attackTimer");
                 excludedProperties.Add("craftRadious");
                 excludedProperties.Add("productionUnits");
-                excludedProperties.Add("buildTime");
                 excludedProperties.Add("attackRange");
                 excludedProperties.Add("attackTimer");
                 excludedProperties.Add("canCraft");
                 excludedProperties.Add("effectRadious");
                 excludedProperties.Add("recoverySpeed");
+                excludedProperties.Add("onCrafted");
+                excludedProperties.Add("onCraftCompleted");
 
                 break;
             case EntityType.Hero:
@@ -198,6 +201,8 @@ public class ShowIfAttributeDrawer
                 excludedProperties.Add("proyectile");
                 excludedProperties.Add("productionUnits");
                 excludedProperties.Add("craftRadious");
+                excludedProperties.Add("onCrafted");
+                excludedProperties.Add("onCraftCompleted");
 
                 break;
         }

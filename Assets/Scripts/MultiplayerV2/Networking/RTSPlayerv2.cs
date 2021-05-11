@@ -15,18 +15,35 @@ public class RTSPlayerv2 : NetworkBehaviour
     private Color teamColor = new Color();
 
     [SyncVar(hook = nameof(ClientHandleResourcesUpdated))]
-    private int resources = 500;
+    [SerializeField] private List<int> resources = new List<int>();
 
-    public event Action<int> ClientOnResourcesUpdated;
+    public event Action<List<int>> ClientOnResourcesUpdated;
 
     public Transform GetCameraTransform()
     {
         return cameraTransform;
     }
-
-    public int GetResources()
-    {
+    public List<int> GetAllResources() {
         return resources;
+    }
+    public int GetResources(ResourcesType resourceType)
+    {
+        switch (resourceType) {
+            case ResourcesType.Ingredients:
+                return resources[0];
+           
+            case ResourcesType.Stone:
+                return resources[1];
+                 
+            case ResourcesType.SubstanceX:
+                return resources[2];
+                 
+            case ResourcesType.Wood:
+                return resources[3];
+                 
+        }
+        return -1;
+          
     }
 
     public Color GetTeamColor()
@@ -73,9 +90,24 @@ public class RTSPlayerv2 : NetworkBehaviour
     }
 
     [Server]
-    public void SetResources(int newResources)
+    public void SetResources(int newResources,ResourcesType resourceType)
     {
-        resources = newResources;
+        switch (resourceType)
+        {
+            case ResourcesType.Ingredients:
+               resources[0] = newResources;
+                break;
+            case ResourcesType.Stone:
+                 resources[1] = newResources;
+                break;
+            case ResourcesType.SubstanceX:
+                  resources[2] = newResources;
+                break;
+            case ResourcesType.Wood:
+                resources[3] = newResources;
+                break;
+        }
+      
     }
 
     public override void OnStartServer()
@@ -112,8 +144,8 @@ public class RTSPlayerv2 : NetworkBehaviour
         {
             return;
         }
-
-        if (resources < buildingToPlace.GetPrice())
+        
+        if (!CheckIfUserHasResources(buildingToPlace.GetPrice()))
         {
             return;
         }
@@ -126,11 +158,31 @@ public class RTSPlayerv2 : NetworkBehaviour
             return;
         }
 
-        SetResources(resources - buildingToPlace.GetPrice());
+        RestPriceToResources(buildingToPlace.GetPrice());
         GameObject buildingInstance =
             Instantiate(buildingToPlace.gameObject, point, buildingToPlace.transform.rotation);
         NetworkServer.Spawn(buildingInstance, connectionToClient);
     }
+
+    public bool CheckIfUserHasResources(List<int> prices)
+    {
+        for (int i=0; i < resources.Count; i++) {
+            if (resources[i] - prices[i] < 0)
+                return false;
+
+        }
+        return true;
+
+    }
+
+    public void RestPriceToResources(List<int> prices) {
+        for (int i = 0; i < resources.Count; i++)
+        {
+            resources[i] -= prices[i];
+            
+        }
+    }
+ 
 
     private void ServerHandleUnitSpawned(Unit unit)
     {
@@ -203,7 +255,7 @@ public class RTSPlayerv2 : NetworkBehaviour
         Building.AuthorityOnBuildingDespawned -= AuthorityHandleBuildingDespawned;
     }
 
-    private void ClientHandleResourcesUpdated(int oldResources, int newResources)
+    private void ClientHandleResourcesUpdated(List<int> oldResources, List<int> newResources)
     {
         ClientOnResourcesUpdated?.Invoke(newResources);
     }

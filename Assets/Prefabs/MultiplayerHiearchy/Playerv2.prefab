@@ -119,6 +119,7 @@ MonoBehaviour:
   buildingRangeLimit: 23.64
   myUnits: []
   myBuildings: []
+  resources: 79000000bc040000993c0300ffffff7f
 --- !u!114 &8091097305547058836
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class Building : RTSBase
     public int buildTime;
     [SerializeField] private GameObject buildingPreview;
     [SerializeField] private Sprite icon;
-    [SerializeField] private int price=100;
+    [SerializeField] private List<int> price= new List<int>();
     [SerializeField] private int id=-1;
     bool _canCraft = false;
     public bool canCraft
@@ -54,7 +54,7 @@ public class Building : RTSBase
      public int GetId()
      {
       return id;
-     } public int GetPrice()
+     } public List<int> GetPrice()
      {
       return price;
      }

@@ -56,13 +56,13 @@ public class UnitSpawnerv2 : Building, IPointerClickHandler
 
         RTSPlayerv2 player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
         Debug.Log("UnitPrefab is " + unitPrefab.name);
-        if (player.GetResources() < unitPrefab.GetResourceCost())
+        if (!player.CheckIfUserHasResources(unitPrefab.prices))
         {
             return;
         }
 
         queuedUnits++;
-        player.SetResources(player.GetResources() - unitPrefab.GetResourceCost());
+        player.RestPriceToResources(unitPrefab.prices);
     }
 
     [Server]

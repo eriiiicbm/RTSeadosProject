@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 4485816749142836887}
   - component: {fileID: 6639525920863891196}
   - component: {fileID: 2041292555691063921}
+  - component: {fileID: 1646261561672915330}
   m_Layer: 0
   m_Name: Nugget Vilager
   m_TagString: Untagged
@@ -141,7 +142,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f69062ed66c4844b615412c9de028a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  entityName: 
+  maxHealth: 0
+  description: 
+  preview: {fileID: 0}
+  prefab: {fileID: 0}
   rtsEntity: {fileID: 0}
+  currentTarget: {fileID: 0}
+  expirationVelocity: 0
+  prices: 
+  resourceCost: 10
+  onSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselected:
+    m_PersistentCalls:
+      m_Calls: []
+  targeter: {fileID: 0}
+  navMeshAgent: {fileID: 0}
+  chaseRange: 10
+  resource: {fileID: 0}
+  building: {fileID: 0}
 --- !u!65 &6639525920863891196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -177,3 +200,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1646261561672915330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4134074402336445218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285172905838fd04d8b13ed8e21c9a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  colorRenderers:
+  - {fileID: 0}

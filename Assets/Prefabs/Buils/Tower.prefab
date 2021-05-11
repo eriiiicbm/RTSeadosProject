@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -2031599160257460867}
   - component: {fileID: 2096892178927748667}
   - component: {fileID: 9018726195243185155}
+  - component: {fileID: -8435968480312469516}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -48,8 +49,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dc0d4fe1387f9e46904815ff9b0645b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  entityName: 
+  maxHealth: 0
+  description: 
+  preview: {fileID: 0}
+  prefab: {fileID: 0}
   rtsEntity: {fileID: 11400000, guid: 7d0364758de086f45b2a3adf634d6482, type: 2}
-  craftRadius: 5
   onCrafted:
     m_PersistentCalls:
       m_Calls:
@@ -92,6 +99,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  buildTime: 0
+  buildingPreview: {fileID: 0}
+  icon: {fileID: 0}
+  price: 100
+  id: -1
 --- !u!65 &-2031599160257460867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -137,6 +149,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8435968480312469516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3722049469362960980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285172905838fd04d8b13ed8e21c9a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  colorRenderers: []
 --- !u!1 &4444141615569874375
 GameObject:
   m_ObjectHideFlags: 0

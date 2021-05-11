@@ -166,10 +166,16 @@ public class RTSPlayerv2 : NetworkBehaviour
 
     public bool CheckIfUserHasResources(List<int> prices)
     {
+         if (prices.Count < resources.Count) {
+            Debug.Log("Price " + prices.Count + "  Resources num " + resources.Count);
+            return false;
+        }
         for (int i=0; i < resources.Count; i++) {
-            if (resources[i] - prices[i] < 0)
+            if (resources[i] - prices[i] < 0) {
+                Debug.Log("You are poor");
                 return false;
 
+            }
         }
         return true;
 

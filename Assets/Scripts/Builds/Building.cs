@@ -6,15 +6,15 @@ using UnityEngine;
 public class Building : RTSBase
 {
     float craftRadius;
-    public MyEvent onCrafted;
-    public MyEvent onCraftCompleted;
+    MyEvent onCrafted;
+    MyEvent onCraftCompleted;
     GameObject craftCompletedGO;
     GameObject craftUncompletedGO;
     Renderer buildRenderer;
     public int buildTime;
     [SerializeField] private GameObject buildingPreview;
     [SerializeField] private Sprite icon;
-    [SerializeField] private List<int> price= new List<int>();
+    [SerializeField] private List<int> price = new List<int>() { 1,1,1,1};
     [SerializeField] private int id=-1;
     bool _canCraft = false;
     public bool canCraft
@@ -67,15 +67,16 @@ public class Building : RTSBase
     ServerOnBuildingSpawned?.Invoke(this);   
     craftRadius = rtsEntity.CraftRadious;
   //comentado porque si no peta
-    //  craftCompletedGO = rtsEntity.Prefab.transform.Find("FinalEstructure").gameObject;
-   // craftUncompletedGO = rtsEntity.Prefab.transform.Find("plataform").gameObject;
-   // buildRenderer = craftCompletedGO.GetComponent<MeshRenderer>();
+    craftCompletedGO = rtsEntity.Prefab.transform.Find("FinalEstructure").gameObject;
+    craftUncompletedGO = rtsEntity.Prefab.transform.Find("plataform").gameObject;
+        onCrafted = rtsEntity.OnCrafted;
+        onCraftCompleted = rtsEntity.OnCraftCompleted;
     buildTime = rtsEntity.BuildTime;
 
     if (buildTime <= 0)
         return;
-   // craftUncompletedGO.SetActive(false);
-    //craftCompletedGO.SetActive(true);
+        craftUncompletedGO.SetActive(false);
+        craftCompletedGO.SetActive(true);
      }
     
      public override void OnStopServer()
@@ -132,4 +133,5 @@ public class Building : RTSBase
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, craftRadius);
     }
+
 }

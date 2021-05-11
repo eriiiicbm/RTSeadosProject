@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 7891350009811154511}
   - component: {fileID: 1079602043218900889}
   m_Layer: 8
-  m_Name: Unitv2
+  m_Name: UnitNoAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
   rtsEntity: {fileID: 11400000, guid: e305453b6e5e4484ca02320dc953151e, type: 2}
   currentTarget: {fileID: 0}
   expirationVelocity: 0
-  prices: 
+  prices: 02000000020000000200000002000000
   resourceCost: 10
   onSelected:
     m_PersistentCalls:

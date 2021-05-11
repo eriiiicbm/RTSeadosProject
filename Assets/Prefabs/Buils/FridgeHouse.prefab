@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3665851795659153058}
   - component: {fileID: 8008017728863751034}
   - component: {fileID: -5558669516458021221}
+  - component: {fileID: -4043642027939555743}
   m_Layer: 0
   m_Name: FridgeHouse
   m_TagString: Untagged
@@ -93,50 +94,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2e27772696f5447a689cecf2b9628b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  entityName: 
+  maxHealth: 0
+  description: 
+  preview: {fileID: 0}
+  prefab: {fileID: 0}
   rtsEntity: {fileID: 11400000, guid: 3694f594a4ab35e4598a408f1edda5b5, type: 2}
-  craftRadius: 2
   onCrafted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -2863722982361048855}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 8008017728863751034}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   onCraftCompleted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -5558669516458021221}
-        m_TargetAssemblyTypeName: RTSBase, Assembly-CSharp
-        m_MethodName: SetColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  buildTime: 0
+  buildingPreview: {fileID: 0}
+  icon: {fileID: 0}
+  price: 100
+  id: -1
+--- !u!114 &-4043642027939555743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265292966799028624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285172905838fd04d8b13ed8e21c9a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  colorRenderers: []
 --- !u!1 &3224654532089377814
 GameObject:
   m_ObjectHideFlags: 0

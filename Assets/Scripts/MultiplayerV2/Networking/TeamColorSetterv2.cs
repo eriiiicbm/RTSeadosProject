@@ -15,6 +15,7 @@ public class TeamColorSetterv2 : NetworkBehaviour
  {
   RTSPlayerv2 player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
   teamColor = player.GetTeamColor();
+        //todo filter colors to avoid the 2 players having the same
  }
 
  #endregion

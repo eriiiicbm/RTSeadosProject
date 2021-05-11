@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d39a750f8e90ade458d0e63925f345cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: {fileID: 1882303561625002681, guid: 6c9f4711e10fadc4a96a9ff60a0f6ab5,
+  building: {fileID: 8917135491928365060, guid: 6c9f4711e10fadc4a96a9ff60a0f6ab5,
     type: 3}
   iconImage: {fileID: 1958322587}
   priceText: {fileID: 1958322586}

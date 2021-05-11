@@ -8,13 +8,17 @@ public class UnitController : MonoBehaviour {
     private NavMeshAgent navAgent;
     private Transform currentTarget;
     private float attackTimer;
+    private float unitHealth;
 
+    private Color defaultMaterial;
     public UnitStats unitStats;
 
     private void Start()
     {
         navAgent = GetComponent<NavMeshAgent>();
         attackTimer = unitStats.attackSpeed;
+        unitHealth = unitStats.health;
+        defaultMaterial = GetComponent<Renderer>().material.color;
     }
 
     private void Update()
@@ -61,18 +65,27 @@ public class UnitController : MonoBehaviour {
 
     public void TakeDamage(UnitController enemy, float damage)
     {
-        StartCoroutine(Flasher(GetComponent<Renderer>().material.color));
+        unitHealth = unitHealth - damage;
+        StartCoroutine(Flasher());
     }
 
-    IEnumerator Flasher(Color defaultColor)
+    IEnumerator Flasher()
     {
         var renderer = GetComponent<Renderer>();
-        for (int i = 0; i < 2; i++)
+        if (unitHealth != 0)
         {
-            renderer.material.color = Color.gray;
-            yield return new WaitForSeconds(.05f);
-            renderer.material.color = defaultColor;
-            yield return new WaitForSeconds(.05f);
+            for (int i = 0; i < 2; i++)
+            {
+                renderer.material.color = Color.gray;
+                yield return new WaitForSeconds(.05f);
+                renderer.material.color = defaultMaterial;
+                yield return new WaitForSeconds(.05f);
+
+            }
+        }
+        else
+        {
+            Destroy(this.transform.gameObject);
         }
     }
 }

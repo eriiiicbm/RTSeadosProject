@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13cca8ca58db5c439e7c15e51c6daa5, type: 3}
+  m_Name: ExampleText2
+  m_EditorClassIdentifier: 
+  stringsEn:
+  - The truth is not in the external. The truth is in the depth. Welcome to the depth.
+  - Help! A piece of moon has disappeared, we need to find it before the boss wakes
+    up.
+  - One day is enough to make us a little bigger or an hour a little smaller.
+  - I think I have seen a fish hide a piece of moon near here. But I don't know 
+    where exactly!
+  - Art does not reproduce the visible, it makes the invisible visible.
+  - '* shhhh * This is where our master rests. Now he  is sleeping. Be quiet. * shhhh
+    *'
+  - We like our home, because it is simple, primitive, the first look of a child.
+    We are the essence.
+  - THIS CAN'T BE HAPPENING!!! THE FULL MOON HAS GONE !!! AS THE BOSS FIND OUT, HE
+    WILL KILL ME
+  - It seems that a piece of moon is missing ...
+  stringsEs:
+  - "La verdad no est\xE1 en lo externo. La verdad se halla en la profundidad. Bienvenido
+    a la profundidad. "
+  - "\xA1Ayuda! Un trozo de luna ha desaparecido, necesitamos encontrarlo antes de
+    que el jefe se despierte."
+  - "Un d\xEDa es bastante para hacernos un poco m\xE1s grande o una hora, un poco
+    m\xE1s peque\xF1os."
+  - "Creo haber visto un pez esconder un pedazo de luna por aqu\xED cerca. \xA1Pero
+    no s\xE9 justo donde!"
+  - El arte no reproduce lo visible, hace visible lo invisible.
+  - "*shhhh* Por aqu\xED se va a d\xF3nde nuestro amo descansa. Ahora mismo est\xE1
+    durmiendo. No hagas ruido. *shhhh*"
+  - "Nos gusta nuestro hogar, porque es simple, primitivo, la primera mirada de un
+    ni\xF1o. Somos la esencia. "
+  - "\xA1\xA1\xA1NO PUEDE SER!!! \xA1\xA1\xA1LA LUNA LLENA HA DESAPARECIDO!!! COMO
+    SE ENTERE EL JEFE, ME MATAR\xC1"
+  - Parece que falta un trozo de luna...

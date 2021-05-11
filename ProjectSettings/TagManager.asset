@@ -8,6 +8,7 @@ TagManager:
   - EnemyUnit
   - Ground
   - Target
+  - wareHouse
   layers:
   - Default
   - TransparentFX
@@ -15,13 +16,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - Ground
-  - 
-  - 
-  - 
-  - 
+  - Terrain
+  - Projectile
+  - Unit
+  - Minimap
+  - Floor
+  - Fog of War
+  - Field of View
   - 
   - 
   - 

@@ -11,19 +11,17 @@ public class Unit : RTSBase
 {
 
     public Transform currentTarget;
-    public NavMeshAgent navAgent;
-    public float expirationVelocity;
+     public float expirationVelocity;
     public int[] prices;
     [SerializeField] private int resourceCost = 10;
-    [SerializeField] private UnitMovement unitMovement;
-    [SerializeField] private UnityEvent onSelected;
+     [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
     [SerializeField] private Targeter targeter;
     [SerializeField] public static event Action<Unit> ServerOnUnitSpawned;
     [SerializeField] public static event Action<Unit> ServerOnUnitDespawned;
     [SerializeField] public static event Action<Unit> AuthorityOnUnitSpawned;
     [SerializeField] public static event Action<Unit> AuthorityOnUnitDespawned;
-    [SerializeField] private NavMeshAgent navMeshAgent;
+    [SerializeField] protected NavMeshAgent navMeshAgent;
     [SerializeField] private float chaseRange = 10f;
      
     public int GetResourceCost()
@@ -31,10 +29,7 @@ public class Unit : RTSBase
         return resourceCost;
     }
 
-    public UnitMovement GetUnitMovement()
-    {
-        return unitMovement;
-    }
+   
     public Targeter GetTargeter()
     {
         return targeter;

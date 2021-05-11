@@ -445,8 +445,6 @@
             <e p="ProductionBuilding.cs" t="Include" />
             <e p="RTSFoodManager.cs" t="Include" />
             <e p="Tower.cs" t="Include" />
-            <e p="Unit.cs" t="Include" />
-            <e p="UnitCombat.cs" t="Include" />
             <e p="Wall.cs" t="Include" />
           </e>
           <e p="CortésUtilities" t="Include">
@@ -515,7 +513,11 @@
             </e>
           </e>
           <e p="MultiplayerV2" t="Include">
-            <e p="BuildingButtonv2.cs" t="Include" />
+            <e p="Buildings" t="Include">
+              <e p="BuildingButtonv2.cs" t="Include" />
+              <e p="UnitBasev2.cs" t="Include" />
+              <e p="UnitSpawnerv2.cs" t="Include" />
+            </e>
             <e p="GameOverHandlerv2.cs" t="Include" />
             <e p="HealthDisplayv2.cs" t="Include" />
             <e p="Minimapv2.cs" t="Include" />
@@ -525,9 +527,10 @@
               <e p="TeamColorSetterv2.cs" t="Include" />
             </e>
             <e p="ResourcesDisplayv2.cs" t="Include" />
-            <e p="UnitBasev2.cs" t="Include" />
-            <e p="UnitSelectionHandlerv2.cs" t="Include" />
-            <e p="UnitSpawnerv2.cs" t="Include" />
+            <e p="Unit" t="Include">
+              <e p="UnitCommandGiverv2.cs" t="Include" />
+              <e p="UnitSelectionHandlerv2.cs" t="Include" />
+            </e>
           </e>
           <e p="Proyectil.cs" t="Include" />
           <e p="RTSBase.cs" t="Include" />
@@ -552,9 +555,17 @@
             </e>
           </e>
           <e p="StateMachineExample.cs" t="Include" />
+          <e p="Unit" t="Include">
+            <e p="Barbaserker.cs" t="Include" />
+            <e p="CondeMcBurguer.cs" t="Include" />
+            <e p="PizzaPriest.cs" t="Include" />
+            <e p="PortableFridge.cs" t="Include" />
+            <e p="Unit.cs" t="Include" />
+            <e p="UnitCombat.cs" t="Include" />
+            <e p="Villager.cs" t="Include" />
+          </e>
           <e p="UnitStates.cs" t="Include" />
           <e p="UsefulEvents.cs" t="Include" />
-          <e p="Villager.cs" t="Include" />
         </e>
         <e p="ScriptTemplates" t="Include">
           <e p="50-Mirror__Network Manager-NewNetworkManager.cs.txt" t="Include" />

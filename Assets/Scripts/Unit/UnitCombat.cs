@@ -25,7 +25,7 @@ public class UnitCombat : Unit
         attackSpeed += Time.deltaTime;
         if (currentTarget != null)
         {
-            navAgent.destination = currentTarget.position;
+            navMeshAgent.destination = currentTarget.position;
 
             var distance = (transform.position - currentTarget.position).magnitude;
 

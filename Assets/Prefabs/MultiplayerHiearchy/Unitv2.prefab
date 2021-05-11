@@ -106,14 +106,13 @@ GameObject:
   - component: {fileID: 2945097168342303934}
   - component: {fileID: 2945097168342303929}
   - component: {fileID: 8916006779407928791}
-  - component: {fileID: 8602236678262387823}
   - component: {fileID: 5845392694001653418}
   - component: {fileID: 216917175679862320}
   - component: {fileID: 2956566950262087117}
   - component: {fileID: 5087048794542079138}
   - component: {fileID: 8779938643762913406}
-  - component: {fileID: 117947463019330689}
   - component: {fileID: 7891350009811154511}
+  - component: {fileID: 1079602043218900889}
   m_Layer: 8
   m_Name: Unitv2
   m_TagString: Untagged
@@ -181,23 +180,6 @@ MonoBehaviour:
   compressRotation: 0
   interpolateScale: 1
   syncScale: 1
---- !u!114 &8602236678262387823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2945097168342303928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88330caaed9f1444e8f9b0cc6c14ade3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  navMeshAgent: {fileID: 5845392694001653418}
-  chaseRange: 10
-  targeter: {fileID: 5087048794542079138}
 --- !u!195 &5845392694001653418
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -284,21 +266,6 @@ MonoBehaviour:
   fireRange: 11
   fireRate: 1
   rotationSpeed: 180
---- !u!114 &117947463019330689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2945097168342303928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2146038ba3b97a4989db8c532db5c43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 0}
-  healtBarParent: {fileID: 4546016625560529680}
-  healthBarImage: {fileID: 6406539510268762974}
 --- !u!114 &7891350009811154511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,11 +287,9 @@ MonoBehaviour:
   prefab: {fileID: 0}
   rtsEntity: {fileID: 11400000, guid: e305453b6e5e4484ca02320dc953151e, type: 2}
   currentTarget: {fileID: 0}
-  navAgent: {fileID: 5845392694001653418}
   expirationVelocity: 0
   prices: 
   resourceCost: 10
-  unitMovement: {fileID: 8602236678262387823}
   onSelected:
     m_PersistentCalls:
       m_Calls:
@@ -358,6 +323,21 @@ MonoBehaviour:
   targeter: {fileID: 5087048794542079138}
   navMeshAgent: {fileID: 5845392694001653418}
   chaseRange: 10
+--- !u!114 &1079602043218900889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2945097168342303928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87580fdfa7185494c84f1af6d35b00fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 7891350009811154511}
+  healtBarParent: {fileID: 4546016625560529680}
+  healthBarImage: {fileID: 6406539510268762974}
 --- !u!1 &3034618548353542273
 GameObject:
   m_ObjectHideFlags: 0

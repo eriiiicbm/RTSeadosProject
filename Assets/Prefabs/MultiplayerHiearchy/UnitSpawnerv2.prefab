@@ -93,6 +93,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b50ab8add1b4647adedd76ac252553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1026162450891260124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8706463502434392613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87580fdfa7185494c84f1af6d35b00fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 7158041827773910725}
+  healtBarParent: {fileID: 6640312099135495522}
+  healthBarImage: {fileID: 4312490320759500076}
 --- !u!114 &7158041827773910725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,28 +139,14 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
   price: 100
   id: 1
-  unitPrefab: {fileID: 0}
+  unitPrefab: {fileID: 7891350009811154511, guid: cf67cc1f3acf9ee43b9b257d85f3bc1e,
+    type: 3}
   unitSpawnPoint: {fileID: 5045854337602022993}
   remainingUnitsText: {fileID: 3247178070606983861}
   unitProgressImage: {fileID: 5860111383271228073}
   maxUnitQueue: 5
   spawnMoveRange: 7
   unitSpawnDuration: 5
---- !u!114 &1026162450891260124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8706463502434392613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87580fdfa7185494c84f1af6d35b00fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 7158041827773910725}
-  healtBarParent: {fileID: 6640312099135495522}
-  healthBarImage: {fileID: 4312490320759500076}
 --- !u!1 &4665700882264156470
 GameObject:
   m_ObjectHideFlags: 0

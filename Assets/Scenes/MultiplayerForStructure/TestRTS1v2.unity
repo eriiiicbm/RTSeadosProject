@@ -530,8 +530,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 893761511}
-  - component: {fileID: 893761512}
   - component: {fileID: 893761510}
+  - component: {fileID: 893761512}
   m_Layer: 0
   m_Name: UnitHandlers
   m_TagString: Untagged
@@ -579,10 +579,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 893761509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24606e2b2dff33641bf16f804db451da, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a5e0e012e861b846ac4aab1bb5c80c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitSelectionHandler: {fileID: 0}
+  unitSelectionHandler: {fileID: 893761510}
   layerMask:
     serializedVersion: 2
     m_Bits: 1281

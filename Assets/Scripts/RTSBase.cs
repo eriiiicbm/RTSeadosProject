@@ -56,7 +56,7 @@ public class RTSBase : NetworkBehaviour
         DealDamage(currentHealth);
     }
 
-    [ContextMenu("c")]
+    [ContextMenu("Deal damage")]
     [Server]
     public void DealDamage(float damageAmount)
     {

@@ -12,6 +12,7 @@ public class Unit : RTSBase
 
     public Transform currentTarget;
      public float expirationVelocity;
+    public float time;
     public List<int> prices;
     [SerializeField] private int resourceCost = 10;
      [SerializeField] private UnityEvent onSelected;

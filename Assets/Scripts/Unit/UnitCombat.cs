@@ -32,6 +32,8 @@ public class UnitCombat : Unit
             if (distance <= attackDistance)
             {
                 Attack();
+
+                //GetComponent<>
             }
         }
     }

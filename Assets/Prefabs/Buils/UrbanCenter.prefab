@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: -2190466256865862728}
   - component: {fileID: -2722353954014759017}
   - component: {fileID: 994766849628178934}
+  - component: {fileID: 6598825409667372986}
   m_Layer: 0
   m_Name: UrbanCenter
   m_TagString: wareHouse
@@ -188,35 +189,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e06f33c3d938c45ba4593d92db22a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  entityName: 
+  maxHealth: 0
+  description: 
+  preview: {fileID: 0}
+  prefab: {fileID: 0}
   rtsEntity: {fileID: 11400000, guid: 2946ca4bbb2132b46ba4f6357b3ec5d8, type: 2}
-  craftRadius: 5
   onCrafted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3759986606869291930}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: -2722353954014759017}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   onCraftCompleted:
     m_PersistentCalls:
       m_Calls:
@@ -232,6 +215,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buildTime: 0
+  buildingPreview: {fileID: 0}
+  icon: {fileID: 0}
+  price: 100
+  id: -1
+  instanceRadius: {x: 0, y: 0}
+--- !u!114 &6598825409667372986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6860597628955110165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285172905838fd04d8b13ed8e21c9a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  colorRenderers: []
 --- !u!1 &8055047113698623803
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,8 +16,11 @@ public class ProductionBuilding : Building
 
         productionUnits = rtsEntity.ProductionUnits;
         craftTime = rtsEntity.AttackTimer;
-        unitsQueue = rtsEntity.UnitsQueue;
-        curretProduction = unitsQueue.Dequeue();
+        if (rtsEntity.UnitsQueue != null)
+        {
+            unitsQueue = rtsEntity.UnitsQueue;
+            curretProduction = unitsQueue.Dequeue();
+        }
 
         InvokeRepeating("InstantiateUnit", craftTime, craftTime);
     }
@@ -39,16 +42,19 @@ public class ProductionBuilding : Building
 
     public void InstantiateUnit()
     {
-        /*if(curretProduction.GetComponent<Unit>().time > 0)
+        if (curretProduction == null) return;
+        if(curretProduction.GetComponent<Unit>().time > 0)
         {
             curretProduction.GetComponent<Unit>().time--;
             return;
-        }*/
+        }
 
         var pos = RandomInsideDonut(instanceRadius);
         Instantiate(curretProduction,
             new Vector3(pos.x + transform.position.x, 0, pos.y + transform.position.z),
             curretProduction.transform.rotation);
+
+        curretProduction = null;
     }
 
     public void AddUnitToQueue(int unit)
@@ -58,12 +64,9 @@ public class ProductionBuilding : Building
 
     public static Vector2 RandomInsideDonut(Vector2 donutRadius)
     {
-        //     var p = Random.
-            
-  //          s.y);
+        var p = Random.Range(donutRadius.x, donutRadius.y);
         var a = Random.Range(0, 360);
 
-    //    return new Vector2(Mathf.Sin(a * Mathf.Deg2Rad), Mathf.Cos(a * Mathf.Deg2Rad)) * p;
-    return Vector2.down;
+        return new Vector2(Mathf.Sin(a * Mathf.Deg2Rad), Mathf.Cos(a * Mathf.Deg2Rad)) * p;
     }
 }

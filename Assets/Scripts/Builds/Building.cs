@@ -6,8 +6,8 @@ using UnityEngine;
 public class Building : RTSBase
 {
     float craftRadius;
-    public MyEvent onCrafted;
-    public MyEvent onCraftCompleted;
+    MyEvent onCrafted;
+    MyEvent onCraftCompleted;
     GameObject craftCompletedGO;
     GameObject craftUncompletedGO;
     Renderer buildRenderer;
@@ -67,15 +67,16 @@ public class Building : RTSBase
     ServerOnBuildingSpawned?.Invoke(this);   
     craftRadius = rtsEntity.CraftRadious;
   //comentado porque si no peta
-    //  craftCompletedGO = rtsEntity.Prefab.transform.Find("FinalEstructure").gameObject;
-   // craftUncompletedGO = rtsEntity.Prefab.transform.Find("plataform").gameObject;
-   // buildRenderer = craftCompletedGO.GetComponent<MeshRenderer>();
+    craftCompletedGO = rtsEntity.Prefab.transform.Find("FinalEstructure").gameObject;
+    craftUncompletedGO = rtsEntity.Prefab.transform.Find("plataform").gameObject;
+        onCrafted = rtsEntity.OnCrafted;
+        onCraftCompleted = rtsEntity.OnCraftCompleted;
     buildTime = rtsEntity.BuildTime;
 
     if (buildTime <= 0)
         return;
-   // craftUncompletedGO.SetActive(false);
-    //craftCompletedGO.SetActive(true);
+        craftUncompletedGO.SetActive(false);
+        craftCompletedGO.SetActive(true);
      }
     
      public override void OnStopServer()

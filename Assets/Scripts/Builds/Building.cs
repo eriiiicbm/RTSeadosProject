@@ -67,8 +67,8 @@ public class Building : RTSBase
     ServerOnBuildingSpawned?.Invoke(this);   
     craftRadius = rtsEntity.CraftRadious;
   //comentado porque si no peta
-    craftCompletedGO = rtsEntity.Prefab.transform.Find("FinalEstructure").gameObject;
-    craftUncompletedGO = rtsEntity.Prefab.transform.Find("plataform").gameObject;
+    craftCompletedGO = transform.Find("FinalEstructure").gameObject;
+    craftUncompletedGO = transform.Find("plataform").gameObject;
         onCrafted = rtsEntity.OnCrafted;
         onCraftCompleted = rtsEntity.OnCraftCompleted;
     buildTime = rtsEntity.BuildTime;

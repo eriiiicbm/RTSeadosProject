@@ -70,6 +70,7 @@ public class BuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, floorMask))
         {
+            Debug.Log("Try place " + building.GetId() + " in " + hit.point);
             player.CmdTryPlaceBuilding(building.GetId(), hit.point);
         }
 
@@ -84,7 +85,7 @@ public class BuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             return;
         }
 
-        buildingPreviewInstance.transform.position = hit.point;
+        buildingPreviewInstance.transform.position = new Vector3 (hit.point.x,buildingPreviewInstance.transform.position.y,hit.point.z);
         if (!buildingPreviewInstance.activeSelf)
         {
             buildingPreviewInstance.SetActive(true);

@@ -61,7 +61,7 @@ MonoBehaviour:
   buildTime: 0
   buildingPreview: {fileID: 0}
   icon: {fileID: 0}
-  price: 
+  price: 00000000000000000000000000000000
   id: -1
   instanceRadius: {x: 0, y: 0}
 --- !u!208 &-6666800497835596082

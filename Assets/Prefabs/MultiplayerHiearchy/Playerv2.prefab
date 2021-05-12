@@ -113,10 +113,16 @@ MonoBehaviour:
   - {fileID: 8625160522924693162, guid: a18ce2f05311c5f49b276f0be5c11546, type: 3}
   - {fileID: 7158041827773910725, guid: 05444f3a8c42111448905051658d48ad, type: 3}
   - {fileID: 8917135491928365060, guid: 6c9f4711e10fadc4a96a9ff60a0f6ab5, type: 3}
+  - {fileID: -21070764998124143, guid: 1def9626f1305574ba187a81c11f8807, type: 3}
+  - {fileID: -5558669516458021221, guid: 06aab8909717c664eb21bd5a36a0d573, type: 3}
+  - {fileID: 7100767405781893154, guid: 95d74b3e50c21bf4bb579498ce47d32c, type: 3}
+  - {fileID: 994766849628178934, guid: 439da96688641d64db856588504a6eb9, type: 3}
+  - {fileID: 5420493816838377146, guid: ae0b58e4514b7c64096a99cc6e3a6992, type: 3}
+  - {fileID: 901695133488945128, guid: e5950ebad5966e446bce262cf41e122c, type: 3}
   buildingBlockLayer:
     serializedVersion: 2
     m_Bits: 1
-  buildingRangeLimit: 23.64
+  buildingRangeLimit: 200
   myUnits: []
   myBuildings: []
   resources: 79000000bc040000993c0300ffffff7f

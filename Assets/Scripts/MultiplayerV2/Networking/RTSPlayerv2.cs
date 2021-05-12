@@ -97,13 +97,13 @@ public class RTSPlayerv2 : NetworkBehaviour
             case ResourcesType.Ingredients:
                resources[0] = newResources;
                 break;
-            case ResourcesType.Stone:
+            case ResourcesType.SubstanceX:
                  resources[1] = newResources;
                 break;
-            case ResourcesType.SubstanceX:
+            case ResourcesType.Wood:
                   resources[2] = newResources;
                 break;
-            case ResourcesType.Wood:
+            case ResourcesType.Stone:
                 resources[3] = newResources;
                 break;
         }

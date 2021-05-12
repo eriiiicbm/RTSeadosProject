@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class AreaDamage : MonoBehaviour, ComponetHability
+using Mirror;
+public class AreaDamage : NetworkBehaviour, ComponetHability
 {
     public void active(RTSBase target, float damage)
     {
@@ -14,8 +14,12 @@ public class AreaDamage : MonoBehaviour, ComponetHability
         {
             if (hit.collider != null) return;
             if (hit.collider.GetComponent<RTSBase>() != null) return;
+            if (hit.collider.TryGetComponent<NetworkIdentity>(out NetworkIdentity networkIdentity))
+            {
+                if (networkIdentity.connectionToClient == connectionToClient)return;                
+            }
 
-            hit.collider.GetComponent<RTSBase>().DealDamage(damage);
+                hit.collider.GetComponent<RTSBase>().DealDamage(damage);
         }
         
     }

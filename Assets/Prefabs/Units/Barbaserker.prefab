@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 853259452964910958}
   - component: {fileID: -6773480170593502627}
   m_Layer: 0
-  m_Name: NuggetWarriior
+  m_Name: Barbaserker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
   description: 
   preview: {fileID: 0}
   prefab: {fileID: 0}
-  rtsEntity: {fileID: 0}
+  rtsEntity: {fileID: 11400000, guid: 8bebe115b801b174b8abbbf0c57ae717, type: 2}
   currentTarget: {fileID: 0}
   expirationVelocity: 0
   time: 0

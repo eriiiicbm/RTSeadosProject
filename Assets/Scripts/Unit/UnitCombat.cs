@@ -20,7 +20,6 @@ public class UnitCombat : Unit
     // Update is called once per frame
     void Update()
     {
-       // base.Update();
 
         attackSpeed += Time.deltaTime;
         if (currentTarget != null)
@@ -28,23 +27,15 @@ public class UnitCombat : Unit
             navMeshAgent.destination = currentTarget.position;
 
             var distance = (transform.position - currentTarget.position).magnitude;
+            Quaternion targetRotation = Quaternion.LookRotation(currentTarget.transform.position - transform.position);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime);
 
-            if (distance <= attackDistance)
+            if (distance <= attackDistance && attackSpeed >= attackTimer)
             {
-                Attack();
+                GetComponent<ComponetHability>().active(currentTarget.GetComponent<RTSBase>(), damage);
 
-                //GetComponent<>
+                attackSpeed = 0;
             }
-        }
-    }
-    [ContextMenu("Force Attack")]
-    void Attack()
-    {
-        if (attackSpeed >= attackTimer)
-        {
-            RTSFoodManager.UnitTakeDamage(this, currentTarget.GetComponent<UnitCombat>());
-            attackSpeed = 0;
-
         }
     }
 }

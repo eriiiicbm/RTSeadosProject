@@ -5,6 +5,7 @@ using UnityEngine;
 public class DistanceUnit : MonoBehaviour, ComponetHability
 {
     private GameObject projectils;
+    public Transform spawnProyectilPoint;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class DistanceUnit : MonoBehaviour, ComponetHability
     {
         Vector3 direction = transform.position - target.transform.position;
         GameObject proyectil = Instantiate(projectils);
-        proyectil.transform.position = transform.position;
+        proyectil.transform.position = spawnProyectilPoint.position;
         proyectil.transform.Rotate(direction);
         proyectil.GetComponent<UnitProjectilev3>().damage = damage;
 

@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class AreaDamage : MonoBehaviour, ComponetHability
 {
-    private int areaRadius;
-
-public int AreaRadius { set => areaRadius = value; }
-
     public void active(RTSBase target, float damage)
     {
          RaycastHit [] hits =  Physics.SphereCastAll(target.gameObject.transform.position, GetComponent<RTSBase>().rtsEntity.EffectRadious, target.gameObject.transform.forward);

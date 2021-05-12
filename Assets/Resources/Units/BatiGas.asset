@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf636b8228f3d346be8a0d449de608e, type: 3}
-  m_Name: ChipsAndArcher
+  m_Name: BatiGas
   m_EditorClassIdentifier: 
   isMoralUp: 0
   entityType: 6
@@ -42,8 +42,7 @@ MonoBehaviour:
   buildRenderer: {fileID: 0}
   buildTime: 0
   canCraft: 0
-  productionUnits:
-  - {fileID: 0}
+  productionUnits: []
   descriptionText: {fileID: 0}
   descriptionPosition: 0
   currentProduction: {fileID: 0}

@@ -14,13 +14,14 @@ GameObject:
   - component: {fileID: 2096892178927748667}
   - component: {fileID: 9018726195243185155}
   - component: {fileID: -8435968480312469516}
+  - component: {fileID: 8398260750668190726}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1308741075413695542
 Transform:
   m_ObjectHideFlags: 0
@@ -122,6 +123,23 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   colorRenderers: []
+--- !u!114 &8398260750668190726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3722049469362960980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &4444141615569874375
 GameObject:
   m_ObjectHideFlags: 0

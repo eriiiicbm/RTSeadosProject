@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Barbaserker : UnitCombat, MeleUnit
+public class Barbaserker : UnitCombat
 {
     public void meleAtack()
     {

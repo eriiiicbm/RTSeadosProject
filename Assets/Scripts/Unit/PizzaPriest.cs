@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PizzaPriest : UnitCombat, MeleUnit, MoralUnit, MoralDebuf
+public class PizzaPriest : UnitCombat
 {
     public void meleAtack()
     {

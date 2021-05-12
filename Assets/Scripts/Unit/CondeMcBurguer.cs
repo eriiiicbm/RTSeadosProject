@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CondeMcBurguer : UnitCombat, MeleUnit, MoralDebuf
+public class CondeMcBurguer : UnitCombat
 {
     public void meleAtack()
     {

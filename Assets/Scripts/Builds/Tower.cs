@@ -21,18 +21,7 @@ public class Tower : Building, FireBuilding
 
         RTSBase enemy = hit.collider.GetComponent<RTSBase>();
 
-        fire(hit.collider.gameObject.transform);
-    }
-
-    public void fire(Transform currentTarget)
-    {
-        Vector3 direction = transform.position - currentTarget.position;
-        GameObject proyectil = Instantiate(proyectils);
-        proyectil.transform.position = transform.position;
-        proyectil.transform.Rotate(direction);
-        proyectil.GetComponent<Proyectil>().damage = damege;
-
-        proyectil.GetComponent<Rigidbody>().AddForce(direction * throwForce, ForceMode.Impulse);
+        GetComponent<ComponetHability>().active(enemy, damege);
     }
 
     // Start is called before the first frame update

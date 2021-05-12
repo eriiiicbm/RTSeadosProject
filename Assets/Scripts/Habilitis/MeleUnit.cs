@@ -6,6 +6,6 @@ public class MeleUnit : MonoBehaviour, ComponetHability
 {
     public void active(RTSBase target, float damage)
     {
-        target.TakeDamage(target, damage);
+        target.DealDamage(damage);
     }
 }

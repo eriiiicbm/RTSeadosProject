@@ -69,8 +69,6 @@ public class Building : RTSBase
   //comentado porque si no peta
     craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
     craftUncompletedGO = transform.Find("plataform")?.gameObject;
-        onCrafted = rtsEntity.OnCrafted;
-        onCraftCompleted = rtsEntity.OnCraftCompleted;
     buildTime = rtsEntity.BuildTime;
 
     if (buildTime <= 0)
@@ -122,7 +120,6 @@ public class Building : RTSBase
         buildTime--;
         if (buildTime <= 0)
         {
-            onCraftCompleted.Invoke();
             craftUncompletedGO.SetActive(false);
             craftCompletedGO.SetActive(true);
         }

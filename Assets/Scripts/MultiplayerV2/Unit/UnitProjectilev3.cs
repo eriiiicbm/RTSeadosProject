@@ -4,18 +4,11 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
-public class UnitProjectilev2 : NetworkBehaviour
+public class UnitProjectilev3 : NetworkBehaviour
 {
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] private int damageToDeal=20;
-    [SerializeField] private float launchForce=10f;
+    public float damage;
     [SerializeField] private float destroyAfterSeconds=5f;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb.velocity = transform.forward * launchForce;
-    }
 
     public override void OnStartServer()
     {
@@ -33,7 +26,7 @@ public class UnitProjectilev2 : NetworkBehaviour
 
             if (other.TryGetComponent<RTSBase>(out RTSBase rtsBase))
             {
-                rtsBase.DealDamage(damageToDeal);
+                rtsBase.DealDamage(damage);
             }
             DestroySelf();
         }

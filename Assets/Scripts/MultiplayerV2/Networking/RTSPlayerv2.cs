@@ -136,17 +136,21 @@ public class RTSPlayerv2 : NetworkBehaviour
             if (building.GetId() == buildingId)
             {
                 buildingToPlace = building;
+
                 break;
             }
         }
 
         if (buildingToPlace == null)
         {
+            Debug.LogWarning("Building to place is null");
             return;
         }
         
         if (!CheckIfUserHasResources(buildingToPlace.GetPrice()))
         {
+            Debug.LogWarning("You are poor");
+
             return;
         }
 
@@ -155,12 +159,15 @@ public class RTSPlayerv2 : NetworkBehaviour
 
         if (!CanPlaceBuilding(buildingCollider, point))
         {
+            Debug.Log("Cant build here");
             return;
         }
 
         RestPriceToResources(buildingToPlace.GetPrice());
         GameObject buildingInstance =
             Instantiate(buildingToPlace.gameObject, point, buildingToPlace.transform.rotation);
+        Debug.LogWarning("Build success");
+
         NetworkServer.Spawn(buildingInstance, connectionToClient);
     }
 

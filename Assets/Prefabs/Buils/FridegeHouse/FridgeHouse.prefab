@@ -106,8 +106,8 @@ MonoBehaviour:
   buildTime: 0
   buildingPreview: {fileID: 0}
   icon: {fileID: 0}
-  price: 
-  id: -1
+  price: 00000000000000000000000000000000
+  id: 329
 --- !u!114 &-4043642027939555743
 MonoBehaviour:
   m_ObjectHideFlags: 0

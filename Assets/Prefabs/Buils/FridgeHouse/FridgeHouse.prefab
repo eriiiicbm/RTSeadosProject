@@ -144,7 +144,7 @@ MonoBehaviour:
   rtsEntity: {fileID: 11400000, guid: 3694f594a4ab35e4598a408f1edda5b5, type: 2}
   buildTime: 0
   buildingPreview: {fileID: 0}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: eb5f6e2757c821940b69cf1456f7865a, type: 3}
   price: 01000000010000000100000001000000
   id: 43
 --- !u!114 &4333745389890217792

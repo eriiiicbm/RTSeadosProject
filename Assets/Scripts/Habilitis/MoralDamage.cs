@@ -2,19 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoralDamage : MonoBehaviour
+public class MoralDamage : PasiveHability
 {
     public float damageMoral;
 
-    // Start is called before the first frame update
-    void Start()
+    public void damageMoralUnits()
     {
-        
+        foreach (var unit in units)
+        {
+            unit.DealMoralSupport(damageMoral);
+            StartCoroutine(Wait(0.5f));
+        }
+    }
+
+    // Start is called before the first frame update
+    private void Start()
+    {
+        damageMoral = GetComponent<RTSEntity>().DamageMoral;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        damageMoralUnits();
     }
 }

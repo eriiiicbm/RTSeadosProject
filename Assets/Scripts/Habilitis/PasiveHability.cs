@@ -5,7 +5,6 @@ using UnityEngine;
 public class PasiveHability : MonoBehaviour
 {
     public float efectRadius;
-    bool inTrigger;
     public float recoverySpeed;
     public List<Unit> units = new List<Unit>();
 
@@ -20,5 +19,22 @@ public class PasiveHability : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Unit rtsaBase = other.GetComponent<Unit>();
+        units.Add(rtsaBase);
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        Unit rtsaBase = other.GetComponent<Unit>();
+        units.Remove(rtsaBase);
+
+    }
+
+    public IEnumerator Wait(float duration)
+    {
+        yield return new WaitForSeconds(duration);
     }
 }

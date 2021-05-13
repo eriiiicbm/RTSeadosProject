@@ -278,6 +278,7 @@ GameObject:
   - component: {fileID: 4725165471567193098}
   - component: {fileID: 5517054805176186858}
   - component: {fileID: 3899188683481475224}
+  - component: {fileID: -8090460596642849067}
   m_Layer: 0
   m_Name: Barbaserker
   m_TagString: Untagged
@@ -506,6 +507,18 @@ MonoBehaviour:
   moral: {fileID: 853259452964910958}
   moralBarParent: {fileID: 4074699054460440339}
   moralBarImage: {fileID: 6877584348734898013}
+--- !u!114 &-8090460596642849067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5651458107991866868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def4d2b8a6e7c9541b4c7c7fc547c68a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7999513309307320537
 GameObject:
   m_ObjectHideFlags: 0

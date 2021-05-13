@@ -336,6 +336,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3109839445633669799, guid: 439da96688641d64db856588504a6eb9,
+        type: 3}
+      propertyPath: sceneId
+      value: 2750107896
+      objectReference: {fileID: 0}
     - target: {fileID: 6046784619768616984, guid: 439da96688641d64db856588504a6eb9,
         type: 3}
       propertyPath: sceneId
@@ -1394,6 +1399,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7335812155872918316, guid: ae0b58e4514b7c64096a99cc6e3a6992,
+        type: 3}
+      propertyPath: sceneId
+      value: 4110744796
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae0b58e4514b7c64096a99cc6e3a6992, type: 3}
 --- !u!1 &1528391218
@@ -1772,6 +1782,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FridgeHouse
       objectReference: {fileID: 0}
+    - target: {fileID: 912334962267162819, guid: 06aab8909717c664eb21bd5a36a0d573,
+        type: 3}
+      propertyPath: sceneId
+      value: 3889311424
+      objectReference: {fileID: 0}
     - target: {fileID: 2391159786583995781, guid: 06aab8909717c664eb21bd5a36a0d573,
         type: 3}
       propertyPath: m_RootOrder
@@ -1911,6 +1926,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398260750668190726, guid: 95d74b3e50c21bf4bb579498ce47d32c,
+        type: 3}
+      propertyPath: sceneId
+      value: 159616781
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d74b3e50c21bf4bb579498ce47d32c, type: 3}
@@ -2210,6 +2230,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372384202135403179, guid: e5950ebad5966e446bce262cf41e122c,
+        type: 3}
+      propertyPath: sceneId
+      value: 787387591
       objectReference: {fileID: 0}
     - target: {fileID: 7058467304536522169, guid: e5950ebad5966e446bce262cf41e122c,
         type: 3}

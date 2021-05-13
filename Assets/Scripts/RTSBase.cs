@@ -127,7 +127,7 @@ public class RTSBase : NetworkBehaviour
         }
     }
 
-    void GoToNextState()
+   public void GoToNextState()
     {
         string methodName = this.currentState.ToString() + "State";
         Debug.Log("STATE METHOD NAME " + methodName);

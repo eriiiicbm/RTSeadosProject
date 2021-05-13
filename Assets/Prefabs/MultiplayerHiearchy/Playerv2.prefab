@@ -140,6 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  isTesting: 1
   playerCameraTransform: {fileID: 5167589719713410488}
   speed: 25
   screenBrderThickness: 10

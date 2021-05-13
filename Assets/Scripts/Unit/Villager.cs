@@ -9,16 +9,15 @@ public class Villager : Unit
     float buildRate;
     float range;
 
-    void Start()
+    public override void OnStartServer()
     {
- 
+        base.OnStartServer();
         buildRate = rtsEntity.AttackTimer;
         range = rtsEntity.AttackRange;
 
-        InvokeRepeating("build", buildRate, buildRate);
-        InvokeRepeating("recolect", buildRate, buildRate);
     }
- 
+
+  
 
     [HideInInspector]
     public Resource resource;
@@ -82,14 +81,18 @@ public class Villager : Unit
         yield return new WaitForEndOfFrame();
     }
     public IEnumerator PickResourcesState() {
+        InvokeRepeating("build", buildRate, buildRate);
+        InvokeRepeating("recolect", buildRate, buildRate);
+
         while (currentState == UnitStates.PickResources)
         {
-
+          
             yield return 0;
 
         }
         yield return new WaitForEndOfFrame();
-
+        GoToNextState();
+        
     }
     public IEnumerator BuildState()
     {

@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class CameraController : NetworkBehaviour
 {
+    public bool isTesting=false;
     [SerializeField] private Transform playerCameraTransform;
     [SerializeField] private float speed = 20f;
     [SerializeField] private float screenBrderThickness= 10f;
@@ -40,20 +41,20 @@ public class CameraController : NetworkBehaviour
         {
             Vector3 cursorMovement = Vector3.zero;
             Vector2 cursorPosition = Mouse.current.position.ReadValue();
-            if (cursorPosition.y >= Screen.height - screenBrderThickness)
+            if (cursorPosition.y >= Screen.height - screenBrderThickness&&!isTesting)
             {
                 cursorMovement.z += 1;
             }
-            else if (cursorPosition.y <= screenBrderThickness)
+            else if (cursorPosition.y <= screenBrderThickness&&!isTesting)
             {
                 cursorMovement.z -= 1;
             }
 
-            if (cursorPosition.x >= Screen.width - screenBrderThickness)
+            if (cursorPosition.x >= Screen.width - screenBrderThickness&&!isTesting)
             {
                 cursorMovement.x += 1;
             }
-            else if (cursorPosition.x <= screenBrderThickness)
+            else if (cursorPosition.x <= screenBrderThickness&&!isTesting)
             {
                 cursorMovement.x -= 1;
             }

@@ -468,7 +468,8 @@
             <e p="ComponetHability.cs" t="Include" />
             <e p="DistanceUnit.cs" t="Include" />
             <e p="MeleUnit.cs" t="Include" />
-            <e p="MoralUnit.cs" t="Include" />
+            <e p="MoralDamage.cs" t="Include" />
+            <e p="MoralSupport.cs" t="Include" />
           </e>
           <e p="implementationsJerarqui" t="Include">
             <e p="FireBuilding.cs" t="Include" />

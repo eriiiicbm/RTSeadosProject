@@ -10,7 +10,7 @@ public class RTSBase : NetworkBehaviour
     [SerializeField] protected string entityName;
     [SerializeField] protected int maxHealth;
      [SerializeField] protected string description;
-    [SerializeField] protected Sprite preview;
+    [SerializeField] public Sprite preview;
     [SerializeField] protected GameObject prefab;
     [SerializeField] public RTSEntity rtsEntity;
 

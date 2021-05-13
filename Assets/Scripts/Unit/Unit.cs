@@ -190,6 +190,7 @@ public class Unit : RTSBase
     private void HandleMoralUpdated(float oldMoral, float newMoral)
     {
         ClientOnMoralUpdated?.Invoke(newMoral, maxMoral);
+        StartCoroutine(nameof(MoralEfect));
     }
 
     void SetNewTarget(Transform target)
@@ -202,9 +203,9 @@ public class Unit : RTSBase
         Destroy(this.transform.parent.gameObject);
     }
 
-    IEnumerator moralEfect()
+    IEnumerator MoralEfect()
     {
-        while (rtsEntity.Moral < rtsEntity.Moral *0.25)
+        if (moral < maxMoral *0.25)
         {
             rtsEntity.Velocity = rtsEntity.Velocity * 0.5f;
 
@@ -218,16 +219,16 @@ public class Unit : RTSBase
             yield return 0;
         }
 
-        while (rtsEntity.Moral > rtsEntity.Moral * 0.75)
+        if (moral > maxMoral * 0.75)
         {
             rtsEntity.Velocity = rtsEntity.Velocity * 0.5f;
 
-            if (rtsEntity.Damage != null) rtsEntity.Damage = rtsEntity.Damage * 1.75f;
+            rtsEntity.Damage = rtsEntity.Damage * 1.75f;
 
-            if (rtsEntity.DamageMoral != null) rtsEntity.DamageMoral = rtsEntity.DamageMoral * 1.5f;
+             rtsEntity.DamageMoral = rtsEntity.DamageMoral * 1.5f;
 
-            if (rtsEntity.EffectRadious != null) rtsEntity.EffectRadious = rtsEntity.EffectRadious * 1.75f;
-            if (rtsEntity.RecoverySpeed != null) rtsEntity.RecoverySpeed = rtsEntity.RecoverySpeed * 1.75f;
+             rtsEntity.EffectRadious = rtsEntity.EffectRadious * 1.75f;
+              rtsEntity.RecoverySpeed = rtsEntity.RecoverySpeed * 1.75f;
 
             yield return 0;
         }

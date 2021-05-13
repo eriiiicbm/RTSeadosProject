@@ -12,6 +12,13 @@ public class UnitCommandGiverv2 : MonoBehaviour
 
     private Camera mainCamera;
 
+
+    GameObject TargetObj;
+
+    public GameObject Target;
+    private float raycastLength = 500;
+    string name = "Target Instantiated";
+
     private void Start()
     {
         mainCamera = Camera.main;
@@ -26,11 +33,15 @@ public class UnitCommandGiverv2 : MonoBehaviour
 
     private void Update()
     {
+
+
         if (!Mouse.current.rightButton.wasPressedThisFrame) { return; }
 
         Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
         if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask)) { return; }
+
+
 
         if (hit.collider.TryGetComponent<Targetable>(out Targetable target))
         {
@@ -38,6 +49,7 @@ public class UnitCommandGiverv2 : MonoBehaviour
             //todo state machine
             if (target.hasAuthority)
             {
+
                 TryMove(hit.point);
                 return;
             }
@@ -45,12 +57,38 @@ public class UnitCommandGiverv2 : MonoBehaviour
             TryTarget(target);
             return;
         }
+        if (hit.transform.CompareTag("Floor"))
+        {
 
-        TryMove(hit.point);
+            GameObject go = GameObject.Find(name);
+
+            if (TargetObj)
+            {
+                Debug.Log("exists");
+                Destroy(go.gameObject);
+                Debug.Log(name + "has been destroyed.");
+
+            }
+            TryMove(hit.point);
+            Debug.Log("TRYMOVE SINSINSIN RETURN");
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, raycastLength))
+            {
+                if (hit.collider.name == "Floor")
+                {
+                    TargetObj = Instantiate(Target, hit.point, Quaternion.identity) as GameObject;
+                    TargetObj.name = "Target Instantiated";
+
+                }
+            }
+            Debug.DrawRay(ray.origin, ray.direction * raycastLength, Color.yellow);
+        }
     }
 
     private void TryMove(Vector3 point)
     {
+
+
         foreach (Unit unit in unitSelectionHandler.SelectedUnits)
         {
             unit.CmdMove(point);

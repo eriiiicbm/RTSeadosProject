@@ -222,8 +222,8 @@ GameObject:
   - component: {fileID: 253583581}
   - component: {fileID: 253583580}
   m_Layer: 10
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Floor
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -569,6 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16bd05ea2994714fa18e914772cf5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOneClick: 0
   unitSelectionArea: {fileID: 1885219578}
   layerMask:
     serializedVersion: 2
@@ -605,6 +606,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1281
+  Target: {fileID: 0}
 --- !u!1 &984459650
 GameObject:
   m_ObjectHideFlags: 0

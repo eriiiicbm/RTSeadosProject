@@ -68,6 +68,7 @@ public class CameraController : NetworkBehaviour
         myCam.orthographicSize = Mathf.Clamp(myCam.orthographicSize,
             zoomLimits.x, zoomLimits.y);
 
+ //       Debug.Log(zoom);
 
         if (zoom < 0 && margin != min && margin != min)
         {

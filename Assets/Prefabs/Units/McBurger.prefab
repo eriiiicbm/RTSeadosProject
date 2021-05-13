@@ -465,7 +465,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   colorRenderers:
-  - {fileID: 7206705581454364923}
   - {fileID: 7507430224698025727}
   - {fileID: 6496283733099016614}
 --- !u!114 &3301321650363912208
@@ -540,6 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: def4d2b8a6e7c9541b4c7c7fc547c68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMoral: 0
 --- !u!114 &-6704540380854355594
 MonoBehaviour:
   m_ObjectHideFlags: 0

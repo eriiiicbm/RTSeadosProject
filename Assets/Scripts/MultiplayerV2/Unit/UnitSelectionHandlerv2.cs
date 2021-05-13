@@ -49,14 +49,8 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
         {
                 player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
         }
-        if (isOneClick) {
-            StartSelectionArea();
-            ClearSelectionArea();
-        }
-        if (Mouse.current.leftButton.wasPressedThisFrame&&Mouse.current.leftButton.wasReleasedThisFrame) {
-            StartSelectionArea();
-            ClearSelectionArea();
-        }
+ 
+     
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             StartSelectionArea();
@@ -121,18 +115,8 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
             if (!unit.hasAuthority) { return; }
 
             SelectedUnits.Add(unit);
-            foreach (Unit selectedUnit in SelectedUnits)
-            {
-
-                selectedUnit.Select();
-                if (selectedUnit.GetComponent<Villager>() != null)
-                {
-
-                    villagersNumber++;
-                }
-            }
-
-
+             CheckIfVilager();
+            Debug.Log("case 1");
 
             return;
         }
@@ -155,27 +139,33 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
                 unit.Select();
             }
         }
-          villagersNumber = 0;
+        CheckIfVilager();
+
+        Debug.Log("case 2");
+
+    }
+    private bool CheckIfVilager() {
+        villagersNumber = 0;
         foreach (Unit selectedUnit in SelectedUnits)
-        {     
- 
+        {
+
             selectedUnit.Select();
-            if (selectedUnit.GetComponent<Villager>()!=null)
+            if (selectedUnit.GetComponent<Villager>() != null)
             {
- 
+
                 villagersNumber++;
             }
         }
 
-        if (SelectedUnits.Count==0)
+        if (SelectedUnits.Count == 0)
         {
-            return;
+            return false;
         }
 
-        if (villagersNumber != SelectedUnits.Count) return;
+        if (villagersNumber != SelectedUnits.Count) return false;
         Debug.Log("All the selected units are villagers");
         buildingsDisplay.SetActive(true);
-        return;
+        return true;
 
     }
 

@@ -196,7 +196,6 @@ MonoBehaviour:
   syncInterval: 0.1
   colorRenderers:
   - {fileID: 5640898361535350097}
-  - {fileID: 6296090056808851369}
   - {fileID: 1164137084865619848}
 --- !u!114 &2779865390690716703
 MonoBehaviour:
@@ -297,7 +296,7 @@ MonoBehaviour:
   maxHealth: 0
   description: 
   preview: {fileID: 0}
-  prefab: {fileID: 0}
+  prefab: {fileID: 947953591945672596}
   rtsEntity: {fileID: 0}
   currentTarget: {fileID: 0}
   expirationVelocity: 0

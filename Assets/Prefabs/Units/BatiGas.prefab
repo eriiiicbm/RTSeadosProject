@@ -302,7 +302,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   colorRenderers:
-  - {fileID: 4143908364189588000}
   - {fileID: 7581953872670860279}
   - {fileID: 7550761471830657442}
 --- !u!114 &4322826233519728793

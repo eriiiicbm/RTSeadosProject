@@ -463,13 +463,16 @@
             <e p="Utilities.cs" t="Include" />
           </e>
           <e p="GameManager.cs" t="Include" />
-          <e p="implementationsJerarqui" t="Include">
+          <e p="Habilitis" t="Include">
+            <e p="AreaDamage.cs" t="Include" />
+            <e p="ComponetHability.cs" t="Include" />
             <e p="DistanceUnit.cs" t="Include" />
+            <e p="MeleUnit.cs" t="Include" />
+            <e p="MoralUnit.cs" t="Include" />
+          </e>
+          <e p="implementationsJerarqui" t="Include">
             <e p="FireBuilding.cs" t="Include" />
             <e p="Fridge.cs" t="Include" />
-            <e p="MeleUnit.cs" t="Include" />
-            <e p="MoralDebuf.cs" t="Include" />
-            <e p="MoralUnit.cs" t="Include" />
           </e>
           <e p="Inputs" t="Include">
             <e p="Controls.cs" t="Include" />
@@ -506,11 +509,9 @@
             <e p="Units" t="Include">
               <e p="UnitCommandGiver.cs" t="Include" />
               <e p="UnitFiring.cs" t="Include" />
-              <e p="UnitFiringv2.cs" t="Include" />
               <e p="UnitMovement.cs" t="Include" />
               <e p="UnitN.cs" t="Include" />
               <e p="UnitProjectile.cs" t="Include" />
-              <e p="UnitProjectilev2.cs" t="Include" />
               <e p="UnitSelectionHandler.cs" t="Include" />
             </e>
           </e>
@@ -524,6 +525,7 @@
             <e p="GameOverHandlerv2.cs" t="Include" />
             <e p="HealthDisplayv2.cs" t="Include" />
             <e p="Minimapv2.cs" t="Include" />
+            <e p="MoralDisplayv2.cs" t="Include" />
             <e p="Networking" t="Include">
               <e p="RTSNetworkManagerv2.cs" t="Include" />
               <e p="RTSPlayerv2.cs" t="Include" />
@@ -532,10 +534,12 @@
             <e p="ResourcesDisplayv2.cs" t="Include" />
             <e p="Unit" t="Include">
               <e p="UnitCommandGiverv2.cs" t="Include" />
+              <e p="UnitFiringv2.cs" t="Include" />
+              <e p="UnitProjectilev2.cs" t="Include" />
+              <e p="UnitProjectilev3.cs" t="Include" />
               <e p="UnitSelectionHandlerv2.cs" t="Include" />
             </e>
           </e>
-          <e p="Proyectil.cs" t="Include" />
           <e p="RTSBase.cs" t="Include" />
           <e p="RTSEntity.cs" t="Include" />
           <e p="Scripts in use" t="Include">

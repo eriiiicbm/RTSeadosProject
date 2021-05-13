@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using UnityEngine.Rendering.VirtualTexturing;
 
 public class Unit : RTSBase
 {
@@ -13,6 +14,9 @@ public class Unit : RTSBase
     public Transform currentTarget;
      public float expirationVelocity;
     public float time;
+    [SyncVar(hook = nameof(HandleMoralUpdated))]
+    public float moral;
+    public float maxMoral;
     public List<int> prices;
     [SerializeField] private int resourceCost = 10;
      [SerializeField] private UnityEvent onSelected;
@@ -24,7 +28,9 @@ public class Unit : RTSBase
     [SerializeField] public static event Action<Unit> AuthorityOnUnitDespawned;
     [SerializeField] protected NavMeshAgent navMeshAgent;
     [SerializeField] private float chaseRange = 10f;
-     
+    public event Action<float, float> ClientOnMoralUpdated;
+    public event Action ServerOnLostMoral;
+
     public int GetResourceCost()
     {
         return resourceCost;
@@ -37,6 +43,25 @@ public class Unit : RTSBase
     }
 
     #region Server
+
+    [ContextMenu("Deal damage")]
+    [Server]
+     public void DealMoralDamage(float damageAmount)
+    {
+        if (moral == 0)
+        {
+            return;
+        }
+
+        moral = Mathf.Max(moral - damageAmount, 0);
+
+        if (moral != 0)
+        {
+            return;
+        }
+
+        ServerOnLostMoral?.Invoke();
+    }
 
     public override void OnStartServer()
     {
@@ -162,7 +187,11 @@ public class Unit : RTSBase
    
 
     #endregion
-    
+    private void HandleMoralUpdated(float oldMoral, float newMoral)
+    {
+        ClientOnMoralUpdated?.Invoke(newMoral, maxMoral);
+    }
+
     void SetNewTarget(Transform target)
     {
         currentTarget = target;

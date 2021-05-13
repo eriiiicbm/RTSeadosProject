@@ -18,6 +18,7 @@ public class Villager : Unit
         InvokeRepeating("build", buildRate, buildRate);
         InvokeRepeating("recolect", buildRate, buildRate);
     }
+ 
 
     [HideInInspector]
     public Resource resource;

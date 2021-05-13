@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="" />
+    <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Nugget Vilager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Nugget Vilager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,13 +30,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Multiplayer/Minimap.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitFiringv2.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Units/UnitSelectionHandler.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/FaceCamera.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuildingButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Resources/ResourcesDisplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Networking/RTSPlayer.cs" />
@@ -60,7 +63,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/BuildingButtonv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/UnitSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/UnitSelectionHandlerv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/GameOverHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/GameOverHandler1.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/GameOverHandlerv2.cs" />
@@ -70,14 +72,18 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/UnitSpawnerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/UnitCommandGiverv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/HealthDisplay.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitSelectionHandlerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineExample.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/ResourceGeneratorv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitFiringv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitProjectilev2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />
@@ -133,7 +139,8 @@
       <workItem from="1620295180237" duration="10491000" />
       <workItem from="1620383364278" duration="13319000" />
       <workItem from="1620465042074" duration="44144000" />
-      <workItem from="1620731878733" duration="5052000" />
+      <workItem from="1620731878733" duration="8508000" />
+      <workItem from="1620897419966" duration="2321000" />
     </task>
     <servers />
   </component>

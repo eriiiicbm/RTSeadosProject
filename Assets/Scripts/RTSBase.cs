@@ -9,7 +9,7 @@ public class RTSBase : NetworkBehaviour
     protected UnitStates currentState;
     [SerializeField] protected string entityName;
     [SerializeField] protected int maxHealth;
-    [SerializeField] protected string description;
+     [SerializeField] protected string description;
     [SerializeField] protected Sprite preview;
     [SerializeField] protected GameObject prefab;
     [SerializeField] public RTSEntity rtsEntity;
@@ -20,7 +20,7 @@ public class RTSBase : NetworkBehaviour
     public event Action ServerOnDie;
 
     public event Action<float, float> ClientOnHealthUpdated;
-
+ 
     #region Server
 
     public override void OnStartServer()
@@ -29,7 +29,7 @@ public class RTSBase : NetworkBehaviour
         UnitBase.ServerOnPlayerDie += ServerHandlePlayerDie;
         currentState = UnitStates.Idle;
         maxHealth = rtsEntity.MaxHealth;
-
+     
         entityName = rtsEntity.name;
         preview = rtsEntity.Preview;
         prefab = rtsEntity.Prefab;

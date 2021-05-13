@@ -124,25 +124,18 @@ public class ShowIfAttributeDrawer
                 excludedProperties.Add("unitsQueue");
                 excludedProperties.Add("proyectile");
                 excludedProperties.Add("currentTarget");
-
-
-
-
-
                 break; 
+
  case EntityType.Priest:
                 excludedProperties.Remove("effectRadious");
                 excludedProperties.Remove("recoverySpeed");
                 excludedProperties.Add("proyectile");
                 excludedProperties.Add("canCraft");
                 excludedProperties.Add("craftRadious");
-                excludedProperties.Add("buildTime");
                 excludedProperties.Add("productionUnits");
                 excludedProperties.Remove("damageMoral");
-                excludedProperties.Add("onCrafted");
-                excludedProperties.Add("onCraftCompleted");
-
                 break;
+
             case EntityType.Villager:
                 excludedProperties.Add("effectRadious");
                 excludedProperties.Add("recoverySpeed");
@@ -152,35 +145,28 @@ public class ShowIfAttributeDrawer
                 excludedProperties.Add("proyectile");
                 excludedProperties.Add("canCraft");
                 excludedProperties.Add("craftRadious");
-                excludedProperties.Add("onCrafted");
-                excludedProperties.Add("onCraftCompleted");
-
                 //todo cambiar nombre a  Attacktimer
                 break;
+
             case EntityType.DistanceUnit:
                 excludedProperties.Remove("proyectile");
                 excludedProperties.Add("canCraft");
                 excludedProperties.Add("craftRadious");
                 excludedProperties.Add("productionUnits");
                 excludedProperties.Add("recoverySpeed");
-                excludedProperties.Add("onCrafted");
-                excludedProperties.Add("onCraftCompleted");
-
                 break;
+
             case EntityType.Tower:
                 excludedProperties.Remove("proyectile");
                 excludedProperties.Add("moral");
                 excludedProperties.Add("productionUnits");
                 excludedProperties.Add("canCraft");
-
                 excludedProperties.Add("effectRadious");
                 excludedProperties.Add("recoverySpeed");
                 excludedProperties.Add("currentTarget");
-
-
                 break;
-            case EntityType.PortableFridge:
 
+            case EntityType.PortableFridge:
                 excludedProperties.Add("proyectile");
                 excludedProperties.Add("damage");
                 excludedProperties.Add("attackTimer");
@@ -189,21 +175,28 @@ public class ShowIfAttributeDrawer
                 excludedProperties.Add("attackRange");
                 excludedProperties.Add("attackTimer");
                 excludedProperties.Add("canCraft");
-                excludedProperties.Add("effectRadious");
-                excludedProperties.Add("recoverySpeed");
-                excludedProperties.Add("onCrafted");
-                excludedProperties.Add("onCraftCompleted");
-
                 break;
+
             case EntityType.Hero:
                 excludedProperties.Remove("damageMoral");
                 excludedProperties.Add("canCraft");
                 excludedProperties.Add("proyectile");
                 excludedProperties.Add("productionUnits");
                 excludedProperties.Add("craftRadious");
-                excludedProperties.Add("onCrafted");
-                excludedProperties.Add("onCraftCompleted");
+                break;
 
+            case EntityType.MeleeUnit:
+                excludedProperties.Remove("damageMoral");
+                excludedProperties.Add("attackRange");
+                excludedProperties.Add("craftRadious");
+                excludedProperties.Add("craftCompletedGO");
+                excludedProperties.Add("craftUnCompletedGO");
+                excludedProperties.Add("buildRenderer");
+                excludedProperties.Add("canCraft");
+                excludedProperties.Add("productionUnits");
+                excludedProperties.Add("craftUnCompletedGO");
+                excludedProperties.Add("recoverySpeed");
+                excludedProperties.Add("proyectile");
                 break;
         }
         DrawPropertiesExcluding(serializedObject, excludedProperties.ToArray());

@@ -36,8 +36,6 @@ public class RTSEntity : ScriptableObject
     [SerializeField] private GameObject proyectile;
     [Header("Crafting stuff")]
     [SerializeField] private float craftRadious;
-    [SerializeField] private MyEvent onCrafted;
-    [SerializeField] private MyEvent onCraftCompleted;
     [SerializeField] private GameObject craftCompletedGO;
     [SerializeField] private GameObject craftUnCompletedGO;
     [SerializeField] private Renderer buildRenderer;
@@ -86,8 +84,6 @@ public class RTSEntity : ScriptableObject
     public EmotionalStates EmotionalState { get => emotionalState; set => emotionalState = value; }
     public ResourcesType TypeOfResourceThatCanHave { get => typeOfResourceThatCanHave; set => typeOfResourceThatCanHave = value; }
     public GameObject Proyectile { get => proyectile; set => proyectile = value; }
-    public MyEvent OnCrafted { get => onCrafted; set => onCrafted = value; }
-    public MyEvent OnCraftCompleted { get => onCraftCompleted; set => onCraftCompleted = value; }
     public Queue<GameObject> UnitsQueue { get => unitsQueue; set => unitsQueue = value; }
     public int Moral { get => moral; set => moral = value; }
     public float DamageMoral { get => damageMoral; set => damageMoral = value; }

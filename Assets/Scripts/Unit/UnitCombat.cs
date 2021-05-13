@@ -28,7 +28,7 @@ public class UnitCombat : Unit
 
             var distance = (transform.position - currentTarget.position).magnitude;
             Quaternion targetRotation = Quaternion.LookRotation(currentTarget.transform.position - transform.position);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 180 * Time.deltaTime);
 
             if (distance <= attackDistance && attackSpeed >= attackTimer)
             {

@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 2779865390690716703}
   - component: {fileID: 1058954000474187532}
   - component: {fileID: 2816502507210305224}
+  - component: {fileID: 6492353288227284995}
   m_Layer: 0
   m_Name: PortableFridge
   m_TagString: Untagged
@@ -135,6 +136,7 @@ Transform:
   - {fileID: 2691333443075709996}
   - {fileID: 1712154898858504415}
   - {fileID: 6526980290483482951}
+  - {fileID: 3689188243028464805}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -200,6 +202,8 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   expirationVelocity: 0
   time: 0
+  moral: 0
+  maxMoral: 0
   prices: 
   resourceCost: 10
   onSelected:
@@ -308,6 +312,21 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   target: {fileID: 1058954000474187532}
+--- !u!114 &6492353288227284995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947953591945672596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd0beb8b9673fa4584126ca9e800b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moral: {fileID: -4321313347219698007}
+  moralBarParent: {fileID: 3003429282024165406}
+  moralBarImage: {fileID: 5643143038450770000}
 --- !u!1 &1847039777751080495
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +521,59 @@ Transform:
   m_Father: {fileID: 8322182406140325045}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3369267849917409539
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8322182406140325045}
+    m_Modifications:
+    - target: {fileID: 2157411598253882790, guid: a80758c01dec3f7488d161a44b9c2991,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157411598253882790, guid: a80758c01dec3f7488d161a44b9c2991,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.48448
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157411598253882790, guid: a80758c01dec3f7488d161a44b9c2991,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.67250997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157411598253882790, guid: a80758c01dec3f7488d161a44b9c2991,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.66
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a80758c01dec3f7488d161a44b9c2991, type: 3}
+--- !u!1 &3003429282024165406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 534899516717283613, guid: a80758c01dec3f7488d161a44b9c2991,
+    type: 3}
+  m_PrefabInstance: {fileID: 3369267849917409539}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &3689188243028464805 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2157411598253882790, guid: a80758c01dec3f7488d161a44b9c2991,
+    type: 3}
+  m_PrefabInstance: {fileID: 3369267849917409539}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5643143038450770000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6958751865998346579, guid: a80758c01dec3f7488d161a44b9c2991,
+    type: 3}
+  m_PrefabInstance: {fileID: 3369267849917409539}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5149152569459057515
 PrefabInstance:
   m_ObjectHideFlags: 0

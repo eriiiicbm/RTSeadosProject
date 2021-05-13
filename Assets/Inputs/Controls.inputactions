@@ -12,6 +12,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "SelectASingleUnit",
+                    "type": "Button",
+                    "id": "2994b18a-91e0-403e-b27c-0c8eda8f92a2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -124,6 +132,17 @@
                     "action": "Move Camera",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "b7f9d54f-3092-4c52-9642-fd7d5366dfbb",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "SelectASingleUnit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

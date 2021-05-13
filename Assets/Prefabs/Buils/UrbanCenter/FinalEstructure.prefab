@@ -11,14 +11,13 @@ GameObject:
   - component: {fileID: 1790744907436708471}
   - component: {fileID: 8592783429801805428}
   - component: {fileID: 2784017195541600506}
-  - component: {fileID: 5579965343110366278}
   m_Layer: 0
   m_Name: FinalEstructure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1790744907436708471
 Transform:
   m_ObjectHideFlags: 0
@@ -82,16 +81,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5579965343110366278
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673507198275943886}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

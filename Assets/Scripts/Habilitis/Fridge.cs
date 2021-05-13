@@ -2,27 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FridgeHouse : Building
+public class Fridge : PasiveHability
 {
-    float efectRadius;
     float recoverVelocity;
-    bool inTrigger;
-    List<Unit> units = new List<Unit>();
     public void recoverUnits()
     {
-        foreach (var unit in units) {
-            if(unit.MaxHealth>unit.CurrentHealth)
-            unit.CurrentHealth += recoverVelocity;
+        foreach (var unit in units)
+        {
+            if (unit.MaxHealth > unit.CurrentHealth)
+                unit.CurrentHealth += recoverVelocity;
             StartCoroutine(Wait(0.5f));
         }
     }
 
     // Start is called before the first frame update
-      private void Start()
+    private void Start()
     {
- 
-        efectRadius = rtsEntity.EffectRadious;   
-        recoverVelocity = rtsEntity.RecoverySpeed;        
+        recoverVelocity = GetComponent<RTSEntity>().RecoverySpeed;
     }
 
     // Update is called once per frame
@@ -37,7 +33,6 @@ public class FridgeHouse : Building
     private void OnTriggerStay(Collider other)
     {
         recoverUnits();
-
     }
     private void OnTriggerExit(Collider other)
     {
@@ -48,7 +43,6 @@ public class FridgeHouse : Building
 
     IEnumerator Wait(float duration)
     {
-        yield return new WaitForSeconds(duration);  
+        yield return new WaitForSeconds(duration);
     }
-
 }

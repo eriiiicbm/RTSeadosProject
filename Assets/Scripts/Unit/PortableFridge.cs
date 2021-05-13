@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PortableFridge : Unit, Fridege
+public class PortableFridge : Unit
 {
     float efectRadius;
     float recoverVelocity;

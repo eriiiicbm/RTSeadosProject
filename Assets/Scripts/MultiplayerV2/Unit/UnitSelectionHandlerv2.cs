@@ -9,6 +9,8 @@ using UnityEngine.Serialization;
 public class UnitSelectionHandlerv2 : MonoBehaviour
 
 {
+    private Controls controls;
+    public bool isOneClick;
     [SerializeField] private RectTransform unitSelectionArea = null;
 
     [SerializeField] private LayerMask layerMask = new LayerMask();
@@ -17,11 +19,16 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
 
     private RTSPlayerv2 player;
     private Camera mainCamera;
+    int villagersNumber = 0;
 
     public List<Unit > SelectedUnits { get; } = new List<Unit >();
 
     private void Start()
     {
+        controls = new Controls();
+        controls.Player.MoveCamera.performed += SetPreviousInput;
+        controls.Player.MoveCamera.canceled += SetPreviousInput;
+        controls.Enable();
         mainCamera = Camera.main;
 
         Unit.AuthorityOnUnitDespawned += AuthorityHandleUnitDespawned;
@@ -33,14 +40,23 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
         Unit.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespawned;
         GameOverHandler.ClientOnGameOver -= ClientHandleGameOver;
     }
-
+   
     private void Update()
     {
+       
+
         if (player == null)
         {
                 player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
         }
-
+        if (isOneClick) {
+            StartSelectionArea();
+            ClearSelectionArea();
+        }
+        if (Mouse.current.leftButton.wasPressedThisFrame&&Mouse.current.leftButton.wasReleasedThisFrame) {
+            StartSelectionArea();
+            ClearSelectionArea();
+        }
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             StartSelectionArea();
@@ -105,9 +121,18 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
             if (!unit.hasAuthority) { return; }
 
             SelectedUnits.Add(unit);
-      
+            foreach (Unit selectedUnit in SelectedUnits)
+            {
 
-             
+                selectedUnit.Select();
+                if (selectedUnit.GetComponent<Villager>() != null)
+                {
+
+                    villagersNumber++;
+                }
+            }
+
+
 
             return;
         }
@@ -130,7 +155,7 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
                 unit.Select();
             }
         }
-        int villagersNumber = 0;
+          villagersNumber = 0;
         foreach (Unit selectedUnit in SelectedUnits)
         {     
  
@@ -163,5 +188,8 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
     {
         enabled = false;
     }
-
+    private void SetPreviousInput(InputAction.CallbackContext ctx)
+    {
+        isOneClick = ctx.ReadValueAsButton();
+    }
 }

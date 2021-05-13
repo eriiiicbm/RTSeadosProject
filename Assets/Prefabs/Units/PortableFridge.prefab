@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2914157075577947577}
   - component: {fileID: 8967560198127039196}
   - component: {fileID: 5640898361535350097}
-  - component: {fileID: 2922854081581746769}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2922854081581746769
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706251083789310612}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &947953591945672596
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +92,6 @@ GameObject:
   - component: {fileID: 8322182406140325045}
   - component: {fileID: -3515681349678952813}
   - component: {fileID: -6908428373711068080}
-  - component: {fileID: -4321313347219698007}
   - component: {fileID: 500150714055533058}
   - component: {fileID: 9105742828950108958}
   - component: {fileID: 2779865390690716703}
@@ -114,6 +99,8 @@ GameObject:
   - component: {fileID: 2816502507210305224}
   - component: {fileID: 6492353288227284995}
   - component: {fileID: 4841988292945089924}
+  - component: {fileID: 6581450852017867769}
+  - component: {fileID: -2108554760688704243}
   m_Layer: 0
   m_Name: PortableFridge
   m_TagString: Untagged
@@ -180,66 +167,6 @@ MonoBehaviour:
   visible: 0
   m_AssetId: 
   hasSpawned: 0
---- !u!114 &-4321313347219698007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947953591945672596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dddf489db5bab6949940de27920fc00b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  entityName: 
-  maxHealth: 0
-  description: 
-  preview: {fileID: 0}
-  prefab: {fileID: 0}
-  rtsEntity: {fileID: 11400000, guid: 75d5c2f7aa0ec084583a2c97652196f9, type: 2}
-  currentTarget: {fileID: 0}
-  expirationVelocity: 0
-  time: 0
-  moral: 0
-  maxMoral: 0
-  prices: 
-  resourceCost: 10
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1847039777751080495}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1847039777751080495}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  targeter: {fileID: 0}
-  navMeshAgent: {fileID: 0}
-  chaseRange: 10
 --- !u!65 &500150714055533058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -248,7 +175,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947953591945672596}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -283,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87580fdfa7185494c84f1af6d35b00fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: -4321313347219698007}
+  health: {fileID: 0}
   healtBarParent: {fileID: 4595214973984364695}
   healthBarImage: {fileID: 6357763367913515225}
 --- !u!114 &1058954000474187532
@@ -328,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd0beb8b9673fa4584126ca9e800b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moral: {fileID: -4321313347219698007}
+  moral: {fileID: 0}
   moralBarParent: {fileID: 3003429282024165406}
   moralBarImage: {fileID: 5643143038450770000}
 --- !u!114 &4841988292945089924
@@ -352,6 +279,81 @@ MonoBehaviour:
   compressRotation: 0
   interpolateScale: 1
   syncScale: 1
+--- !u!114 &6581450852017867769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947953591945672596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46325e270e68a2749bf31f4a8405014c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  entityName: 
+  maxHealth: 0
+  description: 
+  preview: {fileID: 0}
+  prefab: {fileID: 0}
+  rtsEntity: {fileID: 0}
+  currentTarget: {fileID: 0}
+  expirationVelocity: 0
+  time: 0
+  moral: 0
+  maxMoral: 0
+  prices: 
+  resourceCost: 10
+  onSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1847039777751080495}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onDeselected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1847039777751080495}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  targeter: {fileID: 0}
+  navMeshAgent: {fileID: 0}
+  chaseRange: 10
+--- !u!114 &-2108554760688704243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947953591945672596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d25bdf9888a4e4da4521200654e411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  efectRadius: 0
+  recoverySpeed: 0
+  units: []
 --- !u!1 &1847039777751080495
 GameObject:
   m_ObjectHideFlags: 0

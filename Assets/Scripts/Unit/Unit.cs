@@ -12,15 +12,14 @@ public class Unit : RTSBase
 {
 
     public Transform currentTarget;
-     public float expirationVelocity;
+    public float expirationVelocity;
     public float time;
     float velocity;
     [SyncVar(hook = nameof(HandleMoralUpdated))]
     public float moral;
     public float maxMoral;
-    public List<int> prices;
-    [SerializeField] private int resourceCost = 10;
-     [SerializeField] private UnityEvent onSelected;
+    public List<int> prices; 
+    [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
     [SerializeField] private Targeter targeter;
     [SerializeField] public static event Action<Unit> ServerOnUnitSpawned;
@@ -31,12 +30,6 @@ public class Unit : RTSBase
     [SerializeField] private float chaseRange = 10f;
     public event Action<float, float> ClientOnMoralUpdated;
     public event Action ServerOnLostMoral;
-
-    public int GetResourceCost()
-    {
-        return resourceCost;
-    }
-
    
     public Targeter GetTargeter()
     {
@@ -47,16 +40,18 @@ public class Unit : RTSBase
 
     [ContextMenu("Deal damage")]
     [Server]
-     public void DealMoralDamage(float damageAmount)
+    public void DealMoralDamage(float damageAmount)
     {
-        if (moral == 0)
-        {
-            return;
-        }
-
         moral = Mathf.Max(moral - damageAmount, 0);
 
         //ServerOnLostMoral?.Invoke();
+    }
+
+    [ContextMenu("Deal support")]
+    [Server]
+    public void DealMoralSupport(float moralSupport)
+    {
+        moral = Mathf.Max(moral + moralSupport, maxMoral);
     }
 
     public override void OnStartServer()
@@ -68,6 +63,8 @@ public class Unit : RTSBase
         ServerOnDie += ServerHandleDie;
 
         navMeshAgent.speed = velocity;
+
+        connectionToClient.identity.GetComponent<RTSPlayerv2>().Trops++;
     }
 
     public override void OnStopServer()

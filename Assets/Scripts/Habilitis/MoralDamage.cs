@@ -10,7 +10,7 @@ public class MoralDamage : PasiveHability
     {
         foreach (var unit in units)
         {
-            unit.DealMoralSupport(damageMoral);
+            unit.DealMoralDamage(damageMoral);
             StartCoroutine(Wait(0.5f));
         }
     }

@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 1058954000474187532}
   - component: {fileID: 2816502507210305224}
   - component: {fileID: 6492353288227284995}
+  - component: {fileID: 4841988292945089924}
   m_Layer: 0
   m_Name: PortableFridge
   m_TagString: Untagged
@@ -266,7 +267,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  colorRenderers: []
+  colorRenderers:
+  - {fileID: 5640898361535350097}
+  - {fileID: 6296090056808851369}
+  - {fileID: 1164137084865619848}
 --- !u!114 &2779865390690716703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,6 +331,27 @@ MonoBehaviour:
   moral: {fileID: -4321313347219698007}
   moralBarParent: {fileID: 3003429282024165406}
   moralBarImage: {fileID: 5643143038450770000}
+--- !u!114 &4841988292945089924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947953591945672596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 0
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
+  compressRotation: 0
+  interpolateScale: 1
+  syncScale: 1
 --- !u!1 &1847039777751080495
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6526980290483482951
 Transform:
   m_ObjectHideFlags: 0

@@ -140,7 +140,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  isTesting: 1
+  isTesting: 0
+  cameraFocus: {fileID: 4578882886929411765, guid: 70e2096d4e1ea2140961365bdfdd96c4,
+    type: 3}
+  zoomSpeed: 6
+  zoomLimits: {x: 0, y: 0}
   playerCameraTransform: {fileID: 5167589719713410488}
   speed: 25
   screenBrderThickness: 10

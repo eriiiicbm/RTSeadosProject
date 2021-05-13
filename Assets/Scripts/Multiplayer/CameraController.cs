@@ -8,6 +8,17 @@ using UnityEngine.InputSystem;
 public class CameraController : NetworkBehaviour
 {
     public bool isTesting=false;
+    public GameObject cameraFocus;
+
+    Camera myCam;
+    GameObject cam;
+
+    public float zoomSpeed = 6f;
+    public Vector2 zoomLimits;
+
+    int min = -16, max = 39;
+    float margin = 0;
+
     [SerializeField] private Transform playerCameraTransform;
     [SerializeField] private float speed = 20f;
     [SerializeField] private float screenBrderThickness= 10f;
@@ -15,6 +26,21 @@ public class CameraController : NetworkBehaviour
     [SerializeField] private Vector2 screenZLimits= Vector2.zero;
     private Controls controls;
     private Vector2 previousInput;
+
+
+    private void Start()
+    {
+        cam = GameObject.FindWithTag("MainCamera");
+        if (cam != null)
+        {
+            myCam = cam.GetComponent<Camera>();
+        }
+        else
+        {
+            Debug.Log("Null camera component");
+        }
+    }
+
     public override void OnStartAuthority()
     {
         playerCameraTransform.gameObject.SetActive(true);
@@ -26,12 +52,49 @@ public class CameraController : NetworkBehaviour
 [ClientCallback]
     private void Update()
     {
+
         if (!hasAuthority||!Application.isFocused)
         {
             return;
         }
 
         UpdateCameraPosition();
+
+
+        // Zoom code 
+        var zoom = Input.GetAxis("Mouse ScrollWheel");
+        myCam.orthographicSize -= zoom * zoomSpeed;
+
+        myCam.orthographicSize = Mathf.Clamp(myCam.orthographicSize,
+            zoomLimits.x, zoomLimits.y);
+
+
+        if (zoom < 0 && margin != min && margin != min)
+        {
+//            Debug.Log("AUMENTO");
+
+            cameraFocus.gameObject.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
+
+            if (margin > -16)
+            {
+                margin--;
+            }
+        }
+
+        if (zoom > 0 && margin != max && margin != max)
+        {
+  //          Debug.Log("DISMINUCION");
+
+            cameraFocus.gameObject.transform.localScale -= new Vector3(0.25f, 0.25f, 0.25f);
+
+            if (margin < 39)
+            {
+                margin++;
+            }
+
+        }
+ //       Debug.Log(margin);
+
     }
 
     private void UpdateCameraPosition()

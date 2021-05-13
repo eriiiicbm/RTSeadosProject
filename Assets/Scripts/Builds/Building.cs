@@ -6,8 +6,6 @@ using UnityEngine;
 public class Building : RTSBase
 {
     float craftRadius;
-    MyEvent onCrafted;
-    MyEvent onCraftCompleted;
     GameObject craftCompletedGO;
     GameObject craftUncompletedGO;
     Renderer buildRenderer;
@@ -64,15 +62,13 @@ public class Building : RTSBase
      public override void OnStartServer()
      {
          base.OnStartServer();
-    ServerOnBuildingSpawned?.Invoke(this);   
-    craftRadius = rtsEntity.CraftRadious;
-  //comentado porque si no peta
-    craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
-    craftUncompletedGO = transform.Find("plataform")?.gameObject;
-    buildTime = rtsEntity.BuildTime;
+        ServerOnBuildingSpawned?.Invoke(this);   
+        craftRadius = rtsEntity.CraftRadious;
+        craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
+        craftUncompletedGO = transform.Find("plataform")?.gameObject;
+        buildTime = rtsEntity.BuildTime;
 
-    if (buildTime <= 0)
-        return;
+        if (buildTime <= 0)return;
         craftUncompletedGO?.SetActive(false);
         craftCompletedGO?.SetActive(true);
      }
@@ -95,11 +91,9 @@ public class Building : RTSBase
     
      public override void OnStopClient()
      {
-         base.OnStopClient();
-      if (  !hasAuthority)
-      {return;
-      }
-      AuthorityOnBuildingDespawned?.Invoke(this);
+        base.OnStopClient();
+        if (!hasAuthority) return;
+        AuthorityOnBuildingDespawned?.Invoke(this);
      }
     
     
@@ -108,8 +102,7 @@ public class Building : RTSBase
 
     void SetBuild()
     {
-        if (buildTime <= 0)
-            return;
+        if (buildTime <= 0) return;
         craftUncompletedGO.SetActive(true);
         craftCompletedGO.SetActive(false);
     }

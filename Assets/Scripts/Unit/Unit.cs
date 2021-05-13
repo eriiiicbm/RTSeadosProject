@@ -204,7 +204,7 @@ public class Unit : RTSBase
 
     IEnumerator moralEfect()
     {
-        while (rtsEntity.Moral > 5)
+        while (rtsEntity.Moral < rtsEntity.Moral *0.25)
         {
             rtsEntity.Velocity = rtsEntity.Velocity * 0.5f;
 
@@ -214,6 +214,20 @@ public class Unit : RTSBase
 
             if (rtsEntity.EffectRadious != null) rtsEntity.EffectRadious = rtsEntity.EffectRadious * 0.75f;
             if (rtsEntity.RecoverySpeed != null) rtsEntity.RecoverySpeed = rtsEntity.RecoverySpeed * 0.75f;
+
+            yield return 0;
+        }
+
+        while (rtsEntity.Moral > rtsEntity.Moral * 0.75)
+        {
+            rtsEntity.Velocity = rtsEntity.Velocity * 0.5f;
+
+            if (rtsEntity.Damage != null) rtsEntity.Damage = rtsEntity.Damage * 1.75f;
+
+            if (rtsEntity.DamageMoral != null) rtsEntity.DamageMoral = rtsEntity.DamageMoral * 1.5f;
+
+            if (rtsEntity.EffectRadious != null) rtsEntity.EffectRadious = rtsEntity.EffectRadious * 1.75f;
+            if (rtsEntity.RecoverySpeed != null) rtsEntity.RecoverySpeed = rtsEntity.RecoverySpeed * 1.75f;
 
             yield return 0;
         }

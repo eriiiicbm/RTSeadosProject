@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tower : Building, FireBuilding
+public class Tower : Building
 {
     float atackRange;
     float atackTimer;

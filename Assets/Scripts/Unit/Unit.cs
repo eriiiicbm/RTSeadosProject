@@ -67,6 +67,7 @@ public class Unit : RTSBase
         ServerOnUnitSpawned?.Invoke(this);
         ServerOnDie += ServerHandleDie;
 
+        navMeshAgent.speed = velocity;
     }
 
     public override void OnStopServer()

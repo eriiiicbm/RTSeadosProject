@@ -68,9 +68,7 @@ public class Building : RTSBase
         craftUncompletedGO = transform.Find("plataform")?.gameObject;
         buildTime = rtsEntity.BuildTime;
 
-        if (buildTime <= 0)return;
-        craftUncompletedGO?.SetActive(false);
-        craftCompletedGO?.SetActive(true);
+        SetBuild();
      }
     
      public override void OnStopServer()
@@ -102,9 +100,16 @@ public class Building : RTSBase
 
     void SetBuild()
     {
-        if (buildTime <= 0) return;
-        craftUncompletedGO.SetActive(true);
-        craftCompletedGO.SetActive(false);
+        if (buildTime <= 0)
+        {
+            craftUncompletedGO?.SetActive(false);
+            craftCompletedGO?.SetActive(true);
+        }
+        else
+        {
+            craftUncompletedGO.SetActive(true);
+            craftCompletedGO.SetActive(false);
+        }
     }
 
     void CraftPoint()
@@ -115,6 +120,8 @@ public class Building : RTSBase
         {
             craftUncompletedGO.SetActive(false);
             craftCompletedGO.SetActive(true);
+            if (GetComponent<Fridge>() == null) return;
+            connectionToClient.identity.GetComponent<RTSPlayerv2>().addHouse();
         }
     }
 

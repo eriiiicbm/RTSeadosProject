@@ -9,6 +9,7 @@ public class ProductionBuilding : Building
     GameObject curretProduction;
     Queue<GameObject> unitsQueue = new Queue<GameObject>();
     public Vector2 instanceRadius;
+    private RTSPlayerv2 player;
 
     // Start is called before the first frame update
     void Start()
@@ -27,17 +28,14 @@ public class ProductionBuilding : Building
 
     public void intProduction()
     {
-        /*if (unitsQueue.Count <= 0)
+        if (unitsQueue.Count <= 0)
             return;
-        if (unitsQueue.Dequeue().GetComponent<Unit>().prices[1]> recurces[1] || unitsQueue.Dequeue().GetComponent<Unit>().prices[2] > recurces[2])
+        if (!player.CheckIfUserHasResources(unitsQueue.Dequeue().GetComponent<Unit>().prices))
             return;
-        if (CivilizationMetrics.singleton[entity.faction].troops >= CivilizationMetrics.singleton[entity.faction].maxTroops)
-            return;
+        if (!player.checkIfUserHasSpaceTrop()) return;
 
-        recurces[1] -= unitsQueue.Dequeue().GetComponent<Unit>().prices[1]
-        recurces[2] -= unitsQueue.Dequeue().GetComponent<Unit>().prices[2]
-        CivilizationMetrics.singleton[entity.faction].troops++;
-        curretProduction = unitsQueue.Dequeue();*/
+        player.RestPriceToResources(unitsQueue.Dequeue().GetComponent<Unit>().prices);
+        curretProduction = unitsQueue.Dequeue();
     }
 
     public void InstantiateUnit()

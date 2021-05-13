@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Villager : Unit
 {
-    ResourcesType currentResourceType;
-    int resourceQuantity=0;
     float buildRate;
     float range;
 
@@ -15,9 +13,10 @@ public class Villager : Unit
         buildRate = rtsEntity.AttackTimer;
         range = rtsEntity.AttackRange;
 
+        InvokeRepeating("build", buildRate, buildRate);
+        InvokeRepeating("recolect", buildRate, buildRate);
     }
 
-  
 
     [HideInInspector]
     public Resource resource;
@@ -29,24 +28,11 @@ public class Villager : Unit
             base.CmdMove(resource.transform.position);
             return;
         }
+        currentState = UnitStates.PickResources;
         transform.LookAt(resource.transform.position);
         resource.resourcesQuantity -= 10;
-
-        switch (resource.currentResourceType)
-        {
-            case ResourcesType.Ingredients:
-                //CivilizationMetrics.singleton[movileEntity.entity.faction].resources += 10;
-                return;
-            case ResourcesType.Stone:
-                //CivilizationMetrics.singleton[movileEntity.entity.faction].resources += 10;
-                return;
-            case ResourcesType.SubstanceX:
-                //CivilizationMetrics.singleton[movileEntity.entity.faction].resources += 10;
-                return;
-            case ResourcesType.Wood:
-                //CivilizationMetrics.singleton[movileEntity.entity.faction].resources += 10;
-                return;
-        }
+        connectionToClient.identity.GetComponent<RTSPlayerv2>().
+            SetResources(10, resource.currentResourceType);
     }
 
     [HideInInspector]
@@ -58,7 +44,6 @@ public class Villager : Unit
         if (Vector3.Distance(transform.position, building.transform.position) > range)
         {
             base.CmdMove(building.transform.position);
-            currentState = UnitStates.Building;
             return;
         }
         if (building.buildTime <= 0)
@@ -66,6 +51,7 @@ public class Villager : Unit
             building = null;
             return;
         }
+        currentState = UnitStates.Building;
         transform.LookAt(building.transform.position);
 
         building.SendMessage("CraftPoint");
@@ -81,9 +67,6 @@ public class Villager : Unit
         yield return new WaitForEndOfFrame();
     }
     public IEnumerator PickResourcesState() {
-        InvokeRepeating("build", buildRate, buildRate);
-        InvokeRepeating("recolect", buildRate, buildRate);
-
         while (currentState == UnitStates.PickResources)
         {
           

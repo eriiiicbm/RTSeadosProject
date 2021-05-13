@@ -159,6 +159,8 @@ public class RTSPlayerv2 : NetworkBehaviour
             return;
         }
 
+        if (!checkIfUserHasSpaceHouse()) return;
+
         BoxCollider buildingCollider = buildingToPlace.GetComponent<BoxCollider>();
 
 

@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 4077284894349626036}
   - component: {fileID: 5219972785940084734}
   - component: {fileID: 1917411422551978806}
+  - component: {fileID: 1189657123014424701}
   m_Layer: 0
   m_Name: 'NuggetWarriior '
   m_TagString: Untagged
@@ -237,7 +238,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  colorRenderers: []
+  colorRenderers:
+  - {fileID: 2805610930306148531}
+  - {fileID: 6275889005670094984}
+  - {fileID: 8919339180297752522}
 --- !u!114 &853259452964910958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,6 +375,27 @@ MonoBehaviour:
   moral: {fileID: 853259452964910958}
   moralBarParent: {fileID: 9120941563242844859}
   moralBarImage: {fileID: 1831333046107939573}
+--- !u!114 &1189657123014424701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5651458107991866868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 0
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
+  compressRotation: 0
+  interpolateScale: 1
+  syncScale: 1
 --- !u!1 &6569138717430804862
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5685499798370969824
 Transform:
   m_ObjectHideFlags: 0

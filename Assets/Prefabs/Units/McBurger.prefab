@@ -225,7 +225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7079653604821546068
 Transform:
   m_ObjectHideFlags: 0
@@ -235,7 +235,7 @@ Transform:
   m_GameObject: {fileID: 8024623624565548713}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7773632, y: 0.5705418, z: 0.7773632}
+  m_LocalScale: {x: 4.8951, y: 4.8951, z: 4.8951}
   m_Children: []
   m_Father: {fileID: 4325208244837243931}
   m_RootOrder: 4
@@ -309,6 +309,7 @@ GameObject:
   - component: {fileID: 8350690487206437672}
   - component: {fileID: 2712356586138655380}
   - component: {fileID: -4727844309744548443}
+  - component: {fileID: -6704540380854355594}
   m_Layer: 0
   m_Name: McBurger
   m_TagString: Untagged
@@ -477,7 +478,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  colorRenderers: []
+  colorRenderers:
+  - {fileID: 7206705581454364923}
+  - {fileID: 7507430224698025727}
+  - {fileID: 6496283733099016614}
 --- !u!114 &3301321650363912208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,6 +554,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: def4d2b8a6e7c9541b4c7c7fc547c68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6704540380854355594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335747702613979503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 0
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
+  compressRotation: 0
+  interpolateScale: 1
+  syncScale: 1
 --- !u!1001 &3331914593615868309
 PrefabInstance:
   m_ObjectHideFlags: 0

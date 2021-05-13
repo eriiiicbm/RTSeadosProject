@@ -20,11 +20,6 @@ public class MoralDamage : PasiveHability
     {
         damageMoral = GetComponent<RTSEntity>().DamageMoral;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
     private void OnTriggerStay(Collider other)
     {
         damageMoralUnits();

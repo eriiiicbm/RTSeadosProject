@@ -7,7 +7,8 @@ using UnityEngine;
 
 public class ResourcesDisplayv2 : MonoBehaviour
 {
-    [SerializeField] private TMP_Text resourceText;
+    [SerializeField] private List<TMP_Text> resourceTexts;
+    private String[] resourcesIcon = { "I", "X", "W", "S" };
 
     private RTSPlayerv2 player;
     // Start is called before the first frame update
@@ -38,6 +39,9 @@ public class ResourcesDisplayv2 : MonoBehaviour
 
     private void ClientHandleResourcesUpdated(List<int> resources)
     {
-        resourceText.text = $"Resources Wood: {resources[3]}";
+        foreach (TMP_Text resourceText in resourceTexts)
+        {
+            resourceText.text = $"{resources[resourceTexts.IndexOf(resourceText)]} {resourcesIcon[resourceTexts.IndexOf(resourceText)]}";
+        }
     }
 }

@@ -12,17 +12,6 @@ public class MoralSupport : PasiveHability
             StartCoroutine(Wait(0.5f));
         }
     }
-
-    // Start is called before the first frame update
-    private void Start()
-    {
-        recoverySpeed = GetComponent<RTSEntity>().RecoverySpeed;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
     private void OnTriggerStay(Collider other)
     {
         recoverUnits();

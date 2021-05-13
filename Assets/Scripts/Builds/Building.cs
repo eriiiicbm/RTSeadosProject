@@ -131,4 +131,9 @@ public class Building : RTSBase
         Gizmos.DrawWireSphere(transform.position, craftRadius);
     }
 
+    private void OnDestroy()
+    {
+        if (GetComponent<Fridge>() == null) return;
+        connectionToClient.identity.GetComponent<RTSPlayerv2>().deleteHouse();
+    }
 }

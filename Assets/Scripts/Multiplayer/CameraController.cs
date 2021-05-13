@@ -30,15 +30,7 @@ public class CameraController : NetworkBehaviour
 
     private void Start()
     {
-        cam = GameObject.FindWithTag("MainCamera");
-        if (cam != null)
-        {
-            myCam = cam.GetComponent<Camera>();
-        }
-        else
-        {
-            Debug.Log("Null camera component");
-        }
+
     }
 
     public override void OnStartAuthority()
@@ -48,6 +40,15 @@ public class CameraController : NetworkBehaviour
         controls.Player.MoveCamera.performed += SetPreviousInput;
         controls.Player.MoveCamera.canceled += SetPreviousInput;
         controls.Enable();
+        cam = GameObject.FindWithTag("MainCamera");
+        if (cam != null)
+        {
+            myCam = cam.GetComponent<Camera>();
+        }
+        else
+        {
+            Debug.Log("Null camera component");
+        }
     }
 [ClientCallback]
     private void Update()

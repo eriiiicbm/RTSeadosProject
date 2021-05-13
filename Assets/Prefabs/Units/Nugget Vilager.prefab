@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 6186188714790268378}
   - component: {fileID: 6932561627504787393}
   - component: {fileID: 3369336252333868720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Nugget Vilager
   m_TagString: Untagged
   m_Icon: {fileID: 0}

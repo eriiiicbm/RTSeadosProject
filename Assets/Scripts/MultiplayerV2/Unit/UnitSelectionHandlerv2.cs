@@ -12,7 +12,7 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
     [SerializeField] private RectTransform unitSelectionArea = null;
 
     [SerializeField] private LayerMask layerMask = new LayerMask();
-
+    public GameObject buildingsDisplay;
     private Vector2 startPosition;
 
     private RTSPlayerv2 player;
@@ -92,6 +92,7 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
     private void ClearSelectionArea()
     {
         unitSelectionArea.gameObject.SetActive(false);
+        buildingsDisplay.SetActive(false);
 
         if (unitSelectionArea.sizeDelta.magnitude == 0)
         {
@@ -104,11 +105,9 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
             if (!unit.hasAuthority) { return; }
 
             SelectedUnits.Add(unit);
+      
 
-            foreach (Unit selectedUnit in SelectedUnits)
-            {
-                selectedUnit.Select();
-            }
+             
 
             return;
         }
@@ -131,6 +130,28 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
                 unit.Select();
             }
         }
+        int villagersNumber = 0;
+        foreach (Unit selectedUnit in SelectedUnits)
+        {     
+ 
+            selectedUnit.Select();
+            if (selectedUnit.GetComponent<Villager>()!=null)
+            {
+ 
+                villagersNumber++;
+            }
+        }
+
+        if (SelectedUnits.Count==0)
+        {
+            return;
+        }
+
+        if (villagersNumber != SelectedUnits.Count) return;
+        Debug.Log("All the selected units are villagers");
+        buildingsDisplay.SetActive(true);
+        return;
+
     }
 
     private void AuthorityHandleUnitDespawned(Unit  unit)

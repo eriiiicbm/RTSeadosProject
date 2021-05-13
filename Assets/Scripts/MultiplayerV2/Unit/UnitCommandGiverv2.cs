@@ -34,6 +34,8 @@ public class UnitCommandGiverv2 : MonoBehaviour
 
         if (hit.collider.TryGetComponent<Targetable>(out Targetable target))
         {
+            //if the unit is yours move if not target it
+            //todo state machine
             if (target.hasAuthority)
             {
                 TryMove(hit.point);

@@ -198,6 +198,8 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   expirationVelocity: 0
   time: 0
+  moral: 0
+  maxMoral: 0
   prices: 
   resourceCost: 10
   onSelected:

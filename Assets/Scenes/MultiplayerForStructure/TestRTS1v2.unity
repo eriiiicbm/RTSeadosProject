@@ -573,6 +573,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 256
+  buildingsDisplay: {fileID: 1958322594}
 --- !u!4 &893761511
 Transform:
   m_ObjectHideFlags: 0
@@ -1413,6 +1414,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildingsDisplay
       objectReference: {fileID: 0}
+    - target: {fileID: 5157204897171552980, guid: ddcea030746e15241b559f6e9362b39a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5393469622041719340, guid: ddcea030746e15241b559f6e9362b39a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1562,6 +1568,12 @@ MonoBehaviour:
   floorMask:
     serializedVersion: 2
     m_Bits: 1024
+--- !u!1 &1958322594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5157204897171552980, guid: ddcea030746e15241b559f6e9362b39a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958322585}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2120286213
 GameObject:
   m_ObjectHideFlags: 0

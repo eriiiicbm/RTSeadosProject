@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoralDamage : MonoBehaviour
 {
+    public float damageMoral;
+
     // Start is called before the first frame update
     void Start()
     {

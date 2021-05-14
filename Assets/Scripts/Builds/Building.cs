@@ -121,7 +121,6 @@ public class Building : RTSBase
             craftUncompletedGO.SetActive(false);
             craftCompletedGO.SetActive(true);
             if (GetComponent<Fridge>() == null) return;
-            connectionToClient.identity.GetComponent<RTSPlayerv2>().addHouse();
             connectionToClient.identity.GetComponent<RTSPlayerv2>().MaxTrops += 3;
         }
     }

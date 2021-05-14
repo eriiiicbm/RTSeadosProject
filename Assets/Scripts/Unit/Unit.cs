@@ -60,7 +60,7 @@ public class Unit : RTSBase
         GameOverHandlerv2.ServerOnGameOver += ServerHandleGameOver;
 
         ServerOnUnitSpawned?.Invoke(this);
-        ServerOnDie += ServerHandleDie;
+        ServerOnRTSDie += ServerHandleDie;
         velocity = rtsEntity.Velocity;
         navMeshAgent.speed = velocity;
         maxMoral = rtsEntity.Moral;
@@ -76,7 +76,7 @@ public class Unit : RTSBase
         GameOverHandlerv2.ServerOnGameOver -= ServerHandleGameOver;
 
         ServerOnUnitDespawned?.Invoke(this);
-        ServerOnDie -= ServerHandleDie;
+        ServerOnRTSDie -= ServerHandleDie;
 
     }
     [Server]

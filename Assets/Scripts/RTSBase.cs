@@ -17,7 +17,7 @@ public class RTSBase : NetworkBehaviour
     [SyncVar(hook = nameof(HandleHealthUpdated))]
     private float currentHealth;
 
-    public event Action ServerOnDie;
+    public event Action ServerOnRTSDie;
 
     public event Action<float, float> ClientOnHealthUpdated;
  
@@ -72,7 +72,7 @@ public class RTSBase : NetworkBehaviour
             return;
         }
 
-        ServerOnDie?.Invoke();
+        ServerOnRTSDie?.Invoke();
     }
 
     #endregion

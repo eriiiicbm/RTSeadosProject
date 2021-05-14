@@ -31,7 +31,7 @@ public class UnitSpawnerv2 : Building, IPointerClickHandler
     public override void OnStartServer()
     {
         base.OnStartServer();
-        ServerOnDie += ServerHandleDie;
+        ServerOnRTSDie += ServerHandleDie;
     }
 
     [Server]
@@ -43,7 +43,7 @@ public class UnitSpawnerv2 : Building, IPointerClickHandler
     public override void OnStopServer()
     {
         base.OnStopServer();
-        ServerOnDie -= ServerHandleDie;
+        ServerOnRTSDie -= ServerHandleDie;
     }
 
     [Command]

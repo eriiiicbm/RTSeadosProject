@@ -11,7 +11,7 @@ public class CameraController : NetworkBehaviour
     public bool isTesting=false;
     public GameObject cameraFocus;
 
-    Camera myCam;
+  //  Camera myCam;
     GameObject cam;
     private CinemachineVirtualCamera playerCam;
     public float zoomSpeed = 6f;
@@ -41,16 +41,18 @@ public class CameraController : NetworkBehaviour
         controls.Player.MoveCamera.performed += SetPreviousInput;
         controls.Player.MoveCamera.canceled += SetPreviousInput;
         controls.Enable();
-        cam = GameObject.FindWithTag("MainCamera");
-        if (cam != null)
-        {
-            myCam = cam.GetComponent<Camera>();
-        }
-        else
+    }
+
+       // cam = GameObject.FindWithTag("MainCamera");
+       // if (cam != null)
+       // {
+    //        myCam = cam.GetComponent<Camera>();
+     //   }
+      /*  else
         {
             Debug.Log("Null camera component");
-        }
-    }
+        }*/
+    
 [ClientCallback]
     private void Update()
     {
@@ -65,11 +67,11 @@ public class CameraController : NetworkBehaviour
 
         // Zoom code 
         var zoom = Input.GetAxis("Mouse ScrollWheel");
-        myCam.orthographicSize -= zoom * zoomSpeed;
+       // myCam.orthographicSize -= zoom * zoomSpeed;
         playerCam.m_Lens.OrthographicSize -= zoom * zoomSpeed;
 
-        myCam.orthographicSize = Mathf.Clamp(myCam.orthographicSize,
-            zoomLimits.x, zoomLimits.y);
+      //  myCam.orthographicSize = Mathf.Clamp(myCam.orthographicSize,
+        //    zoomLimits.x, zoomLimits.y);
 
  //       Debug.Log(zoom);
 

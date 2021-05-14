@@ -34,7 +34,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     public override void OnStartServer()
     {
         base.OnStartServer();
-        ServerOnDie += ServerHandleDie;
+        ServerOnRTSDie += ServerHandleDie;
         int position = 0;
         foreach (Unit unit in unitPrefab) {
             GameObject gameObject = Instantiate<GameObject>(buildingButtonTemplate,transformCanvas);
@@ -64,7 +64,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     public override void OnStopServer()
     {
         base.OnStopServer();
-        ServerOnDie -= ServerHandleDie;
+        ServerOnRTSDie -= ServerHandleDie;
     }
 
     [Command]

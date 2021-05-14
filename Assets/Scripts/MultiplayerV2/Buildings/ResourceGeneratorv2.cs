@@ -19,13 +19,13 @@ public class ResourceGeneratorv2 : Building
         base.OnStartServer();
         timer = interval;
         player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
-        ServerOnDie += ServerHandleDie;
+        ServerOnRTSDie += ServerHandleDie;
         GameOverHandlerv2.ServerOnGameOver += ServerHandleGameOver;
     }
 
     public override void OnStopServer()
     {
-        ServerOnDie -= ServerHandleDie;
+        ServerOnRTSDie -= ServerHandleDie;
         GameOverHandlerv2.ServerOnGameOver -= ServerHandleGameOver;
     }
 

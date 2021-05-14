@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mirror;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -62,6 +63,7 @@ public class Building : RTSBase
      public override void OnStartServer()
      {
          base.OnStartServer();
+        ServerOnRTSDie += ServerHandleDie;
         ServerOnBuildingSpawned?.Invoke(this);   
         craftRadius = rtsEntity.CraftRadious;
         craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
@@ -75,7 +77,9 @@ public class Building : RTSBase
      {
          base.OnStopServer();
 
-      ServerOnBuildingDespawned?.Invoke(this); }
+        ServerOnRTSDie -= ServerHandleDie;
+
+        ServerOnBuildingDespawned?.Invoke(this); }
     
      #endregion
     
@@ -93,10 +97,14 @@ public class Building : RTSBase
         if (!hasAuthority) return;
         AuthorityOnBuildingDespawned?.Invoke(this);
      }
-    
-    
-     #endregion
- 
+    [Server]
+    private void ServerHandleDie()
+    {
+        NetworkServer.Destroy(gameObject);
+    }
+
+    #endregion
+
 
     void SetBuild()
     {

@@ -61,7 +61,7 @@ public class Unit : RTSBase
 
         ServerOnUnitSpawned?.Invoke(this);
         ServerOnDie += ServerHandleDie;
-
+        velocity = rtsEntity.Velocity;
         navMeshAgent.speed = velocity;
 
         connectionToClient.identity.GetComponent<RTSPlayerv2>().Trops++;

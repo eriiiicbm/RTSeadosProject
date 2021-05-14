@@ -80,12 +80,20 @@ public class Building : RTSBase
         ServerOnRTSDie -= ServerHandleDie;
 
         ServerOnBuildingDespawned?.Invoke(this); }
-    
-     #endregion
-    
-     #region Client
-    
-     public override void OnStartAuthority()
+
+    [Server]
+    private void ServerHandleDie()
+    {
+        NetworkServer.Destroy(gameObject);
+
+        if (GetComponent<Fridge>() == null) return;
+        connectionToClient.identity.GetComponent<RTSPlayerv2>().deleteHouse();
+    }
+    #endregion
+
+    #region Client
+
+    public override void OnStartAuthority()
      {
          base.OnStartAuthority();
       AuthorityOnBuildingSpawned?.Invoke(this);
@@ -97,11 +105,6 @@ public class Building : RTSBase
         if (!hasAuthority) return;
         AuthorityOnBuildingDespawned?.Invoke(this);
      }
-    [Server]
-    private void ServerHandleDie()
-    {
-        NetworkServer.Destroy(gameObject);
-    }
 
     #endregion
 

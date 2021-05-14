@@ -159,7 +159,7 @@ public class RTSPlayerv2 : NetworkBehaviour
             return;
         }
 
-        if (!checkIfUserHasSpaceHouse()) return;
+        if(connectionToClient.identity.GetComponent<RTSPlayerv2>().addHouse()) return;
 
         BoxCollider buildingCollider = buildingToPlace.GetComponent<BoxCollider>();
 
@@ -217,12 +217,12 @@ public class RTSPlayerv2 : NetworkBehaviour
         return false;
     }
 
-    public void addHouse()
+    public bool addHouse()
     {
-        if (checkIfUserHasSpaceHouse()) return;
+        if (checkIfUserHasSpaceHouse()) return false;
 
         numHouse++;
-        maxTrops += 3;
+        return true;
     }
 
     public void deleteHouse()
@@ -232,6 +232,7 @@ public class RTSPlayerv2 : NetworkBehaviour
     }
 
     public int Trops { get => trops; set => trops = value; }
+    public int MaxTrops { get => maxTrops; set => maxTrops = value; }
     public bool Hero1 { get => hero1; set => hero1 = value; }
 
     private void ServerHandleUnitSpawned(Unit unit)

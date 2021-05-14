@@ -59,7 +59,12 @@ public class UnitSpawnerv2 : Building, IPointerClickHandler
         if (!player.CheckIfUserHasResources(unitPrefab.prices))
         {
             return;
+        } 
+        if (!player.checkIfUserHasSpaceTrop() && player)
+        {
+            return;
         }
+        
 
         queuedUnits++;
         player.RestPriceToResources(unitPrefab.prices);

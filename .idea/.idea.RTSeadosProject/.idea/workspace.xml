@@ -4,12 +4,14 @@
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/Playerv2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/Playerv2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/PortableFridge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/PortableFridge.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/MPMainCameraFocus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/MPMainCameraFocus.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/UnitSpawnerv2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/UnitSpawnerv2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/UnitSpawnerv3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/UnitSpawnerv3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
@@ -37,8 +39,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Resources/ResourcesDisplay.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Networking/RTSPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/ResourceGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/UnitMovement.cs" />
@@ -75,19 +75,21 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/HealthDisplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineExample.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/ResourceGeneratorv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitFiringv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitProjectilev2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitSelectionHandlerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv2.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />
@@ -144,7 +146,7 @@
       <workItem from="1620383364278" duration="13319000" />
       <workItem from="1620465042074" duration="44144000" />
       <workItem from="1620731878733" duration="8508000" />
-      <workItem from="1620897419966" duration="8712000" />
+      <workItem from="1620897419966" duration="14165000" />
     </task>
     <servers />
   </component>

@@ -467,13 +467,11 @@
             <e p="AreaDamage.cs" t="Include" />
             <e p="ComponetHability.cs" t="Include" />
             <e p="DistanceUnit.cs" t="Include" />
+            <e p="Fridge.cs" t="Include" />
             <e p="MeleUnit.cs" t="Include" />
             <e p="MoralDamage.cs" t="Include" />
             <e p="MoralSupport.cs" t="Include" />
-          </e>
-          <e p="implementationsJerarqui" t="Include">
-            <e p="FireBuilding.cs" t="Include" />
-            <e p="Fridge.cs" t="Include" />
+            <e p="PasiveHability.cs" t="Include" />
           </e>
           <e p="Inputs" t="Include">
             <e p="Controls.cs" t="Include" />
@@ -521,7 +519,9 @@
               <e p="BuildingButtonv2.cs" t="Include" />
               <e p="ResourceGeneratorv2.cs" t="Include" />
               <e p="UnitBasev2.cs" t="Include" />
+              <e p="UnitBuildingButtonv2.cs" t="Include" />
               <e p="UnitSpawnerv2.cs" t="Include" />
+              <e p="UnitSpawnerv3.cs" t="Include" />
             </e>
             <e p="GameOverHandlerv2.cs" t="Include" />
             <e p="HealthDisplayv2.cs" t="Include" />

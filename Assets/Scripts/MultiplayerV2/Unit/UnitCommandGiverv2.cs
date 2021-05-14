@@ -71,7 +71,7 @@ public class UnitCommandGiverv2 : MonoBehaviour
             }
             TryMove(hit.point);
             Debug.Log("TRYMOVE SINSINSIN RETURN");
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
             if (Physics.Raycast(ray, out hit, raycastLength))
             {
                 if (hit.collider.name == "Floor")

@@ -107,8 +107,8 @@ public class Building : RTSBase
         }
         else
         {
-            craftUncompletedGO.SetActive(true);
-            craftCompletedGO.SetActive(false);
+            craftUncompletedGO?.SetActive(true);
+            craftCompletedGO?.SetActive(false);
         }
     }
 

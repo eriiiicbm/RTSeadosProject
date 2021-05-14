@@ -78,7 +78,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         {
             return;
         }
-
+        if (!player.checkIfUserHasSpaceTrop()) return;
         queuedUnits++;
         player.RestPriceToResources(currentUnit.prices);
      }

@@ -25,6 +25,7 @@ public class RTSBase : NetworkBehaviour
 
     public override void OnStartServer()
     {
+        
  
         UnitBase.ServerOnPlayerDie += ServerHandlePlayerDie;
         currentState = UnitStates.Idle;

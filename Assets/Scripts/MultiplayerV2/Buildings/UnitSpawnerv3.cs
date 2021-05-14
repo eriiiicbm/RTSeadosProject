@@ -20,7 +20,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     [SerializeField] private float unitSpawnDuration = 5f;
     [SerializeField] private GameObject buildingButtonTemplate;
     private Unit currentUnit;
-    public List<Unit> unitQueue= new List<Unit>();
+    public Queue<Unit> unitQueue= new Queue<Unit>();
     [SyncVar(hook = nameof(ClientHandleQueuedUnitsUpdated))]
     private int queuedUnits;
     private List<UnitBuildingButtonv2> buttonsList= new List<UnitBuildingButtonv2>();
@@ -36,6 +36,17 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         base.OnStartServer();
         ServerOnRTSDie += ServerHandleDie;
         int position = 0;
+
+        foreach(GameObject go in rtsEntity.ProductionUnits)
+        {
+            unitPrefab.Add(go.GetComponent<Unit>());
+        }
+        if (rtsEntity.UnitsQueue != null)
+        {
+            unitQueue = rtsEntity.UnitsQueue;
+            currentUnit = rtsEntity.CurretUnit;
+        }
+
         foreach (Unit unit in unitPrefab) {
             GameObject gameObject = Instantiate<GameObject>(buildingButtonTemplate,transformCanvas);
             Debug.Log(gameObject.name +  " name ");
@@ -50,7 +61,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
  
     }
     public void AddUnitToTheQueue(Unit unit) {
-        unitQueue.Add(unit);
+        unitQueue.Enqueue(unit);
         if (currentUnit == null)
             currentUnit = unit;
         CmdSpawnUnit();
@@ -72,11 +83,6 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     [Command]
     private void CmdSpawnUnit()
     {
-        if (queuedUnits == maxUnitQueue)
-        {
-            return;
-        }
-
         RTSPlayerv2 player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
         Debug.Log ("UnitPrefab is " + currentUnit.name);
         if (!player.CheckIfUserHasResources(currentUnit.prices))
@@ -84,20 +90,20 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
             return;
         }
         if (!player.checkIfUserHasSpaceTrop()) return;
-        queuedUnits++;
+        queuedUnits = unitQueue.Count;
         player.RestPriceToResources(currentUnit.prices);
      }
 
     [Server]
     private void ProduceUnits()
     {
-        if (queuedUnits == 0)
+        if (unitQueue.Count == 0)
         {
             return;
         }
-
+    
         unitTimer += Time.deltaTime;
-        if (unitTimer < unitSpawnDuration)
+        if (unitTimer < currentUnit.time)
         {
             return;
         }
@@ -108,15 +114,14 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         spawnOffset.y = unitSpawnPoint.position.y;
         Unit unitMovement = unitInstance.GetComponent<Unit>();
         unitMovement.ServerMove(unitSpawnPoint.position + spawnOffset);
-        unitQueue.Remove(currentUnit);
         currentUnit = null;
-        queuedUnits--;
+        queuedUnits = unitQueue.Count;
         unitTimer = 0f;
-        if (queuedUnits==0)
+        if (unitQueue.Count==0)
         {
             return;
         }
-        currentUnit = unitQueue[queuedUnits-1];
+        currentUnit = unitQueue.Dequeue();
     }
 
     #endregion

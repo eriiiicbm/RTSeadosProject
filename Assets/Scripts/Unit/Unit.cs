@@ -66,6 +66,7 @@ public class Unit : RTSBase
         maxMoral = rtsEntity.Moral;
         moral = maxMoral * 0.5f;
         prices = rtsEntity.Prices;
+        time = rtsEntity.BuildTime;
 
         connectionToClient.identity.GetComponent<RTSPlayerv2>().addTrops();
     }

@@ -67,7 +67,7 @@ public class Building : RTSBase
         craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
         craftUncompletedGO = transform.Find("plataform")?.gameObject;
         buildTime = rtsEntity.BuildTime;
-
+        base.CurrentHealth = 1;
         SetBuild();
      }
     
@@ -116,6 +116,7 @@ public class Building : RTSBase
     {
         print("CRAFTING...");
         buildTime--;
+        base.CurrentHealth = base.maxHealth / buildTime;
         if (buildTime <= 0)
         {
             craftUncompletedGO.SetActive(false);
@@ -129,11 +130,5 @@ public class Building : RTSBase
     {
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, craftRadius);
-    }
-
-    private void OnDestroy()
-    {
-        if (GetComponent<Fridge>() == null) return;
-        connectionToClient.identity.GetComponent<RTSPlayerv2>().deleteHouse();
     }
 }

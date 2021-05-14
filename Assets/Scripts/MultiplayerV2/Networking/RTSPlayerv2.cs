@@ -16,11 +16,13 @@ public class RTSPlayerv2 : NetworkBehaviour
 
     [SyncVar(hook = nameof(ClientHandleResourcesUpdated))]
     [SerializeField] private List<int> resources = new List<int>();
-    [SerializeField] private int trops = 6;
-    [SerializeField] private int maxTrops = 10;
+    [SerializeField] private int trops = 0;
+    [SerializeField] private int maxTrops = 6;
+    [SerializeField] private int tropsInProduction = 6;
     [SerializeField] private int numHouse = 0;
     [SerializeField] private int maxNumHouse = 20;
     [SerializeField] private bool hero1;
+
 
     public event Action<List<int>> ClientOnResourcesUpdated;
 
@@ -203,10 +205,20 @@ public class RTSPlayerv2 : NetworkBehaviour
 
     public bool checkIfUserHasSpaceTrop()
     {
-        if (trops < maxTrops) return true;
+        if (trops + tropsInProduction < maxTrops)
+        {
+            tropsInProduction++;
+            return true;
+        }
 
         Debug.Log("Your food can't rest");
         return false;
+    }
+
+    public void addTrops()
+    {
+        trops++;
+        tropsInProduction--;
     }
 
     public bool checkIfUserHasSpaceHouse()
@@ -234,6 +246,8 @@ public class RTSPlayerv2 : NetworkBehaviour
     public int Trops { get => trops; set => trops = value; }
     public int MaxTrops { get => maxTrops; set => maxTrops = value; }
     public bool Hero1 { get => hero1; set => hero1 = value; }
+    public int MaxNumHouse { get => maxNumHouse; set => maxNumHouse = value; }
+    public int NumHouse { get => numHouse; set => numHouse = value; }
 
     private void ServerHandleUnitSpawned(Unit unit)
     {

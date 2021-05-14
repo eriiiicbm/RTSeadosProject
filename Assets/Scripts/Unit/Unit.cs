@@ -63,8 +63,11 @@ public class Unit : RTSBase
         ServerOnDie += ServerHandleDie;
         velocity = rtsEntity.Velocity;
         navMeshAgent.speed = velocity;
+        maxMoral = rtsEntity.Moral;
+        moral = maxMoral * 0.5f;
+        prices = rtsEntity.Prices;
 
-        connectionToClient.identity.GetComponent<RTSPlayerv2>().Trops++;
+        connectionToClient.identity.GetComponent<RTSPlayerv2>().addTrops();
     }
 
     public override void OnStopServer()
@@ -80,6 +83,8 @@ public class Unit : RTSBase
     private void ServerHandleDie()
     {
         NetworkServer.Destroy(gameObject);
+
+        connectionToClient.identity.GetComponent<RTSPlayerv2>().Trops--;
     }
     [ServerCallback]
     private void Update()

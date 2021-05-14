@@ -39,6 +39,6 @@ public class ResourcesDisplayv2 : MonoBehaviour
     private void ClientHandleResourcesUpdated(List<int> resources)
     {
         resourcesText.text = $"{resources[0]} I  {resources[1]} X  {resources[2]} W  {resources[3]} S  " +
-            $"6 T  0 H";
+            $"{player.Trops}/{player.MaxTrops} T  {player.NumHouse}/{player.MaxNumHouse} H";
     }
 }

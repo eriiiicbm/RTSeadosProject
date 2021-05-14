@@ -94,7 +94,8 @@ MonoBehaviour:
   prefab: {fileID: 0}
   rtsEntity: {fileID: 11400000, guid: 7d0364758de086f45b2a3adf634d6482, type: 2}
   buildTime: 0
-  buildingPreview: {fileID: 0}
+  buildingPreview: {fileID: 5400466911042870709, guid: a85e4e449084fb04ca9dc071d18d113c,
+    type: 3}
   icon: {fileID: 21300000, guid: eb5f6e2757c821940b69cf1456f7865a, type: 3}
   price: 
   id: 14

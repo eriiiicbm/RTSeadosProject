@@ -53,8 +53,10 @@ public class Building : RTSBase
      public int GetId()
      {
       return id;
-     } public List<int> GetPrice()
-     {
+     } 
+
+    public List<int> GetPrice()
+    {
       return price;
      }
     
@@ -64,7 +66,8 @@ public class Building : RTSBase
      {
          base.OnStartServer();
         ServerOnRTSDie += ServerHandleDie;
-        ServerOnBuildingSpawned?.Invoke(this);   
+        ServerOnBuildingSpawned?.Invoke(this);
+        price = rtsEntity.Prices;
         craftRadius = rtsEntity.CraftRadious;
         craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
         craftUncompletedGO = transform.Find("plataform")?.gameObject;

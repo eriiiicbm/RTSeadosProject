@@ -1154,6 +1154,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1192785763260356758, guid: ddcea030746e15241b559f6e9362b39a,
         type: 3}
+      propertyPath: building
+      value: 
+      objectReference: {fileID: 7100767405781893154, guid: 95d74b3e50c21bf4bb579498ce47d32c,
+        type: 3}
+    - target: {fileID: 1192785763260356758, guid: ddcea030746e15241b559f6e9362b39a,
+        type: 3}
       propertyPath: iconImage
       value: 
       objectReference: {fileID: 1958322586}
@@ -1223,6 +1229,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildingsDisplay
       objectReference: {fileID: 0}
+    - target: {fileID: 6010561789534578125, guid: ddcea030746e15241b559f6e9362b39a,
+        type: 3}
+      propertyPath: building
+      value: 
+      objectReference: {fileID: 994766849628178934, guid: 439da96688641d64db856588504a6eb9,
+        type: 3}
     - target: {fileID: 7846604444205510084, guid: ddcea030746e15241b559f6e9362b39a,
         type: 3}
       propertyPath: building

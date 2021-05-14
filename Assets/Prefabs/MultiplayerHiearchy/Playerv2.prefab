@@ -126,9 +126,10 @@ MonoBehaviour:
   buildingRangeLimit: 200
   myUnits: []
   myBuildings: []
-  resources: 79000000bc040000993c0300ffffff7f
-  trops: 6
-  maxTrops: 10
+  resources: 9f8601009f8601009f8601009f860100
+  trops: 0
+  maxTrops: 6
+  tropsInProduction: 0
   numHouse: 0
   maxNumHouse: 20
   hero1: 0

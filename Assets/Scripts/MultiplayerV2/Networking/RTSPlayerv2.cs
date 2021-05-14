@@ -174,7 +174,7 @@ public class RTSPlayerv2 : NetworkBehaviour
 
         RestPriceToResources(buildingToPlace.GetPrice());
         GameObject buildingInstance =
-            Instantiate(buildingToPlace.gameObject, point, buildingToPlace.transform.rotation);
+            Instantiate(buildingToPlace.gameObject, point + buildingToPlace.transform.position , buildingToPlace.transform.rotation);
         Debug.LogWarning("Build success in " + point);
 
         NetworkServer.Spawn(buildingInstance, connectionToClient);

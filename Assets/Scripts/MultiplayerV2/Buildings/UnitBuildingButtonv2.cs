@@ -17,8 +17,7 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
      [SerializeField] private LayerMask floorMask = new LayerMask();
      private Camera mainCamera;
      private RTSPlayerv2 player;
-    UnitSpawnerv3 unitSpawnerv3;
-     private Renderer buildingRendererInstance;
+      private Renderer buildingRendererInstance;
     public void SetUnit(Unit newUnit) {
         unit = newUnit;
 
@@ -32,7 +31,7 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
 
      public void SetSpawner(UnitSpawnerv3 spawner)
      {
-         unitSpawnerv3 = spawner;
+         unitSpawner = spawner;
      }
      private void Update()
      {
@@ -53,7 +52,7 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
 
          if (!player.CheckIfUserHasResources(unit.prices))
          {
-            unitSpawnerv3.AddUnitToTheQueue(unit);
+            unitSpawner.AddUnitToTheQueue(unit);
 
         }
 

@@ -23,7 +23,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     public List<Unit> unitQueue= new List<Unit>();
     [SyncVar(hook = nameof(ClientHandleQueuedUnitsUpdated))]
     private int queuedUnits;
-    private List<UnitBuildingButtonv2> buttonsList;
+    private List<UnitBuildingButtonv2> buttonsList= new List<UnitBuildingButtonv2>();
     [SerializeField] private Transform transformCanvas;
     [SyncVar] private float unitTimer;
 
@@ -44,13 +44,15 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
             unitBuildingButtonv2.SetUnit(unit);
             unitBuildingButtonv2.SetSpawner(this);
             buttonsList.Add(unitBuildingButtonv2);
-            position += 20;
+            position -= 150;
 
          }
  
     }
     public void AddUnitToTheQueue(Unit unit) {
         unitQueue.Add(unit);
+        if (currentUnit == null)
+            currentUnit = unit;
         CmdSpawnUnit();
 
     }
@@ -76,7 +78,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         }
 
         RTSPlayerv2 player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
-        Debug.Log("UnitPrefab is " + currentUnit.name);
+        Debug.Log ("UnitPrefab is " + currentUnit.name);
         if (!player.CheckIfUserHasResources(currentUnit.prices))
         {
             return;
@@ -110,6 +112,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         currentUnit = null;
         queuedUnits--;
         unitTimer = 0f;
+        currentUnit = unitQueue[queuedUnits];
     }
 
     #endregion
@@ -142,8 +145,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
             return;
         }
 
-         CmdSpawnUnit();
-    }
+     }
 
     private void ClientHandleQueuedUnitsUpdated(int oldUnits, int newUnits)
     {

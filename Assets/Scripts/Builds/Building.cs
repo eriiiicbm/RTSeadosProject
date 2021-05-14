@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Building : RTSBase
 {
@@ -16,6 +17,9 @@ public class Building : RTSBase
     [SerializeField] private List<int> price = new List<int>() { 1,1,1,1};
     [SerializeField] private int id=-1;
     bool _canCraft = false;
+    [SerializeField] private UnityEvent onSelected;
+    [SerializeField] private UnityEvent onDeselected;
+
     public bool canCraft
     {
         get
@@ -105,7 +109,27 @@ public class Building : RTSBase
         if (!hasAuthority) return;
         AuthorityOnBuildingDespawned?.Invoke(this);
      }
+     [Client]
+     public virtual void Select()
+     {
+         if (!hasAuthority)
+         {
+             return;
+         }
+         
+         onSelected?.Invoke();
+     }
 
+     [Client]
+     public  virtual  void Deselect()
+     {
+         if (!hasAuthority)
+         {
+             return;
+         }
+         onDeselected?.Invoke();
+
+     }
     #endregion
 
 

@@ -21,7 +21,8 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
     private Camera mainCamera;
     int villagersNumber = 0;
 
-    public List<Unit > SelectedUnits { get; } = new List<Unit >();
+    public List<Unit> SelectedUnits { get; } = new List<Unit>();
+[SerializeField]    public List<Building> SelectedBuildings { get; } = new List<Building>();
 
     private void Start()
     {
@@ -40,17 +41,21 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
         Unit.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespawned;
         GameOverHandler.ClientOnGameOver -= ClientHandleGameOver;
     }
-   
+
+    [Client]
+    public void AddBuildingToSelectedBuildings(Building b)
+    {
+        SelectedBuildings.Add(b);
+    }
+
     private void Update()
     {
-       
-
         if (player == null)
         {
-                player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+            player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
         }
- 
-     
+
+
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             StartSelectionArea();
@@ -75,7 +80,13 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
                 selectedUnit.Deselect();
             }
 
+            foreach (var selectedBuilding in SelectedBuildings)
+            {
+                selectedBuilding.Deselect();
+            }
+
             SelectedUnits.Clear();
+            SelectedBuildings.Clear();
         }
 
         unitSelectionArea.gameObject.SetActive(true);
@@ -95,7 +106,7 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
 
         unitSelectionArea.sizeDelta = new Vector2(Mathf.Abs(areaWidth), Mathf.Abs(areaHeight));
         unitSelectionArea.anchoredPosition = startPosition +
-            new Vector2(areaWidth / 2, areaHeight / 2);
+                                             new Vector2(areaWidth / 2, areaHeight / 2);
     }
 
     [Client]
@@ -108,15 +119,38 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
         {
             Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
-            if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask)) { return; }
+            if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
+            {
+                return;
+            }
 
-            if (!hit.collider.TryGetComponent<Unit >(out Unit  unit)) { return; }
+            if (!hit.collider.TryGetComponent<Unit>(out Unit unit))
+            {
+                goto build;
+            }
 
-            if (!unit.hasAuthority) { return; }
+            if (!unit.hasAuthority)
+            {
+                goto build;
+            }
 
             SelectedUnits.Add(unit);
-             CheckIfVilager();
+            CheckIfVilager();
             Debug.Log("case 1");
+            build:
+            if (!hit.collider.TryGetComponent<Building>(out Building building))
+            {
+                return;
+            }
+
+
+            if (building == null) return;
+            if (!building.hasAuthority)
+            {
+                return;
+            }
+
+            SelectedBuildings.Add(building);
 
             return;
         }
@@ -126,7 +160,10 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
 
         foreach (Unit unit in player.GetMyUnits())
         {
-            if (SelectedUnits.Contains(unit)) { continue; }
+            if (SelectedUnits.Contains(unit))
+            {
+                continue;
+            }
 
             Vector3 screenPosition = mainCamera.WorldToScreenPoint(unit.transform.position);
 
@@ -138,21 +175,39 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
                 SelectedUnits.Add(unit);
                 unit.Select();
             }
+        } 
+        foreach (Building building in player.GetMyBuildings())
+        {
+            if (SelectedBuildings.Contains(building))
+            {
+                continue;
+            }
+
+            Vector3 screenPosition = mainCamera.WorldToScreenPoint(building.transform.position);
+
+            if (screenPosition.x > min.x &&
+                screenPosition.x < max.x &&
+                screenPosition.y > min.y &&
+                screenPosition.y < max.y)
+            {
+                SelectedBuildings.Add(building);
+                building.Select();
+            }
         }
+
         CheckIfVilager();
 
         Debug.Log("case 2");
-
     }
-    private bool CheckIfVilager() {
+
+    private bool CheckIfVilager()
+    {
         villagersNumber = 0;
         foreach (Unit selectedUnit in SelectedUnits)
         {
-
             selectedUnit.Select();
             if (selectedUnit.GetComponent<Villager>() != null)
             {
-
                 villagersNumber++;
             }
         }
@@ -166,18 +221,19 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
         Debug.Log("All the selected units are villagers");
         buildingsDisplay.SetActive(true);
         return true;
-
     }
 
-    private void AuthorityHandleUnitDespawned(Unit  unit)
+    private void AuthorityHandleUnitDespawned(Unit unit)
     {
         SelectedUnits.Remove(unit);
     }
-[Client]
+
+    [Client]
     private void ClientHandleGameOver(string winnerName)
     {
         enabled = false;
     }
+
     private void SetPreviousInput(InputAction.CallbackContext ctx)
     {
         isOneClick = ctx.ReadValueAsButton();

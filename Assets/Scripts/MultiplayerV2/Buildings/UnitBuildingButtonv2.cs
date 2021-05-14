@@ -45,18 +45,21 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
 
      public void OnPointerDown(PointerEventData eventData)
      {
+         Debug.Log("ONPOINTERDOWN");
+
          if (eventData.button != PointerEventData.InputButton.Left)
          {
              return;
          }
+         Debug.Log("ONPOINTERDOWnleFT");
 
-         if (!player.CheckIfUserHasResources(unit.prices))
-         {
+        
             unitSpawner.AddUnitToTheQueue(unit);
-
-        }
+            unitSpawner.Select();
 
        
+
+
      }
 
      public void OnPointerUp(PointerEventData eventData)

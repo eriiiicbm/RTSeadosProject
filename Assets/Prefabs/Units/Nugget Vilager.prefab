@@ -234,7 +234,6 @@ MonoBehaviour:
   moral: 233
   maxMoral: 2333
   prices: 00000000000000000000000000000000
-  resourceCost: 10
   onSelected:
     m_PersistentCalls:
       m_Calls:
@@ -436,7 +435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4275711750927567574
 Transform:
   m_ObjectHideFlags: 0

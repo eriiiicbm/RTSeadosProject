@@ -112,7 +112,11 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         currentUnit = null;
         queuedUnits--;
         unitTimer = 0f;
-        currentUnit = unitQueue[queuedUnits];
+        if (queuedUnits==0)
+        {
+            return;
+        }
+        currentUnit = unitQueue[queuedUnits-1];
     }
 
     #endregion
@@ -144,7 +148,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         {
             return;
         }
-
+        
      }
 
     private void ClientHandleQueuedUnitsUpdated(int oldUnits, int newUnits)
@@ -167,4 +171,18 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
             UpdateTimerDisplay();
         }
     }
+
+[Client]
+public override void Deselect()
+    {
+        base.Deselect();
+        transformCanvas.gameObject.SetActive(false);
+    }
+[Client]
+public override void Select()
+    {
+        base.Select();
+        transformCanvas.gameObject.SetActive(true);
+    }
+ 
 }

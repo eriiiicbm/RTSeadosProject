@@ -1431,6 +1431,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 857180664}
     m_Modifications:
+    - target: {fileID: 1523482070263476705, guid: 345375c09a4388a4cae6a6a69f8baa06,
+        type: 3}
+      propertyPath: building
+      value: 
+      objectReference: {fileID: -8355729088920819036, guid: f46ab509685563344b2db45124c45bb4,
+        type: 3}
+    - target: {fileID: 1523482070263476705, guid: 345375c09a4388a4cae6a6a69f8baa06,
+        type: 3}
+      propertyPath: floorMask.m_Bits
+      value: 1088
+      objectReference: {fileID: 0}
     - target: {fileID: 3682176478860930569, guid: 345375c09a4388a4cae6a6a69f8baa06,
         type: 3}
       propertyPath: m_Pivot.x

@@ -14,8 +14,9 @@ public class RTSPlayerv2 : NetworkBehaviour
     [SerializeField] private List<Building> myBuildings = new List<Building>();
     private Color teamColor = new Color();
 
-    [SyncVar(hook = nameof(ClientHandleResourcesUpdated))]
-    [SerializeField] private List<int> resources = new List<int>();
+    [SyncVar(hook = nameof(ClientHandleResourcesUpdated))] [SerializeField]
+    private List<int> resources = new List<int>();
+
     [SerializeField] private int trops = 0;
     [SerializeField] private int maxTrops = 6;
     [SerializeField] private int tropsInProduction = 6;
@@ -30,27 +31,30 @@ public class RTSPlayerv2 : NetworkBehaviour
     {
         return cameraTransform;
     }
-    public List<int> GetAllResources() {
+
+    public List<int> GetAllResources()
+    {
         return resources;
     }
+
     public int GetResources(ResourcesType resourceType)
     {
-        switch (resourceType) {
+        switch (resourceType)
+        {
             case ResourcesType.Ingredients:
                 return resources[0];
-           
+
             case ResourcesType.Stone:
                 return resources[1];
-                 
+
             case ResourcesType.SubstanceX:
                 return resources[2];
-                 
+
             case ResourcesType.Wood:
                 return resources[3];
-                 
         }
+
         return -1;
-          
     }
 
     public Color GetTeamColor()
@@ -97,24 +101,23 @@ public class RTSPlayerv2 : NetworkBehaviour
     }
 
     [Server]
-    public void SetResources(int newResources,ResourcesType resourceType)
+    public void SetResources(int newResources, ResourcesType resourceType)
     {
         switch (resourceType)
         {
             case ResourcesType.Ingredients:
-               resources[0] = newResources;
+                resources[0] = newResources;
                 break;
             case ResourcesType.SubstanceX:
-                 resources[1] = newResources;
+                resources[1] = newResources;
                 break;
             case ResourcesType.Wood:
-                  resources[2] = newResources;
+                resources[2] = newResources;
                 break;
             case ResourcesType.Stone:
                 resources[3] = newResources;
                 break;
         }
-      
     }
 
     public override void OnStartServer()
@@ -153,7 +156,7 @@ public class RTSPlayerv2 : NetworkBehaviour
             Debug.LogWarning("Building to place is null");
             return;
         }
-        
+
         if (!CheckIfUserHasResources(buildingToPlace.GetPrice()))
         {
             Debug.LogWarning("You are poor");
@@ -161,7 +164,7 @@ public class RTSPlayerv2 : NetworkBehaviour
             return;
         }
 
-        if(connectionToClient.identity.GetComponent<RTSPlayerv2>().addHouse()) return;
+        if (connectionToClient.identity.GetComponent<RTSPlayerv2>().addHouse()) return;
 
         BoxCollider buildingCollider = buildingToPlace.GetComponent<BoxCollider>();
 
@@ -174,7 +177,8 @@ public class RTSPlayerv2 : NetworkBehaviour
 
         RestPriceToResources(buildingToPlace.GetPrice());
         GameObject buildingInstance =
-            Instantiate(buildingToPlace.gameObject, point + buildingToPlace.transform.position , buildingToPlace.transform.rotation);
+            Instantiate(buildingToPlace.gameObject, point + buildingToPlace.transform.position,
+                buildingToPlace.transform.rotation);
         Debug.LogWarning("Build success in " + point);
 
         NetworkServer.Spawn(buildingInstance, connectionToClient);
@@ -182,21 +186,24 @@ public class RTSPlayerv2 : NetworkBehaviour
 
     public bool CheckIfUserHasResources(List<int> prices)
     {
-         if (prices.Count < resources.Count) {
+        if (prices.Count < resources.Count)
+        {
             Debug.Log("Price " + prices.Count + "  Resources num " + resources.Count);
             return false;
         }
-        for (int i=0; i < resources.Count; i++) {
-            if (resources[i] - prices[i] < 0) {
-                Debug.Log("You are poor");
-                return false;
 
-            }
+        for (var i = 0; i < resources.Count; i++)
+        {
+            if (resources[i] - prices[i] >= 0) continue;
+            Debug.Log("You are poor");
+            return false;
         }
+
         return true;
     }
 
-    public void RestPriceToResources(List<int> prices) {
+    public void RestPriceToResources(List<int> prices)
+    {
         for (int i = 0; i < resources.Count; i++)
         {
             resources[i] -= prices[i];
@@ -243,11 +250,35 @@ public class RTSPlayerv2 : NetworkBehaviour
         maxTrops -= 3;
     }
 
-    public int Trops { get => trops; set => trops = value; }
-    public int MaxTrops { get => maxTrops; set => maxTrops = value; }
-    public bool Hero1 { get => hero1; set => hero1 = value; }
-    public int MaxNumHouse { get => maxNumHouse; set => maxNumHouse = value; }
-    public int NumHouse { get => numHouse; set => numHouse = value; }
+    public int Trops
+    {
+        get => trops;
+        set => trops = value;
+    }
+
+    public int MaxTrops
+    {
+        get => maxTrops;
+        set => maxTrops = value;
+    }
+
+    public bool Hero1
+    {
+        get => hero1;
+        set => hero1 = value;
+    }
+
+    public int MaxNumHouse
+    {
+        get => maxNumHouse;
+        set => maxNumHouse = value;
+    }
+
+    public int NumHouse
+    {
+        get => numHouse;
+        set => numHouse = value;
+    }
 
     private void ServerHandleUnitSpawned(Unit unit)
     {

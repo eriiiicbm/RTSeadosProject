@@ -304,8 +304,10 @@ MonoBehaviour:
   rtsEntity: {fileID: 11400000, guid: e305453b6e5e4484ca02320dc953151e, type: 2}
   currentTarget: {fileID: 0}
   expirationVelocity: 0
+  time: 0
+  moral: 0
+  maxMoral: 0
   prices: 02000000020000000200000002000000
-  resourceCost: 10
   onSelected:
     m_PersistentCalls:
       m_Calls:
@@ -535,7 +537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2643458232211647461
 Transform:
   m_ObjectHideFlags: 0

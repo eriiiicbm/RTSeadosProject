@@ -91,7 +91,7 @@ public class Building : RTSBase
     [Server]
     private void ServerHandleDie()
     {
-        NetworkServer.Destroy(gameObject);
+         NetworkServer.Destroy(gameObject);
 
         if (GetComponent<Fridge>() == null) return;
         connectionToClient.identity.GetComponent<RTSPlayerv2>().deleteHouse();

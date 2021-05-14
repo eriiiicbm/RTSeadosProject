@@ -495,6 +495,7 @@
             <e p="FaceCamera.cs" t="Include" />
             <e p="Menus" t="Include">
               <e p="GameOverDisplay.cs" t="Include" />
+              <e p="GameOverDisplayv2.cs" t="Include" />
             </e>
             <e p="Minimap.cs" t="Include" />
             <e p="Networking" t="Include">

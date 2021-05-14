@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &156608093248703549
 Transform:
   m_ObjectHideFlags: 0
@@ -366,7 +366,6 @@ MonoBehaviour:
   moral: 0
   maxMoral: 0
   prices: 
-  resourceCost: 10
   onSelected:
     m_PersistentCalls:
       m_Calls:
@@ -539,6 +538,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: def4d2b8a6e7c9541b4c7c7fc547c68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  efectRadius: 0
+  recoverySpeed: 0
+  units: []
   damageMoral: 0
 --- !u!114 &-6704540380854355594
 MonoBehaviour:

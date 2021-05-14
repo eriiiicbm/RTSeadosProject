@@ -127,7 +127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1919462471570867135
 Transform:
   m_ObjectHideFlags: 0
@@ -396,7 +396,6 @@ MonoBehaviour:
   moral: 0
   maxMoral: 0
   prices: 
-  resourceCost: 10
   onSelected:
     m_PersistentCalls:
       m_Calls:

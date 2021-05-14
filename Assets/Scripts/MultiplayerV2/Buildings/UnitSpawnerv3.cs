@@ -15,7 +15,6 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     [SerializeField] private Transform unitSpawnPoint = null;
     [SerializeField] private TMP_Text remainingUnitsText = null;
     [SerializeField] private Image unitProgressImage = null;
-    [SerializeField] private int maxUnitQueue = 5;
     [SerializeField] private float spawnMoveRange = 7;
     [SerializeField] private float unitSpawnDuration = 5f;
     [SerializeField] private GameObject buildingButtonTemplate;

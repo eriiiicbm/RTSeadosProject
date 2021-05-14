@@ -176,8 +176,7 @@ MonoBehaviour:
   - {fileID: 265292966799028624, guid: 06aab8909717c664eb21bd5a36a0d573, type: 3}
   - {fileID: 6508101106659302983, guid: 1def9626f1305574ba187a81c11f8807, type: 3}
   - {fileID: 6860597628955110165, guid: 439da96688641d64db856588504a6eb9, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8706463502434392613, guid: f46ab509685563344b2db45124c45bb4, type: 3}
   - {fileID: 0}
   startingUnitsAndBuildings:
   - {fileID: 8706463502434392613, guid: a18ce2f05311c5f49b276f0be5c11546, type: 3}

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using Mirror;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,7 +13,7 @@ public class CameraController : NetworkBehaviour
 
     Camera myCam;
     GameObject cam;
-
+    private CinemachineVirtualCamera playerCam;
     public float zoomSpeed = 6f;
     public Vector2 zoomLimits;
 
@@ -30,7 +31,7 @@ public class CameraController : NetworkBehaviour
 
     private void Start()
     {
-
+        playerCam = playerCameraTransform.GetComponent<CinemachineVirtualCamera>();
     }
 
     public override void OnStartAuthority()
@@ -65,6 +66,7 @@ public class CameraController : NetworkBehaviour
         // Zoom code 
         var zoom = Input.GetAxis("Mouse ScrollWheel");
         myCam.orthographicSize -= zoom * zoomSpeed;
+        playerCam.m_Lens.OrthographicSize -= zoom * zoomSpeed;
 
         myCam.orthographicSize = Mathf.Clamp(myCam.orthographicSize,
             zoomLimits.x, zoomLimits.y);
@@ -73,7 +75,7 @@ public class CameraController : NetworkBehaviour
 
         if (zoom < 0 && margin != min && margin != min)
         {
-//            Debug.Log("AUMENTO");
+            Debug.Log("AUMENTO");
 
             cameraFocus.gameObject.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
 
@@ -85,7 +87,7 @@ public class CameraController : NetworkBehaviour
 
         if (zoom > 0 && margin != max && margin != max)
         {
-  //          Debug.Log("DISMINUCION");
+            Debug.Log("DISMINUCION");
 
             cameraFocus.gameObject.transform.localScale -= new Vector3(0.25f, 0.25f, 0.25f);
 

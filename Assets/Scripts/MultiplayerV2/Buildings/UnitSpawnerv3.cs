@@ -24,6 +24,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     [SyncVar(hook = nameof(ClientHandleQueuedUnitsUpdated))]
     private int queuedUnits;
     private List<UnitBuildingButtonv2> buttonsList;
+    [SerializeField] private Transform transformCanvas;
     [SyncVar] private float unitTimer;
 
     private float progressImageVelocity;
@@ -36,11 +37,13 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         ServerOnDie += ServerHandleDie;
         int position = 0;
         foreach (Unit unit in unitPrefab) {
-            GameObject gameObject = Instantiate<GameObject>(buildingButtonTemplate);
+            GameObject gameObject = Instantiate<GameObject>(buildingButtonTemplate,transformCanvas);
+            Debug.Log(gameObject.name +  " name ");
             gameObject.transform.position = new Vector3(gameObject.transform.position.x + position, gameObject.transform.position.y, gameObject.transform.position.z);
             UnitBuildingButtonv2 unitBuildingButtonv2 = gameObject.GetComponent<UnitBuildingButtonv2>();
             unitBuildingButtonv2.SetUnit(unit);
-            buttonsList.Add(unitBuildingButtonv2.GetComponent<UnitBuildingButtonv2>());
+            unitBuildingButtonv2.SetSpawner(this);
+            buttonsList.Add(unitBuildingButtonv2);
             position += 20;
 
          }

@@ -28,9 +28,12 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
          mainCamera = Camera.main;
          iconImage.sprite = unit.preview;
          priceText.text = unit.prices.ToString();
-           unitSpawnerv3=     GetComponentInParent<UnitSpawnerv3>();
-      }
+       }
 
+     public void SetSpawner(UnitSpawnerv3 spawner)
+     {
+         unitSpawnerv3 = spawner;
+     }
      private void Update()
      {
          if (player == null)

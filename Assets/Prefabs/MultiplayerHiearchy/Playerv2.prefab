@@ -119,6 +119,7 @@ MonoBehaviour:
   - {fileID: 994766849628178934, guid: 439da96688641d64db856588504a6eb9, type: 3}
   - {fileID: 5420493816838377146, guid: ae0b58e4514b7c64096a99cc6e3a6992, type: 3}
   - {fileID: 901695133488945128, guid: e5950ebad5966e446bce262cf41e122c, type: 3}
+  - {fileID: -8355729088920819036, guid: f46ab509685563344b2db45124c45bb4, type: 3}
   buildingBlockLayer:
     serializedVersion: 2
     m_Bits: 1
@@ -126,6 +127,11 @@ MonoBehaviour:
   myUnits: []
   myBuildings: []
   resources: 79000000bc040000993c0300ffffff7f
+  trops: 6
+  maxTrops: 10
+  numHouse: 0
+  maxNumHouse: 20
+  hero1: 0
 --- !u!114 &8091097305547058836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  isTesting: 0
+  isTesting: 1
   cameraFocus: {fileID: 4578882886929411765, guid: 70e2096d4e1ea2140961365bdfdd96c4,
     type: 3}
   zoomSpeed: 6

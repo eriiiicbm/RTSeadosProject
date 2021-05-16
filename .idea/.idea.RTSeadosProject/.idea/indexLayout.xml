@@ -30,6 +30,7 @@
     <explicitExcludes>
       <Path>.git</Path>
       <Path>.idea</Path>
+      <Path>BUILDS</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>

@@ -58,7 +58,10 @@ public class Unit : RTSBase
     {
         base.OnStartServer();
         GameOverHandlerv2.ServerOnGameOver += ServerHandleGameOver;
-
+        if (navMeshAgent==null)
+        {
+            navMeshAgent = GetComponent<NavMeshAgent>();
+        }
         ServerOnUnitSpawned?.Invoke(this);
         ServerOnRTSDie += ServerHandleDie;
         velocity = rtsEntity.Velocity;

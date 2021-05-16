@@ -396,8 +396,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  targeter: {fileID: 0}
-  navMeshAgent: {fileID: 0}
+  targeter: {fileID: 8350690487206437672}
+  navMeshAgent: {fileID: 1369374423079910209}
   chaseRange: 10
   damage: 0
 --- !u!114 &-4504148956378012198

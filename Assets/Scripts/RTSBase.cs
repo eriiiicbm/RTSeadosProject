@@ -27,7 +27,7 @@ public class RTSBase : NetworkBehaviour
     {
         
  
-        UnitBase.ServerOnPlayerDie += ServerHandlePlayerDie;
+        UnitBasev2.ServerOnPlayerDie += ServerHandlePlayerDie;
         currentState = UnitStates.Idle;
         maxHealth = rtsEntity.MaxHealth;
      
@@ -42,7 +42,7 @@ public class RTSBase : NetworkBehaviour
 
     public override void OnStopServer()
     {
-         UnitBase.ServerOnPlayerDie -= ServerHandlePlayerDie;
+         UnitBasev2.ServerOnPlayerDie -= ServerHandlePlayerDie;
     }
 
     [Server]

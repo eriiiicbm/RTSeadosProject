@@ -14,6 +14,7 @@ public class UnitBasev2 : Building
  #region Server
  public override void OnStartServer()
  {
+     base.OnStartServer();
    ServerOnRTSDie += ServerHandleDie;
    ServerOnBaseSpawned?.Invoke(this);
        
@@ -22,6 +23,7 @@ public class UnitBasev2 : Building
  public override void OnStopServer()
  {
 
+     base.OnStopServer();
      ServerOnBaseDespawned?.Invoke(this);
    ServerOnRTSDie -= ServerHandleDie;
 

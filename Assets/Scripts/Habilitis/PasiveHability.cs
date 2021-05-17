@@ -11,8 +11,8 @@ public class PasiveHability : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        efectRadius = GetComponent<RTSEntity>().EffectRadious;
-        recoverySpeed = GetComponent<RTSEntity>().RecoverySpeed;
+        efectRadius = GetComponent<RTSBase>().rtsEntity.EffectRadious;
+        recoverySpeed = GetComponent<RTSBase>().rtsEntity.RecoverySpeed;
     }
 
     // Update is called once per frame

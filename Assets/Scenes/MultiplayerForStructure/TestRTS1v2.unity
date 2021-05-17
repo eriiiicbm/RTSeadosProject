@@ -1277,19 +1277,19 @@ PrefabInstance:
         type: 3}
       propertyPath: building
       value: 
-      objectReference: {fileID: 994766849628178934, guid: 439da96688641d64db856588504a6eb9,
+      objectReference: {fileID: 5683830269503721512, guid: 439da96688641d64db856588504a6eb9,
         type: 3}
     - target: {fileID: 7846604444205510084, guid: ddcea030746e15241b559f6e9362b39a,
         type: 3}
       propertyPath: building
       value: 
-      objectReference: {fileID: -21070764998124143, guid: 1def9626f1305574ba187a81c11f8807,
+      objectReference: {fileID: 1164019021932799192, guid: 1def9626f1305574ba187a81c11f8807,
         type: 3}
     - target: {fileID: 7859346008865336052, guid: ddcea030746e15241b559f6e9362b39a,
         type: 3}
       propertyPath: building
       value: 
-      objectReference: {fileID: 8577897102811988554, guid: d69f154243017534b83af99b42a97603,
+      objectReference: {fileID: 8496475827853168161, guid: d69f154243017534b83af99b42a97603,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddcea030746e15241b559f6e9362b39a, type: 3}

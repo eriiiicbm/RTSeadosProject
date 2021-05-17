@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 156608093248703549}
   - component: {fileID: 7206705581454364923}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SelectedHighlight (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3250930520477938458}
   - component: {fileID: 5720447455954391056}
   - component: {fileID: 7507430224698025727}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8479956008552202908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AimAtPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 7079653604821546068}
   - component: {fileID: 3345349416027349083}
   - component: {fileID: 6496283733099016614}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: MinimapIcon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 2712356586138655380}
   - component: {fileID: -4727844309744548443}
   - component: {fileID: -6704540380854355594}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: McBurger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8335747702613979503}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -570,6 +570,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4325208244837243931}
     m_Modifications:
+    - target: {fileID: 534899516717283613, guid: a80758c01dec3f7488d161a44b9c2991,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2157411598253882790, guid: a80758c01dec3f7488d161a44b9c2991,
         type: 3}
       propertyPath: m_RootOrder
@@ -589,6 +594,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 4.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380971818921655662, guid: a80758c01dec3f7488d161a44b9c2991,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732756500941701128, guid: a80758c01dec3f7488d161a44b9c2991,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a80758c01dec3f7488d161a44b9c2991, type: 3}
@@ -623,6 +638,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4325208244837243931}
     m_Modifications:
+    - target: {fileID: 4499788614866715369, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833856539610922895, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7074310017671610183, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
         type: 3}
       propertyPath: m_RootOrder
@@ -677,6 +702,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 4.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696465548202048508, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8696465548202048508, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
         type: 3}

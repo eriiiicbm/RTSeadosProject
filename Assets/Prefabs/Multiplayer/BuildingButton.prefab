@@ -170,7 +170,7 @@ MonoBehaviour:
   priceText: {fileID: 739750677487960559}
   floorMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1088
 --- !u!1 &5455299959005158124
 GameObject:
   m_ObjectHideFlags: 0

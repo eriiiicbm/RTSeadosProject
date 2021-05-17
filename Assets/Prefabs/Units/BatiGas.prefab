@@ -195,10 +195,10 @@ MonoBehaviour:
   entityName: 
   maxHealth: 0
   description: 
-  preview: {fileID: 0}
+  preview: {fileID: 21300000, guid: c33871c8638eb4c41bfb4577f3b58627, type: 3}
   prefab: {fileID: 0}
   rtsEntity: {fileID: 11400000, guid: a2d8413f662594f4aa4d898b777f1cff, type: 2}
-  currentTarget: {fileID: 0}
+  currentTargeteable: {fileID: 0}
   expirationVelocity: 0
   time: 0
   moral: 0
@@ -234,8 +234,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  targeter: {fileID: 0}
-  navMeshAgent: {fileID: 0}
+  targeter: {fileID: 2084167890827028078}
+  navMeshAgent: {fileID: -5711836252711353681}
   chaseRange: 10
   damage: 0
 --- !u!114 &4210234856042342807

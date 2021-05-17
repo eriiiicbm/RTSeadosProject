@@ -25,8 +25,11 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
      private void Start()
      {
          mainCamera = Camera.main;
-         iconImage.sprite = unit.preview;
-         priceText.text = unit.prices.ToString();
+         iconImage.sprite = unit.preview; 
+         priceText.text = $"{unit.rtsEntity.Prices[0]} I\n" +
+                                                           $"{unit.rtsEntity.Prices[1]} X\n" +
+                                                           $"{unit.rtsEntity.Prices[2]} W\n" +
+                                                           $"{unit.rtsEntity.Prices[3]} S";
        }
 
      public void SetSpawner(UnitSpawnerv3 spawner)
@@ -76,23 +79,6 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
          //Destroy(buildingPreviewInstance);
      }
 
-     private void UpdateBuildingPreview()
-     {
-       /*  Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-         if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, floorMask))
-         {
-             return;
-         }
-
-         buildingPreviewInstance.transform.position = new Vector3 (hit.point.x,buildingPreviewInstance.transform.position.y,hit.point.z);
-         if (!buildingPreviewInstance.activeSelf)
-         {
-             buildingPreviewInstance.SetActive(true);
-         }
-
-         Color color = player.CanPlaceBuilding(buildingCollider, hit.point) ? Color.green : Color.red;
-         Debug.Log($"color{color.ToString()}]");
-         buildingRendererInstance.material.SetColor("_Color", color);
-     */} 
+    
     
 }

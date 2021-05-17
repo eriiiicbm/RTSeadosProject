@@ -370,10 +370,10 @@ MonoBehaviour:
   entityName: 
   maxHealth: 0
   description: 
-  preview: {fileID: 0}
+  preview: {fileID: 21300000, guid: a3983c59ebf804b4abba687bd7c9e92f, type: 3}
   prefab: {fileID: 0}
-  rtsEntity: {fileID: 0}
-  currentTarget: {fileID: 0}
+  rtsEntity: {fileID: 11400000, guid: ca0c3016722ea6540a96f9d7a5f80acb, type: 2}
+  currentTargeteable: {fileID: 0}
   expirationVelocity: 0
   time: 0
   moral: 0

@@ -74,11 +74,12 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
 
         RTSPlayerv2 player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
         Debug.Log ("UnitPrefab is " + currentUnit.name);
+        if (!player.CheckIfUserHasSpaceTrop()) return;
+
         if (!player.CheckIfUserHasResources(currentUnit.prices))
         {
             return;
         }
-        if (!player.checkIfUserHasSpaceTrop()) return;
         queuedUnits++;
         player.RestPriceToResources(currentUnit.prices);
      }

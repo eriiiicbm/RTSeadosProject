@@ -78,7 +78,7 @@ public class Unit : RTSBase
         prices = rtsEntity.Prices;
         time = rtsEntity.BuildTime;
 
-        connectionToClient.identity.GetComponent<RTSPlayerv2>().addTrops();
+        connectionToClient.identity.GetComponent<RTSPlayerv2>().AddTrops();
     }
 
     public override void OnStopServer()

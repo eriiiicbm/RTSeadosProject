@@ -32,7 +32,7 @@ public class ProductionBuilding : Building
             return;
         if (!player.CheckIfUserHasResources(unitsQueue.Dequeue().GetComponent<Unit>().prices))
             return;
-        if (!player.checkIfUserHasSpaceTrop()) return;
+        if (!player.CheckIfUserHasSpaceTrop()) return;
 
         player.RestPriceToResources(unitsQueue.Dequeue().GetComponent<Unit>().prices);
         curretProduction = unitsQueue.Dequeue();

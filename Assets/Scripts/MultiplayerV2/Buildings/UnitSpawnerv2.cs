@@ -60,7 +60,7 @@ public class UnitSpawnerv2 : Building, IPointerClickHandler
         {
             return;
         } 
-        if (!player.checkIfUserHasSpaceTrop() && player)
+        if (!player.CheckIfUserHasSpaceTrop() && player)
         {
             return;
         }

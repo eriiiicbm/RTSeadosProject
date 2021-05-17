@@ -14,8 +14,8 @@ public class RTSPlayerv2 : NetworkBehaviour
     [SerializeField] private List<Building> myBuildings = new List<Building>();
     private Color teamColor = new Color();
 
-    [SyncVar(hook = nameof(ClientHandleResourcesUpdated))] [SerializeField]
-    private List<int> resources = new List<int>();
+    [SyncVar(hook = nameof(ClientHandleResourcesUpdated))] 
+    [SerializeField] private List<int> resources = new List<int>();
 
     [SerializeField] private int trops = 0;
     [SerializeField] private int maxTrops = 6;
@@ -164,7 +164,7 @@ public class RTSPlayerv2 : NetworkBehaviour
             return;
         }
 
-        if (connectionToClient.identity.GetComponent<RTSPlayerv2>().addHouse()) return;
+        if (connectionToClient.identity.GetComponent<RTSPlayerv2>().AddHouse()) return;
 
         BoxCollider buildingCollider = buildingToPlace.GetComponent<BoxCollider>();
 
@@ -210,9 +210,9 @@ public class RTSPlayerv2 : NetworkBehaviour
         }
     }
 
-    public bool checkIfUserHasSpaceTrop()
+    public bool CheckIfUserHasSpaceTrop()
     {
-        if (trops + tropsInProduction < maxTrops)
+        if ((trops + tropsInProduction )< maxTrops)
         {
             tropsInProduction++;
             return true;
@@ -222,13 +222,15 @@ public class RTSPlayerv2 : NetworkBehaviour
         return false;
     }
 
-    public void addTrops()
+    public void AddTrops()
     {
         trops++;
-        tropsInProduction--;
+        if (tropsInProduction==0)
+            return;
+            tropsInProduction--;
     }
 
-    public bool checkIfUserHasSpaceHouse()
+    public bool CheckIfUserHasSpaceHouse()
     {
         if (numHouse < maxNumHouse) return true;
 
@@ -236,15 +238,15 @@ public class RTSPlayerv2 : NetworkBehaviour
         return false;
     }
 
-    public bool addHouse()
+    public bool AddHouse()
     {
-        if (checkIfUserHasSpaceHouse()) return false;
+        if (CheckIfUserHasSpaceHouse()) return false;
 
         numHouse++;
         return true;
     }
 
-    public void deleteHouse()
+    public void DeleteHouse()
     {
         numHouse--;
         maxTrops -= 3;
@@ -354,6 +356,7 @@ public class RTSPlayerv2 : NetworkBehaviour
     private void ClientHandleResourcesUpdated(List<int> oldResources, List<int> newResources)
     {
         ClientOnResourcesUpdated?.Invoke(newResources);
+        Debug.Log("Resources Updated");
     }
 
     private void AuthorityHandleBuildingDespawned(Building obj)

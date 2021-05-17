@@ -10,15 +10,16 @@ using UnityEngine.Rendering.VirtualTexturing;
 
 public class Unit : RTSBase
 {
-
-    public Transform currentTarget;
+    [SerializeField] public Targetable currentTargeteable;
     public float expirationVelocity;
     public float time;
     float velocity;
+
     [SyncVar(hook = nameof(HandleMoralUpdated))]
     public float moral;
+
     public float maxMoral;
-    public List<int> prices; 
+    public List<int> prices;
     [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
     [SerializeField] private Targeter targeter;
@@ -30,7 +31,7 @@ public class Unit : RTSBase
     [SerializeField] private float chaseRange = 10f;
     public event Action<float, float> ClientOnMoralUpdated;
     public event Action ServerOnLostMoral;
-   
+
     public Targeter GetTargeter()
     {
         return targeter;
@@ -58,10 +59,16 @@ public class Unit : RTSBase
     {
         base.OnStartServer();
         GameOverHandlerv2.ServerOnGameOver += ServerHandleGameOver;
-        if (navMeshAgent==null)
+        if (navMeshAgent == null)
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
         }
+
+        if (targeter == null)
+        {
+            targeter = GetComponent<Targeter>();
+        }
+
         ServerOnUnitSpawned?.Invoke(this);
         ServerOnRTSDie += ServerHandleDie;
         velocity = rtsEntity.Velocity;
@@ -81,8 +88,8 @@ public class Unit : RTSBase
 
         ServerOnUnitDespawned?.Invoke(this);
         ServerOnRTSDie -= ServerHandleDie;
-
     }
+
     [Server]
     private void ServerHandleDie()
     {
@@ -90,14 +97,17 @@ public class Unit : RTSBase
 
         connectionToClient.identity.GetComponent<RTSPlayerv2>().Trops--;
     }
+
+    protected Targetable target;
+
     [ServerCallback]
-    private void Update()
+    public virtual void Update()
     {
-        Targetable target = targeter.GetTarget();
+        target = targeter.GetTarget();
 
         if (target != null)
         {
-            if ((target.transform.position-transform.position).sqrMagnitude> chaseRange*chaseRange)
+            if ((target.transform.position - transform.position).sqrMagnitude > chaseRange * chaseRange)
             {
                 navMeshAgent.SetDestination(target.transform.position);
             }
@@ -127,13 +137,13 @@ public class Unit : RTSBase
     {
         ServerMove(position);
     }
+
     [Server]
     private void ServerHandleGameOver()
     {
         navMeshAgent.ResetPath();
-
-          
     }
+
     [Server]
     public void ServerMove(Vector3 position)
     {
@@ -146,7 +156,9 @@ public class Unit : RTSBase
         navMeshAgent.SetDestination(hit.position);
         Debug.Log("Moving");
     }
+
     #endregion
+
     #region Client
 
     public override void OnStartAuthority()
@@ -163,6 +175,7 @@ public class Unit : RTSBase
         {
             return;
         }
+
         AuthorityOnUnitDespawned?.Invoke(this);
     }
 
@@ -173,6 +186,7 @@ public class Unit : RTSBase
         {
             return;
         }
+
         onSelected?.Invoke();
     }
 
@@ -183,24 +197,19 @@ public class Unit : RTSBase
         {
             return;
         }
-        onDeselected?.Invoke();
 
+        onDeselected?.Invoke();
     }
 
-   
-
     #endregion
+
     private void HandleMoralUpdated(float oldMoral, float newMoral)
     {
         ClientOnMoralUpdated?.Invoke(newMoral, maxMoral);
         StartCoroutine(nameof(MoralEfect));
     }
 
-    void SetNewTarget(Transform target)
-    {
-        currentTarget = target;
 
-    }
     void ExpirationEffect()
     {
         Destroy(this.transform.parent.gameObject);
@@ -209,20 +218,21 @@ public class Unit : RTSBase
     IEnumerator MoralEfect()
     {
         if (GetComponent<Unit>() == null) yield return 0;
-        if (moral < maxMoral *0.25)
+        if (moral < maxMoral * 0.25)
         {
             velocity = rtsEntity.Velocity * 0.5f;
 
-            if(GetComponent<UnitCombat>() != null) GetComponent<UnitCombat>().damage = rtsEntity.Damage * 0.75f;
+            if (GetComponent<UnitCombat>() != null) GetComponent<UnitCombat>().damage = rtsEntity.Damage * 0.75f;
 
-            if (GetComponent<MoralDamage>() != null) GetComponent<MoralDamage>().damageMoral = rtsEntity.DamageMoral * 0.5f;
+            if (GetComponent<MoralDamage>() != null)
+                GetComponent<MoralDamage>().damageMoral = rtsEntity.DamageMoral * 0.5f;
 
             if (GetComponent<PasiveHability>() != null)
             {
                 GetComponent<PasiveHability>().efectRadius = rtsEntity.EffectRadious * 0.75f;
                 GetComponent<PasiveHability>().recoverySpeed = rtsEntity.RecoverySpeed * 0.75f;
             }
-            
+
             yield return 0;
         }
 
@@ -232,7 +242,8 @@ public class Unit : RTSBase
 
             if (GetComponent<UnitCombat>() != null) GetComponent<UnitCombat>().damage = rtsEntity.Damage * 1.75f;
 
-            if (GetComponent<MoralDamage>() != null) GetComponent<MoralDamage>().damageMoral = rtsEntity.DamageMoral * 1.5f;
+            if (GetComponent<MoralDamage>() != null)
+                GetComponent<MoralDamage>().damageMoral = rtsEntity.DamageMoral * 1.5f;
 
             if (GetComponent<PasiveHability>() != null)
             {
@@ -242,6 +253,7 @@ public class Unit : RTSBase
 
             yield return 0;
         }
+
         yield return new WaitForEndOfFrame();
     }
 
@@ -249,11 +261,9 @@ public class Unit : RTSBase
     {
         while (currentState == UnitStates.Follow)
         {
-
             yield return 0;
-
         }
-        yield return new WaitForEndOfFrame();
 
+        yield return new WaitForEndOfFrame();
     }
 }

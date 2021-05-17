@@ -235,10 +235,13 @@ MonoBehaviour:
   unitPrefab:
   - {fileID: 4543389441489971279, guid: cf67cc1f3acf9ee43b9b257d85f3bc1e, type: 3}
   - {fileID: 4485816749142836887, guid: 06e6a74ba84993f48aa4f75cb8c54991, type: 3}
+  - {fileID: 2356161565519005015, guid: 5b08a59fe7d3155478d441f0e96713e7, type: 3}
+  - {fileID: 853259452964910958, guid: 4616b647417188c4b82ca0d2eba93fe9, type: 3}
+  - {fileID: 3196226852141232465, guid: 9a2546bd221e3114aa5025940063cb70, type: 3}
+  - {fileID: 6095570508150801584, guid: 8c02bf8a536297e4a95053845a09202b, type: 3}
   unitSpawnPoint: {fileID: 5045854337602022993}
   remainingUnitsText: {fileID: 3247178070606983861}
   unitProgressImage: {fileID: 5860111383271228073}
-  maxUnitQueue: 10
   spawnMoveRange: 7.31
   unitSpawnDuration: 5
   buildingButtonTemplate: {fileID: 267681169135266736, guid: 3e8da26e936fdc34f9fa31103a60a42a,

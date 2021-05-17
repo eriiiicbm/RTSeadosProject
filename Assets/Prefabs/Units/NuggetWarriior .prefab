@@ -242,17 +242,17 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   entityName: 
-  maxHealth: 0
+  maxHealth: 139
   description: 
-  preview: {fileID: 0}
+  preview: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   prefab: {fileID: 0}
-  rtsEntity: {fileID: 0}
+  rtsEntity: {fileID: 11400000, guid: 79efde61064eb2041956f5a738945c85, type: 2}
   currentTarget: {fileID: 0}
-  expirationVelocity: 0
+  expirationVelocity: 3.73
   time: 0
-  moral: 0
-  maxMoral: 0
-  prices: 
+  moral: 12.81
+  maxMoral: 17.22
+  prices: 00000000000000000000000000000000
   onSelected:
     m_PersistentCalls:
       m_Calls:
@@ -283,8 +283,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  targeter: {fileID: 0}
-  navMeshAgent: {fileID: 0}
+  targeter: {fileID: 5219972785940084734}
+  navMeshAgent: {fileID: 3089973210246793607}
   chaseRange: 10
   damage: 0
 --- !u!114 &-6773480170593502627

@@ -7,7 +7,9 @@ public class UnitCombat : Unit
     public float damage;
     float attackDistance;
     float attackSpeed;
+
     float attackTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,22 +22,23 @@ public class UnitCombat : Unit
     // Update is called once per frame
     void Update()
     {
-
+        base.Update();
         attackSpeed += Time.deltaTime;
-        if (currentTarget != null)
-        {
-            navMeshAgent.destination = currentTarget.position;
 
-            var distance = (transform.position - currentTarget.position).magnitude;
-            Quaternion targetRotation = Quaternion.LookRotation(currentTarget.transform.position - transform.position);
+        if (target != null)
+        {
+            Vector3 pos = target.transform.position;
+            navMeshAgent.destination = pos;
+
+            var distance = (transform.position - pos).magnitude;
+            Quaternion targetRotation = Quaternion.LookRotation(pos - transform.position);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 180 * Time.deltaTime);
 
-            if (distance <= attackDistance && attackSpeed >= attackTimer)
-            {
-                GetComponent<ComponetHability>().active(currentTarget.GetComponent<RTSBase>(), damage);
+            if (!(distance <= attackDistance) || !(attackSpeed >= attackTimer)) return;
+            Debug.Log("ESTA PEGANDO ");
+            GetComponent<ComponetHability>().active(target.GetComponent<RTSBase>(), damage);
 
-                attackSpeed = 0;
-            }
+            attackSpeed = 0;
         }
     }
 }

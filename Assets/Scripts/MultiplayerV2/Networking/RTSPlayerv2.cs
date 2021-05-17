@@ -15,7 +15,7 @@ public class RTSPlayerv2 : NetworkBehaviour
     private Color teamColor = new Color();
 
     [SyncVar(hook = nameof(ClientHandleResourcesUpdated))] 
-    [SerializeField] private List<int> resources = new List<int>();
+   public List<int> resources = new List<int>();
 
     [SerializeField] private int trops = 0;
     [SerializeField] private int maxTrops = 6;
@@ -102,7 +102,8 @@ public class RTSPlayerv2 : NetworkBehaviour
 
     [Server]
     public void SetResources(int newResources, ResourcesType resourceType)
-    {
+    {       
+Debug.Log("Set resources");
         switch (resourceType)
         {
             case ResourcesType.Ingredients:
@@ -118,6 +119,8 @@ public class RTSPlayerv2 : NetworkBehaviour
                 resources[3] = newResources;
                 break;
         }
+        ClientOnResourcesUpdated?.Invoke(resources);
+
     }
 
     public override void OnStartServer()
@@ -208,6 +211,8 @@ public class RTSPlayerv2 : NetworkBehaviour
         {
             resources[i] -= prices[i];
         }
+        ClientOnResourcesUpdated?.Invoke(resources);
+
     }
 
     public bool CheckIfUserHasSpaceTrop()

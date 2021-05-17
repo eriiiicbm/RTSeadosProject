@@ -94,7 +94,7 @@ public class Building : RTSBase
          NetworkServer.Destroy(gameObject);
 
         if (GetComponent<Fridge>() == null) return;
-        connectionToClient.identity.GetComponent<RTSPlayerv2>().deleteHouse();
+        connectionToClient.identity.GetComponent<RTSPlayerv2>().DeleteHouse();
     }
     #endregion
 

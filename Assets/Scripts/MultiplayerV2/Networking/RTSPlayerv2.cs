@@ -25,7 +25,7 @@ public class RTSPlayerv2 : NetworkBehaviour
     [SerializeField] private bool hero1;
 
 
-    public event Action<List<int>> ClientOnResourcesUpdated;
+    public static event Action<List<int>> ClientOnResourcesUpdated;
 
     public Transform GetCameraTransform()
     {

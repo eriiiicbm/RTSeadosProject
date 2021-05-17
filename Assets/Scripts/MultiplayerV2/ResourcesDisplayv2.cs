@@ -11,38 +11,43 @@ public class ResourcesDisplayv2 : NetworkBehaviour
 
     private RTSPlayerv2 player;
     // Start is called before the first frame update
-    void Start()
-    { 
-        player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
-
-        player.ClientOnResourcesUpdated += ClientHandleResourcesUpdated;
+  [Server]
+    public override void OnStartServer()
+    {
+         player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+         RTSPlayerv2.ClientOnResourcesUpdated += ClientHandleResourcesUpdated;
 
     }
 
+ 
     // Update is called once per frame
     void Update()
     {
         if (player == null)
         {
             player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
-            player.ClientOnResourcesUpdated += ClientHandleResourcesUpdated;
-
+       RTSPlayerv2.ClientOnResourcesUpdated += ClientHandleResourcesUpdated;
+    
         }
-
+/*
        // if (player!=null)
         //    {
         //    {
                 //todo update the cliuenthandleresources to update all the ui
             //     ClientHandleResourcesUpdated(player.GetAllResources());
            // }
+           */
      
     }
 
-    private void OnDestroy()
+   [Server]
+    public override void OnStopServer()
     {
-        player.ClientOnResourcesUpdated -= ClientHandleResourcesUpdated;
+         RTSPlayerv2.ClientOnResourcesUpdated -= ClientHandleResourcesUpdated;
+
     }
-[Client]
+
+    [Client]
     private void ClientHandleResourcesUpdated(List<int> resources)
     {
         Debug.Log( $"{resources[0]} I  {resources[1]} X  {resources[2]} W  {resources[3]} S  " +

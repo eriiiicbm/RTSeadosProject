@@ -17,6 +17,23 @@ public class Villager : Unit
         InvokeRepeating("recolect", buildRate, buildRate);
     }
 
+    private void Update()
+    {
+        if (target != null)
+        {
+            base.Update();
+
+            if(target.gameObject.GetComponent<Building>() != null)
+            {
+                building = target.gameObject.GetComponent<Building>();
+            }
+
+            if(target.gameObject.GetComponent<Resource>() != null)
+            {
+                resource = target.gameObject.GetComponent<Resource>();
+            }
+        }
+    }
 
     [HideInInspector]
     public Resource resource;
@@ -60,9 +77,10 @@ public class Villager : Unit
     public override IEnumerator IdleState()
     {
         while (currentState== UnitStates.Idle) {
+
+
+
             yield return 0;
-
-
         }
         yield return new WaitForEndOfFrame();
     }

@@ -25,6 +25,7 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
      private void Start()
      {
          mainCamera = Camera.main;
+         unit.prices = unit.rtsEntity.Prices;
          iconImage.sprite = unit.preview; 
          priceText.text = $"{unit.rtsEntity.Prices[0]} I\n" +
                                                            $"{unit.rtsEntity.Prices[1]} X\n" +

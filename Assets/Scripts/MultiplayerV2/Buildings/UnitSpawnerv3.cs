@@ -49,6 +49,8 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     }
     public void AddUnitToTheQueue(Unit unit) {
         unitQueue.Add(unit);
+        Debug.Log ("uUnitPrice is " + unit.prices[0] +  " " + unit.prices[1] +  " " + unit.prices[2] +  " " + unit.prices[3] +  " "  );
+
         if (currentUnit == null)
             currentUnit = unit;
         CmdSpawnUnit();
@@ -74,6 +76,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
 
         RTSPlayerv2 player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
         Debug.Log ("UnitPrefab is " + currentUnit.name);
+        Debug.Log ("UnitPrice is " + currentUnit.prices[0] +  " " + currentUnit.prices[1] +  " " + currentUnit.prices[2] +  " " + currentUnit.prices[3] +  " "  );
         if (!player.CheckIfUserHasSpaceTrop()) return;
 
         if (!player.CheckIfUserHasResources(currentUnit.prices))

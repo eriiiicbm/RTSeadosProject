@@ -24,6 +24,7 @@ public class BuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     {
         mainCamera = Camera.main;
         iconImage.sprite = building.GetIcon();
+        building.SetPrice(building.rtsEntity.Prices);
         priceText.text = $"{building.rtsEntity.Prices[0]} I\n" +
             $"{building.rtsEntity.Prices[1]} X\n" +
             $"{building.rtsEntity.Prices[2]} W\n" +

@@ -31,6 +31,7 @@ public class Unit : RTSBase
     [SerializeField] private float chaseRange = 10f;
     public event Action<float, float> ClientOnMoralUpdated;
     public event Action ServerOnLostMoral;
+    private RTSPlayerv2 playerv2;
 
     public Targeter GetTargeter()
     {
@@ -79,7 +80,13 @@ public class Unit : RTSBase
         time = rtsEntity.BuildTime;
         chaseRange = rtsEntity.AttackRange;
 
-        connectionToClient.identity.GetComponent<RTSPlayerv2>().AddTrops();
+        playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+        if (playerv2 != null)
+        {
+            return;
+        }
+
+        Debug.LogWarning("Player is null onstart");
     }
 
     public override void OnStopServer()
@@ -166,6 +173,7 @@ public class Unit : RTSBase
     {
         base.OnStartAuthority();
         AuthorityOnUnitSpawned?.Invoke(this);
+        Debug.Log("Auth");
     }
 
     public override void OnStopClient()

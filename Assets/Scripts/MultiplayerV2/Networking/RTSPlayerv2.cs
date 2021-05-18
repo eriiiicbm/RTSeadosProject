@@ -14,7 +14,7 @@ public class RTSPlayerv2 : NetworkBehaviour
     [SerializeField] private List<Building> myBuildings = new List<Building>();
     private Color teamColor = new Color();
 
-    [SyncVar(hook = nameof(ClientHandleResourcesUpdated))] 
+    
    public List<int> resources = new List<int>();
 
     [SerializeField] private int trops = 0;
@@ -207,10 +207,14 @@ Debug.Log("Set resources");
 
     public void RestPriceToResources(List<int> prices)
     {
+        Debug.Log("apply price + " +String.Join("\n", prices)  + " resources" + resources);
         for (int i = 0; i < resources.Count; i++)
         {
             resources[i] -= prices[i];
         }
+        Debug.Log("applied price + " +String.Join("\n", prices) + " resources" + resources);
+
+        Debug.Log("resource updated");
         ClientOnResourcesUpdated?.Invoke(resources);
 
     }
@@ -222,17 +226,21 @@ Debug.Log("Set resources");
             tropsInProduction++;
             return true;
         }
-
+ 
         Debug.Log("Your food can't rest");
         return false;
     }
 
-    public void AddTrops()
+   [Server]
+    void AddTrops()
     {
+        
         trops++;
-        if (tropsInProduction==0)
-            return;
+        if (tropsInProduction!=0)
             tropsInProduction--;
+        Debug.Log("resources 0" + resources[0]);
+        ClientOnResourcesUpdated?.Invoke(resources);
+
     }
 
     public bool CheckIfUserHasSpaceHouse()
@@ -248,6 +256,8 @@ Debug.Log("Set resources");
         if (CheckIfUserHasSpaceHouse()) return false;
 
         numHouse++;
+        ClientOnResourcesUpdated?.Invoke(resources);
+
         return true;
     }
 
@@ -255,6 +265,8 @@ Debug.Log("Set resources");
     {
         numHouse--;
         maxTrops -= 3;
+        ClientOnResourcesUpdated?.Invoke(resources);
+
     }
 
     public int Trops
@@ -295,6 +307,8 @@ Debug.Log("Set resources");
         }
 
         myUnits.Add(unit);
+        AddTrops();
+
     }
 
     private void ServerHandleUnitDespawned(Unit unit)
@@ -358,11 +372,7 @@ Debug.Log("Set resources");
         Building.AuthorityOnBuildingDespawned -= AuthorityHandleBuildingDespawned;
     }
 
-    private void ClientHandleResourcesUpdated(List<int> oldResources, List<int> newResources)
-    {
-        ClientOnResourcesUpdated?.Invoke(newResources);
-        Debug.Log("Resources Updated");
-    }
+   
 
     private void AuthorityHandleBuildingDespawned(Building obj)
     {
@@ -377,6 +387,8 @@ Debug.Log("Set resources");
     private void AuthorityHandleUnitSpawned(Unit unit)
     {
         myUnits.Add(unit);
+        ClientOnResourcesUpdated?.Invoke(resources);
+Debug.Log("This is");
     }
 
     private void AuthorityHandleUnitDespawned(Unit unit)

@@ -14,7 +14,7 @@ public class ResourcesDisplayv2 : NetworkBehaviour
   [Server]
     public override void OnStartServer()
     {
-         player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+        // player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
          RTSPlayerv2.ClientOnResourcesUpdated += ClientHandleResourcesUpdated;
 
     }
@@ -26,8 +26,7 @@ public class ResourcesDisplayv2 : NetworkBehaviour
         if (player == null)
         {
             player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
-       RTSPlayerv2.ClientOnResourcesUpdated += ClientHandleResourcesUpdated;
-    
+     
         }
 /*
        // if (player!=null)
@@ -48,7 +47,7 @@ public class ResourcesDisplayv2 : NetworkBehaviour
     }
 
     [Client]
-    private void ClientHandleResourcesUpdated(List<int> resources)
+    public void ClientHandleResourcesUpdated(List<int> resources)
     {
         Debug.Log( $"{resources[0]} I  {resources[1]} X  {resources[2]} W  {resources[3]} S  " +
                    $"{player.Trops}/{player.MaxTrops} T  {player.NumHouse}/{player.MaxNumHouse} H");

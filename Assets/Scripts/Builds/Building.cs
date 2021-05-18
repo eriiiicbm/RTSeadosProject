@@ -63,6 +63,10 @@ public class Building : RTSBase
     {
       return price;
      }
+       public void  SetPrice(List<int> newPrices)
+       {
+           price = newPrices;
+       }
     
      #region Server
     

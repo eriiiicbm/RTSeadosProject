@@ -82,6 +82,9 @@ public class Unit : RTSBase
         expirationVelocity = rtsEntity.ExpirationVelocity;
 
         playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+
+        StartCoroutine(nameof(ExpirationEffect));
+
         if (playerv2 != null)
         {
             return;
@@ -111,9 +114,7 @@ public class Unit : RTSBase
 
     [ServerCallback]
     public virtual void Update()
-    {
-        DealDamage(1 * expirationVelocity);
-
+    { 
         target = targeter.GetTarget();
 
         if (target != null)
@@ -222,9 +223,13 @@ public class Unit : RTSBase
     }
 
 
-    void ExpirationEffect()
+    IEnumerator ExpirationEffect()
     {
-        DealDamage(1 * expirationVelocity);
+        while (true)
+        {
+            DealDamage(1 * expirationVelocity);
+            yield return new WaitForSeconds(1);
+        }
     }
 
     IEnumerator MoralEfect()

@@ -14,7 +14,8 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     [SerializeField] private List<Unit> unitPrefab = null;
     [SerializeField] private Transform unitSpawnPoint = null;
     [SerializeField] private TMP_Text remainingUnitsText = null;
-    [SerializeField] private Image unitProgressImage = null; [SerializeField] private float spawnMoveRange = 7;
+    [SerializeField] private Image unitProgressImage = null;
+    [SerializeField] private float spawnMoveRange = 7;
     [SerializeField] private float unitSpawnDuration = 5f;
     [SerializeField] private GameObject buildingButtonTemplate;
     private Unit currentUnit;
@@ -28,12 +29,12 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     private float progressImageVelocity;
 
     #region Server
-
     public override void OnStartServer()
     {
         base.OnStartServer();
         ServerOnRTSDie += ServerHandleDie;
         int position = 0;
+        Debug.Log("UnitPrefab length" + unitPrefab.Count);
         foreach (Unit unit in unitPrefab) {
             GameObject gameObject = Instantiate<GameObject>(buildingButtonTemplate,transformCanvas);
             Debug.Log(gameObject.name +  " name ");
@@ -44,7 +45,8 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
             buttonsList.Add(unitBuildingButtonv2);
             position -= 150;
 
-         }
+            Debug.Log("in the for");
+        }
  
     }
     public void AddUnitToTheQueue(Unit unit) {
@@ -182,6 +184,7 @@ public override void Select()
     {
         base.Select();
         transformCanvas.gameObject.SetActive(true);
+        Debug.Log("Selected");
     }
  
 }

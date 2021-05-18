@@ -81,6 +81,7 @@ public class Building : RTSBase
         craftUncompletedGO = transform.Find("plataform")?.gameObject;
         buildTime = rtsEntity.BuildTime;
         base.CurrentHealth = 1;
+        Debug.Log("base va");
         SetBuild();
      }
     

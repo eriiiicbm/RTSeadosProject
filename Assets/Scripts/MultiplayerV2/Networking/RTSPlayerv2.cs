@@ -149,7 +149,7 @@ Debug.Log("Set resources");
             if (building.GetId() == buildingId)
             {
                 buildingToPlace = building;
-
+Debug.Log("here before boom 1");
                 break;
             }
         }
@@ -166,7 +166,7 @@ Debug.Log("Set resources");
 
             return;
         }
-
+        Debug.Log("here before boom 2");
         if (connectionToClient.identity.GetComponent<RTSPlayerv2>().AddHouse()) return;
 
         BoxCollider buildingCollider = buildingToPlace.GetComponent<BoxCollider>();
@@ -179,10 +179,13 @@ Debug.Log("Set resources");
         }
 
         RestPriceToResources(buildingToPlace.GetPrice());
+        Debug.Log("here before boom 3");
+
         GameObject buildingInstance =
             Instantiate(buildingToPlace.gameObject, point + buildingToPlace.transform.position,
                 buildingToPlace.transform.rotation);
         Debug.LogWarning("Build success in " + point);
+        Debug.Log("here before boom 4");
 
         NetworkServer.Spawn(buildingInstance, connectionToClient);
     }
@@ -374,16 +377,19 @@ Debug.Log("Set resources");
 
    
 
+  
     private void AuthorityHandleBuildingDespawned(Building obj)
     {
         myBuildings.Remove(obj);
     }
 
+    [Client]
     private void AuthorityHandleBuildingSpawned(Building obj)
     {
         myBuildings.Add(obj);
     }
 
+    [Client]
     private void AuthorityHandleUnitSpawned(Unit unit)
     {
         myUnits.Add(unit);

@@ -49,8 +49,15 @@ public class ResourcesDisplayv2 : NetworkBehaviour
     [Client]
     public void ClientHandleResourcesUpdated(List<int> resources)
     {
-        Debug.Log( $"{resources[0]} I  {resources[1]} X  {resources[2]} W  {resources[3]} S  " +
-                   $"{player.Trops}/{player.MaxTrops} T  {player.NumHouse}/{player.MaxNumHouse} H");
+        if (resources==null)
+        {
+            return;
+        }
+
+        if (player==null)
+        {
+            return;
+        }
         resourcesText.text = $"{resources[0]} I  {resources[1]} X  {resources[2]} W  {resources[3]} S  " +
             $"{player.Trops}/{player.MaxTrops} T  {player.NumHouse}/{player.MaxNumHouse} H";
     }

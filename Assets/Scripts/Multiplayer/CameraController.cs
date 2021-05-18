@@ -70,8 +70,8 @@ public class CameraController : NetworkBehaviour
        // myCam.orthographicSize -= zoom * zoomSpeed;
         playerCam.m_Lens.OrthographicSize -= zoom * zoomSpeed;
 
-      //  myCam.orthographicSize = Mathf.Clamp(myCam.orthographicSize,
-        //    zoomLimits.x, zoomLimits.y);
+    //    playerCam.m_Lens.OrthographicSize = Mathf.Clamp( playerCam.m_Lens.OrthographicSize,
+      //      zoomLimits.x, zoomLimits.y);
 
  //       Debug.Log(zoom);
 

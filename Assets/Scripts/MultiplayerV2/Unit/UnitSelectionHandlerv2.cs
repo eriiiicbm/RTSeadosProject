@@ -50,6 +50,10 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
 
     private void Update()
     {
+        if (NetworkClient.connection==null)
+        {
+            return;
+        }
         if (player == null)
         {
             player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();

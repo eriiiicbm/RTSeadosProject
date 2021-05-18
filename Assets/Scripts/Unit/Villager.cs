@@ -17,8 +17,9 @@ public class Villager : Unit
         InvokeRepeating("recolect", buildRate, buildRate);
     }
 
-    private void Update()
+    public  override  void Update()
     {
+        base.Update();
         if (target != null)
         {
             base.Update();

@@ -35,7 +35,6 @@ public class RTSBase : NetworkBehaviour
         preview = rtsEntity.Preview;
         prefab = rtsEntity.Prefab;
         currentHealth = maxHealth;
-        currentHealth = maxHealth;
 
         GoToNextState();
     }

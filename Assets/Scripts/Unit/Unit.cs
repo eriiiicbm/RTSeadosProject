@@ -79,6 +79,7 @@ public class Unit : RTSBase
         prices = rtsEntity.Prices;
         time = rtsEntity.BuildTime;
         chaseRange = rtsEntity.AttackRange;
+        expirationVelocity = rtsEntity.ExpirationVelocity;
 
         playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
         if (playerv2 != null)
@@ -111,6 +112,8 @@ public class Unit : RTSBase
     [ServerCallback]
     public virtual void Update()
     {
+        DealDamage(1 * expirationVelocity);
+
         target = targeter.GetTarget();
 
         if (target != null)
@@ -221,7 +224,7 @@ public class Unit : RTSBase
 
     void ExpirationEffect()
     {
-        Destroy(this.transform.parent.gameObject);
+        DealDamage(1 * expirationVelocity);
     }
 
     IEnumerator MoralEfect()

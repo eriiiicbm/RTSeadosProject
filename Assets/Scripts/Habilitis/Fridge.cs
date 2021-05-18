@@ -9,12 +9,12 @@ public class Fridge : PasiveHability
         foreach (var unit in units)
         {
             if (unit.MaxHealth > unit.CurrentHealth)
-                unit.CurrentHealth += recoverySpeed;
+                unit.DealDamage(-1 * recoverySpeed);
             StartCoroutine(Wait(0.5f));
         }
     }
-    private void OnTriggerStay(Collider other)
+    /*private void OnTriggerStay(Collider other)
     {
         recoverUnits();
-    }
+    }*/
 }

@@ -18,20 +18,36 @@ public class PasiveHability : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        GetComponent<SphereCollider>().radius = efectRadius;
+
+        RaycastHit[] hits = Physics.SphereCastAll(gameObject.transform.position, efectRadius, gameObject.transform.forward);
+
+        foreach (RaycastHit hit in hits){
+            units.Add(RaycastToUnit(hit));
+        }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private Unit RaycastToUnit(RaycastHit hit)
     {
+        if (hit.collider.GetComponent<Unit>() == null) return null;
+        Debug.Log(name + " ha detectado a " + hit.collider.name);
+
+        return hit.collider.GetComponent<Unit>();
+    }
+
+    /*private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(name + " ha detectado a "+ other.name);
+
         Unit rtsaBase = other.GetComponent<Unit>();
         units.Add(rtsaBase);
     }
+
     private void OnTriggerExit(Collider other)
     {
         Unit rtsaBase = other.GetComponent<Unit>();
         units.Remove(rtsaBase);
-
-    }
+    }*/
 
     public IEnumerator Wait(float duration)
     {

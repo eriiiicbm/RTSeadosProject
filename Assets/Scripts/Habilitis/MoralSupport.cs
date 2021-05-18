@@ -12,8 +12,8 @@ public class MoralSupport : PasiveHability
             StartCoroutine(Wait(0.5f));
         }
     }
-    private void OnTriggerStay(Collider other)
+    /*private void OnTriggerStay(Collider other)
     {
         recoverUnits();
-    }
+    }*/
 }

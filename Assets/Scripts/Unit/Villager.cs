@@ -26,7 +26,11 @@ public class Villager : Unit
 
             if(target.gameObject.GetComponent<Building>() != null)
             {
-                building = target.gameObject.GetComponent<Building>();
+                Building build= target.gameObject.GetComponent<Building>();
+                if (build.CurrentHealth != build.MaxHealth)
+                {
+                    building = build;
+                }
             }
 
             if(target.gameObject.GetComponent<Resource>() != null)

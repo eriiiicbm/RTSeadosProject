@@ -19,43 +19,54 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     [SerializeField] private float unitSpawnDuration = 5f;
     [SerializeField] private GameObject buildingButtonTemplate;
     private Unit currentUnit;
-    public List<Unit> unitQueue= new List<Unit>();
+    public List<Unit> unitQueue = new List<Unit>();
+    private RTSPlayerv2 player;
     [SyncVar(hook = nameof(ClientHandleQueuedUnitsUpdated))]
     private int queuedUnits;
-    private List<UnitBuildingButtonv2> buttonsList= new List<UnitBuildingButtonv2>();
+
+    private List<UnitBuildingButtonv2> buttonsList = new List<UnitBuildingButtonv2>();
     [SerializeField] private Transform transformCanvas;
     [SyncVar] private float unitTimer;
-
-    private float progressImageVelocity;
+     private float progressImageVelocity;
 
     #region Server
+
     public override void OnStartServer()
     {
         base.OnStartServer();
         ServerOnRTSDie += ServerHandleDie;
-        int position = 0;
-        Debug.Log("UnitPrefab length" + unitPrefab.Count);
-        foreach (Unit unit in unitPrefab) {
-            GameObject gameObject = Instantiate<GameObject>(buildingButtonTemplate,transformCanvas);
-            Debug.Log(gameObject.name +  " name ");
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x + position, gameObject.transform.position.y, gameObject.transform.position.z);
-            UnitBuildingButtonv2 unitBuildingButtonv2 = gameObject.GetComponent<UnitBuildingButtonv2>();
-            unitBuildingButtonv2.SetUnit(unit);
-            unitBuildingButtonv2.SetSpawner(this);
-            buttonsList.Add(unitBuildingButtonv2);
-            position -= 150;
+      player   = connectionToClient.identity.GetComponent<RTSPlayerv2>();
 
-            Debug.Log("in the for");
-        }
- 
+        Debug.Log("UnitPrefab length" + unitPrefab.Count);
     }
-    public void AddUnitToTheQueue(Unit unit) {
-        unitQueue.Add(unit);
-        Debug.Log ("uUnitPrice is " + unit.prices[0] +  " " + unit.prices[1] +  " " + unit.prices[2] +  " " + unit.prices[3] +  " "  );
+
+    public void AddUnitToTheQueue(Unit unit)
+    {
+        Debug.Log("uUnitPrice is " + unit.prices[0] + " " + unit.prices[1] + " " + unit.prices[2] + " " +
+                  unit.prices[3] + " ");
 
         if (currentUnit == null)
             currentUnit = unit;
+        unitQueue.Add(unit);
+
+         if (player==null)
+        {
+            player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+
+        }
+             
+        Debug.Log("UnitPrefab is " + currentUnit.name);
+        Debug.Log("UnitPricecmd is " + currentUnit.prices[0] + " " + currentUnit.prices[1] + " " +
+                  currentUnit.prices[2] + " " + currentUnit.prices[3] + " ");
+        if (!player.CheckIfUserHasSpaceTrop()) return;
+
+        if (!player.CheckIfUserHasResources(currentUnit.prices))
+        {
+            return;
+        }
+        
         CmdSpawnUnit();
+        player.RestPriceToResources(currentUnit.prices);
 
     }
 
@@ -71,23 +82,14 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         ServerOnRTSDie -= ServerHandleDie;
     }
 
-    [Command]
+ [Command]
     private void CmdSpawnUnit()
     {
-         
 
-        RTSPlayerv2 player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
-        Debug.Log ("UnitPrefab is " + currentUnit.name);
-        Debug.Log ("UnitPrice is " + currentUnit.prices[0] +  " " + currentUnit.prices[1] +  " " + currentUnit.prices[2] +  " " + currentUnit.prices[3] +  " "  );
-        if (!player.CheckIfUserHasSpaceTrop()) return;
-
-        if (!player.CheckIfUserHasResources(currentUnit.prices))
-        {
-            return;
-        }
         queuedUnits++;
         player.RestPriceToResources(currentUnit.prices);
-     }
+    }
+    
 
     [Server]
     private void ProduceUnits()
@@ -103,6 +105,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
             return;
         }
 
+        Debug.Log("Producting");
         GameObject unitInstance = Instantiate(currentUnit.gameObject, unitSpawnPoint.position, unitSpawnPoint.rotation);
         NetworkServer.Spawn(unitInstance, connectionToClient);
         Vector3 spawnOffset = Random.insideUnitSphere * spawnMoveRange;
@@ -113,16 +116,38 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         currentUnit = null;
         queuedUnits--;
         unitTimer = 0f;
-        if (queuedUnits==0)
+        if (queuedUnits == 0)
         {
             return;
         }
-        currentUnit = unitQueue[queuedUnits-1];
+
+        currentUnit = unitQueue[queuedUnits - 1];
     }
 
     #endregion
 
     #region Client
+
+    public override void OnStartAuthority()
+    {
+        base.OnStartAuthority();
+        int position = 0;
+
+        foreach (Unit unit in unitPrefab)
+        {
+            GameObject gameObject = Instantiate<GameObject>(buildingButtonTemplate, transformCanvas);
+            Debug.Log(gameObject.name + " name ");
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x + position,
+                gameObject.transform.position.y, gameObject.transform.position.z);
+            UnitBuildingButtonv2 unitBuildingButtonv2 = gameObject.GetComponent<UnitBuildingButtonv2>();
+            unitBuildingButtonv2.SetUnit(unit);
+            unitBuildingButtonv2.SetSpawner(this);
+            buttonsList.Add(unitBuildingButtonv2);
+            position -= 150;
+
+            Debug.Log("in the for");
+        }
+    }
 
     private void UpdateTimerDisplay()
     {
@@ -149,8 +174,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         {
             return;
         }
-        
-     }
+    }
 
     private void ClientHandleQueuedUnitsUpdated(int oldUnits, int newUnits)
     {
@@ -171,20 +195,28 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         {
             UpdateTimerDisplay();
         }
+
+        if (player == null)
+        {
+            player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+            return;
+        }
+        Debug.LogError("The player is more null that your desires of live");
+
     }
 
-[Client]
-public override void Deselect()
+    [Client]
+    public override void Deselect()
     {
         base.Deselect();
         transformCanvas.gameObject.SetActive(false);
     }
-[Client]
-public override void Select()
+
+    [Client]
+    public override void Select()
     {
         base.Select();
         transformCanvas.gameObject.SetActive(true);
         Debug.Log("Selected");
     }
- 
 }

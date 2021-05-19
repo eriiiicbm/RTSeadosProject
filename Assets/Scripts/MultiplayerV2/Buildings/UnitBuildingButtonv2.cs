@@ -20,18 +20,30 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
       private Renderer buildingRendererInstance;
     public void SetUnit(Unit newUnit) {
         unit = newUnit;
+        StartStuff();
+    }
 
-    } 
-     private void Start()
-     {
-         mainCamera = Camera.main;
-         unit.prices = unit.rtsEntity.Prices;
-         iconImage.sprite = unit.preview; 
-         priceText.text = $"{unit.rtsEntity.Prices[0]} I\n" +
-                                                           $"{unit.rtsEntity.Prices[1]} X\n" +
-                                                           $"{unit.rtsEntity.Prices[2]} W\n" +
-                                                           $"{unit.rtsEntity.Prices[3]} S";
-       }
+    public void StartStuff()
+    {
+      
+        mainCamera = Camera.main;
+        if (unit!=null)
+        {
+          
+            unit.prices = unit.rtsEntity.Prices;   
+        }
+        iconImage.sprite = unit.preview; 
+        priceText.text = $"{unit.rtsEntity.Prices[0]} I\n" +
+                         $"{unit.rtsEntity.Prices[1]} X\n" +
+                         $"{unit.rtsEntity.Prices[2]} W\n" +
+                         $"{unit.rtsEntity.Prices[3]} S";
+
+    }
+
+    private void Start()
+    {
+        StartStuff();
+    }
 
      public void SetSpawner(UnitSpawnerv3 spawner)
      {
@@ -46,8 +58,7 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
 
 
      }
-
-     public void OnPointerDown(PointerEventData eventData)
+      public void OnPointerDown(PointerEventData eventData)
      {
          Debug.Log("ONPOINTERDOWN");
 
@@ -57,9 +68,10 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
          }
          Debug.Log("ONPOINTERDOWnleFT");
 
-        
-            unitSpawner.AddUnitToTheQueue(unit);
+         unit.prices = unit.rtsEntity.Prices;   
+           
             unitSpawner.Select();
+            unitSpawner.AddUnitToTheQueue(unit);
 
        
 

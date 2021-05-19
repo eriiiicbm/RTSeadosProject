@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/MPMainCameraFocus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/MPMainCameraFocus.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/BuildingUnitButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/BuildingUnitButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/UnitSpawnerv3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/UnitSpawnerv3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +65,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitProjectilev2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitSelectionHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/UnitBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/GameOverHandler.cs" />
@@ -71,16 +76,18 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/PasiveHability.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/BuildingButtonv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/ResourcesDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Minimapv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitSelectionHandlerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />
@@ -141,7 +148,8 @@
       <workItem from="1620897419966" duration="33876000" />
       <workItem from="1621185435904" duration="14352000" />
       <workItem from="1621268833177" duration="3014000" />
-      <workItem from="1621335988572" duration="9669000" />
+      <workItem from="1621335988572" duration="12854000" />
+      <workItem from="1621356391213" duration="11158000" />
     </task>
     <servers />
   </component>

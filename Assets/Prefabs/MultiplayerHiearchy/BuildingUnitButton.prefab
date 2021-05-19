@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6096324475575739791}
   - component: {fileID: 4211896289620842571}
   - component: {fileID: 5120543363016336915}
+  - component: {fileID: 1647565599301082453}
   m_Layer: 5
   m_Name: BuildingUnitButton
   m_TagString: Untagged
@@ -97,6 +98,23 @@ MonoBehaviour:
   floorMask:
     serializedVersion: 2
     m_Bits: 1024
+--- !u!114 &1647565599301082453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267681169135266736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &3744724837427061752
 GameObject:
   m_ObjectHideFlags: 0

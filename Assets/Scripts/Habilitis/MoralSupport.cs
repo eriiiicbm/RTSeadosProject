@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoralSupport : PasiveHability
 {
-    public void recoverUnits()
+    public override void PasiveEffect()
     {
         foreach (var unit in units)
         {

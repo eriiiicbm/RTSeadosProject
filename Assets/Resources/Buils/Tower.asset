@@ -32,38 +32,6 @@ MonoBehaviour:
   proyectile: {fileID: 38072651166725387, guid: 71f67b6ff977a714696981bb46ccdcb2,
     type: 3}
   craftRadious: 5
-  onCrafted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -2031599160257460867, guid: 95d74b3e50c21bf4bb579498ce47d32c,
-          type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2096892178927748667, guid: 95d74b3e50c21bf4bb579498ce47d32c,
-          type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  onCraftCompleted:
-    m_PersistentCalls:
-      m_Calls: []
   craftCompletedGO: {fileID: 0}
   craftUnCompletedGO: {fileID: 0}
   buildRenderer: {fileID: 0}
@@ -71,6 +39,7 @@ MonoBehaviour:
   canCraft: 0
   productionUnits:
   - {fileID: 0}
+  curretUnit: {fileID: 0}
   descriptionText: {fileID: 11400000, guid: 799334ba04ee30a4499b2fa3ed3445dc, type: 2}
   descriptionPosition: 0
   currentProduction: {fileID: 0}

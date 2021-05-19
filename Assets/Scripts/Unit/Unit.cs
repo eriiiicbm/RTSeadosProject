@@ -32,6 +32,7 @@ public class Unit : RTSBase
     public event Action<float, float> ClientOnMoralUpdated;
     public event Action ServerOnLostMoral;
     private RTSPlayerv2 playerv2;
+    private bool alteratedState;
 
     public Targeter GetTargeter()
     {
@@ -53,7 +54,7 @@ public class Unit : RTSBase
     [Server]
     public void DealMoralSupport(float moralSupport)
     {
-        moral = Mathf.Max(moral + moralSupport, maxMoral);
+        moral = Mathf.Min(moral + moralSupport, maxMoral);
     }
 
     public override void OnStartServer()
@@ -235,37 +236,66 @@ public class Unit : RTSBase
     IEnumerator MoralEfect()
     {
         if (GetComponent<Unit>() == null) yield return 0;
-        if (moral < maxMoral * 0.25)
+
+        PasiveHability pasiveHability = GetComponent<PasiveHability>();
+        UnitCombat unitCombat = GetComponent<UnitCombat>();
+        MoralDamage moralDamage = GetComponent<MoralDamage>();
+
+        if (moral < maxMoral * 0.25 && !alteratedState)
         {
+            alteratedState = true;
+
             velocity = rtsEntity.Velocity * 0.5f;
 
-            if (GetComponent<UnitCombat>() != null) GetComponent<UnitCombat>().damage = rtsEntity.Damage * 0.75f;
+            if (unitCombat != null) unitCombat.damage = rtsEntity.Damage * 0.75f;
 
-            if (GetComponent<MoralDamage>() != null)
-                GetComponent<MoralDamage>().damageMoral = rtsEntity.DamageMoral * 0.5f;
+            if (moralDamage != null)
+                moralDamage.damageMoral = rtsEntity.DamageMoral * 0.5f;
 
-            if (GetComponent<PasiveHability>() != null)
+            if (pasiveHability != null)
             {
-                GetComponent<PasiveHability>().efectRadius = rtsEntity.EffectRadious * 0.75f;
-                GetComponent<PasiveHability>().recoverySpeed = rtsEntity.RecoverySpeed * 0.75f;
+                pasiveHability.efectRadius = rtsEntity.EffectRadious * 0.75f;
+                pasiveHability.recoverySpeed = rtsEntity.RecoverySpeed * 0.75f;
             }
 
             yield return 0;
         }
 
-        if (moral > maxMoral * 0.75)
+        if (moral < maxMoral * 0.25 && moral < maxMoral * 0.75 && alteratedState)
         {
+            alteratedState = false;
+
+            velocity = rtsEntity.Velocity;
+
+            if (unitCombat != null) unitCombat.damage = rtsEntity.Damage;
+
+            if (moralDamage != null)
+                moralDamage.damageMoral = rtsEntity.DamageMoral;
+
+            if (pasiveHability != null)
+            {
+                pasiveHability.efectRadius = rtsEntity.EffectRadious;
+                pasiveHability.recoverySpeed = rtsEntity.RecoverySpeed;
+            }
+
+            yield return 0;
+        }
+
+        if (moral > maxMoral * 0.75 && !alteratedState)
+        {
+            alteratedState = true;
+
             velocity = rtsEntity.Velocity * 1.5f;
 
-            if (GetComponent<UnitCombat>() != null) GetComponent<UnitCombat>().damage = rtsEntity.Damage * 1.75f;
+            if (unitCombat != null) unitCombat.damage = rtsEntity.Damage * 1.75f;
 
-            if (GetComponent<MoralDamage>() != null)
-                GetComponent<MoralDamage>().damageMoral = rtsEntity.DamageMoral * 1.5f;
+            if (moralDamage != null)
+                moralDamage.damageMoral = rtsEntity.DamageMoral * 1.5f;
 
-            if (GetComponent<PasiveHability>() != null)
+            if (pasiveHability != null)
             {
-                GetComponent<PasiveHability>().efectRadius = rtsEntity.EffectRadious * 1.75f;
-                GetComponent<PasiveHability>().recoverySpeed = rtsEntity.RecoverySpeed * 1.75f;
+                pasiveHability.efectRadius = rtsEntity.EffectRadious * 1.25f;
+                pasiveHability.recoverySpeed = rtsEntity.RecoverySpeed * 1.25f;
             }
 
             yield return 0;

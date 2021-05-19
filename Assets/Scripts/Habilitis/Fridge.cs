@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class Fridge : PasiveHability
 {
-    public override void PasiveEffect()
+    public override void PasiveEffect(Unit unit)
     {
-        foreach (var unit in units)
-        {
-            if (unit.MaxHealth > unit.CurrentHealth)
-            {
-                Debug.Log(unit.name+" unidad recuperada");
-                unit.DealDamage(-1 * recoverySpeed);
-            }
+        if (GetComponent<RTSBase>().connectionToClient != unit.connectionToClient) return;
 
-            StartCoroutine(Wait(0.5f));
+        if (unit.MaxHealth > unit.CurrentHealth)
+        {
+            Debug.Log(unit.name+" unidad recuperada");
+            unit.DealDamage(-1 * recoverySpeed);
         }
     }
     /*private void OnTriggerStay(Collider other)

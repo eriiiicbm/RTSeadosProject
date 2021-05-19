@@ -70,10 +70,18 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
 
          unit.prices = unit.rtsEntity.Prices;   
            
-            unitSpawner.Select();
-            unitSpawner.AddUnitToTheQueue(unit);
+            //unitSpawner.Select();
+            if (unit!=null)
+            {
+             
+                unitSpawner.AddUnitToTheQueue(unit);
+   
+            }
+            else
+            {
+                Debug.LogError("Unit is null ");
+            }
 
-       
 
 
      }

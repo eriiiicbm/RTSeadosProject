@@ -47,6 +47,15 @@ public class BuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         UpdateBuildingPreview();
     }
 
+
+    private void LateUpdate()
+    {
+        if (player == null && NetworkClient.connection.identity != null)
+        {
+            player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+        }
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         if (eventData.button != PointerEventData.InputButton.Left)

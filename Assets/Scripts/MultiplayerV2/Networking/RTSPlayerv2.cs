@@ -179,14 +179,12 @@ Debug.Log("here before boom 1");
         }
 
         RestPriceToResources(buildingToPlace.GetPrice());
-        Debug.Log("here before boom 3");
-
+ 
         GameObject buildingInstance =
             Instantiate(buildingToPlace.gameObject, point + buildingToPlace.transform.position,
                 buildingToPlace.transform.rotation);
         Debug.LogWarning("Build success in " + point);
-        Debug.Log("here before boom 4");
-
+ 
         NetworkServer.Spawn(buildingInstance, connectionToClient);
     }
 

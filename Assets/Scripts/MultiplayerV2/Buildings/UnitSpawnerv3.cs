@@ -21,13 +21,14 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     private Unit currentUnit;
     public List<Unit> unitQueue = new List<Unit>();
     private RTSPlayerv2 player;
+
     [SyncVar(hook = nameof(ClientHandleQueuedUnitsUpdated))]
     private int queuedUnits;
 
     private List<UnitBuildingButtonv2> buttonsList = new List<UnitBuildingButtonv2>();
     [SerializeField] private Transform transformCanvas;
     [SyncVar] private float unitTimer;
-     private float progressImageVelocity;
+    private float progressImageVelocity;
 
     #region Server
 
@@ -35,39 +36,26 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     {
         base.OnStartServer();
         ServerOnRTSDie += ServerHandleDie;
-      player   = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+        player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
 
         Debug.Log("UnitPrefab length" + unitPrefab.Count);
     }
 
-    public void AddUnitToTheQueue(Unit unit)
+     public void AddUnitToTheQueue(Unit unit)
     {
-        Debug.Log("uUnitPrice is " + unit.prices[0] + " " + unit.prices[1] + " " + unit.prices[2] + " " +
-                  unit.prices[3] + " ");
+        
+ //       Debug.Log("uUnitPrice is " + unit.prices[0] + " " + unit.prices[1] + " " + unit.prices[2] + " " +
+   //               unit.prices[3] + " ");
 
         if (currentUnit == null)
             currentUnit = unit;
         unitQueue.Add(unit);
 
-         if (player==null)
+        if (player == null)
         {
             player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
-
         }
-             
-        Debug.Log("UnitPrefab is " + currentUnit.name);
-        Debug.Log("UnitPricecmd is " + currentUnit.prices[0] + " " + currentUnit.prices[1] + " " +
-                  currentUnit.prices[2] + " " + currentUnit.prices[3] + " ");
-        if (!player.CheckIfUserHasSpaceTrop()) return;
-
-        if (!player.CheckIfUserHasResources(currentUnit.prices))
-        {
-            return;
-        }
-        
-        CmdSpawnUnit();
-        player.RestPriceToResources(currentUnit.prices);
-
+CmdSpawnUnit();// < CmdSpawnUnit();
     }
 
     [Server]
@@ -82,14 +70,24 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         ServerOnRTSDie -= ServerHandleDie;
     }
 
- [Command]
+    [Command]
     private void CmdSpawnUnit()
     {
+      
+        Debug.Log("UnitPrefab is " + currentUnit.name);
+        Debug.Log("UnitPricecmd is " + currentUnit.prices[0] + " " + currentUnit.prices[1] + " " +
+                  currentUnit.prices[2] + " " + currentUnit.prices[3] + " ");
+        if (!player.CheckIfUserHasSpaceTrop()) return;
 
+        if (!player.CheckIfUserHasResources(currentUnit.prices))
+        {
+            return;
+        }
         queuedUnits++;
         player.RestPriceToResources(currentUnit.prices);
+
     }
-    
+
 
     [Server]
     private void ProduceUnits()
@@ -198,11 +196,37 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
 
         if (player == null)
         {
+            if (NetworkClient.connection.identity == null)
+            {
+                Debug.LogError("You dont have identity");
+            }
+            else
+            {
+                Debug.Log("Identity name" + NetworkClient.connection.identity.name);
+            }
+
             player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+            if (player == null)
+            {
+                Debug.LogWarning("Try 1 failed");
+                player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+            }
+
+            if (player == null)
+            {
+                Debug.LogWarning("Try 2 failed");
+                player = connectionToServer.identity.GetComponent<RTSPlayerv2>();
+            }
+
             return;
         }
-        Debug.LogError("The player is more null that your desires of live");
+        else
+        {
+            Debug.Log("LIFE ");
+            return;
+        }
 
+        Debug.LogError("The player is more null that your desires of live");
     }
 
     [Client]

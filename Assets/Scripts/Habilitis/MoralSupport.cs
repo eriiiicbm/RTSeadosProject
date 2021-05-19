@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class MoralSupport : PasiveHability
 {
-    public override void PasiveEffect()
+    public override void PasiveEffect(Unit unit)
     {
-        foreach (var unit in units)
-        {
-            unit.DealMoralSupport(recoverySpeed);
-            StartCoroutine(Wait(0.5f));
-        }
+        if (GetComponent<RTSBase>().connectionToClient != unit.connectionToClient) return;
+
+        unit.DealMoralSupport(recoverySpeed);
     }
     /*private void OnTriggerStay(Collider other)
     {

@@ -6,7 +6,7 @@ public class PasiveHability : MonoBehaviour
 {
     public float efectRadius;
     public float recoverySpeed;
-    public List<Unit> units = new List<Unit>();
+    public List<Unit> units;
 
     // Start is called before the first frame update
     private void Start()
@@ -20,19 +20,34 @@ public class PasiveHability : MonoBehaviour
     {
         RaycastHit[] hits = Physics.SphereCastAll(gameObject.transform.position, efectRadius, gameObject.transform.forward);
 
+        units = new List<Unit>();
+
         foreach (RaycastHit hit in hits){
-            units.Add(RaycastToUnit(hit));
+            RaycastToUnit(hit);
         }
 
-        PasiveEffect();
+        if (units.Count >= 0)
+        {
+            foreach (var unit in units)
+            { 
+                if(unit != null)PasiveEffect(unit);
+
+                StartCoroutine(Wait(0.5f));
+            }
+        }
     }
 
-    private Unit RaycastToUnit(RaycastHit hit)
+    private void RaycastToUnit(RaycastHit hit)
     {
-        if (hit.collider.GetComponent<Unit>() == null) return null;
+        Unit unit = hit.collider.GetComponent<Unit>();
+
+        if (unit == null) return;
+
+        if (units.Contains(unit)) return;
+
         Debug.Log(name + " ha detectado a " + hit.collider.name);
 
-        return hit.collider.GetComponent<Unit>();
+        units.Add(unit);
     }
 
     /*private void OnTriggerEnter(Collider other)
@@ -54,7 +69,7 @@ public class PasiveHability : MonoBehaviour
         yield return new WaitForSeconds(duration);
     }
 
-    public virtual void PasiveEffect()
+    public virtual void PasiveEffect(Unit unit)
     {
         Debug.LogError("OverrideThisMethod before use it");
     }

@@ -16,7 +16,7 @@ MonoBehaviour:
   entityType: 2
   maxHealth: 300
   expirationVelocity: 3.5
-  damageMoral: 3
+  damageMoral: 1
   prices: 0c0000000f0000000000000000000000
   description: 
   preview: {fileID: 0}
@@ -37,6 +37,7 @@ MonoBehaviour:
   buildTime: 8
   canCraft: 0
   productionUnits: []
+  curretUnit: {fileID: 0}
   descriptionText: {fileID: 0}
   descriptionPosition: 0
   currentProduction: {fileID: 0}

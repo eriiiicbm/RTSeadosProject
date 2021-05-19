@@ -6,13 +6,11 @@ public class MoralDamage : PasiveHability
 {
     public float damageMoral;
 
-    public override void PasiveEffect()
+    public override void PasiveEffect(Unit unit)
     {
-        foreach (var unit in units)
-        {
-            unit.DealMoralDamage(damageMoral);
-            StartCoroutine(Wait(0.5f));
-        }
+        if (GetComponent<RTSBase>().connectionToClient == unit.connectionToClient) return;
+
+        unit.DealMoralDamage(damageMoral);
     }
 
     // Start is called before the first frame update

@@ -16,7 +16,7 @@ MonoBehaviour:
   entityType: 5
   maxHealth: 300
   expirationVelocity: 2.5
-  damageMoral: 10
+  damageMoral: 5
   prices: 0a0000000f0000000000000000000000
   description: 
   preview: {fileID: 0}
@@ -25,7 +25,7 @@ MonoBehaviour:
   velocity: 3
   currentTarget: {fileID: 0}
   effectRadious: 7
-  recoverySpeed: 5
+  recoverySpeed: 3
   damage: 0
   attackRange: 0
   attackTimer: 0
@@ -37,6 +37,7 @@ MonoBehaviour:
   buildTime: 0
   canCraft: 0
   productionUnits: []
+  curretUnit: {fileID: 0}
   descriptionText: {fileID: 0}
   descriptionPosition: 0
   currentProduction: {fileID: 0}

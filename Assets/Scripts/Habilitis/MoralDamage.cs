@@ -6,7 +6,7 @@ public class MoralDamage : PasiveHability
 {
     public float damageMoral;
 
-    public void damageMoralUnits()
+    public override void PasiveEffect()
     {
         foreach (var unit in units)
         {

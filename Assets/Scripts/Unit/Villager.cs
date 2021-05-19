@@ -15,6 +15,8 @@ public class Villager : Unit
 
         InvokeRepeating("build", buildRate, buildRate);
         InvokeRepeating("recolect", buildRate, buildRate);
+        StartCoroutine(nameof(PickResourcesState));
+        StartCoroutine(nameof(BuildState));
     }
 
     public  override  void Update()

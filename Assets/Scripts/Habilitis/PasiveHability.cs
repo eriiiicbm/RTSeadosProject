@@ -18,13 +18,13 @@ public class PasiveHability : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<SphereCollider>().radius = efectRadius;
-
         RaycastHit[] hits = Physics.SphereCastAll(gameObject.transform.position, efectRadius, gameObject.transform.forward);
 
         foreach (RaycastHit hit in hits){
             units.Add(RaycastToUnit(hit));
         }
+
+        PasiveEffect();
     }
 
     private Unit RaycastToUnit(RaycastHit hit)
@@ -52,5 +52,10 @@ public class PasiveHability : MonoBehaviour
     public IEnumerator Wait(float duration)
     {
         yield return new WaitForSeconds(duration);
+    }
+
+    public virtual void PasiveEffect()
+    {
+        Debug.LogError("OverrideThisMethod before use it");
     }
 }

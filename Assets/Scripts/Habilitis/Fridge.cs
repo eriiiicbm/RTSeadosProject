@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Fridge : PasiveHability
 {
-    public void recoverUnits()
+    public override void PasiveEffect()
     {
         foreach (var unit in units)
         {
             if (unit.MaxHealth > unit.CurrentHealth)
+            {
+                Debug.Log(unit.name+" unidad recuperada");
                 unit.DealDamage(-1 * recoverySpeed);
+            }
+
             StartCoroutine(Wait(0.5f));
         }
     }

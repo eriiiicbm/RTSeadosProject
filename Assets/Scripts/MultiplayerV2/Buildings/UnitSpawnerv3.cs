@@ -51,10 +51,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
             currentUnit = unit;
         unitQueue.Add(unit);
 
-        if (player == null)
-        {
-            player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
-        }
+       
 CmdSpawnUnit();// < CmdSpawnUnit();
     }
 
@@ -194,7 +191,7 @@ CmdSpawnUnit();// < CmdSpawnUnit();
             UpdateTimerDisplay();
         }
 
-        if (player == null)
+     /*   if (player == null)
         {
             if (NetworkClient.connection.identity == null)
             {
@@ -227,7 +224,7 @@ CmdSpawnUnit();// < CmdSpawnUnit();
         }
 
         Debug.LogError("The player is more null that your desires of live");
-    }
+   */ }
 
     [Client]
     public override void Deselect()

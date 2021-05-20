@@ -34,6 +34,8 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
 
         Unit.AuthorityOnUnitDespawned += AuthorityHandleUnitDespawned;
         GameOverHandler.ClientOnGameOver += ClientHandleGameOver;
+        player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+
     }
 
     private void OnDestroy()
@@ -54,11 +56,7 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
         {
             return;
         }
-        if (player == null)
-        {
-            player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
-        }
-
+      
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {

@@ -30,14 +30,13 @@ public class BuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             $"{building.rtsEntity.Prices[2]} W\n" +
             $"{building.rtsEntity.Prices[3]} S";
         buildingCollider = building.GetComponent<BoxCollider>();
+        player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+
     }
 
     private void Update()
     {
-        if (player == null)
-        {
-            player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
-        }
+     
 
         if (buildingPreviewInstance == null)
         {
@@ -48,13 +47,7 @@ public class BuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     }
 
 
-    private void LateUpdate()
-    {
-        if (player == null && NetworkClient.connection.identity != null)
-        {
-            player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
-        }
-    }
+   
 
     public void OnPointerDown(PointerEventData eventData)
     {

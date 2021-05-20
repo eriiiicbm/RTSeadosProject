@@ -23,9 +23,13 @@ public class RTSPlayerv2 : NetworkBehaviour
     [SerializeField] private int numHouse = 0;
     [SerializeField] private int maxNumHouse = 20;
     [SerializeField] private bool hero1;
-
-
+  [SyncVar(hook = nameof(AuthorityHandlePartyOwnerStateUpdated))]
+    private bool isPartyOwner = false;
+[SyncVar(hook = nameof(ClientHandleDisplayNameUpdated))]
+    private string displayName;
+    public static event Action ClientOnInfoUpdated;
     public static event Action<List<int>> ClientOnResourcesUpdated;
+    public static event Action<bool> AuthorityOnPartyOwnerStateUpdated;
 
     public Transform GetCameraTransform()
     {
@@ -35,6 +39,18 @@ public class RTSPlayerv2 : NetworkBehaviour
     public List<int> GetAllResources()
     {
         return resources;
+    }
+
+    public string GetDisplayName()
+    {
+        return displayName;
+    }
+
+ 
+
+    public bool GetIsPartyOwner()
+    {
+        return isPartyOwner;
     }
 
     public int GetResources(ResourcesType resourceType)
@@ -122,6 +138,16 @@ Debug.Log("Set resources");
         ClientOnResourcesUpdated?.Invoke(resources);
 
     }
+    [Server]
+    public void SetDisplayName(string newName)
+    {
+        displayName = newName;
+    }
+    [Server]
+    public void SetPartyOwner(bool state)
+    {
+        isPartyOwner = state;
+    }
 
     public override void OnStartServer()
     {
@@ -129,6 +155,7 @@ Debug.Log("Set resources");
         Unit.ServerOnUnitDespawned += ServerHandleUnitDespawned;
         Building.ServerOnBuildingSpawned += ServerHandleBuildingSpawned;
         Building.ServerOnBuildingDespawned += ServerHandleBuildingDespawned;
+        DontDestroyOnLoad(gameObject);
     }
 
 
@@ -138,6 +165,19 @@ Debug.Log("Set resources");
         Unit.ServerOnUnitDespawned -= ServerHandleUnitDespawned;
         Building.ServerOnBuildingSpawned -= ServerHandleBuildingSpawned;
         Building.ServerOnBuildingDespawned -= ServerHandleBuildingDespawned;
+
+
+    }
+
+    [Command]
+    public void CmdStartGame()
+    {
+        if (!isPartyOwner)
+        {
+            return;
+        }
+
+        ((RTSNetworkManagerv2)NetworkManager.singleton).StartGame();
     }
 
     [Command]
@@ -359,23 +399,45 @@ Debug.Log("here before boom 1");
         Building.AuthorityOnBuildingSpawned += AuthorityHandleBuildingSpawned;
         Building.AuthorityOnBuildingDespawned += AuthorityHandleBuildingDespawned;
     }
-
-    public override void OnStopClient()
+    public override void OnStartClient()
     {
-        if (!isClientOnly || !hasAuthority)
+        if (NetworkServer.active)
         {
             return;
         }
+        DontDestroyOnLoad(gameObject);
+        ((RTSNetworkManagerv2) NetworkManager.singleton).Players.Add(this);
+    }
+    public override void OnStopClient()
+    {
+        ClientOnInfoUpdated?.Invoke();
 
+        if (!isClientOnly )
+        {
+            return;
+        }
+        ((RTSNetworkManagerv2) NetworkManager.singleton).Players.Remove(this);
+        if (!hasAuthority)
+        {
+            return;
+        }
         Unit.AuthorityOnUnitSpawned -= AuthorityHandleUnitSpawned;
         Unit.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespawned;
         Building.AuthorityOnBuildingSpawned -= AuthorityHandleBuildingSpawned;
         Building.AuthorityOnBuildingDespawned -= AuthorityHandleBuildingDespawned;
     }
 
-   
 
-  
+
+    private void AuthorityHandlePartyOwnerStateUpdated(bool oldState, bool newState)
+    {
+        if (!hasAuthority)
+        {
+            return;
+        }        
+        AuthorityOnPartyOwnerStateUpdated?.Invoke(newState);
+    }
+
     private void AuthorityHandleBuildingDespawned(Building obj)
     {
         myBuildings.Remove(obj);
@@ -398,6 +460,11 @@ Debug.Log("This is");
     private void AuthorityHandleUnitDespawned(Unit unit)
     {
         myUnits.Remove(unit);
+    }
+
+    private void ClientHandleDisplayNameUpdated(string oldDisplayName, string newDisplayName)
+    {
+        ClientOnInfoUpdated?.Invoke();
     }
 
     #endregion

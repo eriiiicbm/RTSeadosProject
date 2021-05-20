@@ -526,6 +526,11 @@
             </e>
             <e p="GameOverHandlerv2.cs" t="Include" />
             <e p="HealthDisplayv2.cs" t="Include" />
+            <e p="Menus" t="Include">
+              <e p="JoinLobbyMenu.cs" t="Include" />
+              <e p="LobbyMenu.cs" t="Include" />
+              <e p="MainMenu.cs" t="Include" />
+            </e>
             <e p="Minimapv2.cs" t="Include" />
             <e p="MoralDisplayv2.cs" t="Include" />
             <e p="Networking" t="Include">

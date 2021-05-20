@@ -16,28 +16,11 @@ public class ResourcesDisplayv2 : NetworkBehaviour
     {
         // player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
          RTSPlayerv2.ClientOnResourcesUpdated += ClientHandleResourcesUpdated;
-
+         player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+         ClientHandleResourcesUpdated(player.GetAllResources());
     }
 
- 
-    // Update is called once per frame
-    void Update()
-    {
-        if (player == null)
-        {
-            player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
-     
-        }
-/*
-       // if (player!=null)
-        //    {
-        //    {
-                //todo update the cliuenthandleresources to update all the ui
-            //     ClientHandleResourcesUpdated(player.GetAllResources());
-           // }
-           */
-     
-    }
+  
 
    [Server]
     public override void OnStopServer()

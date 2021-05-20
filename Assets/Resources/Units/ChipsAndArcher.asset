@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMoralUp: 0
   entityType: 6
-  maxHealth: 200
+  maxHealth: 2000
   expirationVelocity: 2.5
   damageMoral: 0
   prices: 0f0000000a0000000000000000000000
   description: 
   preview: {fileID: 0}
   prefab: {fileID: 5726599420013825769, guid: 9a2546bd221e3114aa5025940063cb70, type: 3}
-  moral: 350
+  moral: 3500
   velocity: 4
   currentTarget: {fileID: 0}
   effectRadious: 0
@@ -39,6 +39,7 @@ MonoBehaviour:
   canCraft: 0
   productionUnits:
   - {fileID: 0}
+  curretUnit: {fileID: 0}
   descriptionText: {fileID: 0}
   descriptionPosition: 0
   currentProduction: {fileID: 0}

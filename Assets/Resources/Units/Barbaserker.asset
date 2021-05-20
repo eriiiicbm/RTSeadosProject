@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMoralUp: 0
   entityType: 2
-  maxHealth: 300
+  maxHealth: 3000
   expirationVelocity: 3.5
   damageMoral: 1
   prices: 0c0000000f0000000000000000000000
   description: 
   preview: {fileID: 0}
   prefab: {fileID: 5651458107991866868, guid: 2cfe77dacd0414843af2b33b0c4092b5, type: 3}
-  moral: 500
+  moral: 5000
   velocity: 3
   currentTarget: {fileID: 0}
-  effectRadious: 5
+  effectRadious: 2
   recoverySpeed: 0
   damage: 14
   attackRange: 1

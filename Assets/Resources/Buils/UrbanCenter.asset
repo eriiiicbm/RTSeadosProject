@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMoralUp: 0
   entityType: 0
-  maxHealth: 3000
+  maxHealth: 20000
   expirationVelocity: 0
   damageMoral: 0
   prices: 0000000000000000e803000000000000
@@ -39,6 +39,7 @@ MonoBehaviour:
   productionUnits:
   - {fileID: 4134074402336445218, guid: 06e6a74ba84993f48aa4f75cb8c54991, type: 3}
   - {fileID: 8335747702613979503, guid: 5b08a59fe7d3155478d441f0e96713e7, type: 3}
+  curretUnit: {fileID: 0}
   descriptionText: {fileID: 11400000, guid: 799334ba04ee30a4499b2fa3ed3445dc, type: 2}
   descriptionPosition: 0
   currentProduction: {fileID: 0}

@@ -37,6 +37,7 @@ MonoBehaviour:
   buildTime: 8
   canCraft: 0
   productionUnits: []
+  curretUnit: {fileID: 0}
   descriptionText: {fileID: 0}
   descriptionPosition: 0
   currentProduction: {fileID: 0}

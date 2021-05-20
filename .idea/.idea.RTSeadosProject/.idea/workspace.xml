@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteplay.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteplay.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/MPMainCameraFocus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/MPMainCameraFocus.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/Playerv2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/Playerv2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Barbaserker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Barbaserker.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/BatiGas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/BatiGas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/ChipAndArrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/ChipAndArrow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/McBurger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/McBurger.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Nugget Vilager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Nugget Vilager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/NuggetWarriior .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/NuggetWarriior .prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/PizzaPriest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/PizzaPriest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/PortableFridge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/PortableFridge.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Skewers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Skewers.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/WarHotDog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/WarHotDog.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,22 +94,22 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/PasiveHability.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Minimapv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/JoinLobbyMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitSelectionHandlerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/ResourcesDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/BuildingButtonv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/LobbyMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/MainMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />
@@ -194,13 +208,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs</url>
-          <line>44</line>
+          <line>65</line>
           <properties documentPath="C:\Users\Usuario\Documents\GitHub\RTSeadosProject\Assets\Scripts\MultiplayerV2\Buildings\UnitSpawnerv3.cs" initialLine="44" containingFunctionPresentation="method 'AddUnitToTheQueue'">
             <startOffsets>
-              <option value="1482" />
+              <option value="2273" />
             </startOffsets>
             <endOffsets>
-              <option value="1483" />
+              <option value="2274" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />

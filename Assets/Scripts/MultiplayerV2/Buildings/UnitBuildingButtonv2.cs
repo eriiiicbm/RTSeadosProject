@@ -12,7 +12,7 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
 {
     [SerializeField] private Unit unit;
     [SerializeField] private Image iconImage;
-    [SerializeField] private UnitSpawnerv3 unitSpawner;
+    [SerializeField] private GameObject unitSpawner;
     [SerializeField] private TMP_Text priceText;
     [SerializeField] private LayerMask floorMask = new LayerMask();
     private Camera mainCamera;
@@ -49,7 +49,7 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
 
     public void SetSpawner(UnitSpawnerv3 spawner)
     {
-        unitSpawner = spawner;
+        unitSpawner = spawner.gameObject;
     }
 
     private void Update()
@@ -72,8 +72,15 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
         //unitSpawner.Select();
         if (unit != null)
         {
-            unitSpawner.AddUnitToTheQueue(unit);
-        }
+            Debug.Log("Try create unit in next line");
+
+            if (!NetworkClient.connection.identity.isClient)
+            {
+                return;
+            }
+                player.CmdTryCreateUnit(unit.GetId(),unitSpawner.GetComponent<UnitSpawnerv3>());
+             
+}
         else
         {
             Debug.LogError("Unit is null ");

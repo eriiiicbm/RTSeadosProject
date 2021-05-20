@@ -136,7 +136,7 @@ public class RTSBase : NetworkBehaviour
 
     public virtual IEnumerator IdleState()
     {
-        Debug.LogError("OverrideThisMethod before use it");
+        Debug.LogWarning("OverrideThisMethod before use it");
         yield return new WaitForEndOfFrame();
     }
 }

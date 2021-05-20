@@ -251,6 +251,7 @@ MonoBehaviour:
   expirationVelocity: 3.73
   time: 0
   moral: 12.81
+  id: 7
   maxMoral: 17.22
   prices: 00000000000000000000000000000000
   onSelected:

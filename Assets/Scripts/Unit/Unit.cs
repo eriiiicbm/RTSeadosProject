@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 using UnityEngine.Rendering.VirtualTexturing;
+using Random = System.Random;
 
 public class Unit : RTSBase
 {
@@ -18,6 +19,7 @@ public class Unit : RTSBase
     [SyncVar(hook = nameof(HandleMoralUpdated))]
     public float moral;
 
+    public int id;
     public float maxMoral;
     public List<int> prices;
     [SerializeField] private UnityEvent onSelected;
@@ -38,6 +40,14 @@ public class Unit : RTSBase
     {
         return targeter;
     }
+
+    public int GetId()
+    {
+        return id;
+
+    }
+
+  
 
     #region Server
 
@@ -65,6 +75,8 @@ public class Unit : RTSBase
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
         }
+//todo assign ids
+ //       id = UnityEngine.Random.Range(0, 999999999);
 
         if (targeter == null)
         {

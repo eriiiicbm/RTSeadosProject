@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Mirror;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class RTSPlayerv2 : NetworkBehaviour
 {
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private Building[] buildings = new Building[0];
+    [SerializeField] private Unit[] units = new Unit[0];
     [SerializeField] private LayerMask buildingBlockLayer = new LayerMask();
     [SerializeField] private float buildingRangeLimit = 5;
     [SerializeField] private List<Unit> myUnits = new List<Unit>();
@@ -30,7 +32,10 @@ public class RTSPlayerv2 : NetworkBehaviour
     public static event Action ClientOnInfoUpdated;
     public static event Action<List<int>> ClientOnResourcesUpdated;
     public static event Action<bool> AuthorityOnPartyOwnerStateUpdated;
-
+    public Unit FindUnitById(int id)
+    {
+        return units.FirstOrDefault(unit => unit.GetId() == id);
+    }
     public Transform GetCameraTransform()
     {
         return cameraTransform;
@@ -178,6 +183,26 @@ Debug.Log("Set resources");
         }
 
         ((RTSNetworkManagerv2)NetworkManager.singleton).StartGame();
+    }
+
+    [Command]
+    public void CmdTryCreateUnit(int unitId, UnitSpawnerv3 spawner)
+    {
+        if (!CheckIfUserHasSpaceTrop()) return;
+        Unit unit = FindUnitById(unitId);
+
+        if (!CheckIfUserHasResources(unit.prices))
+        {
+            return;
+        }
+
+        if (spawner.netIdentity==this.netIdentity)
+        {
+            Debug.Log("Is yours");
+        }
+        Debug.Log("line 192");
+        spawner.AddUnitToTheQueue(unitId);
+      
     }
 
     [Command]

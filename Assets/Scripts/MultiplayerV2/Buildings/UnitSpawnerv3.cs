@@ -36,23 +36,52 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     {
         base.OnStartServer();
         ServerOnRTSDie += ServerHandleDie;
-        player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
 
         Debug.Log("UnitPrefab length" + unitPrefab.Count);
+        player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
     }
 
-     public void AddUnitToTheQueue(Unit unit)
+    private void Start()
     {
-        
- //       Debug.Log("uUnitPrice is " + unit.prices[0] + " " + unit.prices[1] + " " + unit.prices[2] + " " +
-   //               unit.prices[3] + " ");
+        int position = 0;
 
+        foreach (Unit unit in unitPrefab)
+        {
+            GameObject gameObject = Instantiate<GameObject>(buildingButtonTemplate, transformCanvas);
+            Debug.Log(gameObject.name + " name ");
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x + position,
+                gameObject.transform.position.y, gameObject.transform.position.z);
+            UnitBuildingButtonv2 unitBuildingButtonv2 = gameObject.GetComponent<UnitBuildingButtonv2>();
+            unitBuildingButtonv2.SetUnit(unit);
+            unitBuildingButtonv2.SetSpawner(this);
+            buttonsList.Add(unitBuildingButtonv2);
+            position -= 150;
+
+            Debug.Log("in the for");
+        }
+    }
+
+   
+    public void AddUnitToTheQueue(int id)
+    {
+       
+        Unit unit = player.FindUnitById(id);
+        Debug.Log("uUnitPrice is " + unit.prices[0] + " " + unit.prices[1] + " " + unit.prices[2] + " " +
+                  unit.prices[3] + " ");
         if (currentUnit == null)
             currentUnit = unit;
         unitQueue.Add(unit);
-
+        Debug.Log("UnitPrefab is " + currentUnit.name);
+        Debug.Log("UnitPricecmd is " + currentUnit.prices[0] + " " + currentUnit.prices[1] + " " +
+                  currentUnit.prices[2] + " " + currentUnit.prices[3] + " ");
        
-CmdSpawnUnit();// < CmdSpawnUnit();
+
+        queuedUnits++;
+    //    player.RestPriceToResources(currentUnit.prices);
+        Debug.Log("NO BOOM");
+        player.RestPriceToResources(unit.prices); 
+       // CmdSpawnUnit();
+     //   CmdSpawnUnit(); // < CmdSpawnUnit();
     }
 
     [Server]
@@ -67,10 +96,8 @@ CmdSpawnUnit();// < CmdSpawnUnit();
         ServerOnRTSDie -= ServerHandleDie;
     }
 
-    [Command]
-    private void CmdSpawnUnit()
+     public void CmdSpawnUnit()
     {
-      
         Debug.Log("UnitPrefab is " + currentUnit.name);
         Debug.Log("UnitPricecmd is " + currentUnit.prices[0] + " " + currentUnit.prices[1] + " " +
                   currentUnit.prices[2] + " " + currentUnit.prices[3] + " ");
@@ -80,9 +107,10 @@ CmdSpawnUnit();// < CmdSpawnUnit();
         {
             return;
         }
+
         queuedUnits++;
         player.RestPriceToResources(currentUnit.prices);
-
+        Debug.Log("NO BOOM");
     }
 
 
@@ -126,22 +154,7 @@ CmdSpawnUnit();// < CmdSpawnUnit();
     public override void OnStartAuthority()
     {
         base.OnStartAuthority();
-        int position = 0;
-
-        foreach (Unit unit in unitPrefab)
-        {
-            GameObject gameObject = Instantiate<GameObject>(buildingButtonTemplate, transformCanvas);
-            Debug.Log(gameObject.name + " name ");
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x + position,
-                gameObject.transform.position.y, gameObject.transform.position.z);
-            UnitBuildingButtonv2 unitBuildingButtonv2 = gameObject.GetComponent<UnitBuildingButtonv2>();
-            unitBuildingButtonv2.SetUnit(unit);
-            unitBuildingButtonv2.SetSpawner(this);
-            buttonsList.Add(unitBuildingButtonv2);
-            position -= 150;
-
-            Debug.Log("in the for");
-        }
+        player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
     }
 
     private void UpdateTimerDisplay()
@@ -191,40 +204,41 @@ CmdSpawnUnit();// < CmdSpawnUnit();
             UpdateTimerDisplay();
         }
 
-     /*   if (player == null)
-        {
-            if (NetworkClient.connection.identity == null)
-            {
-                Debug.LogError("You dont have identity");
-            }
-            else
-            {
-                Debug.Log("Identity name" + NetworkClient.connection.identity.name);
-            }
-
-            player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
-            if (player == null)
-            {
-                Debug.LogWarning("Try 1 failed");
-                player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
-            }
-
-            if (player == null)
-            {
-                Debug.LogWarning("Try 2 failed");
-                player = connectionToServer.identity.GetComponent<RTSPlayerv2>();
-            }
-
-            return;
-        }
-        else
-        {
-            Debug.Log("LIFE ");
-            return;
-        }
-
-        Debug.LogError("The player is more null that your desires of live");
-   */ }
+        /*   if (player == null)
+           {
+               if (NetworkClient.connection.identity == null)
+               {
+                   Debug.LogError("You dont have identity");
+               }
+               else
+               {
+                   Debug.Log("Identity name" + NetworkClient.connection.identity.name);
+               }
+   
+               player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+               if (player == null)
+               {
+                   Debug.LogWarning("Try 1 failed");
+                   player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+               }
+   
+               if (player == null)
+               {
+                   Debug.LogWarning("Try 2 failed");
+                   player = connectionToServer.identity.GetComponent<RTSPlayerv2>();
+               }
+   
+               return;
+           }
+           else
+           {
+               Debug.Log("LIFE ");
+               return;
+           }
+   
+           Debug.LogError("The player is more null that your desires of live");
+      */
+    }
 
     [Client]
     public override void Deselect()

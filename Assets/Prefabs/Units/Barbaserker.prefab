@@ -386,6 +386,7 @@ MonoBehaviour:
   expirationVelocity: 0
   time: 0
   moral: 0
+  id: 1
   maxMoral: 0
   prices: 
   onSelected:

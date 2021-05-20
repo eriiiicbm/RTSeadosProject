@@ -323,6 +323,187 @@
             <e p="SyncSet.cs" t="Include" />
             <e p="Transport" t="Include">
               <e p="FallbackTransport.cs" t="Include" />
+              <e p="FizzySteamworks" t="Include">
+                <e p="BidirectionalDictionary.cs" t="Include" />
+                <e p="Dependencies" t="Include">
+                  <e p="License.txt" t="Include" />
+                  <e p="Steamworks.NET" t="Include">
+                    <e p="autogen" t="Include">
+                      <e p="isteamapplist.cs" t="Include" />
+                      <e p="isteamapps.cs" t="Include" />
+                      <e p="isteamclient.cs" t="Include" />
+                      <e p="isteamfriends.cs" t="Include" />
+                      <e p="isteamgameserver.cs" t="Include" />
+                      <e p="isteamgameserverapps.cs" t="Include" />
+                      <e p="isteamgameserverclient.cs" t="Include" />
+                      <e p="isteamgameserverhttp.cs" t="Include" />
+                      <e p="isteamgameserverinventory.cs" t="Include" />
+                      <e p="isteamgameservernetworking.cs" t="Include" />
+                      <e p="isteamgameservernetworkingsockets.cs" t="Include" />
+                      <e p="isteamgameservernetworkingutils.cs" t="Include" />
+                      <e p="isteamgameserverstats.cs" t="Include" />
+                      <e p="isteamgameserverugc.cs" t="Include" />
+                      <e p="isteamgameserverutils.cs" t="Include" />
+                      <e p="isteamhtmlsurface.cs" t="Include" />
+                      <e p="isteamhttp.cs" t="Include" />
+                      <e p="isteaminput.cs" t="Include" />
+                      <e p="isteaminventory.cs" t="Include" />
+                      <e p="isteammatchmaking.cs" t="Include" />
+                      <e p="isteammusic.cs" t="Include" />
+                      <e p="isteammusicremote.cs" t="Include" />
+                      <e p="isteamnetworking.cs" t="Include" />
+                      <e p="isteamnetworkingmessages.cs" t="Include" />
+                      <e p="isteamnetworkingsockets.cs" t="Include" />
+                      <e p="isteamnetworkingutils.cs" t="Include" />
+                      <e p="isteamparentalsettings.cs" t="Include" />
+                      <e p="isteamremoteplay.cs" t="Include" />
+                      <e p="isteamremotestorage.cs" t="Include" />
+                      <e p="isteamscreenshots.cs" t="Include" />
+                      <e p="isteamugc.cs" t="Include" />
+                      <e p="isteamunifiedmessages.cs" t="Include" />
+                      <e p="isteamuser.cs" t="Include" />
+                      <e p="isteamuserstats.cs" t="Include" />
+                      <e p="isteamutils.cs" t="Include" />
+                      <e p="isteamvideo.cs" t="Include" />
+                      <e p="NativeMethods.cs" t="Include" />
+                      <e p="SteamCallbacks.cs" t="Include" />
+                      <e p="SteamConstants.cs" t="Include" />
+                      <e p="SteamEnums.cs" t="Include" />
+                      <e p="SteamStructs.cs" t="Include" />
+                    </e>
+                    <e p="CallbackDispatcher.cs" t="Include" />
+                    <e p="CallbackIdentity.cs" t="Include" />
+                    <e p="InteropHelp.cs" t="Include" />
+                    <e p="ISteamMatchmakingResponses.cs" t="Include" />
+                    <e p="Packsize.cs" t="Include" />
+                    <e p="redist" t="Include">
+                      <e p="steam_appid.txt" t="Include" />
+                    </e>
+                    <e p="Steam.cs" t="Include" />
+                    <e p="types" t="Include">
+                      <e p="MatchmakingTypes" t="Include">
+                        <e p="gameserveritem_t.cs" t="Include" />
+                        <e p="servernetadr_t.cs" t="Include" />
+                      </e>
+                      <e p="Steam_api_common" t="Include">
+                        <e p="HSteamPipe.cs" t="Include" />
+                        <e p="HSteamUser.cs" t="Include" />
+                      </e>
+                      <e p="SteamClient" t="Include">
+                        <e p="SteamAPI_CheckCallbackRegistered_t.cs" t="Include" />
+                        <e p="SteamAPI_PostAPIResultInProcess_t.cs" t="Include" />
+                        <e p="SteamAPIWarningMessageHook_t.cs" t="Include" />
+                      </e>
+                      <e p="SteamClientPublic" t="Include">
+                        <e p="CGameID.cs" t="Include" />
+                        <e p="CSteamID.cs" t="Include" />
+                        <e p="HAuthTicket.cs" t="Include" />
+                      </e>
+                      <e p="SteamDatagramTickets" t="Include">
+                        <e p="SteamDatagramHostedAddress.cs" t="Include" />
+                        <e p="SteamDatagramRelayAuthTicket.cs" t="Include" />
+                      </e>
+                      <e p="SteamFriends" t="Include">
+                        <e p="FriendsGroupID_t.cs" t="Include" />
+                      </e>
+                      <e p="SteamHTMLSurface" t="Include">
+                        <e p="HHTMLBrowser.cs" t="Include" />
+                      </e>
+                      <e p="SteamHTTP" t="Include">
+                        <e p="HTTPCookieContainerHandle.cs" t="Include" />
+                        <e p="HTTPRequestHandle.cs" t="Include" />
+                      </e>
+                      <e p="SteamInput" t="Include">
+                        <e p="InputActionSetHandle_t.cs" t="Include" />
+                        <e p="InputAnalogActionHandle_t.cs" t="Include" />
+                        <e p="InputDigitalActionHandle_t.cs" t="Include" />
+                        <e p="InputHandle_t.cs" t="Include" />
+                      </e>
+                      <e p="SteamInventory" t="Include">
+                        <e p="SteamInventoryResult_t.cs" t="Include" />
+                        <e p="SteamInventoryUpdateHandle_t.cs" t="Include" />
+                        <e p="SteamItemDef_t.cs" t="Include" />
+                        <e p="SteamItemInstanceID_t.cs" t="Include" />
+                      </e>
+                      <e p="SteamMatchmaking" t="Include">
+                        <e p="HServerListRequest.cs" t="Include" />
+                        <e p="HServerQuery.cs" t="Include" />
+                      </e>
+                      <e p="SteamNetworking" t="Include">
+                        <e p="SNetListenSocket_t.cs" t="Include" />
+                        <e p="SNetSocket_t.cs" t="Include" />
+                      </e>
+                      <e p="SteamNetworkingSockets" t="Include">
+                        <e p="ISteamNetworkingConnectionSignaling.cs" t="Include" />
+                        <e p="ISteamNetworkingSignalingRecvContext.cs" t="Include" />
+                      </e>
+                      <e p="SteamNetworkingTypes" t="Include">
+                        <e p="FSteamNetworkingSocketsDebugOutput.cs" t="Include" />
+                        <e p="HSteamListenSocket.cs" t="Include" />
+                        <e p="HSteamNetConnection.cs" t="Include" />
+                        <e p="HSteamNetPollGroup.cs" t="Include" />
+                        <e p="SteamNetworkingConfigValue_t.cs" t="Include" />
+                        <e p="SteamNetworkingErrMsg.cs" t="Include" />
+                        <e p="SteamNetworkingIdentity.cs" t="Include" />
+                        <e p="SteamNetworkingIPAddr.cs" t="Include" />
+                        <e p="SteamNetworkingMessage_t.cs" t="Include" />
+                        <e p="SteamNetworkingMicroseconds.cs" t="Include" />
+                        <e p="SteamNetworkingPOPID.cs" t="Include" />
+                      </e>
+                      <e p="SteamRemotePlay" t="Include">
+                        <e p="RemotePlaySessionID_t.cs" t="Include" />
+                      </e>
+                      <e p="SteamRemoteStorage" t="Include">
+                        <e p="PublishedFileId_t.cs" t="Include" />
+                        <e p="PublishedFileUpdateHandle_t.cs" t="Include" />
+                        <e p="UGCFileWriteStreamHandle_t.cs" t="Include" />
+                        <e p="UGCHandle_t.cs" t="Include" />
+                      </e>
+                      <e p="SteamScreenshots" t="Include">
+                        <e p="ScreenshotHandle.cs" t="Include" />
+                      </e>
+                      <e p="SteamTypes" t="Include">
+                        <e p="AccountID_t.cs" t="Include" />
+                        <e p="AppId_t.cs" t="Include" />
+                        <e p="DepotId_t.cs" t="Include" />
+                        <e p="ManifestId_t.cs" t="Include" />
+                        <e p="PartyBeaconID_t.cs" t="Include" />
+                        <e p="RTime32.cs" t="Include" />
+                        <e p="SiteId_t.cs" t="Include" />
+                        <e p="SteamAPICall_t.cs" t="Include" />
+                        <e p="SteamIPAddress_t.cs" t="Include" />
+                      </e>
+                      <e p="SteamUGC" t="Include">
+                        <e p="UGCQueryHandle_t.cs" t="Include" />
+                        <e p="UGCUpdateHandle_t.cs" t="Include" />
+                      </e>
+                      <e p="SteamUnifiedMessages" t="Include">
+                        <e p="ClientUnifiedMessageHandle.cs" t="Include" />
+                      </e>
+                      <e p="SteamUserStats" t="Include">
+                        <e p="SteamLeaderboard_t.cs" t="Include" />
+                        <e p="SteamLeaderboardEntries_t.cs" t="Include" />
+                      </e>
+                    </e>
+                    <e p="Version.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="FizzySteamworks.cs" t="Include" />
+                <e p="IClient.cs" t="Include" />
+                <e p="IServer.cs" t="Include" />
+                <e p="LegacyClient.cs" t="Include" />
+                <e p="LegacyCommon.cs" t="Include" />
+                <e p="LegacyServer.cs" t="Include" />
+                <e p="NextClient.cs" t="Include" />
+                <e p="NextCommon.cs" t="Include" />
+                <e p="NextServer.cs" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="Steamworks.NET" t="Include">
+                    <e p="SteamManager.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="version.txt" t="Include" />
+              </e>
               <e p="KCP" t="Include">
                 <e p="kcp2k" t="Include">
                   <e p="highlevel" t="Include">

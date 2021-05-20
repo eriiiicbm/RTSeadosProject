@@ -8,11 +8,8 @@ public class Fridge : PasiveHability
     {
         if (GetComponent<RTSBase>().connectionToClient != unit.connectionToClient) return;
 
-        if (unit.MaxHealth > unit.CurrentHealth)
-        {
-            Debug.Log(unit.name+" unidad recuperada");
-            unit.DealDamage(-1 * recoverySpeed);
-        }
+        Debug.Log(unit.name+" unidad recuperada");
+        unit.DealDamage(-1 * recoverySpeed);        
     }
     /*private void OnTriggerStay(Collider other)
     {

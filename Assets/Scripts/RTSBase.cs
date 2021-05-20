@@ -64,7 +64,7 @@ public class RTSBase : NetworkBehaviour
             return;
         }
 
-        currentHealth = Mathf.Max(currentHealth - damageAmount, 0);
+        currentHealth = Mathf.Min( Mathf.Max(currentHealth - damageAmount, 0), MaxHealth);
 
         if (currentHealth != 0)
         {

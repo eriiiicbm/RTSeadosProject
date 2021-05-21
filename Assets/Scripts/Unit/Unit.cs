@@ -72,7 +72,7 @@ public class Unit : RTSBase
     public void StartStuff()
     {
         velocity = rtsEntity.Velocity;
-        navMeshAgent.speed = velocity;
+      ///  navMeshAgent.speed = velocity;
         maxMoral = rtsEntity.Moral;
         moral = maxMoral * 0.5f;
         prices = rtsEntity.Prices;

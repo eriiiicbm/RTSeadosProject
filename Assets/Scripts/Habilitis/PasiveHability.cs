@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
 public class PasiveHability : MonoBehaviour
@@ -8,7 +9,13 @@ public class PasiveHability : MonoBehaviour
     public float recoverySpeed;
     public List<Unit> units;
 
+    #region Server
+
+    
+
+    #endregion
     // Start is called before the first frame update
+ 
     private void Start()
     {
         efectRadius = GetComponent<RTSBase>().rtsEntity.EffectRadious;
@@ -16,6 +23,7 @@ public class PasiveHability : MonoBehaviour
     }
 
     // Update is called once per frame
+   [ServerCallback]
     void Update()
     {
         RaycastHit[] hits = Physics.SphereCastAll(gameObject.transform.position, efectRadius, gameObject.transform.forward);

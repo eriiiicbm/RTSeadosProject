@@ -50,11 +50,11 @@ public class RTSNetworkManagerv2 : NetworkManager
     }
 
     public override void OnServerDisconnect(NetworkConnection conn)
-    {
+    {  RTSPlayerv2 player = conn.identity.GetComponent<RTSPlayerv2>();
+        Players.Remove(player);
         base.OnServerDisconnect(conn);
 
-        RTSPlayerv2 player = conn.identity.GetComponent<RTSPlayerv2>();
-        Players.Remove(player);
+      
     }
 
     public override void OnStopServer()
@@ -94,10 +94,13 @@ isGameInProgress = false;
                         Quaternion.identity);
                     Debug.Log(unitSpawnerInstance.name);
                     NetworkServer.Spawn(unitSpawnerInstance, player.connectionToClient);
+                    
                 }  
+                
             }
            
         }
+        
     }
 
     public void StartGame()

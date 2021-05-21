@@ -38,7 +38,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         ServerOnRTSDie += ServerHandleDie;
 
         Debug.Log("UnitPrefab length" + unitPrefab.Count);
-        player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+        player =connectionToClient.identity.GetComponent<RTSPlayerv2>();
     }
 
     private void Start()

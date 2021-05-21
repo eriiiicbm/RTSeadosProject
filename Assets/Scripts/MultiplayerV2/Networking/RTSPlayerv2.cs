@@ -16,13 +16,21 @@ public class RTSPlayerv2 : NetworkBehaviour
     [SerializeField] private List<Building> myBuildings = new List<Building>();
     private Color teamColor = new Color();
 
-    
-   public List<int> resources = new List<int>();
+    public SyncList<int> resources = new SyncList<int>(){99999,99999,99999,99999};
 
+    [SyncVar]
     [SerializeField] private int trops = 0;
+    
+    [SyncVar]
     [SerializeField] private int maxTrops = 6;
+  
+    [SyncVar]
     [SerializeField] private int tropsInProduction = 6;
+ 
+    [SyncVar]
     [SerializeField] private int numHouse = 0;
+
+    [SyncVar]
     [SerializeField] private int maxNumHouse = 20;
     [SerializeField] private bool hero1;
   [SyncVar(hook = nameof(AuthorityHandlePartyOwnerStateUpdated))]
@@ -30,7 +38,7 @@ public class RTSPlayerv2 : NetworkBehaviour
 [SyncVar(hook = nameof(ClientHandleDisplayNameUpdated))]
     private string displayName;
     public static event Action ClientOnInfoUpdated;
-    public static event Action<List<int>> ClientOnResourcesUpdated;
+    public static event Action<SyncList<int>> ClientOnResourcesUpdated;
     public static event Action<bool> AuthorityOnPartyOwnerStateUpdated;
     public Unit FindUnitById(int id)
     {
@@ -41,7 +49,7 @@ public class RTSPlayerv2 : NetworkBehaviour
         return cameraTransform;
     }
 
-    public List<int> GetAllResources()
+    public SyncList<int> GetAllResources()
     {
         return resources;
     }
@@ -161,6 +169,8 @@ Debug.Log("Set resources");
         Building.ServerOnBuildingSpawned += ServerHandleBuildingSpawned;
         Building.ServerOnBuildingDespawned += ServerHandleBuildingDespawned;
         DontDestroyOnLoad(gameObject);
+        ClientOnResourcesUpdated?.Invoke(resources);
+
     }
 
 

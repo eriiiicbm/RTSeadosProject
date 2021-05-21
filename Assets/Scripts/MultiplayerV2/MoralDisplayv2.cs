@@ -15,6 +15,8 @@ public class MoralDisplayv2 : MonoBehaviour
   {
     moral = GetComponent<Unit>();
     moral.ClientOnMoralUpdated += HandleMoralUpdated;
+    moralBarParent.SetActive(false);
+
   }
 
   private void OnDestroy()

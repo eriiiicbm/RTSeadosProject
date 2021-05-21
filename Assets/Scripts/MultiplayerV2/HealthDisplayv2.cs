@@ -15,6 +15,8 @@ public class HealthDisplayv2 : MonoBehaviour
   {
     health = GetComponent<RTSBase>();
     health.ClientOnHealthUpdated += HandleHealthUpdated;
+    healtBarParent.SetActive(false);
+
   }
 
   private void OnDestroy()

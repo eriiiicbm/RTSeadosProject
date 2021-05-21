@@ -259,7 +259,7 @@ public class Unit : RTSBase
 
             velocity = rtsEntity.Velocity * 0.5f;
 
-            if (unitCombat != null) unitCombat.damage = rtsEntity.Damage * 0.75f;
+            if (unitCombat != null) unitCombat.damage = rtsEntity.Damage * 0.25f;
 
             if (moralDamage != null)
                 moralDamage.damageMoral = rtsEntity.DamageMoral * 0.5f;
@@ -267,7 +267,7 @@ public class Unit : RTSBase
             if (pasiveHability != null)
             {
                 pasiveHability.efectRadius = rtsEntity.EffectRadious * 0.75f;
-                pasiveHability.recoverySpeed = rtsEntity.RecoverySpeed * 0.75f;
+                pasiveHability.recoverySpeed = rtsEntity.RecoverySpeed * 0.90f;
             }
 
             yield return 0;
@@ -307,7 +307,7 @@ public class Unit : RTSBase
             if (pasiveHability != null)
             {
                 pasiveHability.efectRadius = rtsEntity.EffectRadious * 1.25f;
-                pasiveHability.recoverySpeed = rtsEntity.RecoverySpeed * 1.25f;
+                pasiveHability.recoverySpeed = rtsEntity.RecoverySpeed * 1.10f;
             }
 
             yield return 0;

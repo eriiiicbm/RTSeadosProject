@@ -11,6 +11,7 @@ using Random = UnityEngine.Random;
 
 public class UnitSpawnerv3 : Building, IPointerClickHandler
 {
+    [SerializeField] private GameObject instantiatedCanvas;
     [SerializeField] private List<Unit> unitPrefab = null;
     [SerializeField] private Transform unitSpawnPoint = null;
     [SerializeField] private TMP_Text remainingUnitsText = null;
@@ -26,7 +27,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     private int queuedUnits;
 
     private List<UnitBuildingButtonv2> buttonsList = new List<UnitBuildingButtonv2>();
-    [SerializeField] private Transform transformCanvas;
+    private Transform transformCanvas;
     [SyncVar] private float unitTimer;
     private float progressImageVelocity;
 
@@ -43,25 +44,38 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
 
     private void Start()
     {
+     SpawnButtons();
+
+    }
+
+    public void SpawnButtons()
+    {
         int position = 0;
+        GameObject canvas = Instantiate<GameObject>(instantiatedCanvas);
+        transformCanvas = canvas.transform;
 
         foreach (Unit unit in unitPrefab)
         {
-            GameObject gameObject = Instantiate<GameObject>(buildingButtonTemplate, transformCanvas);
+            GameObject gameObject = Instantiate<GameObject>(buildingButtonTemplate);
             Debug.Log(gameObject.name + " name ");
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x + position,
-                gameObject.transform.position.y, gameObject.transform.position.z);
+            var position1 = gameObject.transform.position;
+            position1 = new Vector3(position1.x + position,
+                position1.y, position1.z);
+            gameObject.transform.position = position1;
             UnitBuildingButtonv2 unitBuildingButtonv2 = gameObject.GetComponent<UnitBuildingButtonv2>();
             unitBuildingButtonv2.SetUnit(unit);
             unitBuildingButtonv2.SetSpawner(this);
             buttonsList.Add(unitBuildingButtonv2);
             position -= 150;
+            gameObject.transform.SetParent(canvas.transform);
+            gameObject.transform.localScale =  Vector3.one;
 
             Debug.Log("in the for");
+
         }
     }
 
-   
+
     public void AddUnitToTheQueue(int id)
     {
        
@@ -242,14 +256,20 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
 
     [Client]
     public override void Deselect()
-    {
+    { if (!hasAuthority)
+        {
+            return;
+        }
         base.Deselect();
         transformCanvas.gameObject.SetActive(false);
     }
 
     [Client]
     public override void Select()
-    {
+    { if (!hasAuthority)
+        {
+            return;
+        }
         base.Select();
         transformCanvas.gameObject.SetActive(true);
         Debug.Log("Selected");

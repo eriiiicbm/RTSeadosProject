@@ -232,6 +232,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  instantiatedCanvas: {fileID: 6349227796455042210, guid: 9743dc6075cf6e44f852aef1a118fede,
+    type: 3}
   unitPrefab:
   - {fileID: 4543389441489971279, guid: cf67cc1f3acf9ee43b9b257d85f3bc1e, type: 3}
   - {fileID: 4485816749142836887, guid: 06e6a74ba84993f48aa4f75cb8c54991, type: 3}

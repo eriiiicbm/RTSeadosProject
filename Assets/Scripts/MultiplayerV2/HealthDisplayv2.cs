@@ -15,7 +15,7 @@ public class HealthDisplayv2 : MonoBehaviour
   {
     health = GetComponent<RTSBase>();
     health.ClientOnHealthUpdated += HandleHealthUpdated;
-    healtBarParent.SetActive(false);
+    healtBarParent.SetActive(true);
 
   }
 
@@ -25,11 +25,12 @@ public class HealthDisplayv2 : MonoBehaviour
 
   private void OnMouseEnter()
   {
-healtBarParent.SetActive(true);  }
+//healtBarParent.SetActive(true);
+}
 
   private void OnMouseExit()
   {
-    healtBarParent.SetActive(false);
+  //  healtBarParent.SetActive(false);
   }
 
   private void HandleHealthUpdated(float currentHealth, float maxHealth)

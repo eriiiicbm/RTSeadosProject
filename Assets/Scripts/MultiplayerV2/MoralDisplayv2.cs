@@ -15,17 +15,19 @@ public class MoralDisplayv2 : MonoBehaviour
   {
     moral = GetComponent<Unit>();
     moral.ClientOnMoralUpdated += HandleMoralUpdated;
-    moralBarParent.SetActive(false);
+    moralBarParent.SetActive(true);
 
   }
 
   private void OnDestroy()
   {
-    moral.ClientOnMoralUpdated -= HandleMoralUpdated;}
+  //  moral.ClientOnMoralUpdated -= HandleMoralUpdated;
+  }
 
   private void OnMouseEnter()
   {
-    moralBarParent.SetActive(true);  }
+  //  moralBarParent.SetActive(true);
+  }
 
   private void OnMouseExit()
   {

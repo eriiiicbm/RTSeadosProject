@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 1569288530541007946}
   - component: {fileID: -2842510099164722031}
   - component: {fileID: 1917688663461435974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChipAndArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

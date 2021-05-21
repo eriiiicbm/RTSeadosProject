@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 3806796685681744519}
   - component: {fileID: 3128857219828913945}
   - component: {fileID: -2908871807586788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PizzaPriest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 7290073556559787900}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1.46
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50

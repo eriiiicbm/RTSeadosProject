@@ -366,7 +366,7 @@ MonoBehaviour:
   moral: 0
   id: 5
   maxMoral: 0
-  prices: 
+  prices: 0f000000190000000000000000000000
   onSelected:
     m_PersistentCalls:
       m_Calls:
@@ -424,7 +424,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8335747702613979503}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 3.44
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50

@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 3899188683481475224}
   - component: {fileID: -8090460596642849067}
   - component: {fileID: 3192544078394320690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barbaserker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 5651458107991866868}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1.01
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50

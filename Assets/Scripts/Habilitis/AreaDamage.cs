@@ -4,6 +4,7 @@ using UnityEngine;
 using Mirror;
 public class AreaDamage : NetworkBehaviour, ComponetHability
 {
+    [Server]
     public void active(RTSBase target, float damage)
     {
          RaycastHit [] hits =  Physics.SphereCastAll(target.gameObject.transform.position, GetComponent<RTSBase>().rtsEntity.EffectRadious, target.gameObject.transform.forward);

@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
 public class MoralDamage : PasiveHability
 {
     public float damageMoral;
 
-    public override void PasiveEffect(Unit unit)
+    [Server]public override void PasiveEffect(Unit unit)
     {
         if (GetComponent<RTSBase>().connectionToClient == unit.connectionToClient) return;
 

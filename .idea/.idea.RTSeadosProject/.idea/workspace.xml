@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Habilitis/AreaDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Habilitis/AreaDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Habilitis/DistanceUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Habilitis/DistanceUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Habilitis/Fridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Habilitis/Fridge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Habilitis/MeleUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Habilitis/MeleUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Habilitis/MoralDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Habilitis/MoralDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Habilitis/MoralSupport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Habilitis/MoralSupport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/PortableFridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/PortableFridge.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,12 +50,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitN.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitCommandGiver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/MainMenuBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/ProductionBuilding.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Villager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/BuildingButton1.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Minimap.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Resources/ResourcesDisplay.cs" />
@@ -70,7 +71,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/UnitBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/GameOverHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Menus/GameOverDisplayv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MoralDamage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Minimapv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" />
@@ -86,7 +86,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/RTSFoodManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/PasiveHability.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
@@ -94,6 +93,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/PortableFridge.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/AreaDamage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/DistanceUnit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/Fridge.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MeleUnit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MoralDamage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MoralSupport.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />

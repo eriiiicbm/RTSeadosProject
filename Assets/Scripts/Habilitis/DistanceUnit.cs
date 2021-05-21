@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
 public class DistanceUnit : MonoBehaviour, ComponetHability
@@ -13,7 +14,7 @@ public class DistanceUnit : MonoBehaviour, ComponetHability
         
         projectils = rtsBase.rtsEntity.Proyectile;
     }
-
+[Server]
     public void active(RTSBase target, float damage)
     {
         Vector3 direction = transform.position - target.transform.position;

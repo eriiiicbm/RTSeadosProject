@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: -2025671624033530747}
   - component: {fileID: 475323671267101232}
   - component: {fileID: 2103224413392091263}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WarHotDog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 4134074402336445218}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 4.53
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50

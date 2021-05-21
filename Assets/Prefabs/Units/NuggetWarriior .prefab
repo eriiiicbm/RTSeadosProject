@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 5219972785940084734}
   - component: {fileID: 1917411422551978806}
   - component: {fileID: 1189657123014424701}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'NuggetWarriior '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 5651458107991866868}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.92
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -253,7 +253,7 @@ MonoBehaviour:
   moral: 12.81
   id: 7
   maxMoral: 17.22
-  prices: 00000000000000000000000000000000
+  prices: 05000000080000000f00000000000000
   onSelected:
     m_PersistentCalls:
       m_Calls:

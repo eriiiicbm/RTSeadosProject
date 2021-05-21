@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 2084167890827028078}
   - component: {fileID: 4107337782891608708}
   - component: {fileID: 333372581825726644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BatiGas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2211274502225543473}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 4
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -270,7 +270,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 3.74
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

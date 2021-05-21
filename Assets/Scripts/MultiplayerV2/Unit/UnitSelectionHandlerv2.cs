@@ -204,7 +204,10 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
 
     private bool CheckIfVilager()
     {
+        buildingsDisplay.SetActive(false);
+
         villagersNumber = 0;
+        if (SelectedBuildings.Count>0) return false;
         foreach (Unit selectedUnit in SelectedUnits)
         {
             selectedUnit.Select();

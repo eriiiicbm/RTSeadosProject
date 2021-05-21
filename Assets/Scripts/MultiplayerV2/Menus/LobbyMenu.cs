@@ -9,8 +9,8 @@ using UnityEngine.UI;
 
 public class LobbyMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject lobbyUI = null;
-    [SerializeField] private Button startGameButton = null;
+    [SerializeField] private GameObject lobbyUI ;
+    [SerializeField] private Button startGameButton  ;
     [SerializeField] private TMP_Text[] playerNameTexts = new TMP_Text[4];
 
     private void Start()
@@ -26,7 +26,7 @@ public class LobbyMenu : MonoBehaviour
     {
         RTSNetworkManagerv2.ClientOnConnected -= HandleClientConnected;
         RTSPlayerv2.AuthorityOnPartyOwnerStateUpdated -= AuthorityHandlePartyOwnerStateUpdated;
-        RTSPlayerv2.ClientOnInfoUpdated += ClientHandleInfoUpdated;
+        RTSPlayerv2.ClientOnInfoUpdated -= ClientHandleInfoUpdated;
 
     }
  
@@ -72,4 +72,8 @@ public class LobbyMenu : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
+    
+      
+ 
+ 
 }

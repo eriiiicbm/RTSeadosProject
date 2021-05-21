@@ -44,10 +44,12 @@ public class Unit : RTSBase
     public int GetId()
     {
         return id;
-
     }
 
-  
+    public void Start()
+    {
+        StartStuff();
+    }
 
     #region Server
 
@@ -67,6 +69,18 @@ public class Unit : RTSBase
         moral = Mathf.Min(moral + moralSupport, maxMoral);
     }
 
+    public void StartStuff()
+    {
+        velocity = rtsEntity.Velocity;
+        navMeshAgent.speed = velocity;
+        maxMoral = rtsEntity.Moral;
+        moral = maxMoral * 0.5f;
+        prices = rtsEntity.Prices;
+        time = rtsEntity.BuildTime;
+        chaseRange = rtsEntity.AttackRange;
+        expirationVelocity = rtsEntity.ExpirationVelocity;
+    }
+
     public override void OnStartServer()
     {
         base.OnStartServer();
@@ -76,7 +90,7 @@ public class Unit : RTSBase
             navMeshAgent = GetComponent<NavMeshAgent>();
         }
 //todo assign ids
- //       id = UnityEngine.Random.Range(0, 999999999);
+        //       id = UnityEngine.Random.Range(0, 999999999);
 
         if (targeter == null)
         {
@@ -85,15 +99,8 @@ public class Unit : RTSBase
 
         ServerOnUnitSpawned?.Invoke(this);
         ServerOnRTSDie += ServerHandleDie;
-        velocity = rtsEntity.Velocity;
-        navMeshAgent.speed = velocity;
-        maxMoral = rtsEntity.Moral;
-        moral = maxMoral * 0.5f;
-        prices = rtsEntity.Prices;
-        time = rtsEntity.BuildTime;
-        chaseRange = rtsEntity.AttackRange;
-        expirationVelocity = rtsEntity.ExpirationVelocity;
 
+        StartStuff();
         playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
 
         StartCoroutine(nameof(ExpirationEffect));
@@ -127,7 +134,7 @@ public class Unit : RTSBase
 
     [ServerCallback]
     public virtual void Update()
-    { 
+    {
         target = targeter.GetTarget();
 
         if (target != null)

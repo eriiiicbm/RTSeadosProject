@@ -20,7 +20,17 @@ public class RTSBase : NetworkBehaviour
     public event Action ServerOnRTSDie;
 
     public event Action<float, float> ClientOnHealthUpdated;
- 
+
+    private void Start()
+    {
+        maxHealth = rtsEntity.MaxHealth;
+     
+        entityName = rtsEntity.name;
+        preview = rtsEntity.Preview;
+        prefab = rtsEntity.Prefab;
+        currentHealth = maxHealth;
+    }
+
     #region Server
 
     public override void OnStartServer()
@@ -102,11 +112,7 @@ public class RTSBase : NetworkBehaviour
         transform.Find("Highlight").gameObject.SetActive(isSelected);
     }
 
-    public void TakeDamage(RTSBase enemy, float damage)
-    {
-        // currentHealth = currentHealth - damage;
-        //      StartCoroutine(Flasher(GetComponent<Renderer>().material.color));
-    }
+ 
 
     IEnumerator Flasher(Color defaultColor)
     {

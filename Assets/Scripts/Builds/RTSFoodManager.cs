@@ -8,6 +8,6 @@ public class RTSFoodManager : MonoBehaviour
     {
         var damage = attackedController.damage;
 
-        attackedController.TakeDamage(attackedController, damage);
+   //     attackedController.TakeDamage(attackedController, damage);
     }
 }

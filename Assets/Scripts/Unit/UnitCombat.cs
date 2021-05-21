@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
 public class UnitCombat : Unit
@@ -20,6 +21,7 @@ public class UnitCombat : Unit
     }
 
     // Update is called once per frame
+ [ServerCallback]
     void Update()
     {
         base.Update();

@@ -16,7 +16,7 @@ MonoBehaviour:
   entityType: 9
   maxHealth: 5000
   expirationVelocity: 3
-  damageMoral: 2
+  damageMoral: 0.5
   prices: 0f000000190000000000000000000000
   description: 
   preview: {fileID: 0}

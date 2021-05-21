@@ -215,6 +215,7 @@ MonoBehaviour:
   unitSpawnDuration: 5
   buildingButtonTemplate: {fileID: 267681169135266736, guid: 3e8da26e936fdc34f9fa31103a60a42a,
     type: 3}
+  unitQueue: []
   transformCanvas: {fileID: 8269588217888505231}
 --- !u!1 &6858805803912611733
 GameObject:
@@ -340,6 +341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FinalEsrtructure
+      objectReference: {fileID: 0}
+    - target: {fileID: 4856965944896171192, guid: d4f818c7441a55341adcf690f48bd941,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8309465093329681362, guid: d4f818c7441a55341adcf690f48bd941,
         type: 3}

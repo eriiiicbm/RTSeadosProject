@@ -138,7 +138,6 @@ MonoBehaviour:
   buildingRangeLimit: 200
   myUnits: []
   myBuildings: []
-  resources: 9f8601009f8601009f8601009f860100
   trops: 0
   maxTrops: 6
   tropsInProduction: 0
@@ -167,8 +166,8 @@ MonoBehaviour:
   playerCameraTransform: {fileID: 5167589719713410488}
   speed: 25
   screenBrderThickness: 10
-  screenXLimits: {x: -45, y: 45}
-  screenZLimits: {x: -55, y: 35}
+  screenXLimits: {x: -70, y: 70}
+  screenZLimits: {x: -70, y: 70}
 --- !u!1 &4489970262673483055
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 8398260750668190726}
   - component: {fileID: 7471795120069677964}
   - component: {fileID: 4237827411918316290}
+  - component: {fileID: -3282456965166877501}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -97,7 +98,7 @@ MonoBehaviour:
   buildTime: 0
   buildingPreview: {fileID: 4444141615569874375}
   icon: {fileID: 21300000, guid: eb5f6e2757c821940b69cf1456f7865a, type: 3}
-  price: 
+  price: 00000000000000003200000000000000
   id: 71
   onSelected:
     m_PersistentCalls:
@@ -237,6 +238,21 @@ MonoBehaviour:
   health: {fileID: 0}
   healtBarParent: {fileID: 6061694262868385096}
   healthBarImage: {fileID: 3738371857889766662}
+--- !u!114 &-3282456965166877501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3722049469362960980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a9fdb787800ef4a84aefed0a61ca1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  aimAtPoint: {fileID: 0}
 --- !u!1 &4029612489833627271
 GameObject:
   m_ObjectHideFlags: 0

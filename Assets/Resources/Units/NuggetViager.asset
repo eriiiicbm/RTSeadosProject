@@ -15,7 +15,7 @@ MonoBehaviour:
   isMoralUp: 0
   entityType: 4
   maxHealth: 2000
-  expirationVelocity: 2
+  expirationVelocity: 12
   damageMoral: 0
   prices: 050000000a0000000000000000000000
   description: 

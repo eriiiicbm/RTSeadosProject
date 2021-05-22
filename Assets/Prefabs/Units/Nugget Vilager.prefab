@@ -225,7 +225,7 @@ MonoBehaviour:
   entityName: 
   maxHealth: 113
   description: 
-  preview: {fileID: 21300000, guid: eb5f6e2757c821940b69cf1456f7865a, type: 3}
+  preview: {fileID: 21300000, guid: 7c2f6fecdf7db5d41a86aa1ad6135af5, type: 3}
   prefab: {fileID: 3425007861387294180}
   rtsEntity: {fileID: 11400000, guid: f752281134896a548923a0b47a0023cd, type: 2}
   currentTargeteable: {fileID: 0}
@@ -234,7 +234,7 @@ MonoBehaviour:
   moral: 233
   id: 6
   maxMoral: 2333
-  prices: 00000000000000000000000000000000
+  prices: 050000000a0000000000000000000000
   onSelected:
     m_PersistentCalls:
       m_Calls:

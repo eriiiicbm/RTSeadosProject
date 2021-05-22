@@ -74,7 +74,7 @@ public class Unit : RTSBase
         velocity = rtsEntity.Velocity;
       ///  navMeshAgent.speed = velocity;
         maxMoral = rtsEntity.Moral;
-        moral = maxMoral * 0.5f;
+ //       moral = maxMoral * 0.5f;
         prices = rtsEntity.Prices;
         time = rtsEntity.BuildTime;
         chaseRange = rtsEntity.AttackRange;
@@ -111,6 +111,7 @@ public class Unit : RTSBase
         }
 
         Debug.LogWarning("Player is null onstart");
+        DealMoralDamage(maxMoral/2);
     }
 
     public override void OnStopServer()

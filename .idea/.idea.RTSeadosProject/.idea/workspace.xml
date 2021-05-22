@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/MPMainCameraFocus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/MPMainCameraFocus.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builds/FridgeHouse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builds/FridgeHouse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Habilitis/PasiveHability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Habilitis/PasiveHability.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Nugget Vilager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Nugget Vilager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/NuggetViager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/NuggetViager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScenes/Scene_MenuMultiplayer 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScenes/Scene_MenuMultiplayer 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScenes/TestRTS1 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScenes/TestRTS1 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/PortableFridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/PortableFridge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +72,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitProjectilev2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitSelectionHandler.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/UnitBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/GameOverHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Menus/GameOverDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" />
@@ -85,7 +86,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/LobbyMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/RTSFoodManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/ResourcesDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
@@ -97,14 +97,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MoralDamage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MoralSupport.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/PasiveHability.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/FridgeHouse.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/PortableFridge.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/UnitBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />

@@ -15,22 +15,13 @@ public class RTSBase : NetworkBehaviour
     [SerializeField] public RTSEntity rtsEntity;
 
     [SyncVar(hook = nameof(HandleHealthUpdated))]
-  [SerializeField]  private float currentHealth;
+     private float currentHealth;
 
     public event Action ServerOnRTSDie;
 
     public event Action<float, float> ClientOnHealthUpdated;
 
-    private void Start()
-    {
-        maxHealth = rtsEntity.MaxHealth;
-     
-        entityName = rtsEntity.name;
-        preview = rtsEntity.Preview;
-        prefab = rtsEntity.Prefab;
-        currentHealth = maxHealth;
-    }
-
+  
     #region Server
 
     public override void OnStartServer()
@@ -89,7 +80,7 @@ public class RTSBase : NetworkBehaviour
 
     private void HandleHealthUpdated(float oldHealth, float newHealth)
     {
-        Debug.Log($"The Health updated is handled {oldHealth}  {newHealth}");
+        Debug.Log($"The Health updated is handled {oldHealth}  {newHealth}  {maxHealth} for {gameObject.name} property of  {NetworkClient.connection.identity.GetComponent<RTSPlayerv2>().gameObject.name}");
         ClientOnHealthUpdated?.Invoke(newHealth, maxHealth);
     }
 
@@ -139,7 +130,14 @@ public class RTSBase : NetworkBehaviour
         SendMessage(methodName);
     }
 
-    public virtual IEnumerator IdleState()
+   public override void OnStartClient()
+   {         maxHealth = rtsEntity.MaxHealth;
+
+       entityName = rtsEntity.name;
+       preview = rtsEntity.Preview;
+       prefab = rtsEntity.Prefab;   }
+
+   public virtual IEnumerator IdleState()
     {
         Debug.LogWarning("OverrideThisMethod before use it");
         yield return new WaitForEndOfFrame();

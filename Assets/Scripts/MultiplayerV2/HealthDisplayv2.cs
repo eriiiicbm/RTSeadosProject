@@ -35,6 +35,7 @@ public class HealthDisplayv2 : MonoBehaviour
 
   private void HandleHealthUpdated(float currentHealth, float maxHealth)
   {
-    healthBarImage.fillAmount = (float)currentHealth / maxHealth;
+     healthBarImage.fillAmount = (float)currentHealth / 
+                                maxHealth;
   }
 }

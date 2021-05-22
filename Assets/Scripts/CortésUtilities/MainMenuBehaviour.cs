@@ -164,8 +164,7 @@ public class MainMenuBehaviour : MonoBehaviour
                 break;
         }
         Debug.Log("Current Language " + GameManager.language  );
-          FindObjectOfType<SendMessagesAllLevel>().ChangeLanguage();
-    //    FindObjectOfType<SendMessagesAllLevel>().ChangeLanguage();
+          FindObjectOfType<SendMessagesAllLevel>()?.ChangeLanguage(); 
    //     gameObject.SendMessageUpwards("OnLanguageChanged");
         GameObject.Find("LanguageText").GetComponent<Text>().text= GameManager.getStrings(textStringsMainMenu)[7] ;
 

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- public class Villager : Unit
+using System;
+
+public class Villager : Unit
 {
     float buildRate;
     float range;
@@ -18,40 +20,62 @@ using UnityEngine;
         StartCoroutine(nameof(BuildState));
     }
 
-    public  override  void Update()
+    private void FixedUpdate()
     {
-        base.Update();
         if (target != null)
         {
-            base.Update();
+            Debug.Log("objetivo: " + target.gameObject.name);
 
-            if(target.gameObject.GetComponent<Building>() != null)
+            if (target.gameObject.GetComponent<Building>() != null)
             {
-                Building build= target.gameObject.GetComponent<Building>();
-                if (build.CurrentHealth != build.MaxHealth)
+                Building build = target.gameObject.GetComponent<Building>();
+
+                Debug.Log("pasa por aqui i autoridad: " + build.hasAuthority);
+
+                if (build.hasAuthority && build.CurrentHealth != build.MaxHealth)
                 {
                     building = build;
+                    resource = null;
+                    return;
                 }
             }
 
-            if(target.gameObject.GetComponent<Resource>() != null)
+            if (target.gameObject.GetComponent<Resource>() != null)
             {
                 resource = target.gameObject.GetComponent<Resource>();
+                building = null;
+                return;
             }
+
+            resource = null;
+            building = null;
         }
+
+        
     }
 
-    [HideInInspector]
+    //[HideInInspector]
     public Resource resource;
     public void recolect() {
         if (resource == null)
             return;
-        if (Vector3.Distance(transform.position, resource.transform.position) > range)
+
+        Vector3 currentPosition = transform.position, targetPosition = resource.transform.position;
+
+        float distance = Mathf.Sqrt(
+            Mathf.Pow(currentPosition.x - targetPosition.x, 2f) +
+            Mathf.Pow(currentPosition.z - targetPosition.z, 2f));
+
+        if (distance > range)
         {
+            Debug.Log("pasa por aqui i faltan "+ (Vector3.Distance(transform.position, resource.transform.position)));
+
             base.CmdMove(resource.transform.position);
             return;
         }
-        
+
+        Debug.Log("pasa por aqui2");
+
         currentState = UnitStates.PickResources;
         transform.LookAt(resource.transform.position);
         resource.resourcesQuantity -= 10;
@@ -59,7 +83,7 @@ using UnityEngine;
             SetResources(10, resource.currentResourceType);
     }
 
-    [HideInInspector]
+    //[HideInInspector]
     public Building building;
     public void build()
     {

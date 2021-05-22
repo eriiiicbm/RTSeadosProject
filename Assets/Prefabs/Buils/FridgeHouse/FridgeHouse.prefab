@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 912334962267162819}
   - component: {fileID: 2154621944659824137}
   - component: {fileID: 4333745389890217792}
+  - component: {fileID: -4237778570618880052}
   m_Layer: 0
   m_Name: FridgeHouse
   m_TagString: Untagged
@@ -146,7 +147,7 @@ MonoBehaviour:
   buildingPreview: {fileID: 4731069443010132957, guid: c9db41ba9153c7d40afa22c9c0bf7d79,
     type: 3}
   icon: {fileID: 21300000, guid: eb5f6e2757c821940b69cf1456f7865a, type: 3}
-  price: 01000000010000000100000001000000
+  price: 00000000000000004b00000000000000
   id: 43
   onSelected:
     m_PersistentCalls:
@@ -193,6 +194,21 @@ MonoBehaviour:
   efectRadius: 0
   recoverySpeed: 0
   units: []
+--- !u!114 &-4237778570618880052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265292966799028624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a9fdb787800ef4a84aefed0a61ca1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  aimAtPoint: {fileID: 0}
 --- !u!1 &8807420075660520922
 GameObject:
   m_ObjectHideFlags: 0

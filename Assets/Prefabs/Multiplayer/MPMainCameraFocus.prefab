@@ -26,7 +26,11 @@ Transform:
   m_GameObject: {fileID: 4578882886929411765}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 8.4, z: -4.2}
-  m_LocalScale: {x: -14.027412, y: -8.531387, z: -3.9830093}
+<<<<<<< Updated upstream
+  m_LocalScale: {x: -13.027412, y: -7.5313873, z: -2.9830093}
+=======
+  m_LocalScale: {x: 2.7225876, y: 8.218613, z: 12.766991}
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

@@ -12,7 +12,7 @@ public class FridgeHouse : Building
     {
         foreach (var unit in units) {
             if(unit.MaxHealth>unit.CurrentHealth)
-            unit.CurrentHealth += recoverVelocity;
+            unit.DealDamage(-recoverVelocity);
             StartCoroutine(Wait(0.5f));
         }
     }

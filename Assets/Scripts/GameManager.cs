@@ -268,9 +268,8 @@ public class GameManager : MonoBehaviour
             case 3:
             case 5:
             case 6:
-           
-                player = GameObject.FindWithTag("Player").transform;
-                achievementsUI = GameObject.Find("Achievement").transform;
+  //todo fix this         
+          /*       achievementsUI = GameObject.Find("Achievement").transform;
                  Debug.Log("aCHIEVEMENTS IS " + achievementsUI);
                 if (savedata == null)
                 {
@@ -285,7 +284,7 @@ public class GameManager : MonoBehaviour
                 LoadSubLevels();
                 Debug.Log("SUBlevelsLoaded");
                 
-
+*/
  
                 break;
         }

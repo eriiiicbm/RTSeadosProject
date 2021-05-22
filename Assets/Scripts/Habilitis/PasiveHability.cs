@@ -43,6 +43,7 @@ public class PasiveHability : MonoBehaviour
                 StartCoroutine(Wait(0.5f));
             }
         }
+        units.Clear();
     }
 
     private void RaycastToUnit(RaycastHit hit)

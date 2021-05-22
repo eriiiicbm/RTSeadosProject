@@ -15,7 +15,7 @@ public class RTSBase : NetworkBehaviour
     [SerializeField] public RTSEntity rtsEntity;
 
     [SyncVar(hook = nameof(HandleHealthUpdated))]
-    private float currentHealth;
+  [SerializeField]  private float currentHealth;
 
     public event Action ServerOnRTSDie;
 
@@ -65,8 +65,7 @@ public class RTSBase : NetworkBehaviour
         DealDamage(currentHealth);
     }
 
-    [ContextMenu("Deal damage")]
-    [Server]
+     [Server]
     public void DealDamage(float damageAmount)
     {
         if (currentHealth == 0)
@@ -90,6 +89,7 @@ public class RTSBase : NetworkBehaviour
 
     private void HandleHealthUpdated(float oldHealth, float newHealth)
     {
+        Debug.Log($"The Health updated is handled {oldHealth}  {newHealth}");
         ClientOnHealthUpdated?.Invoke(newHealth, maxHealth);
     }
 
@@ -104,8 +104,7 @@ public class RTSBase : NetworkBehaviour
     public float CurrentHealth
     {
         get => currentHealth;
-        set => currentHealth = value;
-    }
+     }
 
     void SetSelected(bool isSelected)
     {

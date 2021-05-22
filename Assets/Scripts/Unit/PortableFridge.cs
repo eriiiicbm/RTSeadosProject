@@ -16,7 +16,7 @@ public class PortableFridge : Unit
         foreach (var unit in units)
         {
             if (unit.MaxHealth > unit.CurrentHealth)
-                unit.CurrentHealth += recoverVelocity;
+              DealDamage(-recoverVelocity);
             StartCoroutine(Wait(0.5f));
         }
     }

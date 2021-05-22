@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Villager : Unit
+ public class Villager : Unit
 {
     float buildRate;
     float range;
@@ -52,6 +51,7 @@ public class Villager : Unit
             base.CmdMove(resource.transform.position);
             return;
         }
+        
         currentState = UnitStates.PickResources;
         transform.LookAt(resource.transform.position);
         resource.resourcesQuantity -= 10;
@@ -112,5 +112,10 @@ public class Villager : Unit
         }
         yield return new WaitForEndOfFrame();
 
+    }
+    [ContextMenu("Deal damage")]
+    public void TestDealDamage()
+    {
+     DealDamage(500);   
     }
 }

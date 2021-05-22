@@ -31,7 +31,7 @@ public class MoralDisplayv2 : MonoBehaviour
 
   private void OnMouseExit()
   {
-    moralBarParent.SetActive(false);
+   // moralBarParent.SetActive(false);
   }
 
   private void HandleMoralUpdated(float currentMoral, float maxMoral)

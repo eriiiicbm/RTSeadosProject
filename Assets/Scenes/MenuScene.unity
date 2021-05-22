@@ -6909,8 +6909,11 @@ MonoBehaviour:
   optionsMenuPez: {fileID: 1581309213}
   optionsMenuMamut: {fileID: 945775590}
   optionsMenuIntern: {fileID: 1581309213}
-  soundManager: {fileID: 2141343439}
   mainButton: {fileID: 1492553012}
+  masterSlider: {fileID: 327777877}
+  BGMSlider: {fileID: 1124748891}
+  BGSSlider: {fileID: 994303565}
+  SESlider: {fileID: 2119630107}
   textStringsMainMenu: {fileID: 11400000, guid: 2c3854d9a46c65c4e9192e309b35c888,
     type: 2}
 --- !u!4 &1642805730

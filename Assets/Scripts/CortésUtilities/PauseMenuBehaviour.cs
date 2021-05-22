@@ -16,12 +16,11 @@ public class PauseMenuBehaviour : MainMenuBehaviour
     // Use this for initialization
     void Start()
     {
-        StartCoroutine("StartStuff");
+        base.Start();
         pauseMenu.SetActive(false);
         //Time.timeScale = 1;
         UpdateQualityLabel();
    
-
         if (PauseMenuBehaviour._instance == null)
         {
             _instance = this;

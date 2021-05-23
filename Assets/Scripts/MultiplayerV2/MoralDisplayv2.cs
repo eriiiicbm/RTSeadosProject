@@ -36,7 +36,7 @@ public class MoralDisplayv2 : MonoBehaviour
 
   private void HandleMoralUpdated(float currentMoral, float maxMoral)
   {
-    Debug.Log($"{currentMoral}  of  {maxMoral}  the bar is updated to  {currentMoral/maxMoral}");
+//    Debug.Log($"{currentMoral}  of  {maxMoral}  the bar is updated to  {currentMoral/maxMoral}");
 
     moralBarImage.fillAmount = (float)currentMoral / maxMoral;
   }

@@ -17,6 +17,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     [SerializeField] private TMP_Text remainingUnitsText = null;
     [SerializeField] private Image unitProgressImage = null;
     [SerializeField] private float spawnMoveRange = 7;
+    [SyncVar]
     [SerializeField] private float unitSpawnDuration = 5f;
     [SerializeField] private GameObject buildingButtonTemplate;
     private Unit currentUnit;
@@ -71,19 +72,22 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
             gameObject.transform.localScale =  Vector3.one;
 
             Debug.Log("in the for");
+            transformCanvas = canvas.transform;
 
         }
     }
-
-
-    public void AddUnitToTheQueue(int id)
+     public void AddUnitToTheQueue(int id)
     {
        
         Unit unit = player.FindUnitById(id);
         Debug.Log("uUnitPrice is " + unit.prices[0] + " " + unit.prices[1] + " " + unit.prices[2] + " " +
                   unit.prices[3] + " ");
         if (currentUnit == null)
-            currentUnit = unit;
+        {
+         
+            currentUnit = unit;   
+            unitSpawnDuration = currentUnit.rtsEntity.BuildTime;
+        }
         unitQueue.Add(unit);
         Debug.Log("UnitPrefab is " + currentUnit.name);
         Debug.Log("UnitPricecmd is " + currentUnit.prices[0] + " " + currentUnit.prices[1] + " " +
@@ -159,6 +163,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         }
 
         currentUnit = unitQueue[queuedUnits - 1];
+        unitSpawnDuration = currentUnit.rtsEntity.BuildTime;
     }
 
     #endregion

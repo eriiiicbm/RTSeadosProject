@@ -80,7 +80,7 @@ public class RTSBase : NetworkBehaviour
 
     private void HandleHealthUpdated(float oldHealth, float newHealth)
     {
-        Debug.Log($"The Health updated is handled {oldHealth}  {newHealth}  {maxHealth} for {gameObject.name} property of  {NetworkClient.connection.identity.GetComponent<RTSPlayerv2>().gameObject.name}");
+//        Debug.Log($"The Health updated is handled {oldHealth}  {newHealth}  {maxHealth} for {gameObject.name} property of  {NetworkClient.connection.identity.GetComponent<RTSPlayerv2>().gameObject.name}");
         ClientOnHealthUpdated?.Invoke(newHealth, maxHealth);
     }
 

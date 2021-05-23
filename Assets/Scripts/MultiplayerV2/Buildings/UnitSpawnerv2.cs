@@ -24,7 +24,7 @@ public class UnitSpawnerv2 : Building, IPointerClickHandler
 
     [SyncVar] private float unitTimer;
 
-    private float progressImageVelocity;
+    private float progressImageVelocity;    
 
     #region Server
 

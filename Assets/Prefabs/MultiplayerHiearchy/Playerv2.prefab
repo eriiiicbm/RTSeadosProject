@@ -139,7 +139,7 @@ MonoBehaviour:
   myUnits: []
   myBuildings: []
   trops: 0
-  maxTrops: 6
+  maxTrops: 12
   tropsInProduction: 0
   numHouse: 0
   maxNumHouse: 20

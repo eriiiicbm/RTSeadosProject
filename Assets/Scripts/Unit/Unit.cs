@@ -72,9 +72,9 @@ public class Unit : RTSBase
     public void StartStuff()
     {
         velocity = rtsEntity.Velocity;
-      ///  navMeshAgent.speed = velocity;
+        navMeshAgent.speed = velocity;
         maxMoral = rtsEntity.Moral;
- //       moral = maxMoral * 0.5f;
+        moral = maxMoral * 0.5f;
         prices = rtsEntity.Prices;
         time = rtsEntity.BuildTime;
         chaseRange = rtsEntity.AttackRange;
@@ -266,6 +266,7 @@ public class Unit : RTSBase
             alteratedState = true;
 
             velocity = rtsEntity.Velocity * 0.5f;
+            navMeshAgent.speed = velocity;
 
             if (unitCombat != null) unitCombat.damage = rtsEntity.Damage * 0.25f;
 
@@ -286,6 +287,7 @@ public class Unit : RTSBase
             alteratedState = false;
 
             velocity = rtsEntity.Velocity;
+            navMeshAgent.speed = velocity;
 
             if (unitCombat != null) unitCombat.damage = rtsEntity.Damage;
 
@@ -306,6 +308,7 @@ public class Unit : RTSBase
             alteratedState = true;
 
             velocity = rtsEntity.Velocity * 1.5f;
+            navMeshAgent.speed = velocity;
 
             if (unitCombat != null) unitCombat.damage = rtsEntity.Damage * 1.75f;
 

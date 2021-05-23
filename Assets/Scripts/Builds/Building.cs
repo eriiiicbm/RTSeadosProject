@@ -78,7 +78,7 @@ public class Building : RTSBase
         price = rtsEntity.Prices;
         craftRadius = rtsEntity.CraftRadious;
         craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
-        craftUncompletedGO = transform.Find("plataform")?.gameObject;
+        craftUncompletedGO = transform.Find("Platform")?.gameObject;
         buildTime = rtsEntity.BuildTime;
         DealDamage(maxHealth-1);
         Debug.Log("base va");
@@ -160,10 +160,10 @@ public class Building : RTSBase
         print("CRAFTING...");
         buildTime--;
     //todo pass the correct number to dealdamage
-       // DealDamage();
-        
-  //      base.CurrentHealth = base.maxHealth / buildTime;
-        if (buildTime <= 0)
+
+        DealDamage(-250);
+
+        if (base.CurrentHealth >= base.MaxHealth)
         {
             craftUncompletedGO.SetActive(false);
             craftCompletedGO.SetActive(true);

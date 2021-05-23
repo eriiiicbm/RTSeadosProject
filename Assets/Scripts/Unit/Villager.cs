@@ -54,7 +54,7 @@ public class Villager : Unit
         
     }
 
-    //[HideInInspector]
+    [HideInInspector]
     public Resource resource;
     public void recolect() {
         if (resource == null)
@@ -73,6 +73,12 @@ public class Villager : Unit
             base.CmdMove(resource.transform.position);
             return;
         }
+        if (resource.resourcesQuantity<= 0)
+        {
+            resource = null;
+            currentState = UnitStates.Idle;
+            return;
+        }
 
         Debug.Log("pasa por aqui2");
 
@@ -89,14 +95,21 @@ public class Villager : Unit
     {
         if (building == null)
             return;
-        if (Vector3.Distance(transform.position, building.transform.position) > range)
-        {
+
+        Vector3 currentPosition = transform.position, targetPosition = building.transform.position;
+
+        float distance = Mathf.Sqrt(
+            Mathf.Pow(currentPosition.x - targetPosition.x, 2f) +
+            Mathf.Pow(currentPosition.z - targetPosition.z, 2f));
+
+        if (distance > range) { 
             base.CmdMove(building.transform.position);
             return;
         }
-        if (building.buildTime <= 0)
+        if (building.CurrentHealth >= building.MaxHealth && building.CurrentHealth <= 0)
         {
             building = null;
+            currentState = UnitStates.Idle;
             return;
         }
         currentState = UnitStates.Building;

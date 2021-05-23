@@ -202,7 +202,7 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
         Debug.Log("case 2");
     }
 
-    private bool CheckIfVilager()
+    public bool CheckIfVilager()
     {
         buildingsDisplay.SetActive(false);
 
@@ -226,6 +226,25 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
         Debug.Log("All the selected units are villagers");
         buildingsDisplay.SetActive(true);
         return true;
+    }
+
+    public void ClearVillager()
+    {
+        if (CheckIfVilager())
+        {
+            foreach (Unit selectedUnit in SelectedUnits)
+            {
+                selectedUnit.Select();
+
+                Villager villager = selectedUnit.GetComponent<Villager>();
+
+                if (villager != null)
+                {
+                    villager.building = null;
+                    villager.resource = null;
+                }
+            }
+        }
     }
 
     private void AuthorityHandleUnitDespawned(Unit unit)

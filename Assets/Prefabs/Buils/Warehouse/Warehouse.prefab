@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5910968093104508771}
   - component: {fileID: 1061569788248745023}
   - component: {fileID: 6372384202135403179}
+  - component: {fileID: 5854257061424156624}
   m_Layer: 0
   m_Name: Warehouse
   m_TagString: wareHouse
@@ -79,6 +80,12 @@ MonoBehaviour:
   icon: {fileID: 0}
   price: 
   id: -1
+  onSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselected:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &-7218336312864091891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -140,6 +147,21 @@ MonoBehaviour:
   visible: 0
   m_AssetId: 
   hasSpawned: 0
+--- !u!114 &5854257061424156624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8045332559654146344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87580fdfa7185494c84f1af6d35b00fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 0}
+  healtBarParent: {fileID: 0}
+  healthBarImage: {fileID: 0}
 --- !u!1001 &3104247258079538276
 PrefabInstance:
   m_ObjectHideFlags: 0

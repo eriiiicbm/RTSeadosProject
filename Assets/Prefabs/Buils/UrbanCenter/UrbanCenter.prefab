@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 3109839445633669799}
   - component: {fileID: 3810375074077021370}
   - component: {fileID: 5683830269503721512}
+  - component: {fileID: -7691358590833232676}
   m_Layer: 0
   m_Name: UrbanCenter
   m_TagString: wareHouse
@@ -249,6 +250,21 @@ MonoBehaviour:
   buildingButtonTemplate: {fileID: 267681169135266736, guid: 3e8da26e936fdc34f9fa31103a60a42a,
     type: 3}
   unitQueue: []
+--- !u!114 &-7691358590833232676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6860597628955110165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87580fdfa7185494c84f1af6d35b00fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 0}
+  healtBarParent: {fileID: 7594770759597415417}
+  healthBarImage: {fileID: 1051626184385686455}
 --- !u!1 &8565354406908179164
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,12 +412,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28, type: 3}
+--- !u!1 &7594770759597415417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8696465548202048508, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
+    type: 3}
+  m_PrefabInstance: {fileID: 1285221973270634501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8357266840147140418 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7074310017671610183, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
     type: 3}
   m_PrefabInstance: {fileID: 1285221973270634501}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1051626184385686455 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2255783216044329906, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
+    type: 3}
+  m_PrefabInstance: {fileID: 1285221973270634501}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1473033830049672676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -498,7 +532,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     - target: {fileID: 2275289132839647459, guid: b43c666e79e2ba3469885430148fc7ab,
         type: 3}
       propertyPath: m_fontSizeMin

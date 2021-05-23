@@ -206,7 +206,7 @@ MonoBehaviour:
   buildingPreview: {fileID: 673507198275943886, guid: 08ea299a914b7074a87b7f9cf6eb5a37,
     type: 3}
   icon: {fileID: 21300000, guid: eb5f6e2757c821940b69cf1456f7865a, type: 3}
-  price: 01000000010000000100000001000000
+  price: 0000000000000000e803000000000000
   id: 33
   onSelected:
     m_PersistentCalls:
@@ -238,6 +238,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  instantiatedCanvas: {fileID: 6349227796455042210, guid: 9743dc6075cf6e44f852aef1a118fede,
+    type: 3}
   unitPrefab: []
   unitSpawnPoint: {fileID: 3084180380445125703}
   remainingUnitsText: {fileID: 3956527929849942395}
@@ -247,7 +249,6 @@ MonoBehaviour:
   buildingButtonTemplate: {fileID: 267681169135266736, guid: 3e8da26e936fdc34f9fa31103a60a42a,
     type: 3}
   unitQueue: []
-  transformCanvas: {fileID: 910889011528457306}
 --- !u!1 &8565354406908179164
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,8 +498,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2275289132839647459, guid: b43c666e79e2ba3469885430148fc7ab,
         type: 3}
       propertyPath: m_fontSizeMin

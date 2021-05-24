@@ -271,7 +271,8 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
 
     [Client]
     public override void Select()
-    { if (!hasAuthority)
+    {
+        if (!hasAuthority || !base.builded)
         {
             return;
         }

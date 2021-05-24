@@ -55,7 +55,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 4.182646, y: 1, z: 4.182646}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3665851795659153058
 Rigidbody:
@@ -83,7 +83,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 2.091323, y: 1.5, z: 2.091323}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265292966799028624}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86d25bdf9888a4e4da4521200654e411, type: 3}
   m_Name: 
@@ -544,11 +544,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FinalEstructure
-      objectReference: {fileID: 0}
-    - target: {fileID: 4731069443010132957, guid: c9db41ba9153c7d40afa22c9c0bf7d79,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7479183878331570160, guid: c9db41ba9153c7d40afa22c9c0bf7d79,
         type: 3}

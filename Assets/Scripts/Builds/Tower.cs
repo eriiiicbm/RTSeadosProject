@@ -27,24 +27,41 @@ public class Tower : Building
     // Start is called before the first frame update
     void Start()
     {
-
         atackRange = rtsEntity.AttackRange;
         atackTimer = rtsEntity.AttackTimer;
         damege = rtsEntity.Damage;
         proyectils = rtsEntity.Proyectile;
         throwForce = rtsEntity.Velocity;
+
+        StartCoroutine(nameof(Builded));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (rtsEntity.Prefab.transform.Find("FinalEstructure").gameObject.activeInHierarchy)
+        /*if (transform.Find("FinalEstructure").gameObject.activeInHierarchy)
         {
             if (Time.deltaTime >= currentTime)
             {
                 detectEnemy(atackRange);
                 currentTime = Time.deltaTime + atackTimer;
             }
+        }*/
+    }
+
+    public IEnumerator Builded()
+    {
+        while (base.builded)
+        {
+            if (Time.deltaTime >= currentTime)
+            {
+                detectEnemy(atackRange);
+                currentTime = Time.deltaTime + atackTimer;
+            }
+
+            yield return 0;
         }
+
+        yield return new WaitForEndOfFrame();
     }
 }

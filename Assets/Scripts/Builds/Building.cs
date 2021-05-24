@@ -19,6 +19,7 @@ public class Building : RTSBase
     bool _canCraft = false;
     [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
+    public bool builded;
 
     public bool canCraft
     {
@@ -79,6 +80,10 @@ public class Building : RTSBase
         craftRadius = rtsEntity.CraftRadious;
         craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
         craftUncompletedGO = transform.Find("Platform")?.gameObject;
+
+        StartCoroutine(nameof(InConstuction));
+        StartCoroutine(nameof(Builded));
+
         buildTime = rtsEntity.BuildTime;
         DealDamage(maxHealth-1);
         Debug.Log("base va");
@@ -143,15 +148,13 @@ public class Building : RTSBase
 
     void SetBuild()
     {
-        if (buildTime <= 0)
+        if (buildTime >= 0)
         {
-            craftUncompletedGO?.SetActive(false);
-            craftCompletedGO?.SetActive(true);
+            builded = false;
         }
         else
         {
-            craftUncompletedGO?.SetActive(true);
-            craftCompletedGO?.SetActive(false);
+            builded = true;
         }
     }
 
@@ -165,8 +168,8 @@ public class Building : RTSBase
 
         if (base.CurrentHealth >= base.MaxHealth)
         {
-            craftUncompletedGO.SetActive(false);
-            craftCompletedGO.SetActive(true);
+            builded = true;
+
             if (GetComponent<Fridge>() == null) return;
             connectionToClient.identity.GetComponent<RTSPlayerv2>().MaxTrops += 3;
         }
@@ -176,5 +179,35 @@ public class Building : RTSBase
     {
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, craftRadius);
+    }
+
+    public IEnumerator InConstuction()
+    {
+        while (!builded)
+        {
+            craftUncompletedGO.SetActive(true);
+            craftCompletedGO.SetActive(false);
+
+            yield return 0;
+        }
+
+        yield return new WaitForEndOfFrame();
+    }
+
+    public IEnumerator Builded()
+    {
+        while (builded)
+        {
+            craftUncompletedGO.SetActive(false);
+            craftCompletedGO.SetActive(true);
+
+            Fridge fridge = GetComponent<Fridge>();
+            if (fridge == null) yield return 0;
+            fridge.enabled = true;
+
+            yield return 0;
+        }
+
+        yield return new WaitForEndOfFrame();
     }
 }

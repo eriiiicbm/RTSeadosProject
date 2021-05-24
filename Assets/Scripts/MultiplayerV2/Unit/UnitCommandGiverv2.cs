@@ -57,6 +57,8 @@ public class UnitCommandGiverv2 : MonoBehaviour
                 }
             }
 
+            Debug.Log("target: "+target.gameObject.name);
+
             TryTarget(target);
             return;
         }

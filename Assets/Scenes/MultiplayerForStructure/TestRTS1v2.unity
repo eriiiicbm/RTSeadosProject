@@ -2205,6 +2205,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7855682662538703516, guid: 777d5e1d31c09de439414781391b9eda,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7855682662538703516, guid: 777d5e1d31c09de439414781391b9eda,
+        type: 3}
       propertyPath: DirectionalLight
       value: 
       objectReference: {fileID: 1600941243}

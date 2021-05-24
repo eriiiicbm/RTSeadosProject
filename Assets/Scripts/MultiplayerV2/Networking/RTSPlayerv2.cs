@@ -242,7 +242,10 @@ Debug.Log("here before boom 1");
             return;
         }
         Debug.Log("here before boom 2");
-        if (connectionToClient.identity.GetComponent<RTSPlayerv2>().AddHouse()) return;
+        if(buildingToPlace.GetComponent<Fridge>() != null)
+        {
+            if (!connectionToClient.identity.GetComponent<RTSPlayerv2>().AddHouse()) return;
+        }
 
         BoxCollider buildingCollider = buildingToPlace.GetComponent<BoxCollider>();
 
@@ -329,7 +332,7 @@ Debug.Log("here before boom 1");
 
     public bool AddHouse()
     {
-        if (CheckIfUserHasSpaceHouse()) return false;
+        if (!CheckIfUserHasSpaceHouse()) return false;
 
         numHouse++;
         ClientOnResourcesUpdated?.Invoke(resources);

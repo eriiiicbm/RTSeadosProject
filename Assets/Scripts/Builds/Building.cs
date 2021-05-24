@@ -82,11 +82,9 @@ public class Building : RTSBase
         craftUncompletedGO = transform.Find("Platform")?.gameObject;
 
         StartCoroutine(nameof(InConstuction));
-        StartCoroutine(nameof(Builded));
 
         buildTime = rtsEntity.BuildTime;
         DealDamage(maxHealth-1);
-        Debug.Log("base va");
         SetBuild();
      }
     
@@ -169,9 +167,7 @@ public class Building : RTSBase
         if (base.CurrentHealth >= base.MaxHealth)
         {
             builded = true;
-
-            if (GetComponent<Fridge>() == null) return;
-            connectionToClient.identity.GetComponent<RTSPlayerv2>().MaxTrops += 3;
+            StartCoroutine(nameof(Builded));
         }
     }
 
@@ -196,18 +192,16 @@ public class Building : RTSBase
 
     public IEnumerator Builded()
     {
-        while (builded)
-        {
-            craftUncompletedGO.SetActive(false);
-            craftCompletedGO.SetActive(true);
+        Debug.Log("builded" + name);
 
-            Fridge fridge = GetComponent<Fridge>();
-            if (fridge == null) yield return 0;
-            fridge.enabled = true;
+        craftUncompletedGO.SetActive(false);
+        craftCompletedGO.SetActive(true);
 
-            yield return 0;
-        }
+        Fridge fridge = GetComponent<Fridge>();
+        if (fridge == null) yield return 0;
+        fridge.enabled = true;
+        connectionToClient.identity.GetComponent<RTSPlayerv2>().MaxTrops += 3;
 
-        yield return new WaitForEndOfFrame();
+        yield return 0;
     }
 }

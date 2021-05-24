@@ -180,6 +180,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  builded: 0
 --- !u!114 &4333745389890217792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,7 +407,7 @@ PrefabInstance:
     - target: {fileID: 3660534156442687305, guid: 73d06e45b440c7f40a4dc9b360c0f424,
         type: 3}
       propertyPath: m_Name
-      value: plataform
+      value: Platform
       objectReference: {fileID: 0}
     - target: {fileID: 6161592392302705020, guid: 73d06e45b440c7f40a4dc9b360c0f424,
         type: 3}

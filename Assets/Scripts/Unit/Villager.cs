@@ -106,7 +106,7 @@ public class Villager : Unit
             base.CmdMove(building.transform.position);
             return;
         }
-        if (building.CurrentHealth >= building.MaxHealth && building.CurrentHealth <= 0)
+        if (building.CurrentHealth >= building.MaxHealth)
         {
             building = null;
             currentState = UnitStates.Idle;

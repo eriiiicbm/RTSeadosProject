@@ -272,11 +272,14 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     [Client]
     public override void Select()
     {
-        if (!hasAuthority || !base.builded)
+        if (!hasAuthority)
         {
             return;
         }
         base.Select();
+
+        if (!base.builded) return;
+
         transformCanvas.gameObject.SetActive(true);
         Debug.Log("Selected");
     }

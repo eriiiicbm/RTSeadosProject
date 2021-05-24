@@ -9,7 +9,7 @@ public class DayNightSystem : MonoBehaviour
     [SerializeField] private Light DirectionalLight;
     [SerializeField] private LightingPreset Preset;
     [SerializeField, Range(0, 24)] private float TimeOfDay;
-
+   [SerializeField] private float speed=50;
 
     private void Update()
     {
@@ -18,7 +18,7 @@ public class DayNightSystem : MonoBehaviour
 
         if (Application.isPlaying)
         {
-             TimeOfDay += Time.deltaTime/50;
+             TimeOfDay += Time.deltaTime/speed;
             TimeOfDay %= 24; 
             UpdateLighting(TimeOfDay / 24f);
         }

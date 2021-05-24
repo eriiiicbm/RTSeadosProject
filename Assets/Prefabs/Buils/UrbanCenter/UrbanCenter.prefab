@@ -239,6 +239,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  builded: 0
   instantiatedCanvas: {fileID: 6349227796455042210, guid: 9743dc6075cf6e44f852aef1a118fede,
     type: 3}
   unitPrefab:
@@ -523,12 +524,12 @@ PrefabInstance:
     - target: {fileID: 1885262443125848614, guid: b43c666e79e2ba3469885430148fc7ab,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.6999998
+      value: 3.66
       objectReference: {fileID: 0}
     - target: {fileID: 2275289132839647459, guid: b43c666e79e2ba3469885430148fc7ab,
         type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2275289132839647459, guid: b43c666e79e2ba3469885430148fc7ab,
         type: 3}
@@ -538,7 +539,17 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 2275289132839647459, guid: b43c666e79e2ba3469885430148fc7ab,
         type: 3}
+      propertyPath: m_fontSizeMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275289132839647459, guid: b43c666e79e2ba3469885430148fc7ab,
+        type: 3}
       propertyPath: m_fontSizeMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275289132839647459, guid: b43c666e79e2ba3469885430148fc7ab,
+        type: 3}
+      propertyPath: m_fontSizeBase
       value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -757,6 +768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FinalEstructure
+      objectReference: {fileID: 0}
+    - target: {fileID: 673507198275943886, guid: 08ea299a914b7074a87b7f9cf6eb5a37,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1790744907436708471, guid: 08ea299a914b7074a87b7f9cf6eb5a37,
         type: 3}

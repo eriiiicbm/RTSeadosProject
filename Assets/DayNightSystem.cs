@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
@@ -10,7 +11,9 @@ public class DayNightSystem : MonoBehaviour
     [SerializeField] private LightingPreset Preset;
     [SerializeField, Range(0, 24)] private float TimeOfDay;
    [SerializeField] private float speed=50;
-
+   public DayOrNight dayOrNight;
+   public Action OnDay;
+   public Action OnNight;
     private void Update()
     {
         if (Preset == null)
@@ -26,6 +29,14 @@ public class DayNightSystem : MonoBehaviour
         {
             UpdateLighting(TimeOfDay / 24f);
         }
+
+        if (TimeOfDay!=20f)
+        {
+            return;
+        }
+
+        dayOrNight = DayOrNight.Day;
+        OnDay?.Invoke();
     }
 
 
@@ -54,3 +65,12 @@ public class DayNightSystem : MonoBehaviour
 
  
 }
+
+public  enum DayOrNight
+{
+    Day,Night
+    
+    
+    
+}
+ 

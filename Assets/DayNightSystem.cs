@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
 
-public class TestSpriteLight : MonoBehaviour
+public class DayNightSystem : MonoBehaviour
 { 
     SpriteRenderer sprite;
     [SerializeField] private Light DirectionalLight;
     [SerializeField] private LightingPreset Preset;
-    //Variables
     [SerializeField, Range(0, 24)] private float TimeOfDay;
 
 
@@ -19,9 +18,8 @@ public class TestSpriteLight : MonoBehaviour
 
         if (Application.isPlaying)
         {
-            //(Replace with a reference to the game time)
-            TimeOfDay += Time.deltaTime/50;
-            TimeOfDay %= 24; //Modulus to ensure always between 0-24
+             TimeOfDay += Time.deltaTime/50;
+            TimeOfDay %= 24; 
             UpdateLighting(TimeOfDay / 24f);
         }
         else
@@ -33,12 +31,10 @@ public class TestSpriteLight : MonoBehaviour
 
     private void UpdateLighting(float timePercent)
     {
-        //Set ambient and fog
-        RenderSettings.ambientLight = Preset.AmbientColor.Evaluate(timePercent);
+         RenderSettings.ambientLight = Preset.AmbientColor.Evaluate(timePercent);
         RenderSettings.fogColor = Preset.FogColor.Evaluate(timePercent);
 
-        //If the directional light is set then rotate and set it's color, I actually rarely use the rotation because it casts tall shadows unless you clamp the value
-        if (DirectionalLight != null)
+         if (DirectionalLight != null)
         {
             DirectionalLight.color = Preset.DirectionalColor.Evaluate(timePercent);
 

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestSpriteLight.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestSpriteLight.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +27,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Multiplayer/Menus/GameOverDisplayv2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/49/69a7bf93/Stack`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DayNightSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/UI/InputSystemUIInputModule.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/18/6c015956/IntPtr.cs" root0="SKIP_HIGHLIGHTING" />
@@ -42,7 +45,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Resources/ResourcesDisplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/BuildingButtonv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/UnitSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/UnitSelectionHandlerv2.cs" />
@@ -93,6 +95,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
+      <option value="$PROJECT_DIR$/Assets/DayNightSystem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />
@@ -157,7 +160,7 @@
       <workItem from="1621268833177" duration="3014000" />
       <workItem from="1621335988572" duration="12854000" />
       <workItem from="1621356391213" duration="18385000" />
-      <workItem from="1621788224013" duration="7156000" />
+      <workItem from="1621788224013" duration="7644000" />
     </task>
     <servers />
   </component>

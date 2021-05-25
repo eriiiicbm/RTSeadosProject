@@ -16,7 +16,7 @@ public class RTSPlayerv2 : NetworkBehaviour
     [SerializeField] private List<Building> myBuildings = new List<Building>();
     private Color teamColor = new Color();
 
-    public SyncList<int> resources = new SyncList<int>(){50,100,500,300};
+    public SyncList<int> resources = new SyncList<int>(){9999,9999,9999,9999};
 
     [SyncVar]
     [SerializeField] private int trops = 0;

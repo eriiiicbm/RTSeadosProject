@@ -16,7 +16,7 @@ public class RTSPlayerv2 : NetworkBehaviour
     [SerializeField] private List<Building> myBuildings = new List<Building>();
     private Color teamColor = new Color();
 
-    public SyncList<int> resources = new SyncList<int>(){99999,99999,99999,99999};
+    public SyncList<int> resources = new SyncList<int>(){50,100,500,300};
 
     [SyncVar]
     [SerializeField] private int trops = 0;
@@ -73,13 +73,13 @@ public class RTSPlayerv2 : NetworkBehaviour
             case ResourcesType.Ingredients:
                 return resources[0];
 
-            case ResourcesType.Stone:
+            case ResourcesType.SubstanceX:
                 return resources[1];
 
-            case ResourcesType.SubstanceX:
+            case ResourcesType.Wood:
                 return resources[2];
 
-            case ResourcesType.Wood:
+            case ResourcesType.Stone:
                 return resources[3];
         }
 

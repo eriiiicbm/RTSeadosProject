@@ -68,7 +68,6 @@ public class Villager : Unit
 
         if (distance > range)
         {
-            Debug.Log("pasa por aqui i faltan "+ (Vector3.Distance(transform.position, resource.transform.position)));
 
             base.CmdMove(resource.transform.position);
             return;
@@ -79,14 +78,13 @@ public class Villager : Unit
             currentState = UnitStates.Idle;
             return;
         }
-
-        Debug.Log("pasa por aqui2");
+        int resourceCatch = 10;
 
         currentState = UnitStates.PickResources;
         transform.LookAt(resource.transform.position);
-        resource.resourcesQuantity -= 10;
-        connectionToClient.identity.GetComponent<RTSPlayerv2>().
-            SetResources(10, resource.currentResourceType);
+        resource.resourcesQuantity -= resourceCatch;
+        RTSPlayerv2 player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+        player.SetResources(player.GetResources(resource.currentResourceType) + resourceCatch, resource.currentResourceType);
     }
 
     //[HideInInspector]

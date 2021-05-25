@@ -866,7 +866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   landingPagePanel: {fileID: 115650173}
-  useSteam: 1
+  useSteam: 0
   text: {fileID: 2091881566}
 --- !u!1 &451504951
 GameObject:

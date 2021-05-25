@@ -15,7 +15,7 @@ MonoBehaviour:
   isMoralUp: 0
   entityType: 2
   maxHealth: 3000
-  expirationVelocity: 2.5
+  expirationVelocity: 0
   damageMoral: 0
   prices: 05000000080000000f00000000000000
   description: 
@@ -26,7 +26,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   effectRadious: 0
   recoverySpeed: 0
-  damage: 10
+  damage: 50
   attackRange: 1
   attackTimer: 6
   proyectile: {fileID: 0}

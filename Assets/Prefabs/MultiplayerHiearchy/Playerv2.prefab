@@ -159,7 +159,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   isTesting: 1
-  cameraFocus: {fileID: 4578882886929411765, guid: 70e2096d4e1ea2140961365bdfdd96c4,
+  cameraFocus: {fileID: 7917082309746535190, guid: e1f36da0ccb79084483fd57a94361bf0,
     type: 3}
   zoomSpeed: 6
   zoomLimits: {x: 0, y: 0}

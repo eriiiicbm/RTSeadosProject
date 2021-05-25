@@ -17,7 +17,7 @@ public class CameraController : NetworkBehaviour
     public float zoomSpeed = 6f;
     public Vector2 zoomLimits;
 
-    int min = -16, max = 39;
+    int min = 2, max = 12;
     float margin = 0;
 
     [SerializeField] private Transform playerCameraTransform;
@@ -41,7 +41,9 @@ public class CameraController : NetworkBehaviour
         controls.Player.MoveCamera.performed += SetPreviousInput;
         controls.Player.MoveCamera.canceled += SetPreviousInput;
         controls.Enable();
+
     }
+    
 
        // cam = GameObject.FindWithTag("MainCamera");
        // if (cam != null)
@@ -68,7 +70,20 @@ public class CameraController : NetworkBehaviour
         // Zoom code 
         var zoom = Input.GetAxis("Mouse ScrollWheel");
        // myCam.orthographicSize -= zoom * zoomSpeed;
-        playerCam.m_Lens.OrthographicSize -= zoom * zoomSpeed;
+       var zoomm=0f;
+       zoomm=        playerCam.m_Lens.OrthographicSize -  zoom * zoomSpeed;
+       Debug.Log($"zoom {zoomm}");
+       if (zoomm<2)
+       {
+           zoomm = 2;
+       }
+       else if(zoomm>12)
+       {
+           zoomm = 12;
+       }
+       Debug.Log($"zoomaif {zoomm}");
+
+       playerCam.m_Lens.OrthographicSize =zoomm;
 
     //    playerCam.m_Lens.OrthographicSize = Mathf.Clamp( playerCam.m_Lens.OrthographicSize,
       //      zoomLimits.x, zoomLimits.y);
@@ -87,6 +102,7 @@ public class CameraController : NetworkBehaviour
             }
         }
 
+        
         if (zoom > 0 && margin != max && margin != max)
         {
             Debug.Log("DISMINUCION");
@@ -145,5 +161,11 @@ public class CameraController : NetworkBehaviour
     private void SetPreviousInput(InputAction.CallbackContext ctx)
     {
         previousInput = ctx.ReadValue<Vector2>();
+    }
+
+   [Client] public void ReferenceFocus()
+    {
+        cameraFocus = GameObject.Find("MPMainCameraFocus");
+
     }
 }

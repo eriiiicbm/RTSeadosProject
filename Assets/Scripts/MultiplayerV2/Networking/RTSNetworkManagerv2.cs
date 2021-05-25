@@ -96,8 +96,9 @@ isGameInProgress = false;
                     NetworkServer.Spawn(unitSpawnerInstance, player.connectionToClient);
                     
                 }  
-                
+                player.GetComponent<CameraController>().ReferenceFocus();
             }
+            
            
         }
         

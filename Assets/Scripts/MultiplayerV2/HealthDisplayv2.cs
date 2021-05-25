@@ -19,6 +19,11 @@ public class HealthDisplayv2 : MonoBehaviour
 
   }
 
+  private void Start()
+  {
+    HandleHealthUpdated(health.CurrentHealth, health.MaxHealth);
+  }
+
   private void OnDestroy()
   {
     health.ClientOnHealthUpdated -= HandleHealthUpdated;}

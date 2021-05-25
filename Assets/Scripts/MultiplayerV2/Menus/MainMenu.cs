@@ -10,8 +10,8 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject landingPagePanel = null;
-    [SerializeField] private bool useSteam = false;
-    public TMP_Text text;
+    [SerializeField] public bool useSteam = false;
+    public TMP_InputField text;
 
     protected Callback<LobbyCreated_t> lobbyCreated;
     protected Callback<GameLobbyJoinRequested_t> gameLobbyJoinRequested;

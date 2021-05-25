@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using Steamworks;
 using UnityEngine.SceneManagement;
 
 public class RTSNetworkManagerv2 : NetworkManager
@@ -15,13 +16,20 @@ public class RTSNetworkManagerv2 : NetworkManager
     private bool isGameInProgress = false;
     public int minNumberOfPlayers=1;
     public string gameplaySceneName="TestRTS";
-
+    private MainMenu mainMenu;
     #region Client
+
+    public override void Start()
+    {
+        base.Start();
+        mainMenu = FindObjectOfType<MainMenu>();
+    }
 
     public override void OnClientConnect(NetworkConnection conn)
     {
         base.OnClientConnect(conn);
         ClientOnConnected?.Invoke();
+        
     }
 
     public override void OnClientDisconnect(NetworkConnection conn)
@@ -70,7 +78,17 @@ isGameInProgress = false;
             conn.identity.GetComponent<RTSPlayerv2>();
         Players.Add(player);
         //todo change the name to one custom
-        player.SetDisplayName($"Player {Players.Count}");
+        if (!mainMenu.useSteam)
+        {
+         
+            player.SetDisplayName($"Player {Players.Count}");
+
+        }
+        else
+        {
+            player.SetDisplayName(
+                SteamFriends.GetPersonaName());
+        }
         player.SetTeamColor(new Color(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f),
             UnityEngine.Random.Range(0f, 1f)));
         player.SetPartyOwner(Players.Count==1);

@@ -60,8 +60,7 @@ public class CameraController : NetworkBehaviour
        var zoom = Input.GetAxis("Mouse ScrollWheel");
        var zoomm=0f;
        zoomm=        playerCam.m_Lens.OrthographicSize -  zoom * zoomSpeed;
-       Debug.Log($"zoom {zoomm}");
-       if (zoomm<2)
+        if (zoomm<2)
        {
            zoomm = 2;
        }
@@ -69,8 +68,7 @@ public class CameraController : NetworkBehaviour
        {
            zoomm = 12;
        }
-       Debug.Log($"zoomaif {zoomm}");
-
+ 
        playerCam.m_Lens.OrthographicSize =zoomm;
 
 

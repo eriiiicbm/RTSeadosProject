@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 770527223857158132}
   - component: {fileID: 5034189334177573049}
   - component: {fileID: 8496475827853168161}
-  - component: {fileID: 8543905042982129750}
+  - component: {fileID: 1040811745877512441}
   m_Layer: 0
   m_Name: FoodWorkshop
   m_TagString: Untagged
@@ -335,7 +335,7 @@ MonoBehaviour:
   buildingButtonTemplate: {fileID: 267681169135266736, guid: 3e8da26e936fdc34f9fa31103a60a42a,
     type: 3}
   unitQueue: []
---- !u!114 &8543905042982129750
+--- !u!114 &1040811745877512441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -344,12 +344,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6220137617292709508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb48d928668d18e438a1c3359f37fb38, type: 3}
+  m_Script: {fileID: 11500000, guid: b0a9fdb787800ef4a84aefed0a61ca1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  target: {fileID: 0}
+  aimAtPoint: {fileID: 0}
 --- !u!1001 &395975942962093446
 PrefabInstance:
   m_ObjectHideFlags: 0

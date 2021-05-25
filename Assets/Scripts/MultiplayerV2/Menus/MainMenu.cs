@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Mirror;
 using Steamworks;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject landingPagePanel = null;
     [SerializeField] private bool useSteam = false;
-
+    public TMP_Text text;
 
     protected Callback<LobbyCreated_t> lobbyCreated;
     protected Callback<GameLobbyJoinRequested_t> gameLobbyJoinRequested;
@@ -47,6 +49,9 @@ public class MainMenu : MonoBehaviour
         }
         NetworkManager.singleton.StartHost();
         SteamMatchmaking.SetLobbyData(new CSteamID(callback.m_ulSteamIDLobby),"HostAddress",SteamUser.GetSteamID().ToString());
+      //  text.text = $"{SteamMatchmaking.GetLobbyData(new CSteamID(callback.m_ulSteamIDLobby),"HostAddress")}    user id {SteamUser.GetSteamID().ToString()}  csteamid {new CSteamID(callback.m_ulSteamIDLobby).ToString()}  :F {new CSteamID(callback.m_ulSteamIDLobby).m_SteamID} ";
+        text.text = $"{SteamMatchmaking.GetLobbyData(new CSteamID(callback.m_ulSteamIDLobby),"HostAddress")} ";
+
     }
 
     private void OnGameLobbyJoinRequested(GameLobbyJoinRequested_t callback)
@@ -62,6 +67,7 @@ public class MainMenu : MonoBehaviour
         }
 
         string hostAddress = SteamMatchmaking.GetLobbyData(new CSteamID(callback.m_ulSteamIDLobby), "HostAddress");
+        Debug.Log($"host address {hostAddress}");
         NetworkManager.singleton.networkAddress = hostAddress;
         NetworkManager.singleton.StartClient();
             landingPagePanel.SetActive(false);

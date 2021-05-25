@@ -130,6 +130,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  builded: 1
 --- !u!65 &-2031599160257460867
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -71,6 +71,15 @@ public class Unit : RTSBase
 
     public void StartStuff()
     {
+        if (navMeshAgent == null)
+        {
+            navMeshAgent = GetComponent<NavMeshAgent>();
+        }
+        
+        if (targeter == null)
+        {
+            targeter = GetComponent<Targeter>();
+        }
         velocity = rtsEntity.Velocity;
         navMeshAgent.speed = velocity;
         maxMoral = rtsEntity.Moral;
@@ -85,17 +94,10 @@ public class Unit : RTSBase
     {
         base.OnStartServer();
         GameOverHandlerv2.ServerOnGameOver += ServerHandleGameOver;
-        if (navMeshAgent == null)
-        {
-            navMeshAgent = GetComponent<NavMeshAgent>();
-        }
+        
 //todo assign ids
         //       id = UnityEngine.Random.Range(0, 999999999);
 
-        if (targeter == null)
-        {
-            targeter = GetComponent<Targeter>();
-        }
 
         ServerOnUnitSpawned?.Invoke(this);
         ServerOnRTSDie += ServerHandleDie;
@@ -240,8 +242,12 @@ public class Unit : RTSBase
     private void HandleMoralUpdated(float oldMoral, float newMoral)
     {
         ClientOnMoralUpdated?.Invoke(newMoral, maxMoral);
-        StartCoroutine(nameof(MoralEfect));
-    }
+        if (isServer)
+        {
+         
+            StartCoroutine(nameof(MoralEfect));
+
+        }}
 
 
     IEnumerator ExpirationEffect()
@@ -252,9 +258,8 @@ public class Unit : RTSBase
             yield return new WaitForSeconds(1);
         }
     }
-
-    IEnumerator MoralEfect()
-    {
+     IEnumerator MoralEfect()
+    { 
         if (GetComponent<Unit>() == null) yield return 0;
 
         PasiveHability pasiveHability = GetComponent<PasiveHability>();

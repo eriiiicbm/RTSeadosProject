@@ -19,7 +19,8 @@ public class Building : RTSBase
     bool _canCraft = false;
     [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
-    public bool builded;
+ 
+    [SyncVar(hook = nameof(HandleBuildedUpdated))]  public bool builded;
 
     public bool canCraft
     {
@@ -41,9 +42,14 @@ public class Building : RTSBase
             return Sphere.Length;
         }
     }
-    
-   
-     [SerializeField] public  static  event Action<Building> ServerOnBuildingSpawned;
+
+    private void Start()
+    {
+        craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
+        craftUncompletedGO = transform.Find("Platform")?.gameObject;
+    }
+
+    [SerializeField] public  static  event Action<Building> ServerOnBuildingSpawned;
      [SerializeField] public  static  event Action<Building> ServerOnBuildingDespawned;
      [SerializeField] public  static  event Action<Building> AuthorityOnBuildingSpawned;
      [SerializeField] public  static  event Action<Building> AuthorityOnBuildingDespawned;
@@ -104,6 +110,14 @@ public class Building : RTSBase
         if (GetComponent<Fridge>() == null) return;
         connectionToClient.identity.GetComponent<RTSPlayerv2>().DeleteHouse();
     }
+    
+    
+    [Server] 
+    void SetBuild()
+    {
+        builded = buildTime < 0;
+    }
+
     #endregion
 
     #region Client
@@ -112,6 +126,10 @@ public class Building : RTSBase
      {
          base.OnStartAuthority();
       AuthorityOnBuildingSpawned?.Invoke(this);
+
+
+      StartCoroutine(nameof(InConstuction));
+
      }
     
      public override void OnStopClient()
@@ -144,18 +162,6 @@ public class Building : RTSBase
     #endregion
 
 
-    void SetBuild()
-    {
-        if (buildTime >= 0)
-        {
-            builded = false;
-        }
-        else
-        {
-            builded = true;
-        }
-    }
-
     void CraftPoint()
     {
         print("CRAFTING...");
@@ -171,7 +177,7 @@ public class Building : RTSBase
         }
     }
 
-    void OnDrawGizmosSelected()
+    void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, craftRadius);
@@ -203,5 +209,14 @@ public class Building : RTSBase
         connectionToClient.identity.GetComponent<RTSPlayerv2>().MaxTrops += 3;
 
         yield return 0;
+    }
+
+    public void HandleBuildedUpdated(bool oldBuilding, bool newBuilding)
+    {
+        craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
+        craftUncompletedGO = transform.Find("Platform")?.gameObject;
+        if (!newBuilding) return;
+        craftUncompletedGO.SetActive(false);
+        craftCompletedGO.SetActive(true);
     }
 }

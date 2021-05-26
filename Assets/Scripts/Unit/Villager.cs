@@ -34,7 +34,7 @@ public class Villager : Unit
 
                 Debug.Log("pasa por aqui i autoridad: " + build.hasAuthority);
 
-                if (build.hasAuthority && build.CurrentHealth != build.MaxHealth)
+                if (build.connectionToClient.connectionId == connectionToClient.connectionId && build.CurrentHealth != build.MaxHealth)
                 {
                     building = build;
                     resource = null;

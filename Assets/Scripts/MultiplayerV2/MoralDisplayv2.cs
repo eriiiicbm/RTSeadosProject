@@ -42,7 +42,7 @@ public class MoralDisplayv2 : MonoBehaviour
 
   private void HandleMoralUpdated(float currentMoral, float maxMoral)
   {
-    Debug.Log($"{currentMoral}  of  {maxMoral}  the bar is updated to  {currentMoral/maxMoral} of unit {gameObject.name} of player  {NetworkClient.connection.connectionId}");
+  //  Debug.Log($"{currentMoral}  of  {maxMoral}  the bar is updated to  {currentMoral/maxMoral} of unit {gameObject.name} of player  {NetworkClient.connection.connectionId}");
 
     moralBarImage.fillAmount = (float)currentMoral / maxMoral;
   }

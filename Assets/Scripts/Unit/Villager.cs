@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Mirror;
 
 public class Villager : Unit
 {
-    float buildRate;
-    float range;
+   [SyncVar] float buildRate;
+   [SyncVar] float range;
 
     public override void OnStartServer()
     {
@@ -20,6 +21,7 @@ public class Villager : Unit
         StartCoroutine(nameof(BuildState));
     }
 
+   [ServerCallback]
     private void FixedUpdate()
     {
         if (target != null)

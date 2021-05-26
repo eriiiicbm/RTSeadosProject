@@ -20,7 +20,8 @@ public class Unit : RTSBase
     public float moral;
 
     public int id;
-    [SyncVar]public float maxMoral;
+    [SyncVar(hook = nameof(HandleMaxMoralUpdated))]
+    public float maxMoral;
     public List<int> prices;
     [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
@@ -249,7 +250,11 @@ public class Unit : RTSBase
          
             StartCoroutine(nameof(MoralEfect));
 
-        }}
+        }} 
+    private void HandleMaxMoralUpdated(float oldMaxMoral, float newMaxMoral)
+    {
+        ClientOnMoralUpdated?.Invoke(moral, newMaxMoral);
+    }
 
 
     IEnumerator ExpirationEffect()

@@ -53,7 +53,10 @@ public class PasiveHability : MonoBehaviour
         if (unit == null) return;
 
         if (units.Contains(unit)) return;
-
+        if (unit.gameObject==this.gameObject)
+        {
+            return;
+        }
         Debug.Log(name + " ha detectado a " + hit.collider.name);
 
         units.Add(unit);

@@ -7,11 +7,12 @@ using UnityEngine.Events;
 
 public class Building : RTSBase
 {
-    float craftRadius;
+   [SyncVar] float craftRadius;
     GameObject craftCompletedGO;
     GameObject craftUncompletedGO;
     Renderer buildRenderer;
-    public int buildTime;
+   
+    [SyncVar] public int buildTime;
     [SerializeField] private GameObject buildingPreview;
     [SerializeField] private Sprite icon;
     [SerializeField] private List<int> price = new List<int>() { 1,1,1,1};
@@ -128,8 +129,7 @@ public class Building : RTSBase
       AuthorityOnBuildingSpawned?.Invoke(this);
 
 
-      StartCoroutine(nameof(InConstuction));
-
+ 
      }
     
      public override void OnStopClient()

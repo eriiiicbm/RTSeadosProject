@@ -12,15 +12,15 @@ using Random = System.Random;
 public class Unit : RTSBase
 {
     [SerializeField] public Targetable currentTargeteable;
-    public float expirationVelocity;
-    public float time;
-    float velocity;
+    [SyncVar] public float expirationVelocity;
+    [SyncVar]  public float time;
+    [SyncVar] float velocity;
 
     [SyncVar(hook = nameof(HandleMoralUpdated))]
     public float moral;
 
     public int id;
-    public float maxMoral;
+    [SyncVar]public float maxMoral;
     public List<int> prices;
     [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
@@ -82,8 +82,7 @@ public class Unit : RTSBase
         }
         velocity = rtsEntity.Velocity;
         navMeshAgent.speed = velocity;
-        maxMoral = rtsEntity.Moral;
-        moral = maxMoral * 0.5f;
+       
         prices = rtsEntity.Prices;
         time = rtsEntity.BuildTime;
         chaseRange = rtsEntity.AttackRange;
@@ -93,6 +92,8 @@ public class Unit : RTSBase
     public override void OnStartServer()
     {
         base.OnStartServer();
+        maxMoral = rtsEntity.Moral;
+        moral = maxMoral * 0.5f;
         GameOverHandlerv2.ServerOnGameOver += ServerHandleGameOver;
         
 //todo assign ids
@@ -114,6 +115,7 @@ public class Unit : RTSBase
 
         Debug.LogWarning("Player is null onstart");
         DealMoralDamage(maxMoral/2);
+        HandleMoralUpdated(0,maxMoral/2);
     }
 
     public override void OnStopServer()

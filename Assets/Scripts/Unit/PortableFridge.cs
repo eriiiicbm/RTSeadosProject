@@ -10,7 +10,7 @@ public class PortableFridge : Unit
     float recoverVelocity;
     bool inTrigger;
     List<Unit> units = new List<Unit>();
-   [Server]
+   [Command]
     public void recoverUnits()
     {
         foreach (var unit in units)

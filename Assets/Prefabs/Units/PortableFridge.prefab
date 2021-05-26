@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd0beb8b9673fa4584126ca9e800b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moral: {fileID: 0}
+  moral: {fileID: 6581450852017867769}
   moralBarParent: {fileID: 3003429282024165406}
   moralBarImage: {fileID: 5643143038450770000}
 --- !u!114 &4841988292945089924
@@ -291,19 +291,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
-  syncInterval: 0.1
+  syncInterval: 0.008
   entityName: 
-  maxHealth: 0
+  maxHealth: 15
   description: 
   preview: {fileID: 21300000, guid: 9866a92691696b346901281f2b329034, type: 3}
   prefab: {fileID: 947953591945672596}
   rtsEntity: {fileID: 11400000, guid: 75d5c2f7aa0ec084583a2c97652196f9, type: 2}
   currentTargeteable: {fileID: 0}
-  expirationVelocity: 0
-  time: 0
-  moral: 0
+  expirationVelocity: 5.92
+  time: 4.22
+  moral: 2.61
   id: 9
-  maxMoral: 0
+  maxMoral: 21.14
   prices: 
   onSelected:
     m_PersistentCalls:
@@ -573,6 +573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 3.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958751865998346579, guid: a80758c01dec3f7488d161a44b9c2991,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a80758c01dec3f7488d161a44b9c2991, type: 3}

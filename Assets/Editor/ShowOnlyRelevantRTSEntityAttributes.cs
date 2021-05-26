@@ -186,8 +186,7 @@ public class ShowIfAttributeDrawer
                 break;
 
             case EntityType.MeleeUnit:
-                excludedProperties.Remove("damageMoral");
-                excludedProperties.Add("attackRange");
+                excludedProperties.Remove("damageMoral");   
                 excludedProperties.Add("craftRadious");
                 excludedProperties.Add("craftCompletedGO");
                 excludedProperties.Add("craftUnCompletedGO");

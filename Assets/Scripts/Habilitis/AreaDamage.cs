@@ -7,12 +7,16 @@ public class AreaDamage : NetworkBehaviour, ComponetHability
     [Server]
     public void active(RTSBase target, float damage)
     {
-         RaycastHit [] hits =  Physics.SphereCastAll(target.gameObject.transform.position, GetComponent<RTSBase>().rtsEntity.EffectRadious, target.gameObject.transform.forward);
+        Debug.Log("damageArea con damage: " + damage);
+
+        RaycastHit [] hits =  Physics.SphereCastAll(target.gameObject.transform.position, GetComponent<RTSBase>().rtsEntity.EffectRadious, target.gameObject.transform.forward);
 
         if (hits.Length > 0) return;
 
         foreach (RaycastHit hit in hits)
         {
+            Debug.Log("try of damage to " + hit.collider.name);
+
             if (hit.collider != null) return;
             if (hit.collider.GetComponent<RTSBase>() != null) return;
             if (hit.collider.TryGetComponent<NetworkIdentity>(out NetworkIdentity networkIdentity))
@@ -20,7 +24,9 @@ public class AreaDamage : NetworkBehaviour, ComponetHability
                 if (networkIdentity.connectionToClient == connectionToClient)return;                
             }
 
-                hit.collider.GetComponent<RTSBase>().DealDamage(damage);
+            Debug.Log("damage to "+hit.collider.name);
+
+            hit.collider.GetComponent<RTSBase>().DealDamage(damage);
         }
         
     }

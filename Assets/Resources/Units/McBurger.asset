@@ -24,10 +24,10 @@ MonoBehaviour:
   moral: 5000
   velocity: 2.75
   currentTarget: {fileID: 0}
-  effectRadious: 2
+  effectRadious: 5
   recoverySpeed: 0
-  damage: 20
-  attackRange: 0
+  damage: 200
+  attackRange: 6
   attackTimer: 12
   proyectile: {fileID: 0}
   craftRadious: 0

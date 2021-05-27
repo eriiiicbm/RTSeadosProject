@@ -51,7 +51,6 @@ public class CameraScript : MonoBehaviour
 
         }
 
-        Debug.Log(margin);
 
         // Camera movement per border
         Vector3 Speed = new Vector3();

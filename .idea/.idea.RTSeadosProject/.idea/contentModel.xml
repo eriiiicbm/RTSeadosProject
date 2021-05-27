@@ -600,22 +600,24 @@
           </e>
           <e p="version.txt" t="Include" />
         </e>
-        <e p="Plugins" t="Include">
-          <e p="AssetUsageDetector" t="Include">
-            <e p="Editor" t="Include">
-              <e p="AssetUsageDetector.cs" t="Include" />
-              <e p="AssetUsageDetector.Editor.asmdef" t="Include" />
-              <e p="AssetUsageDetectorCache.cs" t="Include" />
-              <e p="AssetUsageDetectorSearchFunctions.cs" t="Include" />
-              <e p="AssetUsageDetectorWindow.cs" t="Include" />
-              <e p="Enumerators.cs" t="Include" />
-              <e p="ListDrawer.cs" t="Include" />
-              <e p="ObjectToSearch.cs" t="Include" />
-              <e p="SearchResult.cs" t="Include" />
-              <e p="Utilities.cs" t="Include" />
-              <e p="VariableGetter.cs" t="Include" />
+        <e p="Prefabs" t="Include">
+          <e p="Plugins" t="Include">
+            <e p="AssetUsageDetector" t="Include">
+              <e p="Editor" t="Include">
+                <e p="AssetUsageDetector.cs" t="Include" />
+                <e p="AssetUsageDetector.Editor.asmdef" t="Include" />
+                <e p="AssetUsageDetectorCache.cs" t="Include" />
+                <e p="AssetUsageDetectorSearchFunctions.cs" t="Include" />
+                <e p="AssetUsageDetectorWindow.cs" t="Include" />
+                <e p="Enumerators.cs" t="Include" />
+                <e p="ListDrawer.cs" t="Include" />
+                <e p="ObjectToSearch.cs" t="Include" />
+                <e p="SearchResult.cs" t="Include" />
+                <e p="Utilities.cs" t="Include" />
+                <e p="VariableGetter.cs" t="Include" />
+              </e>
+              <e p="README.txt" t="Include" />
             </e>
-            <e p="README.txt" t="Include" />
           </e>
         </e>
         <e p="Projector" t="Include">

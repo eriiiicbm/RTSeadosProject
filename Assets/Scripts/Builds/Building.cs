@@ -204,9 +204,11 @@ public class Building : RTSBase
         craftCompletedGO.SetActive(true);
 
         Fridge fridge = GetComponent<Fridge>();
-        if (fridge == null) yield return 0;
-        fridge.enabled = true;
-        connectionToClient.identity.GetComponent<RTSPlayerv2>().MaxTrops += 3;
+        if (fridge != null)
+        {
+            fridge.enabled = true;
+            connectionToClient.identity.GetComponent<RTSPlayerv2>().MaxTrops += 3;
+        }
 
         yield return 0;
     }

@@ -10,10 +10,13 @@ public class UnitProjectilev3 : NetworkBehaviour
     [SerializeField] private float destroyAfterSeconds=5f;
     [SerializeField] public float launchForce=10f;
     [SerializeField] private Rigidbody rb;
-
+    public Transform model;
 
     public override void OnStartServer()
     {
+       // var rotation = model.rotation;
+     //   model.rotation  = new Quaternion(rotation.x,rotation.y+180,rotation.z,rotation.w
+       // );
         if (rb==null)
         {
             rb = GetComponent<Rigidbody>();

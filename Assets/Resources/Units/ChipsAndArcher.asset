@@ -29,7 +29,7 @@ MonoBehaviour:
   damage: 175
   attackRange: 12
   attackTimer: 1
-  proyectile: {fileID: 38072651166725387, guid: 71f67b6ff977a714696981bb46ccdcb2,
+  proyectile: {fileID: 3370176331153901490, guid: c0b9490ae1569514397d92793ea0a052,
     type: 3}
   craftRadious: 0
   craftCompletedGO: {fileID: 0}

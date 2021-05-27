@@ -40,7 +40,7 @@ public class UnitCombat : Unit
 
             if (!(distance <= attackDistance) || !(attackSpeed >= attackTimer)) return;
             Debug.Log("ESTA PEGANDO ");
-            GetComponent<ComponentAbility>().active(target.GetComponent<RTSBase>(), damage);
+            GetComponent<ComponentAbility>()?.active(target.GetComponent<RTSBase>(), damage);
 
             attackSpeed = 0;
             

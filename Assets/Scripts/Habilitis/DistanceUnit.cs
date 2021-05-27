@@ -18,16 +18,24 @@ public class DistanceUnit : NetworkBehaviour, ComponentAbility
     public void active(RTSBase target, float damage)
     {
         Debug.Log("damageDistance con damage: " + damage);
-
+        if (target==null)
+        {
+            Debug.LogError("Target of the damage is null");
+            return;
+        }
         Vector3 direction = transform.position - target.transform.position;
+        Transform aimPoint = target.GetComponent<Targetable>().GetAimPoint();
+        Quaternion targetRotation = Quaternion.LookRotation(target.transform.position-transform.position);
+        transform.rotation= Quaternion.RotateTowards(transform.rotation,targetRotation,180f*Time.deltaTime);
         Quaternion projectileRotation =
-            Quaternion.LookRotation(target.GetComponent<Targetable>().GetAimPoint().position - projectils.transform.position);
-        GameObject projectile = Instantiate(projectils,spawnProyectilPoint.position,projectileRotation);
+            Quaternion.LookRotation(target.transform.position - spawnProyectilPoint.position);
+        //projectileRotation.y += 90;
+        GameObject projectile = Instantiate(projectils,spawnProyectilPoint.position,projectileRotation );
      
         NetworkServer.Spawn(projectile,connectionToClient);
         projectile.name = "THE POTATO";
         //projectile.transform.position = spawnProyectilPoint.position;
-        projectile.transform.Rotate(direction);
+     //   projectile.transform.Rotate(direction);
             UnitProjectilev3 unitProjectilev3 = 
                 projectile.GetComponent<UnitProjectilev3>();
             unitProjectilev3.damage = damage;

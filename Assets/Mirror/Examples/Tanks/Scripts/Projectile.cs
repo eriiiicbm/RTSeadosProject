@@ -32,6 +32,10 @@ namespace Mirror.Examples.Tanks
         [ServerCallback]
         void OnTriggerEnter(Collider co)
         {
+            if (hasAuthority || connectionToClient.connectionId==NetworkClient.connection.connectionId)
+            {
+                return;
+            }
             NetworkServer.Destroy(gameObject);
         }
     }

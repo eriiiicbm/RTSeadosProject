@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
-public class PasiveHability : MonoBehaviour
+public class PassiveAbility : MonoBehaviour
 {
     public float efectRadius;
     public float recoverySpeed;

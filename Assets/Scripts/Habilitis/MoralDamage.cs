@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
-public class MoralDamage : PasiveHability
+public class MoralDamage : PassiveAbility
 {
     public float damageMoral;
 

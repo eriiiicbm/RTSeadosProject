@@ -299,7 +299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4840919883541756057}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.86, y: 0.64, z: 0}
+  m_LocalPosition: {x: 0, y: 0.64, z: 1.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6595830241698329334}
@@ -427,9 +427,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  targeter: {fileID: 0}
-  navMeshAgent: {fileID: 0}
+  targeter: {fileID: 1569288530541007946}
+  navMeshAgent: {fileID: -3473936041882329017}
   chaseRange: 10
+  defaultDistance: 2
   damage: 0
 --- !u!114 &8614330495538530952
 MonoBehaviour:
@@ -443,6 +444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c3caac766259e419ec27c6cf8304da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   spawnProyectilPoint: {fileID: 5916998140974866170}
 --- !u!65 &5499420111600641859
 BoxCollider:
@@ -540,7 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  target: {fileID: 1471772452764755736}
+  target: {fileID: 0}
 --- !u!114 &-2842510099164722031
 MonoBehaviour:
   m_ObjectHideFlags: 0

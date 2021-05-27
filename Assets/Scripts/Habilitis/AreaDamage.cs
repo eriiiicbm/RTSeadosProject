@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-public class AreaDamage : NetworkBehaviour, ComponetHability
+public class AreaDamage : NetworkBehaviour, ComponentAbility
 {
     [Server]
     public void active(RTSBase target, float damage)

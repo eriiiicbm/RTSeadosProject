@@ -29,6 +29,8 @@ public class UnitCombat : Unit
 
         if (target != null)
         {
+            navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
+
             Vector3 pos = target.transform.position;
             navMeshAgent.destination = pos;
 
@@ -38,9 +40,12 @@ public class UnitCombat : Unit
 
             if (!(distance <= attackDistance) || !(attackSpeed >= attackTimer)) return;
             Debug.Log("ESTA PEGANDO ");
-            GetComponent<ComponetHability>().active(target.GetComponent<RTSBase>(), damage);
+            GetComponent<ComponentAbility>().active(target.GetComponent<RTSBase>(), damage);
 
             attackSpeed = 0;
+            
         }
+        navMeshAgent.stoppingDistance = defaultDistance;
+
     }
 }

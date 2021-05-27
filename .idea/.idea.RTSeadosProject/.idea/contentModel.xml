@@ -648,13 +648,13 @@
           <e p="GameManager.cs" t="Include" />
           <e p="Habilitis" t="Include">
             <e p="AreaDamage.cs" t="Include" />
-            <e p="ComponetHability.cs" t="Include" />
+            <e p="ComponentAbility.cs" t="Include" />
             <e p="DistanceUnit.cs" t="Include" />
             <e p="Fridge.cs" t="Include" />
-            <e p="MeleUnit.cs" t="Include" />
+            <e p="MeleeUnit.cs" t="Include" />
             <e p="MoralDamage.cs" t="Include" />
             <e p="MoralSupport.cs" t="Include" />
-            <e p="PasiveHability.cs" t="Include" />
+            <e p="PassiveAbility.cs" t="Include" />
           </e>
           <e p="Inputs" t="Include">
             <e p="Controls.cs" t="Include" />

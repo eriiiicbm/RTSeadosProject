@@ -28,7 +28,7 @@ MonoBehaviour:
   recoverySpeed: 0
   damage: 175
   attackRange: 12
-  attackTimer: 60
+  attackTimer: 1
   proyectile: {fileID: 38072651166725387, guid: 71f67b6ff977a714696981bb46ccdcb2,
     type: 3}
   craftRadious: 0

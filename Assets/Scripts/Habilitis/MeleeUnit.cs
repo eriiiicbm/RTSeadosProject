@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
-public class MeleUnit : MonoBehaviour, ComponetHability
+public class MeleeUnit : MonoBehaviour, ComponentAbility
 {
    [Server] public void active(RTSBase target, float damage)
     {

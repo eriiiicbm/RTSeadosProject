@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
-public class MoralSupport : PasiveHability
+public class MoralSupport : PassiveAbility
 {
   [Server]  public override void PasiveEffect(Unit unit)
     {

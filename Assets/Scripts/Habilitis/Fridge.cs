@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
-public class Fridge : PasiveHability
+public class Fridge : PassiveAbility
 {
     [Server]
     public override void PasiveEffect(Unit unit)

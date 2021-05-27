@@ -27,7 +27,7 @@ public class UnitCombat : Unit
         base.Update();
         attackSpeed += Time.deltaTime;
 
-        if (target != null)
+        if (target != null&&!target.hasAuthority)
         {
             navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
 
@@ -40,7 +40,7 @@ public class UnitCombat : Unit
 
             if (!(distance <= attackDistance) || !(attackSpeed >= attackTimer)) return;
             Debug.Log("ESTA PEGANDO ");
-            GetComponent<ComponentAbility>()?.active(target.GetComponent<RTSBase>(), damage);
+             GetComponent<ComponentAbility>()?.active(target.GetComponent<RTSBase>(), damage);
 
             attackSpeed = 0;
             

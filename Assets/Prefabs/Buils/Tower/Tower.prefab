@@ -131,6 +131,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   builded: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!65 &-2031599160257460867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -223,6 +226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c3caac766259e419ec27c6cf8304da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   spawnProyectilPoint: {fileID: 1903369974002968979}
 --- !u!114 &4237827411918316290
 MonoBehaviour:

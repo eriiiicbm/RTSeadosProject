@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 7079653604821546068}
   - component: {fileID: 3345349416027349083}
   - component: {fileID: 6496283733099016614}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: MinimapIcon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,6 +335,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!195 &1369374423079910209
 NavMeshAgent:
   m_ObjectHideFlags: 0

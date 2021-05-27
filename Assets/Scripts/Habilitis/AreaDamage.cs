@@ -26,7 +26,8 @@ public class AreaDamage : NetworkBehaviour, ComponentAbility
             if (rtsBase.hasAuthority)
             {
                 return;
-            }
+            } 
+            
             Debug.Log("damage to "+col.name);
             col.GetComponent<RTSBase>().DealDamage(damage);
 

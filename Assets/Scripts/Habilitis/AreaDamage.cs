@@ -1,33 +1,44 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+ 
 public class AreaDamage : NetworkBehaviour, ComponentAbility
-{
+{   
+    [SerializeField] private LayerMask layerMask =~8;
+
+    private float effectRadious=20f;
+    private void SetEffectRadious(float newEffectRadious)
+    {
+      effectRadious= newEffectRadious;
+    }
+
     [Server]
     public void active(RTSBase target, float damage)
     {
         Debug.Log("damageArea con damage: " + damage);
-
-        RaycastHit [] hits =  Physics.SphereCastAll(target.gameObject.transform.position, GetComponent<RTSBase>().rtsEntity.EffectRadious, target.gameObject.transform.forward);
-
-        if (hits.Length > 0) return;
-
-        foreach (RaycastHit hit in hits)
+        Collider[] hits =   Physics.OverlapSphere(this.gameObject.transform.position,effectRadious ,layerMask);
+        foreach (var col in hits)
         {
-            Debug.Log("try of damage to " + hit.collider.name);
-
-            if (hit.collider != null) return;
-            if (hit.collider.GetComponent<RTSBase>() != null) return;
-            if (hit.collider.TryGetComponent<NetworkIdentity>(out NetworkIdentity networkIdentity))
+            Debug.Log(col.name + " name ");
+            RTSBase rtsBase = col.GetComponent<RTSBase>();
+            if (rtsBase.hasAuthority)
             {
-                if (networkIdentity.connectionToClient == connectionToClient)return;                
+                return;
             }
+            Debug.Log("damage to "+col.name);
+            col.GetComponent<RTSBase>().DealDamage(damage);
 
-            Debug.Log("damage to "+hit.collider.name);
-
-            hit.collider.GetComponent<RTSBase>().DealDamage(damage);
         }
+
+   
         
     }
-}
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(this.gameObject.transform.position,effectRadious );    }
+    }
+ 
+

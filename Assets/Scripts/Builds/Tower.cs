@@ -12,17 +12,28 @@ public class Tower : Building
     float attackSpeed;
     float throwForce = 5;
     GameObject proyectils;
+    [SerializeField] private LayerMask layerMask = new LayerMask();
 
     public void detectEnemy(float atackRange)
     {
-        Physics.SphereCast(this.gameObject.transform.position, atackRange, transform.forward, out RaycastHit hit);
- 
-        if (hit.collider == null) return;
-        if (hit.collider.GetComponent<RTSBase>() != null) return;
-
-
-        RTSBase enemy = hit.collider.GetComponent<RTSBase>();
-Debug.Log($"{enemy.name} detected");
+      Collider[] collider =   Physics.OverlapSphere(this.gameObject.transform.position, atackRange,layerMask);
+      Collider nearCollider = collider[0];
+      foreach (var col in collider)
+      {
+          if (col.GetComponent<RTSBase>().connectionToClient.connectionId==NetworkClient.connection.connectionId)
+          {
+              continue;
+          }
+          if (Vector3.Distance(col.transform.position,this.transform.position) <= Vector3.Distance(nearCollider.transform.position,this.transform.position)  )
+          {
+              nearCollider = col;
+          }
+      }
+      
+      if (nearCollider == null) return;
+      RTSBase enemy = nearCollider.GetComponent<RTSBase>();
+      if (enemy == null) return;
+      Debug.Log($"{enemy.name} detected");
         GetComponent<ComponentAbility>().active(enemy, damege);
     }
 

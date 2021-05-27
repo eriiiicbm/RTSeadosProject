@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minimapRect: {fileID: 413442600}
-  mapScale: 1000
+  mapScale: 500
   offset: 15
 --- !u!1001 &487829545
 PrefabInstance:
@@ -1584,7 +1584,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 400
+  orthographic size: 500
   m_Depth: 46.1
   m_CullingMask:
     serializedVersion: 2

@@ -135,7 +135,7 @@ MonoBehaviour:
   buildingBlockLayer:
     serializedVersion: 2
     m_Bits: 257
-  buildingRangeLimit: 200
+  buildingRangeLimit: 10000
   myUnits: []
   myBuildings: []
   trops: 0
@@ -164,10 +164,10 @@ MonoBehaviour:
   zoomSpeed: 6
   zoomLimits: {x: 0, y: 0}
   playerCameraTransform: {fileID: 5167589719713410488}
-  speed: 25
-  screenBrderThickness: 10
-  screenXLimits: {x: -70, y: 70}
-  screenZLimits: {x: -70, y: 70}
+  speed: 40
+  screenBrderThickness: 4
+  screenXLimits: {x: -460, y: 460}
+  screenZLimits: {x: -450, y: 450}
 --- !u!1 &4489970262673483055
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4489970262673483055}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 40, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2856326324898625413}

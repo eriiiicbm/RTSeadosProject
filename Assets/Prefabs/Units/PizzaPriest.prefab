@@ -580,6 +580,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pizza Priest
       objectReference: {fileID: 0}
+    - target: {fileID: 7468410895726798960, guid: fb941c544fd422442867397bbaeae72e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: f728ea032c9d13c42aeb9d988165b849,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb941c544fd422442867397bbaeae72e, type: 3}
 --- !u!4 &6076772592811607454 stripped

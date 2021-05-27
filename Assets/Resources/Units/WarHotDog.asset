@@ -17,12 +17,12 @@ MonoBehaviour:
   maxHealth: 275
   expirationVelocity: 2.5
   damageMoral: 0
-  prices: 0a0000000f0000000000000000000000
+  prices: 190000000f0000000000000000000000
   description: 
   preview: {fileID: 0}
   prefab: {fileID: 4134074402336445218, guid: b5454ad133dca6e4ca4c33b10ad0a538, type: 3}
   moral: 350
-  velocity: 5
+  velocity: 12
   currentTarget: {fileID: 0}
   effectRadious: 0
   recoverySpeed: 0

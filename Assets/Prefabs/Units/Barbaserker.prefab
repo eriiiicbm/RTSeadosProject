@@ -25,11 +25,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294013348522336701}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9.517271, y: 25.08, z: 74.1}
   m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
   m_Children: []
-  m_Father: {fileID: 1025577657071808626}
-  m_RootOrder: 3
+  m_Father: {fileID: 6566199560658216610}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &3045130387650698568
 SpriteRenderer:
@@ -110,10 +110,10 @@ Transform:
   m_GameObject: {fileID: 589116311141575497}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 11.98536, y: 11.98536, z: 11.98536}
   m_Children: []
   m_Father: {fileID: 1025577657071808626}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3733736083268202815
 MeshFilter:
@@ -206,7 +206,6 @@ Transform:
   - {fileID: 6566199560658216610}
   - {fileID: 1199622891881125542}
   - {fileID: 5342418009443035913}
-  - {fileID: 8107503543854433047}
   - {fileID: 8145371750039997740}
   - {fileID: 2454689525812743080}
   m_Father: {fileID: 0}
@@ -279,8 +278,9 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   colorRenderers:
-  - {fileID: 0}
   - {fileID: 2309146976870649456}
+  - {fileID: 7109885966291780110}
+  - {fileID: 3045130387650698568}
 --- !u!114 &853259452964910958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,6 +557,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b094d4b2f6aa55a4b978bc377a9ad967, type: 3}
+--- !u!23 &7109885966291780110 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6353601817231279929, guid: b094d4b2f6aa55a4b978bc377a9ad967,
+    type: 3}
+  m_PrefabInstance: {fileID: 4217591009716176183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6566199560658216610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7032431408976520085, guid: b094d4b2f6aa55a4b978bc377a9ad967,
@@ -573,7 +579,7 @@ PrefabInstance:
     - target: {fileID: 2157411598253882790, guid: a80758c01dec3f7488d161a44b9c2991,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2157411598253882790, guid: a80758c01dec3f7488d161a44b9c2991,
         type: 3}

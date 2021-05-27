@@ -268,6 +268,7 @@ MonoBehaviour:
   targeter: {fileID: 6186188714790268378}
   navMeshAgent: {fileID: 2041292555691063921}
   chaseRange: 10
+  defaultDistance: 2
   resource: {fileID: 0}
   building: {fileID: 0}
 --- !u!65 &6639525920863891196

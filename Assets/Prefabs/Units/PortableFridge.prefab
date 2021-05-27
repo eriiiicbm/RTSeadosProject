@@ -338,6 +338,7 @@ MonoBehaviour:
   targeter: {fileID: 0}
   navMeshAgent: {fileID: 0}
   chaseRange: 10
+  defaultDistance: 2
 --- !u!114 &-2108554760688704243
 MonoBehaviour:
   m_ObjectHideFlags: 0

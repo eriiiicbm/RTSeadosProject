@@ -413,6 +413,7 @@ MonoBehaviour:
   targeter: {fileID: 0}
   navMeshAgent: {fileID: 0}
   chaseRange: 10
+  defaultDistance: 2
   damage: 0
 --- !u!65 &6042258345487002080
 BoxCollider:

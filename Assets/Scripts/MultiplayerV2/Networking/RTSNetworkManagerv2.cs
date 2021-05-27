@@ -105,9 +105,10 @@ isGameInProgress = false;
             NetworkServer.Spawn(gameOverHandlerInstance.gameObject);
             foreach (var player in Players)
             {
+                Vector3 position = GetStartPosition().position;
                 foreach (var gameObject in startingUnitsAndBuildings)
                 {
-                    GameObject unitSpawnerInstance = Instantiate(gameObject, GetStartPosition().position + new Vector3(UnityEngine.Random.Range(0f, 2f), UnityEngine.Random.Range(0f, 2f),
+                    GameObject unitSpawnerInstance = Instantiate(gameObject, position + new Vector3(UnityEngine.Random.Range(0f, 2f), UnityEngine.Random.Range(0f, 2f),
                             UnityEngine.Random.Range(0f, 2f)),
                         Quaternion.identity);
                     Debug.Log(unitSpawnerInstance.name);

@@ -383,6 +383,7 @@ MonoBehaviour:
   targeter: {fileID: 0}
   navMeshAgent: {fileID: 0}
   chaseRange: 10
+  defaultDistance: 2
   damage: 0
 --- !u!114 &2945748873727102925
 MonoBehaviour:

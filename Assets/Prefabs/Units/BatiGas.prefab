@@ -238,6 +238,7 @@ MonoBehaviour:
   targeter: {fileID: 2084167890827028078}
   navMeshAgent: {fileID: -5711836252711353681}
   chaseRange: 10
+  defaultDistance: 2
   damage: 0
 --- !u!114 &4210234856042342807
 MonoBehaviour:
@@ -251,6 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c3caac766259e419ec27c6cf8304da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   spawnProyectilPoint: {fileID: 3997780868454479895}
 --- !u!195 &-5711836252711353681
 NavMeshAgent:

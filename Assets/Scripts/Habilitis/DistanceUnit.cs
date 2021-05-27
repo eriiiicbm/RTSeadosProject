@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
-public class DistanceUnit : MonoBehaviour, ComponetHability
+public class DistanceUnit : NetworkBehaviour, ComponentAbility
 {
     private GameObject projectils;
     public Transform spawnProyectilPoint;
@@ -20,11 +20,19 @@ public class DistanceUnit : MonoBehaviour, ComponetHability
         Debug.Log("damageDistance con damage: " + damage);
 
         Vector3 direction = transform.position - target.transform.position;
-        GameObject proyectil = Instantiate(projectils);
-        proyectil.transform.position = spawnProyectilPoint.position;
-        proyectil.transform.Rotate(direction);
-        proyectil.GetComponent<UnitProjectilev3>().damage = damage;
+        Quaternion projectileRotation =
+            Quaternion.LookRotation(target.GetComponent<Targetable>().GetAimPoint().position - projectils.transform.position);
+        GameObject projectile = Instantiate(projectils,spawnProyectilPoint.position,projectileRotation);
+     
+        NetworkServer.Spawn(projectile,connectionToClient);
+        projectile.name = "THE POTATO";
+        //projectile.transform.position = spawnProyectilPoint.position;
+        projectile.transform.Rotate(direction);
+            UnitProjectilev3 unitProjectilev3 = 
+                projectile.GetComponent<UnitProjectilev3>();
+            unitProjectilev3.damage = damage;
+            unitProjectilev3.launchForce = 10;
 
-        proyectil.GetComponent<Rigidbody>().AddForce(direction * 100f, ForceMode.Impulse);
+       // projectile.GetComponent<Rigidbody>().AddForce(direction * 100f, ForceMode.Impulse);
     }
 }

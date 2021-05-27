@@ -62,7 +62,7 @@ public class UnitCommandGiverv2 : MonoBehaviour
             TryTarget(target);
             return;
         }
-        Debug.Log(hit.point + "  is the point");
+//        Debug.Log(hit.point + "  is the point");
         TryMove(hit.point);
 
        if (hit.transform.gameObject.layer !=10) return;

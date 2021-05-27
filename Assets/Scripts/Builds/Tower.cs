@@ -21,7 +21,7 @@ public class Tower : Building
 
         RTSBase enemy = hit.collider.GetComponent<RTSBase>();
 
-        GetComponent<ComponetHability>().active(enemy, damege);
+        GetComponent<ComponentAbility>().active(enemy, damege);
     }
 
     // Start is called before the first frame update

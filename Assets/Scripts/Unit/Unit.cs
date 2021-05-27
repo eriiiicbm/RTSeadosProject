@@ -36,7 +36,7 @@ public class Unit : RTSBase
     public event Action ServerOnLostMoral;
     private RTSPlayerv2 playerv2;
     private bool alteratedState;
-
+    public float defaultDistance = 2;
     public Targeter GetTargeter()
     {
         return targeter;
@@ -75,8 +75,10 @@ public class Unit : RTSBase
         if (navMeshAgent == null)
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
+
         }
-        
+        navMeshAgent.stoppingDistance = defaultDistance;
+
         if (targeter == null)
         {
             targeter = GetComponent<Targeter>();
@@ -96,7 +98,6 @@ public class Unit : RTSBase
         maxMoral = rtsEntity.Moral;
         moral = maxMoral * 0.5f;
         GameOverHandlerv2.ServerOnGameOver += ServerHandleGameOver;
-        
 //todo assign ids
         //       id = UnityEngine.Random.Range(0, 999999999);
 
@@ -105,6 +106,8 @@ public class Unit : RTSBase
         ServerOnRTSDie += ServerHandleDie;
 
         StartStuff();
+        navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
+
         playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
 
         StartCoroutine(nameof(ExpirationEffect));
@@ -269,7 +272,7 @@ public class Unit : RTSBase
     { 
         if (GetComponent<Unit>() == null) yield return 0;
 
-        PasiveHability pasiveHability = GetComponent<PasiveHability>();
+        PassiveAbility passiveAbility = GetComponent<PassiveAbility>();
         UnitCombat unitCombat = GetComponent<UnitCombat>();
         MoralDamage moralDamage = GetComponent<MoralDamage>();
 
@@ -285,10 +288,10 @@ public class Unit : RTSBase
             if (moralDamage != null)
                 moralDamage.damageMoral = rtsEntity.DamageMoral * 0.5f;
 
-            if (pasiveHability != null)
+            if (passiveAbility != null)
             {
-                pasiveHability.efectRadius = rtsEntity.EffectRadious * 0.75f;
-                pasiveHability.recoverySpeed = rtsEntity.RecoverySpeed * 0.90f;
+                passiveAbility.efectRadius = rtsEntity.EffectRadious * 0.75f;
+                passiveAbility.recoverySpeed = rtsEntity.RecoverySpeed * 0.90f;
             }
 
             yield return 0;
@@ -306,10 +309,10 @@ public class Unit : RTSBase
             if (moralDamage != null)
                 moralDamage.damageMoral = rtsEntity.DamageMoral;
 
-            if (pasiveHability != null)
+            if (passiveAbility != null)
             {
-                pasiveHability.efectRadius = rtsEntity.EffectRadious;
-                pasiveHability.recoverySpeed = rtsEntity.RecoverySpeed;
+                passiveAbility.efectRadius = rtsEntity.EffectRadious;
+                passiveAbility.recoverySpeed = rtsEntity.RecoverySpeed;
             }
 
             yield return 0;
@@ -327,10 +330,10 @@ public class Unit : RTSBase
             if (moralDamage != null)
                 moralDamage.damageMoral = rtsEntity.DamageMoral * 1.5f;
 
-            if (pasiveHability != null)
+            if (passiveAbility != null)
             {
-                pasiveHability.efectRadius = rtsEntity.EffectRadious * 1.25f;
-                pasiveHability.recoverySpeed = rtsEntity.RecoverySpeed * 1.10f;
+                passiveAbility.efectRadius = rtsEntity.EffectRadious * 1.25f;
+                passiveAbility.recoverySpeed = rtsEntity.RecoverySpeed * 1.10f;
             }
 
             yield return 0;

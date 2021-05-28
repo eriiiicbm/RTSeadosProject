@@ -680,7 +680,6 @@
             <e p="FaceCamera.cs" t="Include" />
             <e p="Menus" t="Include">
               <e p="GameOverDisplay.cs" t="Include" />
-              <e p="GameOverDisplayv2.cs" t="Include" />
             </e>
             <e p="Minimap.cs" t="Include" />
             <e p="Networking" t="Include">
@@ -712,6 +711,7 @@
             <e p="GameOverHandlerv2.cs" t="Include" />
             <e p="HealthDisplayv2.cs" t="Include" />
             <e p="Menus" t="Include">
+              <e p="GameOverDisplayv2.cs" t="Include" />
               <e p="JoinLobbyMenu.cs" t="Include" />
               <e p="LobbyMenu.cs" t="Include" />
               <e p="MainMenu.cs" t="Include" />

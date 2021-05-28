@@ -23,8 +23,7 @@ public class RTSBase : NetworkBehaviour
     [SyncVar(hook = nameof(HandleHealthUpdated))]
     private float currentHealth;
 
-    [SyncVar] private Color teamColor;
-    public event Action ServerOnRTSDie;
+     public event Action ServerOnRTSDie;
 
     public event Action<float, float> ClientOnHealthUpdated;
     public List<AudioClip> audioList= new List<AudioClip>( );
@@ -54,8 +53,7 @@ audioList.Insert(1,deadSound);
         GoToNextState();
         animator = transform.GetComponentInChildren<Animator>();
         unitStates = UnitStates.Idle;
-        teamColor =connectionToClient.identity.GetComponent<RTSPlayerv2>().GetTeamColor();
-    }
+     }
 
     public override void OnStopServer()
     {
@@ -135,6 +133,7 @@ audioList.Insert(1,deadSound);
         if (newHealth < oldHealth)
         {
             //todo start flasher 
+            //shake
         }
     }
 
@@ -158,6 +157,10 @@ audioList.Insert(1,deadSound);
 [ClientRpc]
     public void PlayListSoundEffect(int position,float pitch,bool overwrite)
     {
+        if (position>=audioList.Count || position <0)
+        {
+            return;
+        }
         if (overwrite)
         {
             SoundManager._instance.PlaySE(audioList[position],pitch);

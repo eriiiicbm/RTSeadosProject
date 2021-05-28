@@ -43,7 +43,7 @@ public class UnitCombat : Unit
     {
         
         attackSpeed += Time.deltaTime;
-        if (target != null&&!target.hasAuthority)
+        if (target != null&&connectionToClient.connectionId!=target.connectionToClient.connectionId)
         {
             navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
 

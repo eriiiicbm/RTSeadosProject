@@ -347,8 +347,7 @@ Debug.Log("here before boom 1");
         ClientOnResourcesUpdated?.Invoke(resources);
         if (numHouse==0&& trops==0)
         {
-            UnitBasev2.InvokeEvent(connectionToClient.connectionId);
-            Debug.Log($"The winner id is {connectionToClient.connectionId}");
+             Debug.Log($"The winner id is {connectionToClient.connectionId}");
 
         }
 
@@ -403,11 +402,7 @@ Debug.Log("here before boom 1");
         }
 
         myUnits.Remove(unit);
-        if (numHouse==0&& trops==0)
-        {
-            UnitBasev2.InvokeEvent(connectionToClient.connectionId);
-                 Debug.Log($"The winner id is {connectionToClient.connectionId}");
-        }
+      
     }
 
     private void ServerHandleBuildingDespawned(Building building)

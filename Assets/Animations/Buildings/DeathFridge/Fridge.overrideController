@@ -9,5 +9,5 @@ AnimatorOverrideController:
   m_Name: Fridge
   m_Controller: {fileID: 9100000, guid: 0a3b074ad7820474b8554bf9093e7f2d, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 0a5b0c86fb476644ea296cc96d04024c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6240ef9666797ec4d85428d2a98cddc3, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 7d3d8543cf7bb6f44a47de062cec341b, type: 2}

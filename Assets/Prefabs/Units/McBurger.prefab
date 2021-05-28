@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6834297855465758007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5.73, z: 0.23}
   m_LocalScale: {x: 0.25912106, y: 0.1901806, z: 0.25912106}
   m_Children: []
   m_Father: {fileID: 4325208244837243931}
@@ -277,7 +277,7 @@ MonoBehaviour:
   entityName: 
   maxHealth: 0
   description: 
-  preview: {fileID: 21300000, guid: 0f2833a292a197d4fb0385a8efa1dc91, type: 3}
+  preview: {fileID: 21300000, guid: a222b585429f05b4784f8e801558c4f6, type: 3}
   prefab: {fileID: 0}
   rtsEntity: {fileID: 11400000, guid: d4c89b93f0788674dae005a4c44c0fea, type: 2}
   animator: {fileID: 0}

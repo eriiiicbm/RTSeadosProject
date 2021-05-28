@@ -28,7 +28,7 @@ MonoBehaviour:
   effectRadious: 0
   recoverySpeed: 0
   damage: 175
-  attackRange: 12
+  attackRange: 28
   attackTimer: 1
   proyectile: {fileID: 3370176331153901490, guid: c0b9490ae1569514397d92793ea0a052,
     type: 3}

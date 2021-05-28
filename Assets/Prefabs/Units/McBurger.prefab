@@ -140,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 8024623624565548713}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.8951, y: 4.8951, z: 4.8951}
+  m_LocalScale: {x: 11.98536, y: 11.98536, z: 11.98536}
   m_Children: []
   m_Father: {fileID: 4325208244837243931}
   m_RootOrder: 4
@@ -388,7 +388,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   colorRenderers:
-  - {fileID: 0}
+  - {fileID: 3482272579712476395}
   - {fileID: 6496283733099016614}
 --- !u!114 &3301321650363912208
 MonoBehaviour:
@@ -758,6 +758,12 @@ PrefabInstance:
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0e9f8a2b3c487940ad7017d7f9eb63b, type: 3}
+--- !u!23 &3482272579712476395 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4873170374455683326, guid: f0e9f8a2b3c487940ad7017d7f9eb63b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8355161186856799253}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5910666447054967693 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2447030222473863064, guid: f0e9f8a2b3c487940ad7017d7f9eb63b,

@@ -286,9 +286,14 @@ MonoBehaviour:
   preview: {fileID: 0}
   prefab: {fileID: 0}
   rtsEntity: {fileID: 11400000, guid: 4abe244a3d3ebb14883a89173d017f8b, type: 2}
+  animator: {fileID: 0}
+  deadSound: {fileID: 0}
+  hitSound: {fileID: 0}
+  unitStates: 0
+  audioList: []
   buildTime: 0
   buildingPreview: {fileID: 2681769063031661022}
-  icon: {fileID: 21300000, guid: eb5f6e2757c821940b69cf1456f7865a, type: 3}
+  icon: {fileID: 21300000, guid: add3c48f403c71f4fa81eecb03e41196, type: 3}
   price: 0000000000000000c800000000000000
   id: 28
   onSelected:

@@ -13,7 +13,7 @@ public class TeamColorSetterv2 : NetworkBehaviour
 
  public override void OnStartServer()
  {
-  RTSPlayerv2 player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+  RTSPlayerv2 player =connectionToClient.identity.GetComponent<RTSPlayerv2>();
   teamColor = player.GetTeamColor();
         //todo filter colors to avoid the 2 players having the same
  }

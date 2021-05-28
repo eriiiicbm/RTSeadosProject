@@ -152,6 +152,7 @@ MonoBehaviour:
   deadSound: {fileID: 8300000, guid: 3fae6a20379d14c47add1114cfce6df1, type: 3}
   hitSound: {fileID: 8300000, guid: b13687a710c75714080e2ff2773fe2a0, type: 3}
   unitStates: 0
+  audioList: []
   currentTargeteable: {fileID: 0}
   expirationVelocity: 1.9
   time: 1.05
@@ -621,16 +622,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2157411598253882790, guid: a80758c01dec3f7488d161a44b9c2991,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4844796
-      objectReference: {fileID: 0}
-    - target: {fileID: 2157411598253882790, guid: a80758c01dec3f7488d161a44b9c2991,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.6725124
-      objectReference: {fileID: 0}
-    - target: {fileID: 2157411598253882790, guid: a80758c01dec3f7488d161a44b9c2991,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -672,7 +663,7 @@ PrefabInstance:
     - target: {fileID: 2157411598253882790, guid: a80758c01dec3f7488d161a44b9c2991,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.279
+      value: 2.999
       objectReference: {fileID: 0}
     - target: {fileID: 2157411598253882790, guid: a80758c01dec3f7488d161a44b9c2991,
         type: 3}
@@ -769,16 +760,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7074310017671610183, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3229864
-      objectReference: {fileID: 0}
-    - target: {fileID: 7074310017671610183, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.323615
-      objectReference: {fileID: 0}
-    - target: {fileID: 7074310017671610183, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -820,7 +801,7 @@ PrefabInstance:
     - target: {fileID: 7074310017671610183, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.009
+      value: 3.46
       objectReference: {fileID: 0}
     - target: {fileID: 7074310017671610183, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
         type: 3}
@@ -841,11 +822,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealthBarCanvas (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8696465548202048508, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c89a71e3a513bbc4cbe70e0cfcfbcd28, type: 3}

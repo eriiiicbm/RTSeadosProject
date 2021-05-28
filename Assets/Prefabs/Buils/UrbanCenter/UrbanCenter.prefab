@@ -115,7 +115,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!208 &-2722353954014759017
 NavMeshObstacle:
@@ -212,7 +212,7 @@ MonoBehaviour:
   buildingPreview: {fileID: 673507198275943886, guid: 08ea299a914b7074a87b7f9cf6eb5a37,
     type: 3}
   icon: {fileID: 21300000, guid: 2339cafb482c9a44885156348bdd2f6f, type: 3}
-  price: 0000000000000000e803000000000000
+  price: 01000000010000000100000001000000
   id: 33
   onSelected:
     m_PersistentCalls:

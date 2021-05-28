@@ -23,6 +23,10 @@ public class AreaDamage : NetworkBehaviour, ComponentAbility
         {
             Debug.Log(col.name + " name ");
             RTSBase rtsBase = col.GetComponent<RTSBase>();
+            if (rtsBase==null)
+            {
+               return; 
+            }
             if (rtsBase.hasAuthority)
             {
                 return;

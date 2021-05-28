@@ -23,8 +23,8 @@ public class RTSBase : NetworkBehaviour
     [SyncVar(hook = nameof(HandleHealthUpdated))]
     private float currentHealth;
 
-    [SyncVar] private Color teamColor;
-    public event Action ServerOnRTSDie;
+     public event Action ServerOnRTSDie;
+     protected RTSPlayerv2 playerv2;
 
     public event Action<float, float> ClientOnHealthUpdated;
     public List<AudioClip> audioList= new List<AudioClip>( );
@@ -54,8 +54,9 @@ audioList.Insert(1,deadSound);
         GoToNextState();
         animator = transform.GetComponentInChildren<Animator>();
         unitStates = UnitStates.Idle;
-        teamColor =connectionToClient.identity.GetComponent<RTSPlayerv2>().GetTeamColor();
-    }
+        playerv2 = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+
+     }
 
     public override void OnStopServer()
     {
@@ -65,7 +66,10 @@ audioList.Insert(1,deadSound);
     [Server]
     private void ServerHandlePlayerDie(int connectionId)
     {
-        if (connectionToClient.connectionId != connectionId)
+        playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+
+         
+        if (playerv2.connectionToClient.connectionId != connectionId)
         {
             return;
         }
@@ -135,6 +139,7 @@ audioList.Insert(1,deadSound);
         if (newHealth < oldHealth)
         {
             //todo start flasher 
+            //shake
         }
     }
 
@@ -158,6 +163,10 @@ audioList.Insert(1,deadSound);
 [ClientRpc]
     public void PlayListSoundEffect(int position,float pitch,bool overwrite)
     {
+        if (position>=audioList.Count || position <0)
+        {
+            return;
+        }
         if (overwrite)
         {
             SoundManager._instance.PlaySE(audioList[position],pitch);
@@ -224,5 +233,10 @@ audioList.Insert(1,deadSound);
                 animator.ResetTrigger(param.name);
             }
         }
+    }
+
+    public virtual void Update()
+    {
+        
     }
 }

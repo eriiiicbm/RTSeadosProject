@@ -76,7 +76,9 @@ isGameInProgress = false;
         base.OnServerAddPlayer(conn);
         RTSPlayerv2 player =
             conn.identity.GetComponent<RTSPlayerv2>();
-        Players.Add(player);
+        player.SetTeamColor(new Color(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f),
+            UnityEngine.Random.Range(0f, 1f)));
+        Players.Add(player); 
         //todo change the name to one custom
         if (!mainMenu.useSteam)
         {
@@ -86,11 +88,11 @@ isGameInProgress = false;
         }
         else
         {
+            Debug.Log($"{conn.address} + {conn.identity}");
             player.SetDisplayName(
                 SteamFriends.GetPersonaName());
         }
-        player.SetTeamColor(new Color(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f),
-            UnityEngine.Random.Range(0f, 1f)));
+      
         player.SetPartyOwner(Players.Count==1);
     
     }
@@ -105,15 +107,19 @@ isGameInProgress = false;
             NetworkServer.Spawn(gameOverHandlerInstance.gameObject);
             foreach (var player in Players)
             {
+                
                 Vector3 position = GetStartPosition().position;
-                foreach (var gameObject in startingUnitsAndBuildings)
+                Debug.Log($"{position} for player {player.name}");
+                player.transform.GetChild(0).transform.position = new Vector3(position.x,player.transform.GetChild(0).transform.position.y,position.z-  player.transform.GetChild(0).transform.position.y);
+                foreach (var startingUnit in startingUnitsAndBuildings)
                 {
-                    GameObject unitSpawnerInstance = Instantiate(gameObject, position + new Vector3(UnityEngine.Random.Range(0f, 2f), UnityEngine.Random.Range(0f, 2f),
+                    GameObject unitSpawnerInstance = Instantiate(startingUnit, position + new Vector3(UnityEngine.Random.Range(0f, 2f), UnityEngine.Random.Range(0f, 2f),
                             UnityEngine.Random.Range(0f, 2f)),
                         Quaternion.identity);
                     Debug.Log(unitSpawnerInstance.name);
                     NetworkServer.Spawn(unitSpawnerInstance, player.connectionToClient);
-                    
+                      player.transform.GetChild(0).transform.position = new Vector3(unitSpawnerInstance.transform.position.x,player.transform.GetChild(0).transform.position.y,unitSpawnerInstance.transform.position.z);
+
                 }  
                 player.GetComponent<CameraController>().ReferenceFocus();
             }

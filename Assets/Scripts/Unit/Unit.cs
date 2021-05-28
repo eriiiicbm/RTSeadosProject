@@ -34,7 +34,6 @@ public class Unit : RTSBase
     [SerializeField] private float chaseRange = 10f;
     public event Action<float, float> ClientOnMoralUpdated;
     public event Action ServerOnLostMoral;
-    private RTSPlayerv2 playerv2;
     private bool alteratedState;
     public float defaultDistance = 2;
     [SerializeField] private AudioClip movementSound;
@@ -114,7 +113,7 @@ public class Unit : RTSBase
         StartStuff();
         navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
 
-        playerv2 = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+        playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
 
         StartCoroutine(nameof(ExpirationEffect));
 
@@ -133,10 +132,10 @@ public class Unit : RTSBase
     {
         base.OnStopServer();
         GameOverHandlerv2.ServerOnGameOver -= ServerHandleGameOver;
+        ServerOnUnitDespawned?.Invoke(this);
 
         ServerOnRTSDie -= ServerHandleDie;
         
-        ServerOnUnitDespawned?.Invoke(this);
 
     }
 
@@ -144,7 +143,7 @@ public class Unit : RTSBase
     private void ServerHandleDie()
     {
         StartCoroutine(nameof(DeadAnim));
-        connectionToClient.identity.GetComponent<RTSPlayerv2>().Trops--;
+      playerv2.Trops--;
     }
 
     IEnumerator DeadAnim()

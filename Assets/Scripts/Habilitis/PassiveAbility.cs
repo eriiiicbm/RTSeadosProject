@@ -57,7 +57,7 @@ public class PassiveAbility : MonoBehaviour
         {
             return;
         }
-        Debug.Log(name + " ha detectado a " + hit.collider.name);
+     //   Debug.Log(name + " ha detectado a " + hit.collider.name);
 
         units.Add(unit);
     }

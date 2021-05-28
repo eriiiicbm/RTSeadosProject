@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -24,10 +25,11 @@ public class SoundManager : MonoBehaviour
     {
         
     }
-
+    [ClientRpc]
     public bool isSEPlaying() {
         return AS[2].isPlaying;
     }
+    [ClientRpc]
     public void PlayBGM(AudioClip _clip)
     {
         if (CheckIfAudioClipIsNull(_clip))
@@ -38,7 +40,8 @@ public class SoundManager : MonoBehaviour
         AS[0].Play();
 
 
-    }  public void PlayBGS(AudioClip _clip,bool _loop)
+    }  [ClientRpc]
+    public void PlayBGS(AudioClip _clip,bool _loop)
     {
         if (CheckIfAudioClipIsNull(_clip))
         {
@@ -59,6 +62,7 @@ public class SoundManager : MonoBehaviour
 
     }
 
+    [ClientRpc]
     public void PlaySE(AudioClip _clip, float _pitch)
     {
         if (CheckIfAudioClipIsNull(_clip))
@@ -70,7 +74,8 @@ public class SoundManager : MonoBehaviour
         AS[2].PlayOneShot(_clip,5f);
 
 
-    }  public void PlaySEIfNotPlaying(AudioClip _clip, float _pitch)
+    }  [ClientRpc]
+    public void PlaySEIfNotPlaying(AudioClip _clip, float _pitch)
     {
         if (CheckIfAudioClipIsNull(_clip))
         {
@@ -83,7 +88,8 @@ public class SoundManager : MonoBehaviour
 
 
 
-    }public void PlaySE(AudioClip _clip, float _pitch, float volume)
+    }[ClientRpc]
+    public void PlaySE(AudioClip _clip, float _pitch, float volume)
     {
         if (CheckIfAudioClipIsNull(_clip))
         {
@@ -94,6 +100,7 @@ public class SoundManager : MonoBehaviour
 
 
     }
+    [ClientRpc]
     public void ChangePitch(int num, float _pitch) {
         AS[num].pitch = _pitch;
     }

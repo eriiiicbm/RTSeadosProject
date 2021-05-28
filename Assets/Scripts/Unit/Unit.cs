@@ -131,20 +131,32 @@ public class Unit : RTSBase
         base.OnStopServer();
         GameOverHandlerv2.ServerOnGameOver -= ServerHandleGameOver;
 
-        ServerOnUnitDespawned?.Invoke(this);
         ServerOnRTSDie -= ServerHandleDie;
+        
+        ServerOnUnitDespawned?.Invoke(this);
+
     }
 
     [Server]
     private void ServerHandleDie()
     {
-        NetworkServer.Destroy(gameObject);
-
+        StartCoroutine(nameof(DeadAnim));
         connectionToClient.identity.GetComponent<RTSPlayerv2>().Trops--;
     }
 
-    protected Targetable target;
+    IEnumerator DeadAnim()
+    {
+        /*do
+        {
+            
+        } while (animator.GetCurrentAnimatorStateInfo(0).IsName("Death"));
+*/
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length + 3);
+        NetworkServer.Destroy(gameObject);
 
+        
+    }
+    protected Targetable target;
     [ServerCallback]
     public virtual void Update()
     {
@@ -154,8 +166,7 @@ public class Unit : RTSBase
 [Server]
 private void NavMeshToTarget()
     {
-        Debug.Log(targeter + " is null?" + gameObject.name);
-        target = targeter?.GetTarget();
+         target = targeter?.GetTarget();
 
         if (target != null)
         {
@@ -166,7 +177,11 @@ private void NavMeshToTarget()
             else if (navMeshAgent.hasPath)
             {
                 navMeshAgent.ResetPath();
-                unitStates = UnitStates.Idle;
+                if (unitStates!=UnitStates.Attack)
+                {
+                 
+                    unitStates = UnitStates.Idle;   
+                }
             }
 
             return;
@@ -184,7 +199,11 @@ private void NavMeshToTarget()
 
         navMeshAgent.ResetPath();
         
-        unitStates = UnitStates.Idle;
+        if (unitStates!=UnitStates.Attack)
+        {
+                 
+            unitStates = UnitStates.Idle;   
+        }
     }
 
     [Command]
@@ -366,4 +385,6 @@ private void NavMeshToTarget()
 
         yield return new WaitForEndOfFrame();
     }
+
+   
 }

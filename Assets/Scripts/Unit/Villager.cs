@@ -8,7 +8,7 @@ public class Villager : Unit
 {
    [SyncVar] float buildRate;
    [SyncVar] float range;
-
+   [SerializeField] private AudioClip recolectSound;
     public override void OnStartServer()
     {
         base.OnStartServer();
@@ -85,6 +85,7 @@ public class Villager : Unit
 
         currentState = UnitStates.Attack;
         transform.LookAt(resource.transform.position);
+        SoundManager._instance.PlaySE(recolectSound,1f);
         resource.resourcesQuantity -= resourceCatch;
         RTSPlayerv2 player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
         player.SetResources(player.GetResources(resource.currentResourceType) + resourceCatch, resource.currentResourceType);

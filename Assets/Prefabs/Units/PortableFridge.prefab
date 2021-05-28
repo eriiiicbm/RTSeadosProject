@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 4841988292945089924}
   - component: {fileID: 6581450852017867769}
   - component: {fileID: -2108554760688704243}
+  - component: {fileID: -2399966832600337112}
   m_Layer: 8
   m_Name: PortableFridge
   m_TagString: Untagged
@@ -97,7 +98,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 4, y: 8, z: 4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &9105742828950108958
 MonoBehaviour:
@@ -160,7 +161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  target: {fileID: 1058954000474187532}
 --- !u!114 &6492353288227284995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +217,10 @@ MonoBehaviour:
   preview: {fileID: 21300000, guid: 9866a92691696b346901281f2b329034, type: 3}
   prefab: {fileID: 947953591945672596}
   rtsEntity: {fileID: 11400000, guid: 75d5c2f7aa0ec084583a2c97652196f9, type: 2}
+  animator: {fileID: 0}
+  deadSound: {fileID: 8300000, guid: 82973586d7e8ade41a4f3087ba599c66, type: 3}
+  hitSound: {fileID: 8300000, guid: d76a39ee0964f524dbd1ef325280f097, type: 3}
+  unitStates: 0
   currentTargeteable: {fileID: 0}
   expirationVelocity: 5.92
   time: 4.22
@@ -258,6 +262,7 @@ MonoBehaviour:
   navMeshAgent: {fileID: 0}
   chaseRange: 10
   defaultDistance: 2
+  movementSound: {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
 --- !u!114 &-2108554760688704243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +278,22 @@ MonoBehaviour:
   efectRadius: 0
   recoverySpeed: 0
   units: []
+--- !u!54 &-2399966832600337112
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947953591945672596}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1847039777751080495
 GameObject:
   m_ObjectHideFlags: 0

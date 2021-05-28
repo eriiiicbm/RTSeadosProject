@@ -191,7 +191,8 @@ private void NavMeshToTarget()
         {
             return;
         }
-        SoundManager._instance.PlaySEIfNotPlaying(movementSound,1f);
+        PlayHitSound();
+    // PlaySEIfNotPlaying(movementSound,1f);
         if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
         {
             return;

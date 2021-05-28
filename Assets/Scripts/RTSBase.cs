@@ -74,7 +74,7 @@ public class RTSBase : NetworkBehaviour
             return;
         }
 
-         
+
         SoundManager._instance.PlaySE(hitSound, 1f);
 
         currentHealth = Mathf.Min(Mathf.Max(currentHealth - damageAmount, 0), MaxHealth);
@@ -86,25 +86,25 @@ public class RTSBase : NetworkBehaviour
 
         ServerOnRTSDie?.Invoke();
         unitStates = UnitStates.Dead;
-        SoundManager._instance.PlaySE(deadSound, 1f);
+        PlayDeadSound();
     }
-    
+
     //todo refactor this method
     [Server]
-    public void DealDamage(float damageAmount,bool hitSound)
+    public void DealDamage(float damageAmount, bool hitSound)
     {
         if (hitSound)
         {
             DealDamage(damageAmount);
             return;
         }
-        
+
         if (currentHealth == 0)
         {
             return;
         }
 
-       
+
         currentHealth = Mathf.Min(Mathf.Max(currentHealth - damageAmount, 0), MaxHealth);
 
         if (currentHealth != 0)
@@ -128,15 +128,16 @@ public class RTSBase : NetworkBehaviour
         if (newHealth < oldHealth)
         {
             //todo start flasher 
-         }
+        }
     }
 
     private void HandleStatesUpdated(UnitStates oldState, UnitStates newState)
     {
-        if (animator==null)
+        if (animator == null)
         {
             return;
         }
+
         ResetAllTriggers();
         animator.SetTrigger(newState.ToString());
 
@@ -144,6 +145,21 @@ public class RTSBase : NetworkBehaviour
 
     #endregion
 
+    #region ClientSound
+
+    [ClientRpc]
+    public void PlayDeadSound()
+    {
+        SoundManager._instance.PlaySE(deadSound, 1f);
+
+    }  [ClientRpc]
+    public void PlayHitSound()
+    {
+        SoundManager._instance.PlaySE(hitSound, 1f);
+
+    }
+
+#endregion
     public int MaxHealth
     {
         get => maxHealth;

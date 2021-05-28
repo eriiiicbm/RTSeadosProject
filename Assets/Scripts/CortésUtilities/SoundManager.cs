@@ -25,12 +25,10 @@ public class SoundManager : MonoBehaviour
     {
         
     }
-    [ClientRpc]
-    public bool isSEPlaying() {
+     public bool isSEPlaying() {
         return AS[2].isPlaying;
     }
-    [ClientRpc]
-    public void PlayBGM(AudioClip _clip)
+     public void PlayBGM(AudioClip _clip)
     {
         if (CheckIfAudioClipIsNull(_clip))
         {
@@ -40,7 +38,7 @@ public class SoundManager : MonoBehaviour
         AS[0].Play();
 
 
-    }  [ClientRpc]
+    }  
     public void PlayBGS(AudioClip _clip,bool _loop)
     {
         if (CheckIfAudioClipIsNull(_clip))
@@ -62,8 +60,7 @@ public class SoundManager : MonoBehaviour
 
     }
 
-    [ClientRpc]
-    public void PlaySE(AudioClip _clip, float _pitch)
+     public void PlaySE(AudioClip _clip, float _pitch)
     {
         if (CheckIfAudioClipIsNull(_clip))
         {
@@ -74,7 +71,7 @@ public class SoundManager : MonoBehaviour
         AS[2].PlayOneShot(_clip,5f);
 
 
-    }  [ClientRpc]
+    }  
     public void PlaySEIfNotPlaying(AudioClip _clip, float _pitch)
     {
         if (CheckIfAudioClipIsNull(_clip))
@@ -88,7 +85,7 @@ public class SoundManager : MonoBehaviour
 
 
 
-    }[ClientRpc]
+    } 
     public void PlaySE(AudioClip _clip, float _pitch, float volume)
     {
         if (CheckIfAudioClipIsNull(_clip))
@@ -100,8 +97,7 @@ public class SoundManager : MonoBehaviour
 
 
     }
-    [ClientRpc]
-    public void ChangePitch(int num, float _pitch) {
+     public void ChangePitch(int num, float _pitch) {
         AS[num].pitch = _pitch;
     }
    

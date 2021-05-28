@@ -3,24 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/UnitController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/UnitController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Barbaserker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Barbaserker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/BatiGas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/BatiGas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/ChipAndArrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/ChipAndArrow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/McBurger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/McBurger.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Nugget Vilager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Nugget Vilager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/NuggetWarriior .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/NuggetWarriior .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/PizzaPriest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/PizzaPriest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/PortableFridge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/PortableFridge.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Skewers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Skewers.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/WarHotDog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/WarHotDog.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Habilitis/PassiveAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Habilitis/PassiveAbility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,12 +93,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/Targeter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/TeamColorSetterv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/PassiveAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SoundManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />
@@ -227,13 +213,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SoundManager.cs</url>
-          <line>28</line>
+          <line>27</line>
           <properties documentPath="C:\Users\Usuario\Documents\GitHub\RTSeadosProject\Assets\Scripts\CortésUtilities\SoundManager.cs" initialLine="27" containingFunctionPresentation="method 'isSEPlaying'">
             <startOffsets>
-              <option value="669" />
+              <option value="654" />
             </startOffsets>
             <endOffsets>
-              <option value="670" />
+              <option value="655" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />

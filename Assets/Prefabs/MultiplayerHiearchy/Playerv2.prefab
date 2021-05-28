@@ -163,11 +163,13 @@ MonoBehaviour:
     type: 3}
   zoomSpeed: 6
   zoomLimits: {x: 0, y: 0}
+  min: 2
+  max: 30
   playerCameraTransform: {fileID: 5167589719713410488}
   speed: 80
   screenBrderThickness: 4
-  screenXLimits: {x: -460, y: 155}
-  screenZLimits: {x: -540, y: 31}
+  screenXLimits: {x: -421, y: 115}
+  screenZLimits: {x: -540, y: 8}
 --- !u!1 &4489970262673483055
 GameObject:
   m_ObjectHideFlags: 0

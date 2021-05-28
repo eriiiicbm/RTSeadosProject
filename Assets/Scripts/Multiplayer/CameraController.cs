@@ -16,7 +16,7 @@ public class CameraController : NetworkBehaviour
     public float zoomSpeed = 6f;
     public Vector2 zoomLimits;
 
-    int min = 2, max = 12;
+   public int min = 2, max = 12;
     float margin = 0;
 
     [SerializeField] private Transform playerCameraTransform;
@@ -60,13 +60,13 @@ public class CameraController : NetworkBehaviour
        var zoom = Input.GetAxis("Mouse ScrollWheel");
        var zoomm=0f;
        zoomm=        playerCam.m_Lens.OrthographicSize -  zoom * zoomSpeed;
-        if (zoomm<2)
+        if (zoomm<min)
        {
-           zoomm = 2;
+           zoomm = min;
        }
-       else if(zoomm>12)
+       else if(zoomm>max)
        {
-           zoomm = 12;
+           zoomm = max;
        }
  
        playerCam.m_Lens.OrthographicSize =zoomm;

@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainCamera Focus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainCamera Focus.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/UnitBasev2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/UnitBasev2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,12 +89,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/TeamColorSetterv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/AreaDamage.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Networking/RTSNetworkManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />

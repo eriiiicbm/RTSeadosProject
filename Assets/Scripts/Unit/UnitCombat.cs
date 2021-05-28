@@ -82,7 +82,10 @@ public class UnitCombat : Unit
             
         } while (animator.GetCurrentAnimatorStateInfo(0).IsName("Death"));
 */
-
+        if (animator==null)
+        {
+            yield break;
+        }
         yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
         unitStates = UnitStates.Idle;
 

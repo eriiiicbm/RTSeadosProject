@@ -284,6 +284,7 @@ MonoBehaviour:
   deadSound: {fileID: 8300000, guid: 82973586d7e8ade41a4f3087ba599c66, type: 3}
   hitSound: {fileID: 8300000, guid: d76a39ee0964f524dbd1ef325280f097, type: 3}
   unitStates: 0
+  audioList: []
   currentTargeteable: {fileID: 0}
   expirationVelocity: 0
   time: 0
@@ -778,6 +779,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 22100000, guid: 74a3c14e239f98747be50cd6e548cdef,
         type: 2}
+    - target: {fileID: 2447030222473863143, guid: f0e9f8a2b3c487940ad7017d7f9eb63b,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0e9f8a2b3c487940ad7017d7f9eb63b, type: 3}
 --- !u!23 &3482272579712476395 stripped

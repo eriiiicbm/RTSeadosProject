@@ -20,10 +20,8 @@ public class Tower : Building
       Collider nearCollider = collider[0];
       foreach (var col in collider)
       {
-          if (col.GetComponent<RTSBase>().connectionToClient.connectionId==NetworkClient.connection.connectionId)
-          {
-              continue;
-          }
+          if (col.GetComponent<RTSBase>().connectionToClient.connectionId ==
+              NetworkClient.connection.connectionId) continue;
           if (Vector3.Distance(col.transform.position,this.transform.position) <= Vector3.Distance(nearCollider.transform.position,this.transform.position)  )
           {
               nearCollider = col;
@@ -31,8 +29,15 @@ public class Tower : Building
       }
       
       if (nearCollider == null) return;
+      
       RTSBase enemy = nearCollider.GetComponent<RTSBase>();
+   
       if (enemy == null) return;
+      if (enemy.connectionToClient.connectionId ==
+          NetworkClient.connection.connectionId)
+      {
+          return;
+      }
       Debug.Log($"{enemy.name} detected");
         GetComponent<ComponentAbility>().active(enemy, damege);
     }

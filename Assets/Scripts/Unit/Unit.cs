@@ -107,9 +107,9 @@ public class Unit : RTSBase
 //todo assign ids
         //       id = UnityEngine.Random.Range(0, 999999999);
 
+        ServerOnUnitSpawned?.Invoke(this);
 
         ServerOnRTSDie += ServerHandleDie;
-        ServerOnUnitSpawned?.Invoke(this);
 
         StartStuff();
         navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
@@ -149,11 +149,8 @@ public class Unit : RTSBase
 
     IEnumerator DeadAnim()
     {
-        /*do
-        {
-            
-        } while (animator.GetCurrentAnimatorStateInfo(0).IsName("Death"));
-*/
+        yield return new WaitForEndOfFrame();
+        animator.Play("Dead");
         yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length + 3);
         NetworkServer.Destroy(gameObject);
 

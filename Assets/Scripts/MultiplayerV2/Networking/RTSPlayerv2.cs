@@ -380,7 +380,7 @@ Debug.Log("here before boom 1");
 
     private void ServerHandleUnitSpawned(Unit unit)
     {
-        if (unit.connectionToClient.connectionId != connectionToClient.connectionId)
+        if (unit.connectionToClient?.connectionId != connectionToClient.connectionId)
         {
             return;
         }

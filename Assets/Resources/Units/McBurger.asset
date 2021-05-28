@@ -22,14 +22,14 @@ MonoBehaviour:
   preview: {fileID: 0}
   prefab: {fileID: 8335747702613979503, guid: 5b08a59fe7d3155478d441f0e96713e7, type: 3}
   moral: 5000
-  defaultStoppingDistance: 4
+  defaultStoppingDistance: 3
   velocity: 6.5
   currentTarget: {fileID: 0}
   effectRadious: 5
   recoverySpeed: 0
   damage: 200
-  attackRange: 6
-  attackTimer: 1
+  attackRange: 8
+  attackTimer: 4
   proyectile: {fileID: 0}
   craftRadious: 0
   craftCompletedGO: {fileID: 0}

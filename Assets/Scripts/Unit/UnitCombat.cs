@@ -55,10 +55,11 @@ public class UnitCombat : Unit
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 180 * Time.deltaTime);
             Debug.Log($"ha authority on ta1rget {target.hasAuthority}  attack distance is {attackDistance} distance is {distance} attaclspeed is {attackSpeed} attacktimer is {attackTimer} the rest {distance -  navMeshAgent.stoppingDistance }");
 
-            if (((distance -  navMeshAgent.stoppingDistance - target.gameObject.GetComponent<NavMeshAgent>().stoppingDistance )>= attackDistance) || !(attackSpeed >= attackTimer)) return;
+            if (((distance -    target.gameObject.GetComponent<NavMeshAgent>().stoppingDistance )>= attackDistance) || !(attackSpeed >= attackTimer)) return;
             Debug.Log($"ha authority on ta2rget {target.hasAuthority}");
 
             unitStates = UnitStates.Attack;
+            StopCoroutine(nameof(AttackAnim));
            StartCoroutine(nameof(AttackAnim));
            Debug.Log("ESTA PEGANDO ");
             GetComponent<ComponentAbility>()?.active(target.GetComponent<RTSBase>(), damage);
@@ -71,11 +72,13 @@ public class UnitCombat : Unit
     }
     IEnumerator AttackAnim()
     {
+        yield return new WaitForEndOfFrame();
         /*do
         {
             
         } while (animator.GetCurrentAnimatorStateInfo(0).IsName("Death"));
 */
+
         yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
         unitStates = UnitStates.Idle;
 

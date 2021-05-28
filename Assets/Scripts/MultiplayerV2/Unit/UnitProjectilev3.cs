@@ -37,6 +37,7 @@ public class UnitProjectilev3 : NetworkBehaviour
         Debug.Log($"Touched enemy {other.name}");
         if (other.TryGetComponent<RTSBase>(out RTSBase rtsBase))
         {
+            
             ComponentAbility componentAbility = GetComponent<ComponentAbility>();
             if (componentAbility!=null)
             {

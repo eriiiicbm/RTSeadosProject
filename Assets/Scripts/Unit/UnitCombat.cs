@@ -54,8 +54,12 @@ public class UnitCombat : Unit
             Quaternion targetRotation = Quaternion.LookRotation(pos - transform.position);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 180 * Time.deltaTime);
             Debug.Log($"ha authority on ta1rget {target.hasAuthority}  attack distance is {attackDistance} distance is {distance} attaclspeed is {attackSpeed} attacktimer is {attackTimer} the rest {distance -  navMeshAgent.stoppingDistance }");
-
-            if (((distance -    target.gameObject.GetComponent<NavMeshAgent>().stoppingDistance )>= attackDistance) || !(attackSpeed >= attackTimer)) return;
+            NavMeshAgent navMeshAgentTarget = target.gameObject.GetComponent<NavMeshAgent>();
+            if (navMeshAgentTarget==null)
+            {
+                return;
+            }
+            if (((distance - navMeshAgent.stoppingDistance )>= attackDistance) || !(attackSpeed >= attackTimer)) return;
             Debug.Log($"ha authority on ta2rget {target.hasAuthority}");
 
             unitStates = UnitStates.Attack;

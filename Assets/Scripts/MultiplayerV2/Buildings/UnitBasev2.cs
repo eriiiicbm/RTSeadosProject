@@ -6,36 +6,44 @@ using UnityEngine;
 
 public class UnitBasev2 : Building
 {
-  [SerializeField] public  static  event Action<int> ServerOnPlayerDie;
- [SerializeField] public  static  event Action<UnitBasev2> ServerOnBaseSpawned;
- [SerializeField] public  static  event Action<UnitBasev2> ServerOnBaseDespawned;
- 
+    [SerializeField] public static event Action<int> ServerOnPlayerDie;
+    [SerializeField] public static event Action<UnitBasev2> ServerOnBaseSpawned;
+    [SerializeField] public static event Action<UnitBasev2> ServerOnBaseDespawned;
 
- #region Server
- public override void OnStartServer()
- {
-     base.OnStartServer();
-   ServerOnRTSDie += ServerHandleDie;
-   ServerOnBaseSpawned?.Invoke(this);
-       
- }
 
- public override void OnStopServer()
- {
+    #region Server
 
-     base.OnStopServer();
-   ServerOnRTSDie -= ServerHandleDie;
+    public override void OnStartServer()
+    {
+        base.OnStartServer();
+        ServerOnRTSDie += ServerHandleDie;
+        ServerOnBaseSpawned?.Invoke(this);
 
- }
- [Server]
- private void ServerHandleDie()
- {
-     ServerOnPlayerDie?.Invoke(connectionToClient.connectionId);
-     NetworkServer.Destroy(gameObject);    }
- 
- #endregion
+    }
 
- #region Client
+    public override void OnStopServer()
+    {
+
+        base.OnStopServer();
+        ServerOnRTSDie -= ServerHandleDie;
+
+    }
+
+    [Server]
+    private void ServerHandleDie()
+    {
+        NetworkServer.Destroy(gameObject);
+    }
+
+    #endregion
+
+    public static void InvokeEvent(int connectionId)
+    {
+        ServerOnPlayerDie?.Invoke(connectionId);
+
+    }
+
+    #region Client
 
  
 

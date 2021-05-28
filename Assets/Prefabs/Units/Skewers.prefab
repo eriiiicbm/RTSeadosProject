@@ -259,7 +259,7 @@ MonoBehaviour:
   entityName: 
   maxHealth: 0
   description: 
-  preview: {fileID: 21300000, guid: 9d7c6e4896067aa4fa512a00f692ac1c, type: 3}
+  preview: {fileID: 21300000, guid: 73142d338b04f7e40803241231a294e5, type: 3}
   prefab: {fileID: 0}
   rtsEntity: {fileID: 11400000, guid: 23c5f1d4fb8def04884585cad0ead3ff, type: 2}
   animator: {fileID: 0}

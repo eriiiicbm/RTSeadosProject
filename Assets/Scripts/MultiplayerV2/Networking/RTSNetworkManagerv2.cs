@@ -78,7 +78,7 @@ isGameInProgress = false;
             conn.identity.GetComponent<RTSPlayerv2>();
         player.SetTeamColor(new Color(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f),
             UnityEngine.Random.Range(0f, 1f)));
-        Players.Add(player);
+        Players.Add(player); 
         //todo change the name to one custom
         if (!mainMenu.useSteam)
         {
@@ -118,7 +118,7 @@ isGameInProgress = false;
                         Quaternion.identity);
                     Debug.Log(unitSpawnerInstance.name);
                     NetworkServer.Spawn(unitSpawnerInstance, player.connectionToClient);
-                    player.transform.GetChild(0).transform.position = new Vector3(unitSpawnerInstance.transform.position.x,player.transform.GetChild(0).transform.position.y,unitSpawnerInstance.transform.position.z);
+                      player.transform.GetChild(0).transform.position = new Vector3(unitSpawnerInstance.transform.position.x,player.transform.GetChild(0).transform.position.y,unitSpawnerInstance.transform.position.z);
 
                 }  
                 player.GetComponent<CameraController>().ReferenceFocus();

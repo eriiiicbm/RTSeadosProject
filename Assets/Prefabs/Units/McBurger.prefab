@@ -281,7 +281,7 @@ MonoBehaviour:
   prefab: {fileID: 0}
   rtsEntity: {fileID: 11400000, guid: d4c89b93f0788674dae005a4c44c0fea, type: 2}
   animator: {fileID: 0}
-  deadSound: {fileID: 8300000, guid: 82973586d7e8ade41a4f3087ba599c66, type: 3}
+  deadSound: {fileID: 8300000, guid: c97e9f978b76b6542a8c370013a5adb8, type: 3}
   hitSound: {fileID: 8300000, guid: d76a39ee0964f524dbd1ef325280f097, type: 3}
   unitStates: 0
   audioList: []

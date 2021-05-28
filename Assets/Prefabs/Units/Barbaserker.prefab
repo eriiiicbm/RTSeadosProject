@@ -281,7 +281,6 @@ MonoBehaviour:
   colorRenderers:
   - {fileID: 2309146976870649456}
   - {fileID: 7109885966291780110}
-  - {fileID: 3045130387650698568}
 --- !u!114 &853259452964910958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +302,7 @@ MonoBehaviour:
   prefab: {fileID: 0}
   rtsEntity: {fileID: 11400000, guid: 8bebe115b801b174b8abbbf0c57ae717, type: 2}
   animator: {fileID: 0}
-  deadSound: {fileID: 8300000, guid: 82973586d7e8ade41a4f3087ba599c66, type: 3}
+  deadSound: {fileID: 8300000, guid: 567c265b8c8fd324085eabca55b7a8b3, type: 3}
   hitSound: {fileID: 8300000, guid: d76a39ee0964f524dbd1ef325280f097, type: 3}
   unitStates: 0
   audioList: []

@@ -339,7 +339,7 @@ MonoBehaviour:
   navMeshAgent: {fileID: 0}
   chaseRange: 10
   defaultDistance: 2
-  movementSound: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
+  movementSound: {fileID: 8300000, guid: d01ac337a07986246a38d61d6c6d6283, type: 3}
   damage: 0
   attackSound: {fileID: 8300000, guid: b13687a710c75714080e2ff2773fe2a0, type: 3}
 --- !u!65 &6042258345487002080

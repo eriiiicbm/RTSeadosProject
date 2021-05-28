@@ -72,6 +72,7 @@ public class Villager : Unit
         {
 
             base.CmdMove(resource.transform.position);
+            
             return;
         }
         if (resource.resourcesQuantity<= 0)
@@ -82,7 +83,7 @@ public class Villager : Unit
         }
         int resourceCatch = 10;
 
-        currentState = UnitStates.PickResources;
+        currentState = UnitStates.Attack;
         transform.LookAt(resource.transform.position);
         resource.resourcesQuantity -= resourceCatch;
         RTSPlayerv2 player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
@@ -112,7 +113,7 @@ public class Villager : Unit
             currentState = UnitStates.Idle;
             return;
         }
-        currentState = UnitStates.Building;
+        currentState = UnitStates.Attack;
         transform.LookAt(building.transform.position);
 
         building.SendMessage("CraftPoint");

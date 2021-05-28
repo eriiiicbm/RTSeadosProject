@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New RTSEntity", menuName = "new RTSENtity")]
 public class RTSEntity : ScriptableObject
 {
+
     //todo idioma descricpion 
     [Header("Generic stuff")]
     string entityName;
@@ -22,6 +23,7 @@ public class RTSEntity : ScriptableObject
     [Header("Movement stuff")]
     [SerializeField] private int moral;
 
+    [SerializeField] private float defaultStoppingDistance=2;
     [SerializeField] private float velocity;
     [SerializeField] private Transform currentTarget;
 
@@ -55,6 +57,7 @@ public class RTSEntity : ScriptableObject
     [HideInInspector] [SerializeField] UnitStates unitState;
     [HideInInspector] [SerializeField] EmotionalStates emotionalState;
     [HideInInspector] [SerializeField] ResourcesType typeOfResourceThatCanHave;
+    public float DefaultStoppingDistance => defaultStoppingDistance;
 
     public string EntityName { get => entityName; set => entityName = value; }
     public int MaxHealth { get => maxHealth; set => maxHealth = value; }

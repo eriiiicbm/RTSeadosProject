@@ -9,6 +9,8 @@ public class UnitCombat : Unit
     float attackDistance;
     float attackSpeed;
 
+    [SerializeField]
+    private  AudioClip attackSound;
     float attackTimer;
 
     // Start is called before the first frame update
@@ -25,6 +27,13 @@ public class UnitCombat : Unit
     void Update()
     {
         base.Update();
+         Attack();
+
+    }
+
+    [Server]
+    private void Attack()
+    {
         attackSpeed += Time.deltaTime;
 
         if (target != null&&!target.hasAuthority)
@@ -39,13 +48,14 @@ public class UnitCombat : Unit
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 180 * Time.deltaTime);
 
             if (!(distance <= attackDistance) || !(attackSpeed >= attackTimer)) return;
+            unitStates = UnitStates.Attack;
+            SoundManager._instance.PlaySE(attackSound,1f);
             Debug.Log("ESTA PEGANDO ");
-             GetComponent<ComponentAbility>()?.active(target.GetComponent<RTSBase>(), damage);
+            GetComponent<ComponentAbility>()?.active(target.GetComponent<RTSBase>(), damage);
 
             attackSpeed = 0;
             
         }
         navMeshAgent.stoppingDistance = defaultDistance;
-
     }
 }

@@ -22,6 +22,7 @@ MonoBehaviour:
   preview: {fileID: 0}
   prefab: {fileID: 7290073556559787900, guid: 8c02bf8a536297e4a95053845a09202b, type: 3}
   moral: 4000
+  defaultStoppingDistance: 2
   velocity: 6
   currentTarget: {fileID: 0}
   effectRadious: 5

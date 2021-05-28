@@ -37,6 +37,7 @@ public class Unit : RTSBase
     private RTSPlayerv2 playerv2;
     private bool alteratedState;
     public float defaultDistance = 2;
+    [SerializeField] private AudioClip movementSound;
     public Targeter GetTargeter()
     {
         return targeter;
@@ -77,13 +78,15 @@ public class Unit : RTSBase
             navMeshAgent = GetComponent<NavMeshAgent>();
 
         }
+
+        defaultDistance = rtsEntity.DefaultStoppingDistance;
         navMeshAgent.stoppingDistance = defaultDistance;
 
         if (targeter == null)
         {
             targeter = GetComponent<Targeter>();
         }
-        velocity = rtsEntity.Velocity;
+         velocity = rtsEntity.Velocity;
         navMeshAgent.speed = velocity;
        
         prices = rtsEntity.Prices;
@@ -144,7 +147,14 @@ public class Unit : RTSBase
     [ServerCallback]
     public virtual void Update()
     {
-        target = targeter.GetTarget();
+      NavMeshToTarget();
+    }
+
+[Server]
+private void NavMeshToTarget()
+    {
+        Debug.Log(targeter + " is null?" + gameObject.name);
+        target = targeter?.GetTarget();
 
         if (target != null)
         {
@@ -155,6 +165,7 @@ public class Unit : RTSBase
             else if (navMeshAgent.hasPath)
             {
                 navMeshAgent.ResetPath();
+                unitStates = UnitStates.Idle;
             }
 
             return;
@@ -164,13 +175,15 @@ public class Unit : RTSBase
         {
             return;
         }
-
+        SoundManager._instance.PlaySEIfNotPlaying(movementSound,1f);
         if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
         {
             return;
         }
 
         navMeshAgent.ResetPath();
+        
+        unitStates = UnitStates.Idle;
     }
 
     [Command]
@@ -194,6 +207,7 @@ public class Unit : RTSBase
             return;
         }
 
+        unitStates = UnitStates.Walk;
         navMeshAgent.SetDestination(hit.position);
         Debug.Log("Moving");
     }
@@ -344,7 +358,7 @@ public class Unit : RTSBase
 
     public IEnumerator MoveState()
     {
-        while (currentState == UnitStates.Follow)
+        while (currentState == UnitStates.Walk)
         {
             yield return 0;
         }

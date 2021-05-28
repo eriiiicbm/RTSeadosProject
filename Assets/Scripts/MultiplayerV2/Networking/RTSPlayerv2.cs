@@ -384,7 +384,6 @@ Debug.Log("here before boom 1");
         {
             return;
         }
-
         myUnits.Add(unit);
         AddTrops();
 

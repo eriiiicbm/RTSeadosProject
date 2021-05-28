@@ -3,7 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Habilitis/AreaDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Habilitis/AreaDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/Barbaserker.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/Barbaserker.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/BatiGas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/BatiGas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/ChipsAndArcher.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/ChipsAndArcher.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/McBurger.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/McBurger.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/NuggetViager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/NuggetViager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/NuggetWarriior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/NuggetWarriior.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/PizzaPriest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/PizzaPriest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/PortableFridge.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/PortableFridge.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/Skewers.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/Skewers.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/WarHotDog.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/WarHotDog.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/Targeter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/Targeter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/TeamColorSetterv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/TeamColorSetterv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RTSEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RTSEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineExample.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnitStates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnitStates.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,12 +67,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/UnitSpawnerv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/UnitCommandGiverv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/HealthDisplay.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineExample.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/ResourceGeneratorv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitFiringv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitProjectilev2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitSelectionHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/GameOverHandler.cs" />
@@ -71,21 +87,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/UnitBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
       <option value="$PROJECT_DIR$/Assets/DayNightSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/MainMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/PortableFridge.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/Fridge.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/PasiveHability.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/ComponentAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MeleeUnit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/PassiveAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Mirror/Examples/Tanks/Scripts/Projectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitProjectilev3.cs" />
@@ -94,8 +106,18 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Tower.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/AreaDamage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SoundManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UnitStates.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineExample.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RTSEntity.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/Targeter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/TeamColorSetterv2.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />

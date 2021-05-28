@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum  UnitStates
 {
-Idle,Follow,Dead,Escape,Attack,PickResources,Building
+Idle,Walk,Dead,Escape,Attack,PickResources,Building
 }
 public enum EmotionalStates {
 Neutral,Aggressive, Pasive

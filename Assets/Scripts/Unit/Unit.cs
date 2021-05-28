@@ -50,6 +50,9 @@ public class Unit : RTSBase
 
     public void Start()
     {
+        base.Start();
+        audioList.Insert(2,movementSound);  
+
         StartStuff();
     }
 
@@ -106,12 +109,12 @@ public class Unit : RTSBase
 
 
         ServerOnRTSDie += ServerHandleDie;
+        ServerOnUnitSpawned?.Invoke(this);
 
         StartStuff();
         navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
 
         playerv2 = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
-        ServerOnUnitSpawned?.Invoke(this);
 
         StartCoroutine(nameof(ExpirationEffect));
 
@@ -191,7 +194,7 @@ private void NavMeshToTarget()
         {
             return;
         }
-        PlayHitSound();
+        PlayListSoundEffect(2,1,false);
     // PlaySEIfNotPlaying(movementSound,1f);
         if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
         {
@@ -229,6 +232,7 @@ private void NavMeshToTarget()
         }
 
         unitStates = UnitStates.Walk;
+        PlayListSoundEffect(2,1,false);
         navMeshAgent.SetDestination(hit.position);
         Debug.Log("Moving");
     }

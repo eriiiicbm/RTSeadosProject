@@ -37,8 +37,18 @@ public class UnitProjectilev3 : NetworkBehaviour
         Debug.Log($"Touched enemy {other.name}");
         if (other.TryGetComponent<RTSBase>(out RTSBase rtsBase))
         {
-            rtsBase.DealDamage(damage);
-        }
+            ComponentAbility componentAbility = GetComponent<ComponentAbility>();
+            if (componentAbility!=null)
+            {
+             
+                GetComponent<ComponentAbility>()?.active(rtsBase.GetComponent<RTSBase>(), damage);
+
+            }
+            else
+            {
+                rtsBase.DealDamage(damage);
+            }}
+
         Debug.Log("Dies when touch");
         DestroySelf();
     }

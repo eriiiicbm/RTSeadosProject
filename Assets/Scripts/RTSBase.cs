@@ -27,7 +27,14 @@ public class RTSBase : NetworkBehaviour
     public event Action ServerOnRTSDie;
 
     public event Action<float, float> ClientOnHealthUpdated;
+    public List<AudioClip> audioList= new List<AudioClip>( );
+    public virtual  void Start()
+    {
+audioList.Insert(0,deadSound); 
+audioList.Insert(1,deadSound);  
 
+
+    }
 
     #region Server
 
@@ -75,8 +82,8 @@ public class RTSBase : NetworkBehaviour
         }
 
 
-        SoundManager._instance.PlaySE(hitSound, 1f);
 
+        PlayListSoundEffect(1,1,true);
         currentHealth = Mathf.Min(Mathf.Max(currentHealth - damageAmount, 0), MaxHealth);
 
         if (currentHealth != 0)
@@ -86,7 +93,7 @@ public class RTSBase : NetworkBehaviour
 
         ServerOnRTSDie?.Invoke();
         unitStates = UnitStates.Dead;
-        PlayDeadSound();
+        PlayListSoundEffect(0,1,true);
     }
 
     //todo refactor this method
@@ -114,7 +121,7 @@ public class RTSBase : NetworkBehaviour
 
         ServerOnRTSDie?.Invoke();
         unitStates = UnitStates.Dead;
-        SoundManager._instance.PlaySE(deadSound, 1f);
+        PlayListSoundEffect(0,1,true);
     }
 
     #endregion
@@ -147,16 +154,19 @@ public class RTSBase : NetworkBehaviour
 
     #region ClientSound
 
-    [ClientRpc]
-    public void PlayDeadSound()
+   
+[ClientRpc]
+    public void PlayListSoundEffect(int position,float pitch,bool overwrite)
     {
-        SoundManager._instance.PlaySE(deadSound, 1f);
-
-    }  [ClientRpc]
-    public void PlayHitSound()
-    {
-        SoundManager._instance.PlaySE(hitSound, 1f);
-
+        if (overwrite)
+        {
+            SoundManager._instance.PlaySE(audioList[position],pitch);
+      
+        }
+        else
+        {
+            SoundManager._instance.PlaySEIfNotPlaying(audioList[position],pitch);
+        }
     }
 
 #endregion

@@ -26,6 +26,7 @@ public class UnitCombat : Unit
         {
             attackDistance = defaultDistance;
         }
+        audioList.Insert(3,attackSound);  
     }
 
     // Update is called once per frame
@@ -61,8 +62,7 @@ public class UnitCombat : Unit
            StartCoroutine(nameof(AttackAnim));
            Debug.Log("ESTA PEGANDO ");
             GetComponent<ComponentAbility>()?.active(target.GetComponent<RTSBase>(), damage);
-            SoundManager._instance.PlaySE(attackSound,1f);
-
+            PlayListSoundEffect(3,1,false);
             attackSpeed = 0;
             
             

@@ -22,6 +22,7 @@ MonoBehaviour:
   preview: {fileID: 0}
   prefab: {fileID: 3722049469362960980, guid: 95d74b3e50c21bf4bb579498ce47d32c, type: 3}
   moral: 0
+  defaultStoppingDistance: 2
   velocity: 6
   currentTarget: {fileID: 0}
   effectRadious: 0
@@ -29,7 +30,7 @@ MonoBehaviour:
   damage: 5
   attackRange: 10
   attackTimer: 1
-  proyectile: {fileID: 3370176331153901490, guid: c0b9490ae1569514397d92793ea0a052,
+  proyectile: {fileID: 8734694017325873992, guid: 04856c9b21e15e84399cad08e93c25c8,
     type: 3}
   craftRadious: 5
   craftCompletedGO: {fileID: 0}

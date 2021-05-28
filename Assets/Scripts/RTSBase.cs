@@ -133,6 +133,10 @@ public class RTSBase : NetworkBehaviour
 
     private void HandleStatesUpdated(UnitStates oldState, UnitStates newState)
     {
+        if (animator==null)
+        {
+            return;
+        }
         ResetAllTriggers();
         animator.SetTrigger(newState.ToString());
 
@@ -186,10 +190,7 @@ public class RTSBase : NetworkBehaviour
 
     private void ResetAllTriggers()
     {
-        if (animator==null)
-        {
-            return;
-        }
+       
         foreach (var param in animator.parameters)
         {
             if (param.type == AnimatorControllerParameterType.Trigger)

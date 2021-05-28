@@ -106,12 +106,12 @@ public class Unit : RTSBase
 
 
         ServerOnRTSDie += ServerHandleDie;
-        ServerOnUnitSpawned?.Invoke(this);
 
         StartStuff();
         navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
 
         playerv2 = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+        ServerOnUnitSpawned?.Invoke(this);
 
         StartCoroutine(nameof(ExpirationEffect));
 

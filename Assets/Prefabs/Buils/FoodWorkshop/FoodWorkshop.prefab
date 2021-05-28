@@ -597,11 +597,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinalEstructure
       objectReference: {fileID: 0}
-    - target: {fileID: 1893716328239681422, guid: dff490e3a719c5241bea04b115783e69,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2862423192871721608, guid: dff490e3a719c5241bea04b115783e69,
         type: 3}
       propertyPath: m_RootOrder

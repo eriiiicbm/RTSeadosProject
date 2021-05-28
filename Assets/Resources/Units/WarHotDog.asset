@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMoralUp: 0
   entityType: 2
-  maxHealth: 275
+  maxHealth: 2350
   expirationVelocity: 2.5
   damageMoral: 0
   prices: 190000000f0000000000000000000000
@@ -29,7 +29,7 @@ MonoBehaviour:
   recoverySpeed: 0
   damage: 175
   attackRange: 4
-  attackTimer: 6
+  attackTimer: 1.75
   proyectile: {fileID: 0}
   craftRadious: 0
   craftCompletedGO: {fileID: 0}

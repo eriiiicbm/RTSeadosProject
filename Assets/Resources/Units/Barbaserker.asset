@@ -29,7 +29,7 @@ MonoBehaviour:
   recoverySpeed: 0
   damage: 250
   attackRange: 2
-  attackTimer: 8
+  attackTimer: 2
   proyectile: {fileID: 0}
   craftRadious: 0
   craftCompletedGO: {fileID: 0}

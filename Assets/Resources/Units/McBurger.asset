@@ -27,9 +27,9 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   effectRadious: 5
   recoverySpeed: 0
-  damage: 200
+  damage: 230
   attackRange: 8
-  attackTimer: 4
+  attackTimer: 3
   proyectile: {fileID: 0}
   craftRadious: 0
   craftCompletedGO: {fileID: 0}

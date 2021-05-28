@@ -105,13 +105,13 @@ public class Unit : RTSBase
         //       id = UnityEngine.Random.Range(0, 999999999);
 
 
-        ServerOnUnitSpawned?.Invoke(this);
         ServerOnRTSDie += ServerHandleDie;
+        ServerOnUnitSpawned?.Invoke(this);
 
         StartStuff();
         navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
 
-        playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+        playerv2 = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
 
         StartCoroutine(nameof(ExpirationEffect));
 
@@ -123,6 +123,7 @@ public class Unit : RTSBase
         Debug.LogWarning("Player is null onstart");
         DealMoralDamage(maxMoral/2);
         HandleMoralUpdated(0,maxMoral/2);
+
     }
 
     public override void OnStopServer()
@@ -278,7 +279,7 @@ private void NavMeshToTarget()
     {
         while (true)
         {
-            DealDamage(1 * expirationVelocity);
+            DealDamage(1 * expirationVelocity,false);
             yield return new WaitForSeconds(1);
         }
     }

@@ -73,8 +73,38 @@ public class RTSBase : NetworkBehaviour
         {
             return;
         }
+
+         
         SoundManager._instance.PlaySE(hitSound, 1f);
 
+        currentHealth = Mathf.Min(Mathf.Max(currentHealth - damageAmount, 0), MaxHealth);
+
+        if (currentHealth != 0)
+        {
+            return;
+        }
+
+        ServerOnRTSDie?.Invoke();
+        unitStates = UnitStates.Dead;
+        SoundManager._instance.PlaySE(deadSound, 1f);
+    }
+    
+    //todo refactor this method
+    [Server]
+    public void DealDamage(float damageAmount,bool hitSound)
+    {
+        if (hitSound)
+        {
+            DealDamage(damageAmount);
+            return;
+        }
+        
+        if (currentHealth == 0)
+        {
+            return;
+        }
+
+       
         currentHealth = Mathf.Min(Mathf.Max(currentHealth - damageAmount, 0), MaxHealth);
 
         if (currentHealth != 0)
@@ -156,6 +186,10 @@ public class RTSBase : NetworkBehaviour
 
     private void ResetAllTriggers()
     {
+        if (animator==null)
+        {
+            return;
+        }
         foreach (var param in animator.parameters)
         {
             if (param.type == AnimatorControllerParameterType.Trigger)

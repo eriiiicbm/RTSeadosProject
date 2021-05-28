@@ -84,6 +84,7 @@ public class Villager : Unit
         int resourceCatch = 10;
 
         currentState = UnitStates.Attack;
+        Debug.Log("estado: " + currentState);
         transform.LookAt(resource.transform.position);
         SoundManager._instance.PlaySE(recolectSound,1f);
         resource.resourcesQuantity -= resourceCatch;
@@ -91,7 +92,7 @@ public class Villager : Unit
         player.SetResources(player.GetResources(resource.currentResourceType) + resourceCatch, resource.currentResourceType);
     }
 
-    //[HideInInspector]
+    [HideInInspector]
     public Building building;
     public void build()
     {

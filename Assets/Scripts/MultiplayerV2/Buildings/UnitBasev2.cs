@@ -17,8 +17,16 @@ public class UnitBasev2 : Building
     {
         base.OnStartServer();
         ServerOnRTSDie += ServerHandleDie;
+        RTSPlayerv2.ClientOnResourcesUpdated += HandleResourcesUpdated;
         ServerOnBaseSpawned?.Invoke(this);
 
+    }
+
+    private void HandleResourcesUpdated(SyncList<int> obj)
+    {
+        RTSPlayerv2 playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+        DealDamage(float.MaxValue);
+        
     }
 
     public override void OnStopServer()
@@ -26,22 +34,18 @@ public class UnitBasev2 : Building
 
         base.OnStopServer();
         ServerOnRTSDie -= ServerHandleDie;
+        RTSPlayerv2.ClientOnResourcesUpdated -= HandleResourcesUpdated;
 
     }
 
     [Server]
     private void ServerHandleDie()
     {
-        NetworkServer.Destroy(gameObject);
-    }
+        ServerOnPlayerDie?.Invoke(connectionToClient.connectionId);
+        NetworkServer.Destroy(gameObject);    }
 
     #endregion
-
-    public static void InvokeEvent(int connectionId)
-    {
-        ServerOnPlayerDie?.Invoke(connectionId);
-
-    }
+ 
 
     #region Client
 

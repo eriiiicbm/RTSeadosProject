@@ -24,8 +24,9 @@ public class UnitBasev2 : Building
 
     private void HandleResourcesUpdated(SyncList<int> obj)
     {
-        RTSPlayerv2 playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
-        DealDamage(float.MaxValue);
+         RTSPlayerv2 playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+        Debug.Log($"time to die for {playerv2.name}");
+        DealDamage(maxHealth);
         
     }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using Mirror;
 using UnityEngine;
 using UnityEngine.AI;
@@ -45,6 +46,10 @@ public class UnitCombat : Unit
         attackSpeed += Time.deltaTime;
         if (target != null)
         {
+            if (connectionToClient==null || target.connectionToClient==null)
+            {
+                return;
+            }
             if (connectionToClient.connectionId==target.connectionToClient.connectionId)
             {
                 return;

@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &54113176302587296
 Transform:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   prefab: {fileID: 0}
   rtsEntity: {fileID: 11400000, guid: f752281134896a548923a0b47a0023cd, type: 2}
   animator: {fileID: 0}
-  deadSound: {fileID: 8300000, guid: 3fae6a20379d14c47add1114cfce6df1, type: 3}
+  deadSound: {fileID: 8300000, guid: 567c265b8c8fd324085eabca55b7a8b3, type: 3}
   hitSound: {fileID: 8300000, guid: b13687a710c75714080e2ff2773fe2a0, type: 3}
   unitStates: 0
   audioList: []

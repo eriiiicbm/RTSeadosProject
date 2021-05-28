@@ -24,6 +24,7 @@ public class RTSBase : NetworkBehaviour
     private float currentHealth;
 
      public event Action ServerOnRTSDie;
+     protected RTSPlayerv2 playerv2;
 
     public event Action<float, float> ClientOnHealthUpdated;
     public List<AudioClip> audioList= new List<AudioClip>( );
@@ -53,6 +54,8 @@ audioList.Insert(1,deadSound);
         GoToNextState();
         animator = transform.GetComponentInChildren<Animator>();
         unitStates = UnitStates.Idle;
+        playerv2 = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+
      }
 
     public override void OnStopServer()
@@ -63,7 +66,10 @@ audioList.Insert(1,deadSound);
     [Server]
     private void ServerHandlePlayerDie(int connectionId)
     {
-        if (connectionToClient.connectionId != connectionId)
+        playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+
+         
+        if (playerv2.connectionToClient.connectionId != connectionId)
         {
             return;
         }
@@ -227,5 +233,10 @@ audioList.Insert(1,deadSound);
                 animator.ResetTrigger(param.name);
             }
         }
+    }
+
+    public virtual void Update()
+    {
+        
     }
 }

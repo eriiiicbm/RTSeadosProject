@@ -195,7 +195,7 @@ MonoBehaviour:
   chaseRange: 10
   defaultDistance: 2
   movementSound: {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
-  recolectSound: {fileID: 0}
+  recolectSound: {fileID: 8300000, guid: 1e8c12ba594a40640b5896452daecf1e, type: 3}
   resource: {fileID: 0}
   building: {fileID: 0}
 --- !u!65 &6639525920863891196

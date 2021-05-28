@@ -54,7 +54,7 @@ audioList.Insert(1,deadSound);
         GoToNextState();
         animator = transform.GetComponentInChildren<Animator>();
         unitStates = UnitStates.Idle;
-        teamColor = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>().GetTeamColor();
+        teamColor =connectionToClient.identity.GetComponent<RTSPlayerv2>().GetTeamColor();
     }
 
     public override void OnStopServer()

@@ -24,7 +24,6 @@ public class UnitBasev2 : Building
  {
 
      base.OnStopServer();
-     ServerOnBaseDespawned?.Invoke(this);
    ServerOnRTSDie -= ServerHandleDie;
 
  }

@@ -97,6 +97,8 @@ audioList.Insert(1,deadSound);
 
         ServerOnRTSDie?.Invoke();
         unitStates = UnitStates.Dead;
+        StartCoroutine(nameof(DeadAnim));
+
         PlayListSoundEffect(0,1,true);
     }
 
@@ -125,6 +127,7 @@ audioList.Insert(1,deadSound);
 
         ServerOnRTSDie?.Invoke();
         unitStates = UnitStates.Dead;
+        StartCoroutine(nameof(DeadAnim));
         PlayListSoundEffect(0,1,true);
     }
 
@@ -189,7 +192,22 @@ audioList.Insert(1,deadSound);
     {
         get => currentHealth;
     }
+    IEnumerator DeadAnim()
+    {
+        if (animator==null)
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
+        animator.Play("Dead");
 
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
+        animator.Play("Dead anim played");
+
+        NetworkServer.Destroy(gameObject);
+
+        
+    }
     void SetSelected(bool isSelected)
     {
         transform.Find("Highlight").gameObject.SetActive(isSelected);

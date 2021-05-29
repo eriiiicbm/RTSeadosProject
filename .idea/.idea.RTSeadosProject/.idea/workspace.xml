@@ -4,28 +4,24 @@
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathFoodFactory/DeathFoodFactory.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathFoodFactory/DeathFoodFactory.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathFoodWorkshop/DeathFoodWorkshop.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathFoodWorkshop/DeathFoodWorkshop.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathFridge/DeathFridge.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathFridge/DeathFridge.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathKetchupTurret/DeathKetchupTurret.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathKetchupTurret/DeathKetchupTurret.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathUrbanCenter.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathUrbanCenter.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathUrbanCenter/DeathUrbanCenter.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathUrbanCenter/DeathUrbanCenter.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathUrbanCenter/UrbanCenter.overrideController" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Buildings/DeathUrbanCenter/UrbanCenter.overrideController" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buils/FoodFactory/FoodFactory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buils/FoodFactory/FoodFactory.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buils/FoodWorkshop/FoodWorkshop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buils/FoodWorkshop/FoodWorkshop.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buils/FridgeHouse/FridgeHouse.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buils/FridgeHouse/FridgeHouse.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buils/Tower/Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buils/Tower/Tower.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buils/UrbanCenter/UrbanCenter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buils/UrbanCenter/UrbanCenter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/ChipArrowv2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/ChipArrowv2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/Ketchup drop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/Ketchup drop.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/proyectileGas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/proyectileGas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/BatiGas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/BatiGas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/WarHotDog.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/WarHotDog.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builds/Tower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builds/Tower.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Habilitis/AreaDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Habilitis/AreaDamage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Habilitis/ComponentAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Habilitis/ComponentAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Habilitis/DistanceUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Habilitis/DistanceUnit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Habilitis/MeleeUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Habilitis/MeleeUnit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitProjectilev3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitProjectilev3.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainCamera Focus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainCamera Focus.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +80,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/UnitBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
       <option value="$PROJECT_DIR$/Assets/DayNightSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/MainMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/PortableFridge.cs" />
@@ -94,7 +89,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Mirror/Examples/Tanks/Scripts/Projectile.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UnitStates.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineExample.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RTSEntity.cs" />
@@ -106,10 +100,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/BuildingButtonv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/TeamColorSetterv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Networking/RTSNetworkManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitProjectilev3.cs" />
@@ -118,6 +110,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MeleeUnit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/DistanceUnit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Tower.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />
@@ -219,13 +215,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs</url>
-          <line>79</line>
+          <line>78</line>
           <properties documentPath="C:\Users\Usuario\Documents\GitHub\RTSeadosProject\Assets\Scripts\MultiplayerV2\Buildings\UnitSpawnerv3.cs" initialLine="44" containingFunctionPresentation="method 'AddUnitToTheQueue'">
             <startOffsets>
-              <option value="2690" />
+              <option value="2648" />
             </startOffsets>
             <endOffsets>
-              <option value="2691" />
+              <option value="2649" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />

@@ -142,19 +142,10 @@ public class Unit : RTSBase
     [Server]
     private void ServerHandleDie()
     {
-        StartCoroutine(nameof(DeadAnim));
       playerv2.Trops--;
     }
 
-    IEnumerator DeadAnim()
-    {
-        yield return new WaitForEndOfFrame();
-        animator.Play("Dead");
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length + 3);
-        NetworkServer.Destroy(gameObject);
-
-        
-    }
+  
     protected Targetable target;
     [ServerCallback]
     public virtual void Update()

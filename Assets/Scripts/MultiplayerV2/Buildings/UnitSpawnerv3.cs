@@ -37,8 +37,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     public override void OnStartServer()
     {
         base.OnStartServer();
-        ServerOnRTSDie += ServerHandleDie;
-
+ 
         Debug.Log("UnitPrefab length" + unitPrefab.Count);
         player =connectionToClient.identity.GetComponent<RTSPlayerv2>();
     }
@@ -102,16 +101,12 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
      //   CmdSpawnUnit(); // < CmdSpawnUnit();
     }
 
-    [Server]
-    private void ServerHandleDie()
-    {
-        NetworkServer.Destroy(gameObject);
-    }
+   
 
     public override void OnStopServer()
     {
         base.OnStopServer();
-        ServerOnRTSDie -= ServerHandleDie;
+  
     }
 
      public void CmdSpawnUnit()

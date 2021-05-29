@@ -808,6 +808,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinalEstructure
       objectReference: {fileID: 0}
+    - target: {fileID: 673507198275943886, guid: 08ea299a914b7074a87b7f9cf6eb5a37,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1790744907436708471, guid: 08ea299a914b7074a87b7f9cf6eb5a37,
         type: 3}
       propertyPath: m_RootOrder

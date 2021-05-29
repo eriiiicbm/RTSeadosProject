@@ -105,9 +105,7 @@ public class Building : RTSBase
 
     [Server]
     private void ServerHandleDie()
-    {
-         NetworkServer.Destroy(gameObject);
-
+    { 
         if (GetComponent<Fridge>() == null) return;
         connectionToClient.identity.GetComponent<RTSPlayerv2>().DeleteHouse();
     }
@@ -202,6 +200,7 @@ public class Building : RTSBase
 
         craftUncompletedGO.SetActive(false);
         craftCompletedGO.SetActive(true);
+        animator = craftCompletedGO.GetComponent<Animator>();
 
         Fridge fridge = GetComponent<Fridge>();
         if (fridge != null)
@@ -220,5 +219,7 @@ public class Building : RTSBase
         if (!newBuilding) return;
         craftUncompletedGO.SetActive(false);
         craftCompletedGO.SetActive(true);
+        
+        animator = craftCompletedGO.GetComponent<Animator>();
     }
 }

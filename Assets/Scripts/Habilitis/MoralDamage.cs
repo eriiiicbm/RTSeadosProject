@@ -1,27 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
-public class MoralDamage : PasiveHability
+public class MoralDamage : PassiveAbility
 {
     public float damageMoral;
 
-    public void damageMoralUnits()
+    [Server]public override void PasiveEffect(Unit unit)
     {
-        foreach (var unit in units)
-        {
-            unit.DealMoralDamage(damageMoral);
-            StartCoroutine(Wait(0.5f));
-        }
+        if (GetComponent<RTSBase>().connectionToClient == unit.connectionToClient) return;
+
+        unit.DealMoralDamage(damageMoral);
     }
 
     // Start is called before the first frame update
     private void Start()
     {
-        damageMoral = GetComponent<RTSEntity>().DamageMoral;
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        damageMoralUnits();
+        damageMoral = GetComponent<Unit>().rtsEntity.DamageMoral;
     }
 }

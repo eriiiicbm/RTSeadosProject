@@ -3,14 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/MPMainCameraFocus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Multiplayer/MPMainCameraFocus.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/Playerv2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/Playerv2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/UnitBasev2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/UnitBasev2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/Unitv2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/Unitv2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/GameOverHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/GameOverHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/ChipsAndArcher.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/ChipsAndArcher.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Units/NuggetViager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Units/NuggetViager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builds/Tower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builds/Tower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,64 +29,80 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/9f/ad32491f/Logger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/GameOverDisplayv2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/49/69a7bf93/Stack`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DayNightSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/UI/InputSystemUIInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/18/6c015956/IntPtr.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/89/9a15fddb/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/LobbyMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/HorizontalLayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/FizzySteamworks.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/57/3ffb50ad/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/7c/4b93d343/Debug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/78/b260dec5/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Multiplayer/Minimap.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Networking/RTSNetworkManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Networking/TeamColorSetter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/Building.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/Unit.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/BuildingN.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/BuildingButton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Networking/RTSPlayer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitN.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitCommandGiver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/MainMenuBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/ProductionBuilding.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Villager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/BuildingButton1.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Minimap.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitSelectionHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/GameOverHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Menus/GameOverDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Minimapv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Resources/ResourcesDisplay.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/JoinLobbyMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitSelectionHandlerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/LobbyMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/RTSFoodManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/ResourcesDisplayv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/BuildingButtonv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/UnitSpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/UnitSelectionHandlerv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/GameOverHandler1.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/GameOverHandlerv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Unit.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/UnitSpawnerv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/UnitCommandGiverv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/HealthDisplay.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineExample.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/ResourceGeneratorv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitFiringv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitProjectilev2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MeleUnit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MoralDamage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MoralSupport.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/FridgeHouse.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/UnitBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
+      <option value="$PROJECT_DIR$/Assets/DayNightSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/MainMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/PortableFridge.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/Fridge.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/PasiveHability.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/ComponentAbility.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MeleeUnit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Mirror/Examples/Tanks/Scripts/Projectile.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/DistanceUnit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UnitStates.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineExample.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RTSEntity.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/Targeter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/PassiveAbility.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SoundManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitProjectilev3.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/BuildingButtonv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/TeamColorSetterv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Units/UnitSelectionHandler.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitSelectionHandlerv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/UnitBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/AreaDamage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Networking/RTSNetworkManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/GameOverHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Tower.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />
@@ -96,13 +112,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.7398844" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Standalone Player.Standalone Player">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Videos/testos\FinalProjectRTS.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -143,7 +162,14 @@
       <workItem from="1620383364278" duration="13319000" />
       <workItem from="1620465042074" duration="44144000" />
       <workItem from="1620731878733" duration="8508000" />
-      <workItem from="1620897419966" duration="32782000" />
+      <workItem from="1620897419966" duration="33876000" />
+      <workItem from="1621185435904" duration="14352000" />
+      <workItem from="1621268833177" duration="3014000" />
+      <workItem from="1621335988572" duration="12854000" />
+      <workItem from="1621356391213" duration="18385000" />
+      <workItem from="1621788224013" duration="10531000" />
+      <workItem from="1621937864131" duration="6273000" />
+      <workItem from="1621951462282" duration="17236000" />
     </task>
     <servers />
   </component>
@@ -175,6 +201,32 @@
           <line>116</line>
           <properties documentPath="C:\Users\Usuario\Documents\GitHub\RTSeadosProject\Assets\Scripts\Networking\RTSPlayer.cs" initialLine="50" containingFunctionPresentation="method 'OnStartClient'" />
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs</url>
+          <line>79</line>
+          <properties documentPath="C:\Users\Usuario\Documents\GitHub\RTSeadosProject\Assets\Scripts\MultiplayerV2\Buildings\UnitSpawnerv3.cs" initialLine="44" containingFunctionPresentation="method 'AddUnitToTheQueue'">
+            <startOffsets>
+              <option value="2690" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2691" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SoundManager.cs</url>
+          <line>27</line>
+          <properties documentPath="C:\Users\Usuario\Documents\GitHub\RTSeadosProject\Assets\Scripts\CortésUtilities\SoundManager.cs" initialLine="27" containingFunctionPresentation="method 'isSEPlaying'">
+            <startOffsets>
+              <option value="654" />
+            </startOffsets>
+            <endOffsets>
+              <option value="655" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

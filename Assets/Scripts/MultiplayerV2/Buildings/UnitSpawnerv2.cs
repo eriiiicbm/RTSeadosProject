@@ -24,7 +24,7 @@ public class UnitSpawnerv2 : Building, IPointerClickHandler
 
     [SyncVar] private float unitTimer;
 
-    private float progressImageVelocity;
+    private float progressImageVelocity;    
 
     #region Server
 
@@ -60,7 +60,7 @@ public class UnitSpawnerv2 : Building, IPointerClickHandler
         {
             return;
         } 
-        if (!player.checkIfUserHasSpaceTrop() && player)
+        if (!player.CheckIfUserHasSpaceTrop() && player)
         {
             return;
         }
@@ -146,5 +146,7 @@ public class UnitSpawnerv2 : Building, IPointerClickHandler
         {
             UpdateTimerDisplay();
         }
+        
     }
+    
 }

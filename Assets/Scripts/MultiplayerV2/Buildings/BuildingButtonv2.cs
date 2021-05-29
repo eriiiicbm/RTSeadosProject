@@ -24,19 +24,19 @@ public class BuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     {
         mainCamera = Camera.main;
         iconImage.sprite = building.GetIcon();
+        building.SetPrice(building.rtsEntity.Prices);
         priceText.text = $"{building.rtsEntity.Prices[0]} I\n" +
             $"{building.rtsEntity.Prices[1]} X\n" +
             $"{building.rtsEntity.Prices[2]} W\n" +
             $"{building.rtsEntity.Prices[3]} S";
         buildingCollider = building.GetComponent<BoxCollider>();
+        player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+
     }
 
     private void Update()
     {
-        if (player == null)
-        {
-            player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
-        }
+     
 
         if (buildingPreviewInstance == null)
         {
@@ -45,6 +45,9 @@ public class BuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
         UpdateBuildingPreview();
     }
+
+
+   
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -88,7 +91,7 @@ public class BuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             return;
         }
 
-        buildingPreviewInstance.transform.position = new Vector3 (hit.point.x,buildingPreviewInstance.transform.position.y,hit.point.z);
+        buildingPreviewInstance.transform.position = new Vector3 (hit.point.x,buildingPreviewInstance.transform.position.y ,hit.point.z);
         if (!buildingPreviewInstance.activeSelf)
         {
             buildingPreviewInstance.SetActive(true);

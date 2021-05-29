@@ -1,19 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
-public class MoralSupport : PasiveHability
+public class MoralSupport : PassiveAbility
 {
-    public void recoverUnits()
+  [Server]  public override void PasiveEffect(Unit unit)
     {
-        foreach (var unit in units)
-        {
-            unit.DealMoralSupport(recoverySpeed);
-            StartCoroutine(Wait(0.5f));
-        }
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        recoverUnits();
+        if (GetComponent<RTSBase>().connectionToClient != unit.connectionToClient) return;
+
+        unit.DealMoralSupport(recoverySpeed);
     }
 }

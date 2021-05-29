@@ -50,14 +50,19 @@ public class UnitCommandGiverv2 : MonoBehaviour
             if (target.hasAuthority)
             {
 
-                TryMove(hit.point);
-                return;
+                if (!unitSelectionHandler.CheckIfVilager() && target.GetComponent<Building>() == null)
+                {
+                    TryMove(hit.point);
+                    return;
+                }
             }
+
+            Debug.Log("target: "+target.gameObject.name);
 
             TryTarget(target);
             return;
         }
-        Debug.Log(hit.point + "  is the point");
+//        Debug.Log(hit.point + "  is the point");
         TryMove(hit.point);
 
        if (hit.transform.gameObject.layer !=10) return;
@@ -87,7 +92,7 @@ public class UnitCommandGiverv2 : MonoBehaviour
 
     private void TryMove(Vector3 point)
     {
-
+        unitSelectionHandler.ClearVillager();
 
         foreach (Unit unit in unitSelectionHandler.SelectedUnits)
         {

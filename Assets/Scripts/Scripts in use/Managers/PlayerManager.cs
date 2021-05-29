@@ -104,8 +104,9 @@ public class PlayerManager : MonoBehaviour {
                     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                     if (Physics.Raycast(ray, out hit, raycastLength))
                     {
-                        if (hit.collider.name == "Terrain")
+                        if (hit.collider.name == "Terrain" || hit.collider.name == "Floor" || hit.collider.name == "Ground") ;
                         {
+                            Debug.Log("EL TARGET TOCO");
                             TargetObj = Instantiate(Target, hit.point, Quaternion.identity) as GameObject;
                             TargetObj.name = "Target Instantiated";
 

@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using Mirror;
 
 public class Villager : Unit
 {
-    float buildRate;
-    float range;
-
+   [SyncVar] float buildRate;
+   [SyncVar] float range;
+   [SerializeField] private AudioClip recolectSound;
     public override void OnStartServer()
     {
         base.OnStartServer();
@@ -15,24 +17,79 @@ public class Villager : Unit
 
         InvokeRepeating("build", buildRate, buildRate);
         InvokeRepeating("recolect", buildRate, buildRate);
+        StartCoroutine(nameof(PickResourcesState));
+        StartCoroutine(nameof(BuildState));
     }
 
+   [ServerCallback]
+    private void FixedUpdate()
+    {
+        if (target != null)
+        {
+            Debug.Log("objetivo: " + target.gameObject.name);
+
+            if (target.gameObject.GetComponent<Building>() != null)
+            {
+                Building build = target.gameObject.GetComponent<Building>();
+
+                Debug.Log("pasa por aqui i autoridad: " + build.hasAuthority);
+
+                if (build.connectionToClient.connectionId == connectionToClient.connectionId && build.CurrentHealth != build.MaxHealth)
+                {
+                    building = build;
+                    resource = null;
+                    return;
+                }
+            }
+
+            if (target.gameObject.GetComponent<Resource>() != null)
+            {
+                resource = target.gameObject.GetComponent<Resource>();
+                building = null;
+                return;
+            }
+
+            resource = null;
+            building = null;
+        }
+
+        
+    }
 
     [HideInInspector]
     public Resource resource;
     public void recolect() {
         if (resource == null)
             return;
-        if (Vector3.Distance(transform.position, resource.transform.position) > range)
+
+        Vector3 currentPosition = transform.position, targetPosition = resource.transform.position;
+
+        float distance = Mathf.Sqrt(
+            Mathf.Pow(currentPosition.x - targetPosition.x, 2f) +
+            Mathf.Pow(currentPosition.z - targetPosition.z, 2f));
+
+        if (distance > range)
         {
+
             base.CmdMove(resource.transform.position);
+            
             return;
         }
-        currentState = UnitStates.PickResources;
+        if (resource.resourcesQuantity<= 0)
+        {
+            resource = null;
+            currentState = UnitStates.Idle;
+            return;
+        }
+        int resourceCatch = 10;
+
+        currentState = UnitStates.Attack;
+        Debug.Log("estado: " + currentState);
         transform.LookAt(resource.transform.position);
-        resource.resourcesQuantity -= 10;
-        connectionToClient.identity.GetComponent<RTSPlayerv2>().
-            SetResources(10, resource.currentResourceType);
+        SoundManager._instance.PlaySE(recolectSound,1f);
+        resource.resourcesQuantity -= resourceCatch;
+        RTSPlayerv2 player = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+        player.SetResources(player.GetResources(resource.currentResourceType) + resourceCatch, resource.currentResourceType);
     }
 
     [HideInInspector]
@@ -41,17 +98,24 @@ public class Villager : Unit
     {
         if (building == null)
             return;
-        if (Vector3.Distance(transform.position, building.transform.position) > range)
-        {
+
+        Vector3 currentPosition = transform.position, targetPosition = building.transform.position;
+
+        float distance = Mathf.Sqrt(
+            Mathf.Pow(currentPosition.x - targetPosition.x, 2f) +
+            Mathf.Pow(currentPosition.z - targetPosition.z, 2f));
+
+        if (distance > range) { 
             base.CmdMove(building.transform.position);
             return;
         }
-        if (building.buildTime <= 0)
+        if (building.CurrentHealth >= building.MaxHealth)
         {
             building = null;
+            currentState = UnitStates.Idle;
             return;
         }
-        currentState = UnitStates.Building;
+        currentState = UnitStates.Attack;
         transform.LookAt(building.transform.position);
 
         building.SendMessage("CraftPoint");
@@ -60,9 +124,10 @@ public class Villager : Unit
     public override IEnumerator IdleState()
     {
         while (currentState== UnitStates.Idle) {
+
+
+
             yield return 0;
-
-
         }
         yield return new WaitForEndOfFrame();
     }
@@ -87,5 +152,10 @@ public class Villager : Unit
         }
         yield return new WaitForEndOfFrame();
 
+    }
+    [ContextMenu("Deal damage")]
+    public void TestDealDamage()
+    {
+     DealDamage(500);   
     }
 }

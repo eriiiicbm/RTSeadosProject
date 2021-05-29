@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
 public class PortableFridge : Unit
@@ -8,12 +10,13 @@ public class PortableFridge : Unit
     float recoverVelocity;
     bool inTrigger;
     List<Unit> units = new List<Unit>();
+   [Command]
     public void recoverUnits()
     {
         foreach (var unit in units)
         {
             if (unit.MaxHealth > unit.CurrentHealth)
-                unit.CurrentHealth += recoverVelocity;
+              DealDamage(-recoverVelocity);
             StartCoroutine(Wait(0.5f));
         }
     }
@@ -27,19 +30,23 @@ public class PortableFridge : Unit
     }
 
     // Update is called once per frame
+  [ServerCallback]
     void Update()
     {
     }
+    [ServerCallback]
     private void OnTriggerEnter(Collider other)
     {
         Unit rtsaBase = other.GetComponent<Unit>();
         units.Add(rtsaBase);
     }
+    [Server]
     private void OnTriggerStay(Collider other)
     {
         recoverUnits();
 
     }
+    [ServerCallback]
     private void OnTriggerExit(Collider other)
     {
         Unit rtsaBase = other.GetComponent<Unit>();

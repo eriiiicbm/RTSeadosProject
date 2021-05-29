@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Mirror;
 [Serializable]
 public class PauseMenuBehaviour : MainMenuBehaviour
 {
@@ -15,12 +16,11 @@ public class PauseMenuBehaviour : MainMenuBehaviour
     // Use this for initialization
     void Start()
     {
-        StartCoroutine("StartStuff");
+        base.Start();
         pauseMenu.SetActive(false);
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         UpdateQualityLabel();
    
-
         if (PauseMenuBehaviour._instance == null)
         {
             _instance = this;
@@ -35,7 +35,18 @@ public class PauseMenuBehaviour : MainMenuBehaviour
     }
     public void LoadMainAndSave()
     {
-        GameManager._instance.SaveIntoJson();
+        //todo readapt this
+        //  GameManager._instance.SaveIntoJson();
+        if (NetworkServer.active && NetworkClient.isConnected)
+        {
+            NetworkManager.singleton.StopHost();
+        }
+        else
+        {
+            NetworkManager.singleton.StopClient();
+
+            SceneManager.LoadScene(0);
+        }
         GameManager._instance.ChangeLevel(0);
     }
     // Update is called once per frame
@@ -47,7 +58,7 @@ public class PauseMenuBehaviour : MainMenuBehaviour
             if (!optionsMenuIntern.activeInHierarchy)
             {
                 isPaused = !isPaused;
-                Time.timeScale = (isPaused ? 0 : 1);
+         //       Time.timeScale = (isPaused ? 0 : 1);
 
                 pauseMenu.SetActive(isPaused);
             }
@@ -62,7 +73,7 @@ public class PauseMenuBehaviour : MainMenuBehaviour
     {
         isPaused = false;
         pauseMenu.SetActive(false);
-        Time.timeScale = 1;
+       // Time.timeScale = 1;
     }
 
     public void RestartGame()

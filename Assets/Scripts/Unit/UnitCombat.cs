@@ -1,41 +1,96 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
+using Mirror;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class UnitCombat : Unit
 {
     public float damage;
     float attackDistance;
     float attackSpeed;
+
+    [SerializeField]
+    private  AudioClip attackSound;
     float attackTimer;
+
     // Start is called before the first frame update
     void Start()
     {
+        base.Start();
         attackSpeed = rtsEntity.AttackTimer;
         attackDistance = rtsEntity.AttackRange;
         damage = rtsEntity.Damage;
         attackTimer = rtsEntity.AttackTimer;
+        if (attackDistance<=defaultDistance)
+        {
+            attackDistance = defaultDistance;
+        }
+        audioList.Insert(3,attackSound);  
     }
 
     // Update is called once per frame
+ [ServerCallback]
     void Update()
     {
+        base.Update();
+         Attack();
 
+    }
+
+    [Server]
+    private void Attack()
+    {
+        
         attackSpeed += Time.deltaTime;
-        if (currentTarget != null)
+        if (target != null)
         {
-            navMeshAgent.destination = currentTarget.position;
+         
+           // if (connectionToClient.connectionId==target.connectionToClient.connectionId)
+            //{
+              //  return;
+            //}
+            navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
 
-            var distance = (transform.position - currentTarget.position).magnitude;
-            Quaternion targetRotation = Quaternion.LookRotation(currentTarget.transform.position - transform.position);
+            Vector3 pos = target.transform.position;
+            navMeshAgent.destination = pos;
+
+            var distance = (transform.position - pos).magnitude;
+            Quaternion targetRotation = Quaternion.LookRotation(pos - transform.position);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 180 * Time.deltaTime);
+            Debug.Log($"ha authority on ta1rget {target.hasAuthority}  attack distance is {attackDistance} distance is {distance} attaclspeed is {attackSpeed} attacktimer is {attackTimer} the rest {distance -  navMeshAgent.stoppingDistance }");
+         
+            if (((distance - defaultDistance )>= attackDistance) || !(attackSpeed >= attackTimer)) return;
+            Debug.Log($"ha authority on ta2rget {target.hasAuthority}");
 
-            if (distance <= attackDistance && attackSpeed >= attackTimer)
-            {
-                GetComponent<ComponetHability>().active(currentTarget.GetComponent<RTSBase>(), damage);
-
-                attackSpeed = 0;
-            }
+            unitStates = UnitStates.Attack;
+            StopCoroutine(nameof(AttackAnim));
+           StartCoroutine(nameof(AttackAnim));
+           Debug.Log("ESTA PEGANDO ");
+            GetComponent<ComponentAbility>()?.active(target.GetComponent<RTSBase>(), damage);
+            PlayListSoundEffect(3,1,false);
+            attackSpeed = 0;
+            
+            
         }
+        navMeshAgent.stoppingDistance = defaultDistance;
+    }
+    IEnumerator AttackAnim()
+    {
+        yield return new WaitForEndOfFrame();
+        /*do
+        {
+            
+        } while (animator.GetCurrentAnimatorStateInfo(0).IsName("Death"));
+*/
+        if (animator==null)
+        {
+            yield break;
+        }
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
+        unitStates = UnitStates.Idle;
+
+        
     }
 }

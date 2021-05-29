@@ -402,6 +402,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetowrkManager
       objectReference: {fileID: 0}
+    - target: {fileID: 9221100780923022492, guid: 98d4a46d89f11b340b2512124c5125e4,
+        type: 3}
+      propertyPath: onlineScene
+      value: Assets/Scenes/TestScenes/TestRTS1 1.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221100780923022492, guid: 98d4a46d89f11b340b2512124c5125e4,
+        type: 3}
+      propertyPath: offlineScene
+      value: Assets/Scenes/TestScenes/Scene_MenuMultiplayer 1.unity
+      objectReference: {fileID: 0}
     - target: {fileID: 9221100780923022493, guid: 98d4a46d89f11b340b2512124c5125e4,
         type: 3}
       propertyPath: m_RootOrder

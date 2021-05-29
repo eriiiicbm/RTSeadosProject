@@ -15,6 +15,13 @@ public class HealthDisplayv2 : MonoBehaviour
   {
     health = GetComponent<RTSBase>();
     health.ClientOnHealthUpdated += HandleHealthUpdated;
+    healtBarParent.SetActive(true);
+
+  }
+
+  private void Start()
+  {
+    HandleHealthUpdated(health.CurrentHealth, health.MaxHealth);
   }
 
   private void OnDestroy()
@@ -23,15 +30,17 @@ public class HealthDisplayv2 : MonoBehaviour
 
   private void OnMouseEnter()
   {
-healtBarParent.SetActive(true);  }
+//healtBarParent.SetActive(true);
+}
 
   private void OnMouseExit()
   {
-    healtBarParent.SetActive(false);
+  //  healtBarParent.SetActive(false);
   }
 
   private void HandleHealthUpdated(float currentHealth, float maxHealth)
   {
-    healthBarImage.fillAmount = (float)currentHealth / maxHealth;
+     healthBarImage.fillAmount = (float)currentHealth / 
+                                maxHealth;
   }
 }

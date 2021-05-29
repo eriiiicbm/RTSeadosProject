@@ -9,46 +9,67 @@ public class RTSBase : NetworkBehaviour
     protected UnitStates currentState;
     [SerializeField] protected string entityName;
     [SerializeField] protected int maxHealth;
-     [SerializeField] protected string description;
+    [SerializeField] protected string description;
     [SerializeField] public Sprite preview;
     [SerializeField] protected GameObject prefab;
     [SerializeField] public RTSEntity rtsEntity;
+    [SerializeField] public Animator animator;
+    [SerializeField] private AudioClip deadSound;
+    [SerializeField] private AudioClip hitSound;
+
+    [SyncVar(hook = nameof(HandleStatesUpdated))]
+    public UnitStates unitStates = UnitStates.Idle;
 
     [SyncVar(hook = nameof(HandleHealthUpdated))]
     private float currentHealth;
 
-    public event Action ServerOnRTSDie;
+     public event Action ServerOnRTSDie;
+     protected RTSPlayerv2 playerv2;
 
     public event Action<float, float> ClientOnHealthUpdated;
- 
+    public List<AudioClip> audioList= new List<AudioClip>( );
+    public virtual  void Start()
+    {
+audioList.Insert(0,deadSound); 
+audioList.Insert(1,deadSound);  
+
+
+    }
+
     #region Server
 
     public override void OnStartServer()
     {
-        
- 
-        UnitBase.ServerOnPlayerDie += ServerHandlePlayerDie;
+
+
+        UnitBasev2.ServerOnPlayerDie += ServerHandlePlayerDie;
         currentState = UnitStates.Idle;
         maxHealth = rtsEntity.MaxHealth;
-     
+
         entityName = rtsEntity.name;
         preview = rtsEntity.Preview;
         prefab = rtsEntity.Prefab;
         currentHealth = maxHealth;
-        currentHealth = maxHealth;
 
         GoToNextState();
-    }
+        animator = transform.GetComponentInChildren<Animator>();
+        unitStates = UnitStates.Idle;
+        playerv2 = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+
+     }
 
     public override void OnStopServer()
     {
-         UnitBase.ServerOnPlayerDie -= ServerHandlePlayerDie;
+        UnitBasev2.ServerOnPlayerDie -= ServerHandlePlayerDie;
     }
 
     [Server]
     private void ServerHandlePlayerDie(int connectionId)
     {
-        if (connectionToClient.connectionId != connectionId)
+        playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+
+         
+        if (playerv2.connectionToClient.connectionId != connectionId)
         {
             return;
         }
@@ -56,7 +77,6 @@ public class RTSBase : NetworkBehaviour
         DealDamage(currentHealth);
     }
 
-    [ContextMenu("Deal damage")]
     [Server]
     public void DealDamage(float damageAmount)
     {
@@ -65,7 +85,10 @@ public class RTSBase : NetworkBehaviour
             return;
         }
 
-        currentHealth = Mathf.Max(currentHealth - damageAmount, 0);
+
+
+        PlayListSoundEffect(1,1,true);
+        currentHealth = Mathf.Min(Mathf.Max(currentHealth - damageAmount, 0), MaxHealth);
 
         if (currentHealth != 0)
         {
@@ -73,6 +96,36 @@ public class RTSBase : NetworkBehaviour
         }
 
         ServerOnRTSDie?.Invoke();
+        unitStates = UnitStates.Dead;
+        PlayListSoundEffect(0,1,true);
+    }
+
+    //todo refactor this method
+    [Server]
+    public void DealDamage(float damageAmount, bool hitSound)
+    {
+        if (hitSound)
+        {
+            DealDamage(damageAmount);
+            return;
+        }
+
+        if (currentHealth == 0)
+        {
+            return;
+        }
+
+
+        currentHealth = Mathf.Min(Mathf.Max(currentHealth - damageAmount, 0), MaxHealth);
+
+        if (currentHealth != 0)
+        {
+            return;
+        }
+
+        ServerOnRTSDie?.Invoke();
+        unitStates = UnitStates.Dead;
+        PlayListSoundEffect(0,1,true);
     }
 
     #endregion
@@ -81,11 +134,51 @@ public class RTSBase : NetworkBehaviour
 
     private void HandleHealthUpdated(float oldHealth, float newHealth)
     {
+//        Debug.Log($"The Health updated is handled {oldHealth}  {newHealth}  {maxHealth} for {gameObject.name} property of  {NetworkClient.connection.identity.GetComponent<RTSPlayerv2>().gameObject.name}");
         ClientOnHealthUpdated?.Invoke(newHealth, maxHealth);
+        if (newHealth < oldHealth)
+        {
+            //todo start flasher 
+            //shake
+        }
+    }
+
+    private void HandleStatesUpdated(UnitStates oldState, UnitStates newState)
+    {
+        if (animator == null)
+        {
+            return;
+        }
+
+        ResetAllTriggers();
+        animator.SetTrigger(newState.ToString());
+
     }
 
     #endregion
 
+    #region ClientSound
+
+   
+[ClientRpc]
+    public void PlayListSoundEffect(int position,float pitch,bool overwrite)
+    {
+        if (position>=audioList.Count || position <0)
+        {
+            return;
+        }
+        if (overwrite)
+        {
+            SoundManager._instance.PlaySE(audioList[position],pitch);
+      
+        }
+        else
+        {
+            SoundManager._instance.PlaySEIfNotPlaying(audioList[position],pitch);
+        }
+    }
+
+#endregion
     public int MaxHealth
     {
         get => maxHealth;
@@ -95,7 +188,6 @@ public class RTSBase : NetworkBehaviour
     public float CurrentHealth
     {
         get => currentHealth;
-        set => currentHealth = value;
     }
 
     void SetSelected(bool isSelected)
@@ -103,41 +195,48 @@ public class RTSBase : NetworkBehaviour
         transform.Find("Highlight").gameObject.SetActive(isSelected);
     }
 
-    public void TakeDamage(RTSBase enemy, float damage)
-    {
-        // currentHealth = currentHealth - damage;
-        //      StartCoroutine(Flasher(GetComponent<Renderer>().material.color));
-    }
 
-    IEnumerator Flasher(Color defaultColor)
-    {
-        var renderer = GetComponent<Renderer>();
-        if (currentHealth != 0)
-        {
-            for (int i = 0; i < 2; i++)
-            {
-                renderer.material.color = Color.gray;
-                yield return new WaitForSeconds(.05f);
-                renderer.material.color = defaultColor;
-                yield return new WaitForSeconds(.05f);
-            }
-        }
-        else
-        {
-            Destroy(this.transform.parent.gameObject);
-        }
-    }
 
-   public void GoToNextState()
+  
+
+    public void GoToNextState()
     {
         string methodName = this.currentState.ToString() + "State";
         Debug.Log("STATE METHOD NAME " + methodName);
         SendMessage(methodName);
     }
 
+    public override void OnStartClient()
+    {
+        maxHealth = rtsEntity.MaxHealth;
+
+        entityName = rtsEntity.name;
+        preview = rtsEntity.Preview;
+        prefab = rtsEntity.Prefab;
+        animator = transform.GetComponentInChildren<Animator>();
+
+    }
+
     public virtual IEnumerator IdleState()
     {
-        Debug.LogError("OverrideThisMethod before use it");
+        Debug.LogWarning("OverrideThisMethod before use it");
         yield return new WaitForEndOfFrame();
+    }
+
+    private void ResetAllTriggers()
+    {
+       
+        foreach (var param in animator.parameters)
+        {
+            if (param.type == AnimatorControllerParameterType.Trigger)
+            {
+                animator.ResetTrigger(param.name);
+            }
+        }
+    }
+
+    public virtual void Update()
+    {
+        
     }
 }

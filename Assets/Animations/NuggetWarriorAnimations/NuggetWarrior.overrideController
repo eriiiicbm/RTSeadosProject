@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: NuggetWarrior
+  m_Controller: {fileID: 9100000, guid: 0a3b074ad7820474b8554bf9093e7f2d, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 6f3bd5d362393bf4d980ffd9a4372af4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 852dd84cdf98857469fa826242b617cb, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6fc8fde1ff8cb214d8d1b33f02c8bd9b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 619c261a2d047cb49af9a695c4d3465e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 35fd1e8cc7c1b7147ac2995a32c63ba3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 388cc683777989c4ab705a5a0e2fac95, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6240ef9666797ec4d85428d2a98cddc3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a4a46c26b03c16547996c583a0dfb0cf, type: 2}

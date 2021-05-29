@@ -7,18 +7,22 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 using UnityEngine.Rendering.VirtualTexturing;
+using Random = System.Random;
 
 public class Unit : RTSBase
 {
+    [SerializeField] public Targetable currentTargeteable;
+    [SyncVar] public float expirationVelocity;
+    [SyncVar]  public float time;
+    [SyncVar] float velocity;
 
-    public Transform currentTarget;
-    public float expirationVelocity;
-    public float time;
-    float velocity;
     [SyncVar(hook = nameof(HandleMoralUpdated))]
     public float moral;
+
+    public int id;
+    [SyncVar(hook = nameof(HandleMaxMoralUpdated))]
     public float maxMoral;
-    public List<int> prices; 
+    public List<int> prices;
     [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
     [SerializeField] private Targeter targeter;
@@ -30,10 +34,25 @@ public class Unit : RTSBase
     [SerializeField] private float chaseRange = 10f;
     public event Action<float, float> ClientOnMoralUpdated;
     public event Action ServerOnLostMoral;
-   
+    private bool alteratedState;
+    public float defaultDistance = 2;
+    [SerializeField] private AudioClip movementSound;
     public Targeter GetTargeter()
     {
         return targeter;
+    }
+
+    public int GetId()
+    {
+        return id;
+    }
+
+    public void Start()
+    {
+        base.Start();
+        audioList.Insert(2,movementSound);  
+
+        StartStuff();
     }
 
     #region Server
@@ -51,55 +70,117 @@ public class Unit : RTSBase
     [Server]
     public void DealMoralSupport(float moralSupport)
     {
-        moral = Mathf.Max(moral + moralSupport, maxMoral);
+        moral = Mathf.Min(moral + moralSupport, maxMoral);
+    }
+
+    public void StartStuff()
+    {
+        if (navMeshAgent == null)
+        {
+            navMeshAgent = GetComponent<NavMeshAgent>();
+
+        }
+
+        defaultDistance = rtsEntity.DefaultStoppingDistance;
+        navMeshAgent.stoppingDistance = defaultDistance;
+
+        if (targeter == null)
+        {
+            targeter = GetComponent<Targeter>();
+        }
+         velocity = rtsEntity.Velocity;
+        navMeshAgent.speed = velocity;
+       
+        prices = rtsEntity.Prices;
+        time = rtsEntity.BuildTime;
+        chaseRange = rtsEntity.AttackRange;
+        expirationVelocity = rtsEntity.ExpirationVelocity;
     }
 
     public override void OnStartServer()
     {
         base.OnStartServer();
-        GameOverHandlerv2.ServerOnGameOver += ServerHandleGameOver;
-
-        ServerOnUnitSpawned?.Invoke(this);
-        ServerOnRTSDie += ServerHandleDie;
-        velocity = rtsEntity.Velocity;
-        navMeshAgent.speed = velocity;
         maxMoral = rtsEntity.Moral;
         moral = maxMoral * 0.5f;
-        prices = rtsEntity.Prices;
+        GameOverHandlerv2.ServerOnGameOver += ServerHandleGameOver;
+//todo assign ids
+        //       id = UnityEngine.Random.Range(0, 999999999);
 
-        connectionToClient.identity.GetComponent<RTSPlayerv2>().addTrops();
+        ServerOnUnitSpawned?.Invoke(this);
+
+        ServerOnRTSDie += ServerHandleDie;
+
+        StartStuff();
+        navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
+
+        playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+
+        StartCoroutine(nameof(ExpirationEffect));
+
+        if (playerv2 != null)
+        {
+            return;
+        }
+
+        Debug.LogWarning("Player is null onstart");
+        DealMoralDamage(maxMoral/2);
+        HandleMoralUpdated(0,maxMoral/2);
+
     }
 
     public override void OnStopServer()
     {
         base.OnStopServer();
         GameOverHandlerv2.ServerOnGameOver -= ServerHandleGameOver;
-
         ServerOnUnitDespawned?.Invoke(this);
+
         ServerOnRTSDie -= ServerHandleDie;
+        
 
     }
+
     [Server]
     private void ServerHandleDie()
     {
+        StartCoroutine(nameof(DeadAnim));
+      playerv2.Trops--;
+    }
+
+    IEnumerator DeadAnim()
+    {
+        yield return new WaitForEndOfFrame();
+        animator.Play("Dead");
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length + 3);
         NetworkServer.Destroy(gameObject);
 
-        connectionToClient.identity.GetComponent<RTSPlayerv2>().Trops--;
+        
     }
+    protected Targetable target;
     [ServerCallback]
-    private void Update()
+    public virtual void Update()
     {
-        Targetable target = targeter.GetTarget();
+      NavMeshToTarget();
+    }
+
+[Server]
+private void NavMeshToTarget()
+    {
+         target = targeter?.GetTarget();
 
         if (target != null)
         {
-            if ((target.transform.position-transform.position).sqrMagnitude> chaseRange*chaseRange)
+            if ((target.transform.position - transform.position).sqrMagnitude > chaseRange * chaseRange)
             {
                 navMeshAgent.SetDestination(target.transform.position);
             }
             else if (navMeshAgent.hasPath)
             {
                 navMeshAgent.ResetPath();
+                if (unitStates!=UnitStates.Attack)
+                {
+                 
+                    unitStates = UnitStates.Idle;   
+                }
             }
 
             return;
@@ -109,13 +190,20 @@ public class Unit : RTSBase
         {
             return;
         }
-
+        PlayListSoundEffect(2,1,false);
+    // PlaySEIfNotPlaying(movementSound,1f);
         if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
         {
             return;
         }
 
         navMeshAgent.ResetPath();
+        
+        if (unitStates!=UnitStates.Attack)
+        {
+                 
+            unitStates = UnitStates.Idle;   
+        }
     }
 
     [Command]
@@ -123,13 +211,13 @@ public class Unit : RTSBase
     {
         ServerMove(position);
     }
+
     [Server]
     private void ServerHandleGameOver()
     {
         navMeshAgent.ResetPath();
-
-          
     }
+
     [Server]
     public void ServerMove(Vector3 position)
     {
@@ -139,16 +227,21 @@ public class Unit : RTSBase
             return;
         }
 
+        unitStates = UnitStates.Walk;
+        PlayListSoundEffect(2,1,false);
         navMeshAgent.SetDestination(hit.position);
         Debug.Log("Moving");
     }
+
     #endregion
+
     #region Client
 
     public override void OnStartAuthority()
     {
         base.OnStartAuthority();
         AuthorityOnUnitSpawned?.Invoke(this);
+        Debug.Log("Auth");
     }
 
     public override void OnStopClient()
@@ -159,6 +252,7 @@ public class Unit : RTSBase
         {
             return;
         }
+
         AuthorityOnUnitDespawned?.Invoke(this);
     }
 
@@ -169,6 +263,7 @@ public class Unit : RTSBase
         {
             return;
         }
+
         onSelected?.Invoke();
     }
 
@@ -179,77 +274,118 @@ public class Unit : RTSBase
         {
             return;
         }
-        onDeselected?.Invoke();
 
+        onDeselected?.Invoke();
     }
 
-   
-
     #endregion
+
     private void HandleMoralUpdated(float oldMoral, float newMoral)
     {
         ClientOnMoralUpdated?.Invoke(newMoral, maxMoral);
-        StartCoroutine(nameof(MoralEfect));
+        if (isServer)
+        {
+         
+            StartCoroutine(nameof(MoralEfect));
+
+        }} 
+    private void HandleMaxMoralUpdated(float oldMaxMoral, float newMaxMoral)
+    {
+        ClientOnMoralUpdated?.Invoke(moral, newMaxMoral);
     }
 
-    void SetNewTarget(Transform target)
-    {
-        currentTarget = target;
 
-    }
-    void ExpirationEffect()
+    IEnumerator ExpirationEffect()
     {
-        Destroy(this.transform.parent.gameObject);
+        while (true)
+        {
+            DealDamage(1 * expirationVelocity,false);
+            yield return new WaitForSeconds(1);
+        }
     }
-
-    IEnumerator MoralEfect()
-    {
+     IEnumerator MoralEfect()
+    { 
         if (GetComponent<Unit>() == null) yield return 0;
-        if (moral < maxMoral *0.25)
+
+        PassiveAbility passiveAbility = GetComponent<PassiveAbility>();
+        UnitCombat unitCombat = GetComponent<UnitCombat>();
+        MoralDamage moralDamage = GetComponent<MoralDamage>();
+
+        if (moral < maxMoral * 0.25 && !alteratedState)
         {
+            alteratedState = true;
+
             velocity = rtsEntity.Velocity * 0.5f;
+            navMeshAgent.speed = velocity;
 
-            if(GetComponent<UnitCombat>() != null) GetComponent<UnitCombat>().damage = rtsEntity.Damage * 0.75f;
+            if (unitCombat != null) unitCombat.damage = rtsEntity.Damage * 0.25f;
 
-            if (GetComponent<MoralDamage>() != null) GetComponent<MoralDamage>().damageMoral = rtsEntity.DamageMoral * 0.5f;
+            if (moralDamage != null)
+                moralDamage.damageMoral = rtsEntity.DamageMoral * 0.5f;
 
-            if (GetComponent<PasiveHability>() != null)
+            if (passiveAbility != null)
             {
-                GetComponent<PasiveHability>().efectRadius = rtsEntity.EffectRadious * 0.75f;
-                GetComponent<PasiveHability>().recoverySpeed = rtsEntity.RecoverySpeed * 0.75f;
+                passiveAbility.efectRadius = rtsEntity.EffectRadious * 0.75f;
+                passiveAbility.recoverySpeed = rtsEntity.RecoverySpeed * 0.90f;
             }
-            
+
             yield return 0;
         }
 
-        if (moral > maxMoral * 0.75)
+        if (moral < maxMoral * 0.25 && moral < maxMoral * 0.75 && alteratedState)
         {
-            velocity = rtsEntity.Velocity * 1.5f;
+            alteratedState = false;
 
-            if (GetComponent<UnitCombat>() != null) GetComponent<UnitCombat>().damage = rtsEntity.Damage * 1.75f;
+            velocity = rtsEntity.Velocity;
+            navMeshAgent.speed = velocity;
 
-            if (GetComponent<MoralDamage>() != null) GetComponent<MoralDamage>().damageMoral = rtsEntity.DamageMoral * 1.5f;
+            if (unitCombat != null) unitCombat.damage = rtsEntity.Damage;
 
-            if (GetComponent<PasiveHability>() != null)
+            if (moralDamage != null)
+                moralDamage.damageMoral = rtsEntity.DamageMoral;
+
+            if (passiveAbility != null)
             {
-                GetComponent<PasiveHability>().efectRadius = rtsEntity.EffectRadious * 1.75f;
-                GetComponent<PasiveHability>().recoverySpeed = rtsEntity.RecoverySpeed * 1.75f;
+                passiveAbility.efectRadius = rtsEntity.EffectRadious;
+                passiveAbility.recoverySpeed = rtsEntity.RecoverySpeed;
             }
 
             yield return 0;
         }
+
+        if (moral > maxMoral * 0.75 && !alteratedState)
+        {
+            alteratedState = true;
+
+            velocity = rtsEntity.Velocity * 1.5f;
+            navMeshAgent.speed = velocity;
+
+            if (unitCombat != null) unitCombat.damage = rtsEntity.Damage * 1.75f;
+
+            if (moralDamage != null)
+                moralDamage.damageMoral = rtsEntity.DamageMoral * 1.5f;
+
+            if (passiveAbility != null)
+            {
+                passiveAbility.efectRadius = rtsEntity.EffectRadious * 1.25f;
+                passiveAbility.recoverySpeed = rtsEntity.RecoverySpeed * 1.10f;
+            }
+
+            yield return 0;
+        }
+
         yield return new WaitForEndOfFrame();
     }
 
     public IEnumerator MoveState()
     {
-        while (currentState == UnitStates.Follow)
+        while (currentState == UnitStates.Walk)
         {
-
             yield return 0;
-
         }
-        yield return new WaitForEndOfFrame();
 
+        yield return new WaitForEndOfFrame();
     }
+
+   
 }

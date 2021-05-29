@@ -60,7 +60,7 @@ public class StateMachineExample : MonoBehaviour
     {
         Debug.Log("Follow: Enter");
         agent.destination = target.position;
-        while (this.currentState == UnitStates.Follow)
+        while (this.currentState == UnitStates.Walk)
         {
             agent.destination = target.position;
 
@@ -98,7 +98,7 @@ public class StateMachineExample : MonoBehaviour
             if (GetDistance() < followRange && !GameManager._instance.isPlayerHiding)
             {
                 Debug.Log("aHORA SEGUIRA A PLAYER");
-                this.currentState = UnitStates.Follow;
+                this.currentState = UnitStates.Walk;
             }
 
             if (!agent.pathPending)
@@ -204,7 +204,7 @@ public class StateMachineExample : MonoBehaviour
         else
         {
             this.followRange = Mathf.Max(GetDistance(), this.followRange);
-            this.currentState = UnitStates.Follow;
+            this.currentState = UnitStates.Walk;
         }
 
         print("Vida actual del enemigo: " + this.currentHealth.ToString());

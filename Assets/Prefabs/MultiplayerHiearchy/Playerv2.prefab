@@ -110,23 +110,34 @@ MonoBehaviour:
   syncInterval: 0.1
   cameraTransform: {fileID: 5167589719713410488}
   buildings:
-  - {fileID: 8625160522924693162, guid: a18ce2f05311c5f49b276f0be5c11546, type: 3}
+  - {fileID: 1164019021932799192, guid: 1def9626f1305574ba187a81c11f8807, type: 3}
   - {fileID: 7158041827773910725, guid: 05444f3a8c42111448905051658d48ad, type: 3}
   - {fileID: 8917135491928365060, guid: 6c9f4711e10fadc4a96a9ff60a0f6ab5, type: 3}
-  - {fileID: -21070764998124143, guid: 1def9626f1305574ba187a81c11f8807, type: 3}
-  - {fileID: -5558669516458021221, guid: 06aab8909717c664eb21bd5a36a0d573, type: 3}
+  - {fileID: 8496475827853168161, guid: d69f154243017534b83af99b42a97603, type: 3}
+  - {fileID: 2154621944659824137, guid: 06aab8909717c664eb21bd5a36a0d573, type: 3}
   - {fileID: 7100767405781893154, guid: 95d74b3e50c21bf4bb579498ce47d32c, type: 3}
-  - {fileID: 994766849628178934, guid: 439da96688641d64db856588504a6eb9, type: 3}
+  - {fileID: 5683830269503721512, guid: 439da96688641d64db856588504a6eb9, type: 3}
   - {fileID: 5420493816838377146, guid: ae0b58e4514b7c64096a99cc6e3a6992, type: 3}
   - {fileID: 901695133488945128, guid: e5950ebad5966e446bce262cf41e122c, type: 3}
   - {fileID: -8355729088920819036, guid: f46ab509685563344b2db45124c45bb4, type: 3}
+  units:
+  - {fileID: 4543389441489971279, guid: cf67cc1f3acf9ee43b9b257d85f3bc1e, type: 3}
+  - {fileID: 853259452964910958, guid: 2cfe77dacd0414843af2b33b0c4092b5, type: 3}
+  - {fileID: 2723693316114536446, guid: 03bd3e307d62c0243be7fc2729f26d0b, type: 3}
+  - {fileID: 3196226852141232465, guid: 9a2546bd221e3114aa5025940063cb70, type: 3}
+  - {fileID: 2356161565519005015, guid: 5b08a59fe7d3155478d441f0e96713e7, type: 3}
+  - {fileID: 4485816749142836887, guid: 06e6a74ba84993f48aa4f75cb8c54991, type: 3}
+  - {fileID: 853259452964910958, guid: 4616b647417188c4b82ca0d2eba93fe9, type: 3}
+  - {fileID: 6095570508150801584, guid: 8c02bf8a536297e4a95053845a09202b, type: 3}
+  - {fileID: 6581450852017867769, guid: f21b0342ba5d486418f87b46b8606e0f, type: 3}
+  - {fileID: 1791935667381984454, guid: 0b8029faa8c89ee45bf43bc5c70c94eb, type: 3}
+  - {fileID: 3815506669057876792, guid: b5454ad133dca6e4ca4c33b10ad0a538, type: 3}
   buildingBlockLayer:
     serializedVersion: 2
-    m_Bits: 1
-  buildingRangeLimit: 200
+    m_Bits: 257
+  buildingRangeLimit: 10000
   myUnits: []
   myBuildings: []
-  resources: 9f8601009f8601009f8601009f860100
   trops: 0
   maxTrops: 6
   tropsInProduction: 0
@@ -148,15 +159,17 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   isTesting: 1
-  cameraFocus: {fileID: 4578882886929411765, guid: 70e2096d4e1ea2140961365bdfdd96c4,
+  cameraFocus: {fileID: 7917082309746535190, guid: e1f36da0ccb79084483fd57a94361bf0,
     type: 3}
   zoomSpeed: 6
   zoomLimits: {x: 0, y: 0}
+  min: 2
+  max: 30
   playerCameraTransform: {fileID: 5167589719713410488}
-  speed: 25
-  screenBrderThickness: 10
-  screenXLimits: {x: -45, y: 45}
-  screenZLimits: {x: -55, y: 35}
+  speed: 80
+  screenBrderThickness: 4
+  screenXLimits: {x: -421, y: 115}
+  screenZLimits: {x: -540, y: 8}
 --- !u!1 &4489970262673483055
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +195,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4489970262673483055}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2856326324898625413}

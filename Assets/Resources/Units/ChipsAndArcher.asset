@@ -14,22 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMoralUp: 0
   entityType: 6
-  maxHealth: 200
+  maxHealth: 2000
   expirationVelocity: 2.5
   damageMoral: 0
-  prices: 0f0000000a0000000000000000000000
+  prices: 320000000a0000000000000000000000
   description: 
   preview: {fileID: 0}
   prefab: {fileID: 5726599420013825769, guid: 9a2546bd221e3114aa5025940063cb70, type: 3}
-  moral: 350
-  velocity: 4
+  moral: 3500
+  defaultStoppingDistance: 1
+  velocity: 1111
   currentTarget: {fileID: 0}
   effectRadious: 0
   recoverySpeed: 0
-  damage: 12
-  attackRange: 4
-  attackTimer: 6
-  proyectile: {fileID: 38072651166725387, guid: 71f67b6ff977a714696981bb46ccdcb2,
+  damage: 175
+  attackRange: 28
+  attackTimer: 3
+  proyectile: {fileID: 3370176331153901490, guid: c0b9490ae1569514397d92793ea0a052,
     type: 3}
   craftRadious: 0
   craftCompletedGO: {fileID: 0}
@@ -39,6 +40,7 @@ MonoBehaviour:
   canCraft: 0
   productionUnits:
   - {fileID: 0}
+  curretUnit: {fileID: 0}
   descriptionText: {fileID: 0}
   descriptionPosition: 0
   currentProduction: {fileID: 0}

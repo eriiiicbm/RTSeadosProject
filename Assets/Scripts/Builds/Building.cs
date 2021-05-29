@@ -7,11 +7,12 @@ using UnityEngine.Events;
 
 public class Building : RTSBase
 {
-    float craftRadius;
+   [SyncVar] float craftRadius;
     GameObject craftCompletedGO;
     GameObject craftUncompletedGO;
     Renderer buildRenderer;
-    public int buildTime;
+   
+    [SyncVar] public int buildTime;
     [SerializeField] private GameObject buildingPreview;
     [SerializeField] private Sprite icon;
     [SerializeField] private List<int> price = new List<int>() { 1,1,1,1};
@@ -19,6 +20,8 @@ public class Building : RTSBase
     bool _canCraft = false;
     [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
+ 
+    [SyncVar(hook = nameof(HandleBuildedUpdated))]  public bool builded;
 
     public bool canCraft
     {
@@ -40,9 +43,14 @@ public class Building : RTSBase
             return Sphere.Length;
         }
     }
-    
-   
-     [SerializeField] public  static  event Action<Building> ServerOnBuildingSpawned;
+
+    private void Start()
+    {
+        craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
+        craftUncompletedGO = transform.Find("Platform")?.gameObject;
+    }
+
+    [SerializeField] public  static  event Action<Building> ServerOnBuildingSpawned;
      [SerializeField] public  static  event Action<Building> ServerOnBuildingDespawned;
      [SerializeField] public  static  event Action<Building> AuthorityOnBuildingSpawned;
      [SerializeField] public  static  event Action<Building> AuthorityOnBuildingDespawned;
@@ -63,6 +71,10 @@ public class Building : RTSBase
     {
       return price;
      }
+       public void  SetPrice(List<int> newPrices)
+       {
+           price = newPrices;
+       }
     
      #region Server
     
@@ -74,9 +86,12 @@ public class Building : RTSBase
         price = rtsEntity.Prices;
         craftRadius = rtsEntity.CraftRadious;
         craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
-        craftUncompletedGO = transform.Find("plataform")?.gameObject;
+        craftUncompletedGO = transform.Find("Platform")?.gameObject;
+
+        StartCoroutine(nameof(InConstuction));
+
         buildTime = rtsEntity.BuildTime;
-        base.CurrentHealth = 1;
+        DealDamage(maxHealth-1);
         SetBuild();
      }
     
@@ -94,8 +109,16 @@ public class Building : RTSBase
          NetworkServer.Destroy(gameObject);
 
         if (GetComponent<Fridge>() == null) return;
-        connectionToClient.identity.GetComponent<RTSPlayerv2>().deleteHouse();
+        connectionToClient.identity.GetComponent<RTSPlayerv2>().DeleteHouse();
     }
+    
+    
+    [Server] 
+    void SetBuild()
+    {
+        builded = buildTime < 0;
+    }
+
     #endregion
 
     #region Client
@@ -104,6 +127,9 @@ public class Building : RTSBase
      {
          base.OnStartAuthority();
       AuthorityOnBuildingSpawned?.Invoke(this);
+
+
+ 
      }
     
      public override void OnStopClient()
@@ -136,37 +162,63 @@ public class Building : RTSBase
     #endregion
 
 
-    void SetBuild()
-    {
-        if (buildTime <= 0)
-        {
-            craftUncompletedGO?.SetActive(false);
-            craftCompletedGO?.SetActive(true);
-        }
-        else
-        {
-            craftUncompletedGO?.SetActive(true);
-            craftCompletedGO?.SetActive(false);
-        }
-    }
-
     void CraftPoint()
     {
         print("CRAFTING...");
         buildTime--;
-        base.CurrentHealth = base.maxHealth / buildTime;
-        if (buildTime <= 0)
+    //todo pass the correct number to dealdamage
+
+        DealDamage(-250);
+
+        if (base.CurrentHealth >= base.MaxHealth)
         {
-            craftUncompletedGO.SetActive(false);
-            craftCompletedGO.SetActive(true);
-            if (GetComponent<Fridge>() == null) return;
-            connectionToClient.identity.GetComponent<RTSPlayerv2>().MaxTrops += 3;
+            builded = true;
+            StartCoroutine(nameof(Builded));
         }
     }
 
-    void OnDrawGizmosSelected()
+    void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, craftRadius);
+    }
+
+    public IEnumerator InConstuction()
+    {
+        while (!builded)
+        {
+            craftUncompletedGO.SetActive(true);
+            craftCompletedGO.SetActive(false);
+
+            yield return 0;
+        }
+
+        yield return new WaitForEndOfFrame();
+    }
+
+    public IEnumerator Builded()
+    {
+        Debug.Log("builded" + name);
+
+        craftUncompletedGO.SetActive(false);
+        craftCompletedGO.SetActive(true);
+
+        Fridge fridge = GetComponent<Fridge>();
+        if (fridge != null)
+        {
+            fridge.enabled = true;
+            connectionToClient.identity.GetComponent<RTSPlayerv2>().MaxTrops += 3;
+        }
+
+        yield return 0;
+    }
+
+    public void HandleBuildedUpdated(bool oldBuilding, bool newBuilding)
+    {
+        craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
+        craftUncompletedGO = transform.Find("Platform")?.gameObject;
+        if (!newBuilding) return;
+        craftUncompletedGO.SetActive(false);
+        craftCompletedGO.SetActive(true);
     }
 }

@@ -10,35 +10,44 @@ public class ResourcesDisplayv2 : MonoBehaviour
     [SerializeField] private TMP_Text resourcesText;
 
     private RTSPlayerv2 player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+ 
+
+  private void Start()
+  {
+      RTSPlayerv2.ClientOnResourcesUpdated += ClientHandleResourcesUpdated;
+      player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+      ClientHandleResourcesUpdated(player.GetAllResources());
+  }
+
+  private void OnDestroy()
+  {
+      RTSPlayerv2.ClientOnResourcesUpdated -= ClientHandleResourcesUpdated;
+
+  }
+
+   
+    
+
+   
+
+     public void ClientHandleResourcesUpdated(SyncList<int> resources)
     {
-        if (player == null)
+        if (resources==null)
         {
-            player = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
-            if (player!=null)
-            {
-                //todo update the cliuenthandleresources to update all the ui
-                 ClientHandleResourcesUpdated(player.GetAllResources());
-                player.ClientOnResourcesUpdated += ClientHandleResourcesUpdated;
-            }
+            return;
         }
-    }
 
-    private void OnDestroy()
-    {
-        player.ClientOnResourcesUpdated -= ClientHandleResourcesUpdated;
-    }
-
-    private void ClientHandleResourcesUpdated(List<int> resources)
-    {
+        if (player==null)
+        {
+            return;
+        }
         resourcesText.text = $"{resources[0]} I  {resources[1]} X  {resources[2]} W  {resources[3]} S  " +
             $"{player.Trops}/{player.MaxTrops} T  {player.NumHouse}/{player.MaxNumHouse} H";
+    }
+ 
+     private void Update()
+    {
+        ClientHandleResourcesUpdated(player.resources);
     }
 }

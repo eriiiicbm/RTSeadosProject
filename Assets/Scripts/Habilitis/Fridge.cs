@@ -1,20 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
-public class Fridge : PasiveHability
+public class Fridge : PassiveAbility
 {
-    public void recoverUnits()
+    [Server]
+    public override void PasiveEffect(Unit unit)
     {
-        foreach (var unit in units)
-        {
-            if (unit.MaxHealth > unit.CurrentHealth)
-                unit.CurrentHealth += recoverySpeed;
-            StartCoroutine(Wait(0.5f));
-        }
+        if (GetComponent<RTSBase>().connectionToClient != unit.connectionToClient) return;
+    
+        Debug.Log(unit.name+" unidad recuperada");
+        unit.DealDamage(-1 * recoverySpeed);        
     }
-    private void OnTriggerStay(Collider other)
+    /*private void OnTriggerStay(Collider other)
     {
         recoverUnits();
-    }
+    }*/
 }

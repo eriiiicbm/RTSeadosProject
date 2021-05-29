@@ -18,6 +18,10 @@ public class Minimapv2 : MonoBehaviour,IPointerDownHandler,IDragHandler
       if (playerCameraTransform!=null)
       {return; }
 
+      if (NetworkClient.connection==null)
+      {
+         return;
+      }
       if (NetworkClient.connection.identity==null)
       {
          return;

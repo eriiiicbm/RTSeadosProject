@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New RTSEntity", menuName = "new RTSENtity")]
 public class RTSEntity : ScriptableObject
 {
+
     //todo idioma descricpion 
     [Header("Generic stuff")]
     string entityName;
@@ -22,6 +23,7 @@ public class RTSEntity : ScriptableObject
     [Header("Movement stuff")]
     [SerializeField] private int moral;
 
+    [SerializeField] private float defaultStoppingDistance=2;
     [SerializeField] private float velocity;
     [SerializeField] private Transform currentTarget;
 
@@ -41,8 +43,9 @@ public class RTSEntity : ScriptableObject
     [SerializeField] private Renderer buildRenderer;
     [SerializeField] private int buildTime;
     [SerializeField] private bool canCraft;
-    [SerializeField] private GameObject[] productionUnits;
-    [SerializeField] private Queue<GameObject> unitsQueue;
+    [SerializeField] private List<GameObject> productionUnits;
+    [SerializeField] private Queue<Unit> unitsQueue;
+    [SerializeField] private Unit curretUnit;
     [Header("Description  stuff")]
     [SerializeField] private TextStrings descriptionText;
     [SerializeField] private int descriptionPosition;
@@ -54,6 +57,7 @@ public class RTSEntity : ScriptableObject
     [HideInInspector] [SerializeField] UnitStates unitState;
     [HideInInspector] [SerializeField] EmotionalStates emotionalState;
     [HideInInspector] [SerializeField] ResourcesType typeOfResourceThatCanHave;
+    public float DefaultStoppingDistance => defaultStoppingDistance;
 
     public string EntityName { get => entityName; set => entityName = value; }
     public int MaxHealth { get => maxHealth; set => maxHealth = value; }
@@ -75,7 +79,7 @@ public class RTSEntity : ScriptableObject
     public Renderer BuildRenderer { get => buildRenderer; set => buildRenderer = value; }
     public int BuildTime { get => buildTime; set => buildTime = value; }
     public bool CanCraft { get => canCraft; set => canCraft = value; }
-    public GameObject[] ProductionUnits { get => productionUnits; set => productionUnits = value; }
+    public List<GameObject> ProductionUnits { get => productionUnits; set => productionUnits = value; }
     public TextStrings DescriptionText { get => descriptionText; set => descriptionText = value; }
     public int DescriptionPosition { get => descriptionPosition; set => descriptionPosition = value; }
     public TextStrings NameText { get => nameText; set => nameText = value; }
@@ -84,7 +88,8 @@ public class RTSEntity : ScriptableObject
     public EmotionalStates EmotionalState { get => emotionalState; set => emotionalState = value; }
     public ResourcesType TypeOfResourceThatCanHave { get => typeOfResourceThatCanHave; set => typeOfResourceThatCanHave = value; }
     public GameObject Proyectile { get => proyectile; set => proyectile = value; }
-    public Queue<GameObject> UnitsQueue { get => unitsQueue; set => unitsQueue = value; }
+    public Queue<Unit> UnitsQueue { get => unitsQueue; set => unitsQueue = value; }
     public int Moral { get => moral; set => moral = value; }
     public float DamageMoral { get => damageMoral; set => damageMoral = value; }
+    public Unit CurretUnit { get => curretUnit; set => curretUnit = value; }
 }

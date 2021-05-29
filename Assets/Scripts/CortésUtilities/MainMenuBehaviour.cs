@@ -11,13 +11,13 @@ public class MainMenuBehaviour : MonoBehaviour
     public GameObject optionsMenuPez;
     public GameObject optionsMenuMamut;
     public GameObject optionsMenuIntern;
-    public SoundManager soundManager;
+ 
 
     public Button mainButton;
-   // public Slider masterSlider;
-   // public Slider BGMSlider;
-   // public Slider BGSSlider;
-   // public Slider SESlider;
+    public Slider masterSlider;
+    public Slider BGMSlider;
+    public Slider BGSSlider;
+    public Slider SESlider;
     int backgroundNumber;
     [Header("Text Resource settings")]
     public TextStrings textStringsMainMenu;
@@ -34,11 +34,7 @@ public class MainMenuBehaviour : MonoBehaviour
         GameManager._instance.ChangeLevel(2) ;
 
     }
-    private void OnLevelWasLoaded(int level)
-    {
-    //    StartStuff();
-    }
-
+  
     public void EndGame()
     {
 
@@ -71,7 +67,7 @@ public class MainMenuBehaviour : MonoBehaviour
 
     public void UpdateMasterVolumeLabel()
     {
-        Debug.Log(AudioListener.volume);
+        Debug.Log(AudioListener.volume);        
         float MasterAudioVolume = AudioListener.volume * 100;
         PlayerPrefs.SetFloat("masterAudioVolume", MasterAudioVolume);
 
@@ -80,7 +76,7 @@ public class MainMenuBehaviour : MonoBehaviour
     }
     public void UpdateBGMVolumeLabel()
     {
-        float BgmAudioVolume = soundManager.AS[0].volume * 100;
+        float BgmAudioVolume = SoundManager._instance.AS[0].volume * 100;
 
         PlayerPrefs.SetFloat("bgmAudioVolume", BgmAudioVolume);
         String text = GameManager.getStrings(textStringsMainMenu)[2];
@@ -90,7 +86,7 @@ public class MainMenuBehaviour : MonoBehaviour
     public void UpdateBGSVolumeLabel()
     {
         
-        float BgsAudioVolume = soundManager.AS[1].volume * 100;
+        float BgsAudioVolume = SoundManager._instance.AS[1].volume * 100;
 
         PlayerPrefs.SetFloat("bgsAudioVolume", BgsAudioVolume);
 
@@ -98,7 +94,7 @@ public class MainMenuBehaviour : MonoBehaviour
     }
     public void UpdateSEVolumeLabel()
     {
-        float SEAudioVolume = soundManager.AS[2].volume * 100;
+        float SEAudioVolume = SoundManager._instance.AS[2].volume * 100;
 
 
         PlayerPrefs.SetFloat("seAudioVolume", SEAudioVolume);
@@ -132,26 +128,27 @@ public class MainMenuBehaviour : MonoBehaviour
     }
     public void SetBGMVolume(float value)
     {
-        soundManager.AS[0].volume = value;
+        SoundManager._instance.AS[0].volume = value;
         UpdateBGMVolumeLabel();
     }
     public void SetBGSVolume(float value)
     {
-        soundManager.AS[1].volume = value;
+        SoundManager._instance.AS[1].volume = value;
         UpdateBGSVolumeLabel();
     }
     public void SetSEVolume(float value)
     {
-        soundManager.AS[2].volume = value;
+        SoundManager._instance.AS[2].volume = value;
         UpdateSEVolumeLabel();
     }
     
-    private void Start()
+    public virtual void Start()
     {
         //Destroy(GameObject.Find("Main Camera").gameObject);
         StartCoroutine(nameof(StartStuff));
         GameManager._instance.FixBugButtons();
-        OnLanguageChanged();
+        
+        
 
     }
     public void ChangeLanguage() {
@@ -164,8 +161,7 @@ public class MainMenuBehaviour : MonoBehaviour
                 break;
         }
         Debug.Log("Current Language " + GameManager.language  );
-          FindObjectOfType<SendMessagesAllLevel>().ChangeLanguage();
-    //    FindObjectOfType<SendMessagesAllLevel>().ChangeLanguage();
+          FindObjectOfType<SendMessagesAllLevel>()?.ChangeLanguage(); 
    //     gameObject.SendMessageUpwards("OnLanguageChanged");
         GameObject.Find("LanguageText").GetComponent<Text>().text= GameManager.getStrings(textStringsMainMenu)[7] ;
 
@@ -191,19 +187,12 @@ public class MainMenuBehaviour : MonoBehaviour
         }
 
         
-        soundManager = FindObjectOfType<SoundManager>();
-        //   AudioListener.volume = PlayerPrefs.GetFloat("masterAudioVolume") / 100;
+         //   AudioListener.volume = PlayerPrefs.GetFloat("masterAudioVolume") / 100;
         // soundManager.AS[0].volume = PlayerPrefs.GetFloat("bgmAudioVolume") / 100;
         //soundManager.AS[1].volume = PlayerPrefs.GetFloat("bgsAudioVolume") / 100;
         // soundManager.AS[2].volume = PlayerPrefs.GetFloat("seAudioVolume") / 100;
-        OnLanguageChanged();   
-        Debug.Log("mas vbo" + soundManager.AS[0].volume);
+        Debug.Log("mas vbo" + SoundManager._instance.AS[0].volume);
 
-     
-        //  masterSlider.value = AudioListener.volume;
-        //  BGMSlider.value = soundManager.AS[0].volume;
-        // BGSSlider.value = soundManager.AS[1].volume;
-        // SESlider.value = soundManager.AS[2].volume;
         //  UpdateBGMVolumeLabel();
         //  UpdateBGSVolumeLabel();
         // UpdateMasterVolumeLabel();
@@ -213,6 +202,13 @@ public class MainMenuBehaviour : MonoBehaviour
         SetBGMVolume(PlayerPrefs.GetFloat("bgmAudioVolume") / 100);
         SetBGSVolume(PlayerPrefs.GetFloat("bgsAudioVolume") / 100);
         SetSEVolume(PlayerPrefs.GetFloat("seAudioVolume") / 100);
+
+        masterSlider.value = AudioListener.volume;
+        BGMSlider.value = SoundManager._instance.AS[0].volume;
+        BGSSlider.value = SoundManager._instance.AS[1].volume;
+        SESlider.value = SoundManager._instance.AS[2].volume;
+
+        OnLanguageChanged();
         if (!isPauseMenu)
         {
            

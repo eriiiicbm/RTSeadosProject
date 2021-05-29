@@ -108,6 +108,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  isTesting: 0
+  cameraFocus: {fileID: 0}
+  zoomSpeed: 6
+  zoomLimits: {x: 0, y: 0}
   playerCameraTransform: {fileID: 5167589719713410488}
   speed: 25
   screenBrderThickness: 10
@@ -128,7 +132,10 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   cameraTransform: {fileID: 5167589719713410488}
-  buildings: []
+  buildings:
+  - {fileID: 833689706591024623, guid: 92c39debce9e9c446b85bec9b3c16e28, type: 3}
+  - {fileID: 833689706591024623, guid: 50920c2fab0e93341a9e7a819493e343, type: 3}
+  - {fileID: 833689706591024623, guid: a120932f3d59c4548a7f2103ab671bf5, type: 3}
   buildingBlockLayer:
     serializedVersion: 2
     m_Bits: 0

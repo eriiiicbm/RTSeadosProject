@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProductionBuilding : Building
 {
-    GameObject[] productionUnits;
+    List<GameObject> productionUnits;
     float craftTime;
     GameObject curretProduction;
     Queue<GameObject> unitsQueue = new Queue<GameObject>();
@@ -19,7 +19,7 @@ public class ProductionBuilding : Building
         craftTime = rtsEntity.AttackTimer;
         if (rtsEntity.UnitsQueue != null)
         {
-            unitsQueue = rtsEntity.UnitsQueue;
+            //unitsQueue = rtsEntity.UnitsQueue;
             curretProduction = unitsQueue.Dequeue();
         }
 
@@ -32,7 +32,7 @@ public class ProductionBuilding : Building
             return;
         if (!player.CheckIfUserHasResources(unitsQueue.Dequeue().GetComponent<Unit>().prices))
             return;
-        if (!player.checkIfUserHasSpaceTrop()) return;
+        if (!player.CheckIfUserHasSpaceTrop()) return;
 
         player.RestPriceToResources(unitsQueue.Dequeue().GetComponent<Unit>().prices);
         curretProduction = unitsQueue.Dequeue();

@@ -11,8 +11,4 @@ public class MoralSupport : PassiveAbility
 
         unit.DealMoralSupport(recoverySpeed);
     }
-    /*private void OnTriggerStay(Collider other)
-    {
-        recoverUnits();
-    }*/
 }

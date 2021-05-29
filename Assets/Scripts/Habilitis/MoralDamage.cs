@@ -19,8 +19,4 @@ public class MoralDamage : PassiveAbility
     {
         damageMoral = GetComponent<Unit>().rtsEntity.DamageMoral;
     }
-    /*private void OnTriggerStay(Collider other)
-    {
-        damageMoralUnits();
-    }*/
 }

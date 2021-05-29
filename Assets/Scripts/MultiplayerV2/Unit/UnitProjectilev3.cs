@@ -41,7 +41,7 @@ public class UnitProjectilev3 : NetworkBehaviour
             ComponentAbility componentAbility = GetComponent<ComponentAbility>();
             if (componentAbility!=null)
             {
-             
+             Debug.Log("has component");
                 GetComponent<ComponentAbility>()?.active(rtsBase.GetComponent<RTSBase>(), damage);
 
             }

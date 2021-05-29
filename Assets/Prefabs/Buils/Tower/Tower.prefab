@@ -103,7 +103,7 @@ MonoBehaviour:
   buildTime: 0
   buildingPreview: {fileID: 4444141615569874375}
   icon: {fileID: 21300000, guid: 62a2c590ffc918842b270ae9f3679983, type: 3}
-  price: 00000000000000006400000000000000
+  price: 0000000000000000c800000014000000
   id: 71
   onSelected:
     m_PersistentCalls:
@@ -135,7 +135,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  builded: 1
+  builded: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 256
@@ -180,7 +180,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0

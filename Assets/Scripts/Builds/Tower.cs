@@ -13,7 +13,7 @@ public class Tower : Building
     float throwForce = 5;
     GameObject proyectils;
     [SerializeField] private LayerMask layerMask = new LayerMask();
-
+    private Transform lookAt;
     public void detectEnemy(float atackRange)
     {
       Collider[] collider =   Physics.OverlapSphere(this.gameObject.transform.position, atackRange,layerMask);

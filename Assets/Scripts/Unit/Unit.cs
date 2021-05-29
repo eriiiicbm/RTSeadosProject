@@ -297,6 +297,7 @@ private void NavMeshToTarget()
     }
      IEnumerator MoralEfect()
     { 
+        //todo aura
         if (GetComponent<Unit>() == null) yield return 0;
 
         PassiveAbility passiveAbility = GetComponent<PassiveAbility>();

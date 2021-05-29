@@ -93,7 +93,12 @@ public class Building : RTSBase
         StartCoroutine(nameof(InConstuction));
 
         buildTime = rtsEntity.BuildTime;
+        if (!builded)
+        {
+            
         DealDamage(maxHealth-1);
+    
+        }
         SetBuild();
      }
     

@@ -43,6 +43,7 @@ public class Tower : Building
           return;
       }
       Debug.Log($"{enemy.name} detected");
+        GetComponent<ComponentAbility>().SetParameter(rtsEntity.EffectRadious);
         GetComponent<ComponentAbility>().active(enemy, damege);
     }
 

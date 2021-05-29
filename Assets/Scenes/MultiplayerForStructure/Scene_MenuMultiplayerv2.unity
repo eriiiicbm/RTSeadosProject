@@ -942,7 +942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   landingPagePanel: {fileID: 115650173}
-  useSteam: 0
+  useSteam: 1
   text: {fileID: 1837121726}
 --- !u!1 &451504951
 GameObject:
@@ -1293,7 +1293,7 @@ MonoBehaviour:
   onlineScene: 
   transport: {fileID: 530741865}
   networkAddress: localhost
-  maxConnections: 100
+  maxConnections: 4
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
@@ -1334,15 +1334,14 @@ MonoBehaviour:
   - {fileID: 38072651166725387, guid: 71f67b6ff977a714696981bb46ccdcb2, type: 3}
   - {fileID: 1582148332403714993, guid: 707445dba83b2a747af2f929be78a74e, type: 3}
   - {fileID: 3370176331153901490, guid: c0b9490ae1569514397d92793ea0a052, type: 3}
+  - {fileID: 8734694017325873992, guid: 04856c9b21e15e84399cad08e93c25c8, type: 3}
   startingUnitsAndBuildings:
   - {fileID: 8706463502434392613, guid: a18ce2f05311c5f49b276f0be5c11546, type: 3}
   - {fileID: 4134074402336445218, guid: 06e6a74ba84993f48aa4f75cb8c54991, type: 3}
   - {fileID: 4134074402336445218, guid: 06e6a74ba84993f48aa4f75cb8c54991, type: 3}
   - {fileID: 4134074402336445218, guid: 06e6a74ba84993f48aa4f75cb8c54991, type: 3}
-  - {fileID: 4134074402336445218, guid: 0b8029faa8c89ee45bf43bc5c70c94eb, type: 3}
-  - {fileID: 8773565069365050068, guid: 8fb782d07cc2ce94cbdb0c81e6484c2c, type: 3}
-  - {fileID: 5651458107991866868, guid: 2cfe77dacd0414843af2b33b0c4092b5, type: 3}
-  - {fileID: 5726599420013825769, guid: 9a2546bd221e3114aa5025940063cb70, type: 3}
+  - {fileID: 2211274502225543473, guid: 03bd3e307d62c0243be7fc2729f26d0b, type: 3}
+  - {fileID: 4134074402336445218, guid: b5454ad133dca6e4ca4c33b10ad0a538, type: 3}
   gameOverHandler: {fileID: 1883506953350536586, guid: 9fd13280fb076794b81ae6244c8d7872,
     type: 3}
   minNumberOfPlayers: 1

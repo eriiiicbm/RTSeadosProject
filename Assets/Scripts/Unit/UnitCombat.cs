@@ -46,11 +46,19 @@ public class UnitCombat : Unit
         attackSpeed += Time.deltaTime;
         if (target != null)
         {
-         
+            if (target.GetComponent<Resource>()!=null)
+            {
+                return;
+            }
+            if (target.connectionToClient==null)
+            {
+                goto damage;
+            }
              if (connectionToClient.connectionId==target.connectionToClient.connectionId)
              {
                return;
              }
+             damage:
             navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
 
             Vector3 pos = target.transform.position;

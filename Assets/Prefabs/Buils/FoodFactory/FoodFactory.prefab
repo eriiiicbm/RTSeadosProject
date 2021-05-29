@@ -12,6 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b50ab8add1b4647adedd76ac252553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2533968074652244601
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6280296467146063287}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 5d9f3af9d4581e84f8eb62ca4d7741e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6508101106659302983
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +389,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FinalEstructure
+      objectReference: {fileID: 0}
+    - target: {fileID: 4856965944896171192, guid: d4f818c7441a55341adcf690f48bd941,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8309465093329681362, guid: d4f818c7441a55341adcf690f48bd941,
         type: 3}

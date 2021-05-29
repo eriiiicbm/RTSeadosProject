@@ -163,7 +163,10 @@ public class Villager : Unit
     }
     
     IEnumerator PickageAnim()
+    
     {
+        unitStates = UnitStates.Attack;
+animator.Play("Attack");
         yield return new WaitForEndOfFrame();
         
         if (animator==null)

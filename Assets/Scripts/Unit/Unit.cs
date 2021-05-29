@@ -218,8 +218,9 @@ private void NavMeshToTarget()
             return;
         }
 
-        unitStates = UnitStates.Walk;
-        PlayListSoundEffect(2,1,false);
+         
+            unitStates = UnitStates.Walk;
+         PlayListSoundEffect(2,1,false);
         navMeshAgent.SetDestination(hit.position);
         Debug.Log("Moving");
     }

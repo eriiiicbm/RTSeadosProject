@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &69045437109026133
+--- !u!1 &2553362715371673476
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9098224575239466606}
-  - component: {fileID: 6238695323292833572}
-  - component: {fileID: 7472024246544348080}
+  - component: {fileID: 6762562359436936383}
+  - component: {fileID: 8434782500811226613}
+  - component: {fileID: 4912274766362810721}
   m_Layer: 0
   m_Name: rketchup turret body
   m_TagString: Untagged
@@ -18,35 +18,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9098224575239466606
+--- !u!4 &6762562359436936383
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69045437109026133}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.006000042, y: 4.48, z: 0.46099922}
-  m_LocalScale: {x: 0.3667584, y: 0.8316529, z: 0.473816}
+  m_GameObject: {fileID: 2553362715371673476}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.0811996, y: -0.035419464, z: -11.862488}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4251141556472751435}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!33 &6238695323292833572
+  m_Father: {fileID: 1199435341127585987}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8434782500811226613
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69045437109026133}
+  m_GameObject: {fileID: 2553362715371673476}
   m_Mesh: {fileID: -2432090755550338912, guid: 87dc71ac8984711499e392b2926059dd, type: 3}
---- !u!23 &7472024246544348080
+--- !u!23 &4912274766362810721
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69045437109026133}
+  m_GameObject: {fileID: 2553362715371673476}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -81,7 +81,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &1367559303248200203
+--- !u!1 &3558013416409524442
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,9 +89,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7803793186983104816}
-  - component: {fileID: 4943698754082433146}
-  - component: {fileID: 8484273671638928622}
+  - component: {fileID: 5752984756257553377}
+  - component: {fileID: 7422383517743825579}
+  - component: {fileID: 6207121761494296127}
   m_Layer: 0
   m_Name: rketchup turret cannon
   m_TagString: Untagged
@@ -99,35 +99,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7803793186983104816
+--- !u!4 &5752984756257553377
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367559303248200203}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.006, y: 4.48, z: 0.461}
-  m_LocalScale: {x: 0.3667584, y: 0.8316529, z: 0.473816}
+  m_GameObject: {fileID: 3558013416409524442}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.0811996, y: -0.035419464, z: -11.862488}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4251141556472751435}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!33 &4943698754082433146
+  m_Father: {fileID: 1199435341127585987}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7422383517743825579
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367559303248200203}
+  m_GameObject: {fileID: 3558013416409524442}
   m_Mesh: {fileID: -2432090755550338912, guid: a75ee451c27fa9f4aae2bfc156e1692b, type: 3}
---- !u!23 &8484273671638928622
+--- !u!23 &6207121761494296127
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367559303248200203}
+  m_GameObject: {fileID: 3558013416409524442}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -162,7 +162,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &7722935628887487804
+--- !u!1 &4504455067567449134
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,47 +170,78 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4251141556472751435}
-  - component: {fileID: 6809477854278365927}
-  - component: {fileID: 431963827262925023}
+  - component: {fileID: 1199435341127585987}
   m_Layer: 0
-  m_Name: FinalEstructure
+  m_Name: RKetchup Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4251141556472751435
+--- !u!4 &1199435341127585987
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7722935628887487804}
+  m_GameObject: {fileID: 4504455067567449134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1, z: 0}
-  m_LocalScale: {x: 2.4, y: 1.0613688, z: 1.9495}
+  m_LocalPosition: {x: 118.0812, y: 5.0354195, z: -25.137512}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7803793186983104816}
-  - {fileID: 9098224575239466606}
+  - {fileID: 1083641440166308202}
+  - {fileID: 5752984756257553377}
+  - {fileID: 6762562359436936383}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6809477854278365927
+--- !u!1 &8196535208789375569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1083641440166308202}
+  - component: {fileID: 2872999120109522976}
+  - component: {fileID: 1656000143486383284}
+  m_Layer: 0
+  m_Name: rketchup turret floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1083641440166308202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8196535208789375569}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.0811996, y: -0.035419464, z: -11.862488}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1199435341127585987}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2872999120109522976
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7722935628887487804}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &431963827262925023
+  m_GameObject: {fileID: 8196535208789375569}
+  m_Mesh: {fileID: -2432090755550338912, guid: 3a7005a61cfbe824982a153cfe5018c8, type: 3}
+--- !u!23 &1656000143486383284
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7722935628887487804}
+  m_GameObject: {fileID: 8196535208789375569}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -223,7 +254,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 56c280dde24449c4fbb8715836972d88, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -137,6 +137,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buildedFinishedSound: {fileID: 0}
   builded: 0
   layerMask:
     serializedVersion: 2

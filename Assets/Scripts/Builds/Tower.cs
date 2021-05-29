@@ -17,6 +17,10 @@ public class Tower : Building
     public void detectEnemy(float atackRange)
     {
       Collider[] collider =   Physics.OverlapSphere(this.gameObject.transform.position, atackRange,layerMask);
+      if (collider.Length==0)
+      {
+          return;
+      }
       Collider nearCollider = collider[0];
       foreach (var col in collider)
       {

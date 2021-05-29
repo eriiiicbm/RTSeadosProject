@@ -47,10 +47,10 @@ public class UnitCombat : Unit
         if (target != null)
         {
          
-            if (connectionToClient.connectionId==target.connectionToClient.connectionId)
-            {
-                return;
-            }
+           // if (connectionToClient.connectionId==target.connectionToClient.connectionId)
+            //{
+              //  return;
+            //}
             navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
 
             Vector3 pos = target.transform.position;

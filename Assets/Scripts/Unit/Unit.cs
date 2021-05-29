@@ -370,7 +370,7 @@ private void NavMeshToTarget()
 
     public IEnumerator MoveState()
     {
-        while (currentState == UnitStates.Walk)
+        while (unitStates == UnitStates.Walk)
         {
             yield return 0;
         }

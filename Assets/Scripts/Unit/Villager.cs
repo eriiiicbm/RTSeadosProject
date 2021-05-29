@@ -78,13 +78,14 @@ public class Villager : Unit
         if (resource.resourcesQuantity<= 0)
         {
             resource = null;
-            currentState = UnitStates.Idle;
+            unitStates = UnitStates.Idle;
             return;
         }
         int resourceCatch = 10;
 
-        currentState = UnitStates.Attack;
-        Debug.Log("estado: " + currentState);
+        StopCoroutine(nameof(PickageAnim));
+        StartCoroutine(nameof(PickageAnim));
+        Debug.Log("state: " + unitStates);
         transform.LookAt(resource.transform.position);
         SoundManager._instance.PlaySE(recolectSound,1f);
         resource.resourcesQuantity -= resourceCatch;
@@ -112,18 +113,20 @@ public class Villager : Unit
         if (building.CurrentHealth >= building.MaxHealth)
         {
             building = null;
-            currentState = UnitStates.Idle;
+            unitStates = UnitStates.Idle;
             return;
         }
-        currentState = UnitStates.Attack;
+  
         transform.LookAt(building.transform.position);
-
+        unitStates = UnitStates.Attack;
+        StopCoroutine(nameof(PickageAnim));
+        StartCoroutine(nameof(PickageAnim));
         building.SendMessage("CraftPoint");
     }
 
     public override IEnumerator IdleState()
     {
-        while (currentState== UnitStates.Idle) {
+        while (unitStates== UnitStates.Idle) {
 
 
 
@@ -132,7 +135,7 @@ public class Villager : Unit
         yield return new WaitForEndOfFrame();
     }
     public IEnumerator PickResourcesState() {
-        while (currentState == UnitStates.PickResources)
+        while (unitStates == UnitStates.PickResources)
         {
           
             yield return 0;
@@ -144,7 +147,7 @@ public class Villager : Unit
     }
     public IEnumerator BuildState()
     {
-        while (currentState == UnitStates.Building)
+        while (unitStates == UnitStates.Building)
         {
 
             yield return 0;
@@ -157,5 +160,18 @@ public class Villager : Unit
     public void TestDealDamage()
     {
      DealDamage(500);   
+    }
+    
+    IEnumerator PickageAnim()
+    {
+        yield return new WaitForEndOfFrame();
+        
+        if (animator==null)
+        {
+            yield break;
+        }
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
+ 
+        
     }
 }

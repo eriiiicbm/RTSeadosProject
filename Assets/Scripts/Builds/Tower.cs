@@ -24,24 +24,33 @@ public class Tower : Building
       Collider nearCollider = collider[0];
       foreach (var col in collider)
       {
+          if (col.GetComponent<RTSBase>().connectionToClient==null)
+          {
+              goto afterConnectionCheck;
+          }
           if (col.GetComponent<RTSBase>().connectionToClient.connectionId ==
               NetworkClient.connection.connectionId) continue;
+          afterConnectionCheck:
           if (Vector3.Distance(col.transform.position,this.transform.position) <= Vector3.Distance(nearCollider.transform.position,this.transform.position)  )
           {
               nearCollider = col;
           }
       }
-      
       if (nearCollider == null) return;
       
       RTSBase enemy = nearCollider.GetComponent<RTSBase>();
    
       if (enemy == null) return;
+      if (enemy.connectionToClient==null)
+      {
+          goto afterConnectionCheck2;
+      }
       if (enemy.connectionToClient.connectionId ==
           NetworkClient.connection.connectionId)
       {
           return;
       }
+      afterConnectionCheck2:
       Debug.Log($"{enemy.name} detected");
         GetComponent<ComponentAbility>().SetParameter(rtsEntity.EffectRadious);
         GetComponent<ComponentAbility>().active(enemy, damege);

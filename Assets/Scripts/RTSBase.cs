@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class RTSBase : NetworkBehaviour
 {
-    protected UnitStates currentState;
-    [SerializeField] protected string entityName;
+     [SerializeField] protected string entityName;
     [SerializeField] protected int maxHealth;
     [SerializeField] protected string description;
     [SerializeField] public Sprite preview;
@@ -27,7 +26,7 @@ public class RTSBase : NetworkBehaviour
      protected RTSPlayerv2 playerv2;
 
     public event Action<float, float> ClientOnHealthUpdated;
-    public List<AudioClip> audioList= new List<AudioClip>( );
+   [HideInInspector] public List<AudioClip> audioList= new List<AudioClip>( );
     public virtual  void Start()
     {
 audioList.Insert(0,deadSound); 
@@ -43,7 +42,8 @@ audioList.Insert(1,deadSound);
 
 
         UnitBasev2.ServerOnPlayerDie += ServerHandlePlayerDie;
-        currentState = UnitStates.Idle;
+        animator = transform.GetComponentInChildren<Animator>();
+        unitStates = UnitStates.Idle;
         maxHealth = rtsEntity.MaxHealth;
 
         entityName = rtsEntity.name;
@@ -52,8 +52,6 @@ audioList.Insert(1,deadSound);
         currentHealth = maxHealth;
 
         GoToNextState();
-        animator = transform.GetComponentInChildren<Animator>();
-        unitStates = UnitStates.Idle;
         playerv2 = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
 
      }
@@ -219,7 +217,7 @@ audioList.Insert(1,deadSound);
 
     public void GoToNextState()
     {
-        string methodName = this.currentState.ToString() + "State";
+        string methodName = this.unitStates.ToString() + "State";
         Debug.Log("STATE METHOD NAME " + methodName);
         SendMessage(methodName);
     }

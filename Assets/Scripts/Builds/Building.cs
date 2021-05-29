@@ -20,7 +20,7 @@ public class Building : RTSBase
     bool _canCraft = false;
     [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
- 
+    [SerializeField] private AudioClip buildedFinishedSound;
     [SyncVar(hook = nameof(HandleBuildedUpdated))]  public bool builded;
 
     public bool canCraft
@@ -46,8 +46,10 @@ public class Building : RTSBase
 
     private void Start()
     {
+        base.Start();
         craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
         craftUncompletedGO = transform.Find("Platform")?.gameObject;
+        audioList.Insert(2,buildedFinishedSound);
     }
 
     [SerializeField] public  static  event Action<Building> ServerOnBuildingSpawned;
@@ -168,11 +170,10 @@ public class Building : RTSBase
 
         DealDamage(-250);
 
-        if (base.CurrentHealth >= base.MaxHealth)
-        {
-            builded = true;
-            StartCoroutine(nameof(Builded));
-        }
+        if (!(base.CurrentHealth >= base.MaxHealth)) return;
+        builded = true;
+        PlayListSoundEffect(8,1f,true);
+        StartCoroutine(nameof(Builded));
     }
 
     void OnDrawGizmos()

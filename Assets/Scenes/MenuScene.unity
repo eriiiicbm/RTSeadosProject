@@ -2307,14 +2307,16 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Hello fellow lovers of RTS games! \nThis is a tiny tutorial. Read it if
     you want to dominate your enemy in the first match!\n\n->Your objective is to
-    destroy the enemy main base.\n->Harvest the 4 types of resources (Stone, Wood,
-    Substance X and Ingredients) to create a powerful army.\n->Select your troops
-    by clicking or dragging your cursor with Left Click and give them orders with
-    Right Click.\n->When you have units selected, Right Click on an enemy to attack
-    him.\n->Your villagers are the only units who can construct  buildings. You need
-    buildings to create units.\n->Most of the buildings can create different types
-    of units.\n->There are many resources hidden on the map. Find and harvest them
-    to beat your enemies!!\n\nGood luck!!\n"
+    destroy the enemy core (main base).\n->Harvest the 4 types of resources (Stone,
+    Wood, Substance X and Ingredients) to create a powerful army.\n->Select your
+    troops by clicking or dragging your cursor with Left Click and give them orders
+    with Right Click.\n->When you have units selected, Right Click on an enemy to
+    attack him or Click on terrain to move your units.\n->Your villagers are the
+    only units who can construct buildings. You need buildings to create units.\n->
+    Your first building should be the Fast Food Stand. Only villagers can be trained
+    there.\n->Most of the buildings can create different types of units.\n->There
+    are many resources hidden on the map. Find and harvest them to beat your enemies!!\n\nGood
+    luck!!\n"
 --- !u!222 &478072869
 CanvasRenderer:
   m_ObjectHideFlags: 0

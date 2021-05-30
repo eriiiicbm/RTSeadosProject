@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5330,6 +5330,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1585294042370576558, guid: 95d74b3e50c21bf4bb579498ce47d32c,
+        type: 3}
+      propertyPath: sceneId
+      value: 233739999
+      objectReference: {fileID: 0}
     - target: {fileID: 2549152051244014389, guid: 95d74b3e50c21bf4bb579498ce47d32c,
         type: 3}
       propertyPath: sceneId
@@ -5339,6 +5344,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753947399081429749, guid: 95d74b3e50c21bf4bb579498ce47d32c,
+        type: 3}
+      propertyPath: sceneId
+      value: 1372002044
+      objectReference: {fileID: 0}
+    - target: {fileID: 6408499739065666045, guid: 95d74b3e50c21bf4bb579498ce47d32c,
+        type: 3}
+      propertyPath: sceneId
+      value: 2792813763
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225121636845669922, guid: 95d74b3e50c21bf4bb579498ce47d32c,
+        type: 3}
+      propertyPath: sceneId
+      value: 2971791206
       objectReference: {fileID: 0}
     - target: {fileID: 8398260750668190726, guid: 95d74b3e50c21bf4bb579498ce47d32c,
         type: 3}

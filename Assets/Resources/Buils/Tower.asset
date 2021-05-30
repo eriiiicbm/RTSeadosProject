@@ -27,7 +27,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   effectRadious: 0
   recoverySpeed: 0
-  damage: 5
+  damage: 50
   attackRange: 10
   attackTimer: 1
   proyectile: {fileID: 8734694017325873992, guid: 04856c9b21e15e84399cad08e93c25c8,

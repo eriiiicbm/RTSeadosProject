@@ -17,7 +17,7 @@ public class RTSPlayerv2 : NetworkBehaviour
     private Color teamColor = new Color();
     [HideInInspector] public List<AudioClip> audioList= new List<AudioClip>( );
 
-    public SyncList<int> resources = new SyncList<int>(){600,350,1200,400};
+    public SyncList<int> resources = new SyncList<int>(){600,350,2200,500};
 
     [SyncVar]
     [SerializeField] private int trops = 0;

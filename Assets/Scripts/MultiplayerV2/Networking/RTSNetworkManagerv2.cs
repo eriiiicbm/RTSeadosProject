@@ -112,18 +112,9 @@ isGameInProgress = false;
         }
         else
         {
+            player.SetDisplayName(mainMenu.playerNames[Players.IndexOf(player)]);
             Debug.Log($"{conn.address} + {conn.identity}");
-            if (player.isServer)
-            {
-             
-                player.SetDisplayName(
-                    SteamFriends.GetPersonaName());
-            }
-            else
-            {
-                //mainMenu.playerNames;
-                //todo  player.SetDisplayName();
-            }
+           
         }
       
         player.SetPartyOwner(Players.Count==1);

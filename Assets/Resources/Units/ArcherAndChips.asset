@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf636b8228f3d346be8a0d449de608e, type: 3}
-  m_Name: ChipsAndArcher
+  m_Name: ArcherAndChips
   m_EditorClassIdentifier: 
   isMoralUp: 0
   entityType: 6
@@ -23,7 +23,7 @@ MonoBehaviour:
   prefab: {fileID: 5726599420013825769, guid: 9a2546bd221e3114aa5025940063cb70, type: 3}
   moral: 3500
   defaultStoppingDistance: 1
-  velocity: 20
+  velocity: 8.5
   currentTarget: {fileID: 0}
   effectRadious: 0
   recoverySpeed: 0

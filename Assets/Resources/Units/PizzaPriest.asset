@@ -28,7 +28,7 @@ MonoBehaviour:
   effectRadious: 5
   recoverySpeed: 0.5
   damage: 180
-  attackRange: 3
+  attackRange: 5
   attackTimer: 2
   proyectile: {fileID: 0}
   craftRadious: 0

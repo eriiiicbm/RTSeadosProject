@@ -17,7 +17,6 @@
           </e>
           <e p="README.txt" t="Include" />
           <e p="Scipts" t="Include">
-            <e p="Colorizer.cs" t="Include" />
             <e p="LightCurves.cs" t="Include" />
             <e p="ParticleSystemScaler.cs" t="Include" />
           </e>

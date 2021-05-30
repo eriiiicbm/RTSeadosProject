@@ -4,26 +4,10 @@
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buils/FoodFactory/FinalEstructure.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buils/FoodFactory/FinalEstructure.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buils/FoodFactory/FoodFactory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buils/FoodFactory/FoodFactory.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buils/FoodWorkshop/FinalEstructure.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buils/FoodWorkshop/FinalEstructure.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buils/FoodWorkshop/FoodWorkshop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buils/FoodWorkshop/FoodWorkshop.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buils/FridgeHouse/FinalEstructure.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buils/FridgeHouse/FinalEstructure.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Barbaserker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Barbaserker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/BatiGas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/BatiGas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/ChipAndArrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/ChipAndArrow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/McBurger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/McBurger.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Nugget Vilager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Nugget Vilager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/NuggetWarriior .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/NuggetWarriior .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/PizzaPriest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/PizzaPriest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/PortableFridge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/PortableFridge.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Skewers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Skewers.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/WarHotDog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/WarHotDog.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Buils/UrbanCenter.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Buils/UrbanCenter.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/BuildingButtonv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/BuildingButtonv2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnitStates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnitStates.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CartoonFX/Scipts/Colorizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CartoonFX/Scipts/Colorizer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +50,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Buildings/GameOverHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Menus/GameOverDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Minimapv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/JoinLobbyMenu.cs" />
@@ -117,6 +100,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UnitStates.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/BuildingButtonv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
+      <option value="$PROJECT_DIR$/Assets/CartoonFX/Scipts/Colorizer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />

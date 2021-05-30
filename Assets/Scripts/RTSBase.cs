@@ -15,6 +15,7 @@ public class RTSBase : NetworkBehaviour
     [SerializeField] public Animator animator;
     [SerializeField] private AudioClip deadSound;
     [SerializeField] private AudioClip hitSound;
+    [SerializeField] private AudioClip healSound;
 
     [SyncVar(hook = nameof(HandleStatesUpdated))]
     public UnitStates unitStates = UnitStates.Idle;
@@ -30,7 +31,8 @@ public class RTSBase : NetworkBehaviour
     public virtual  void Start()
     {
 audioList.Insert(0,deadSound); 
-audioList.Insert(1,deadSound);  
+audioList.Insert(1,hitSound);  
+audioList.Insert(4,healSound);  
 
 
     }
@@ -84,9 +86,12 @@ audioList.Insert(1,deadSound);
         }
 
 
-
+        if (damageAmount<=0)
+        {
+            PlayListSoundEffect(4,1,false);
+        }else{
         PlayListSoundEffect(1,1,true);
-        currentHealth = Mathf.Min(Mathf.Max(currentHealth - damageAmount, 0), MaxHealth);
+        } currentHealth = Mathf.Min(Mathf.Max(currentHealth - damageAmount, 0), MaxHealth);
 
         if (currentHealth != 0)
         {

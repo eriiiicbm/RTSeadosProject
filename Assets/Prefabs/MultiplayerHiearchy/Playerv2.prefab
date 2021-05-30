@@ -134,16 +134,23 @@ MonoBehaviour:
   - {fileID: 3815506669057876792, guid: b5454ad133dca6e4ca4c33b10ad0a538, type: 3}
   buildingBlockLayer:
     serializedVersion: 2
-    m_Bits: 257
+    m_Bits: 2305
   buildingRangeLimit: 10000
   myUnits: []
   myBuildings: []
+  audioList: []
   trops: 0
   maxTrops: 6
   tropsInProduction: 0
   numHouse: 0
   maxNumHouse: 20
   hero1: 0
+  audioLimitTropes: {fileID: 8300000, guid: 05a56245d81a71d4caabfc4c1982bc37, type: 3}
+  audioNoBuildingPermision: {fileID: 8300000, guid: 0adde9a9e1de02442b8a3edf510595ba,
+    type: 3}
+  audioYouArePoor: {fileID: 8300000, guid: ad714a5db5eda1042be788d808a99630, type: 3}
+  audioYouHaveMaxHouse: {fileID: 8300000, guid: d17c7f4e5db5dbe468d50c0523d337a0,
+    type: 3}
 --- !u!114 &8091097305547058836
 MonoBehaviour:
   m_ObjectHideFlags: 0

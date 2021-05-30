@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1863136404858556364}
   - component: {fileID: 1863136404858556365}
   - component: {fileID: 1863136404858556338}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Wood Resource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1863136405313775229}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Wood Resource (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

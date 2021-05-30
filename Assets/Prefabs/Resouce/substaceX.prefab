@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4870399621259404503}
   - component: {fileID: 7728192331995618717}
   - component: {fileID: 6513814591160203529}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: substaceX
   m_TagString: Untagged
   m_Icon: {fileID: 0}

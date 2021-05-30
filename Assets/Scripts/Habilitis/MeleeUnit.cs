@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class MeleeUnit : MonoBehaviour, ComponentAbility
 {
-   [Server] public void active(RTSBase target, float damage)
+    public void SetParameter(float parameter)
+    {Debug.LogError("Can't use this method here");
+    }
+
+    [Server] public void active(RTSBase target, float damage)
     {
         Debug.Log("damageMele con damage: "+ damage);
 

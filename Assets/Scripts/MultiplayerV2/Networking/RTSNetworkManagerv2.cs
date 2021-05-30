@@ -58,7 +58,23 @@ public class RTSNetworkManagerv2 : NetworkManager
     }
 
     public override void OnServerDisconnect(NetworkConnection conn)
-    {  RTSPlayerv2 player = conn.identity.GetComponent<RTSPlayerv2>();
+    {
+        if (conn==null)
+        {
+            return;
+        }
+
+        if (conn.identity==null)
+        {
+            return;
+        }
+
+        if (conn.identity.GetComponent<RTSPlayerv2>())
+        {
+            return;
+        }
+
+        RTSPlayerv2 player = conn.identity.GetComponent<RTSPlayerv2>();
         Players.Remove(player);
         base.OnServerDisconnect(conn);
 

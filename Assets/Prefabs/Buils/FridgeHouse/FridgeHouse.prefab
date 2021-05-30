@@ -231,6 +231,25 @@ MonoBehaviour:
   health: {fileID: 0}
   healtBarParent: {fileID: 7861629049243117969}
   healthBarImage: {fileID: 784811894523959775}
+--- !u!95 &1557600656830197337
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7624415126411576879}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 40ab34865601cea4e859aac98cb8f9b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8807420075660520922
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +590,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinalEstructure
       objectReference: {fileID: 0}
+    - target: {fileID: 4731069443010132957, guid: c9db41ba9153c7d40afa22c9c0bf7d79,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7479183878331570160, guid: c9db41ba9153c7d40afa22c9c0bf7d79,
         type: 3}
       propertyPath: m_RootOrder
@@ -628,6 +652,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9db41ba9153c7d40afa22c9c0bf7d79, type: 3}
+--- !u!1 &7624415126411576879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4731069443010132957, guid: c9db41ba9153c7d40afa22c9c0bf7d79,
+    type: 3}
+  m_PrefabInstance: {fileID: 2911436141556301298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5740991811493194242 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7479183878331570160, guid: c9db41ba9153c7d40afa22c9c0bf7d79,

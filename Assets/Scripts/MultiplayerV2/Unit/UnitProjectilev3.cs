@@ -42,17 +42,18 @@ public class UnitProjectilev3 : NetworkBehaviour
             if (componentAbility!=null)
             {
              Debug.Log("has component");
-                GetComponent<ComponentAbility>()?.active(rtsBase.GetComponent<RTSBase>(), damage);
+          
+            componentAbility.active(rtsBase.GetComponent<RTSBase>(), damage);
 
             }
             else
             {
                 rtsBase.DealDamage(damage);
+                DestroySelf();
+
             }}
 
-        Debug.Log("Dies when touch");
-        DestroySelf();
-    }
+     }
 
     [ServerCallback]
     private void DestroySelf()

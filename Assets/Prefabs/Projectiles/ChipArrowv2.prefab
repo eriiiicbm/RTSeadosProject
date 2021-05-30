@@ -137,8 +137,8 @@ MonoBehaviour:
   damage: 15.95
   destroyAfterSeconds: 5
   launchForce: 10
-  rb: {fileID: 0}
-  model: {fileID: 0}
+  rb: {fileID: 5561175842899344374}
+  model: {fileID: 6468431712784763985}
 --- !u!114 &2846206445964741292
 MonoBehaviour:
   m_ObjectHideFlags: 0

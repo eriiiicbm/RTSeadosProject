@@ -9,9 +9,14 @@ public class AreaDamage : NetworkBehaviour, ComponentAbility
     [SerializeField] private LayerMask layerMask =~8;
 
     private float effectRadious=20f;
-    private void SetEffectRadious(float newEffectRadious)
+    public void SetEffectRadious(float newEffectRadious)
     {
       effectRadious= newEffectRadious;
+    }
+
+    public void SetParameter(float parameter)
+    {
+        effectRadious = parameter;
     }
 
     [Server]
@@ -27,11 +32,16 @@ public class AreaDamage : NetworkBehaviour, ComponentAbility
             {
                return; 
             }
-            if (rtsBase.hasAuthority)
+
+            if (rtsBase.connectionToClient==null)
+            {
+            goto    damage;
+            }
+            if (rtsBase.connectionToClient.connectionId==connectionToClient.connectionId)
             {
                 return;
             } 
-            
+            damage:
             Debug.Log("damage to "+col.name);
             col.GetComponent<RTSBase>().DealDamage(damage);
 

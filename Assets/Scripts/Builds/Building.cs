@@ -20,7 +20,7 @@ public class Building : RTSBase
     bool _canCraft = false;
     [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
- 
+    [SerializeField] private AudioClip buildedFinishedSound;
     [SyncVar(hook = nameof(HandleBuildedUpdated))]  public bool builded;
 
     public bool canCraft
@@ -46,8 +46,10 @@ public class Building : RTSBase
 
     private void Start()
     {
+        base.Start();
         craftCompletedGO = transform.Find("FinalEstructure")?.gameObject;
         craftUncompletedGO = transform.Find("Platform")?.gameObject;
+        audioList.Insert(2,buildedFinishedSound);
     }
 
     [SerializeField] public  static  event Action<Building> ServerOnBuildingSpawned;
@@ -91,7 +93,12 @@ public class Building : RTSBase
         StartCoroutine(nameof(InConstuction));
 
         buildTime = rtsEntity.BuildTime;
+        if (!builded)
+        {
+            
         DealDamage(maxHealth-1);
+    
+        }
         SetBuild();
      }
     
@@ -105,9 +112,7 @@ public class Building : RTSBase
 
     [Server]
     private void ServerHandleDie()
-    {
-         NetworkServer.Destroy(gameObject);
-
+    { 
         if (GetComponent<Fridge>() == null) return;
         connectionToClient.identity.GetComponent<RTSPlayerv2>().DeleteHouse();
     }
@@ -170,11 +175,10 @@ public class Building : RTSBase
 
         DealDamage(-250);
 
-        if (base.CurrentHealth >= base.MaxHealth)
-        {
-            builded = true;
-            StartCoroutine(nameof(Builded));
-        }
+        if (!(base.CurrentHealth >= base.MaxHealth)) return;
+        builded = true;
+        PlayListSoundEffect(8,1f,true);
+        StartCoroutine(nameof(Builded));
     }
 
     void OnDrawGizmos()
@@ -202,6 +206,7 @@ public class Building : RTSBase
 
         craftUncompletedGO.SetActive(false);
         craftCompletedGO.SetActive(true);
+        animator = craftCompletedGO.GetComponent<Animator>();
 
         Fridge fridge = GetComponent<Fridge>();
         if (fridge != null)
@@ -220,5 +225,7 @@ public class Building : RTSBase
         if (!newBuilding) return;
         craftUncompletedGO.SetActive(false);
         craftCompletedGO.SetActive(true);
+        
+        animator = craftCompletedGO.GetComponent<Animator>();
     }
 }

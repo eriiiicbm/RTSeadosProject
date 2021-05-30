@@ -142,19 +142,10 @@ public class Unit : RTSBase
     [Server]
     private void ServerHandleDie()
     {
-        StartCoroutine(nameof(DeadAnim));
       playerv2.Trops--;
     }
 
-    IEnumerator DeadAnim()
-    {
-        yield return new WaitForEndOfFrame();
-        animator.Play("Dead");
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length + 3);
-        NetworkServer.Destroy(gameObject);
-
-        
-    }
+  
     protected Targetable target;
     [ServerCallback]
     public virtual void Update()
@@ -227,8 +218,9 @@ private void NavMeshToTarget()
             return;
         }
 
-        unitStates = UnitStates.Walk;
-        PlayListSoundEffect(2,1,false);
+         
+            unitStates = UnitStates.Walk;
+         PlayListSoundEffect(2,1,false);
         navMeshAgent.SetDestination(hit.position);
         Debug.Log("Moving");
     }
@@ -305,6 +297,7 @@ private void NavMeshToTarget()
     }
      IEnumerator MoralEfect()
     { 
+        //todo aura
         if (GetComponent<Unit>() == null) yield return 0;
 
         PassiveAbility passiveAbility = GetComponent<PassiveAbility>();
@@ -379,7 +372,7 @@ private void NavMeshToTarget()
 
     public IEnumerator MoveState()
     {
-        while (currentState == UnitStates.Walk)
+        while (unitStates == UnitStates.Walk)
         {
             yield return 0;
         }

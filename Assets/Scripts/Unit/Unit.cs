@@ -53,7 +53,7 @@ public class Unit : RTSBase
     public void Start()
     {
         base.Start();
-        audioList.Insert(2,movementSound);  
+        audioList.Insert(3,movementSound);  
 
         StartStuff();
     }
@@ -198,7 +198,7 @@ private void NavMeshToTarget()
         {
             return;
         }
-        PlayListSoundEffect(2,1,false);
+        PlayListSoundEffect(3,1,false);
     // PlaySEIfNotPlaying(movementSound,1f);
         if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
         {
@@ -237,7 +237,7 @@ private void NavMeshToTarget()
 
          
             unitStates = UnitStates.Walk;
-         PlayListSoundEffect(2,1,false);
+         PlayListSoundEffect(3,1,false);
         navMeshAgent.SetDestination(hit.position);
         Debug.Log("Moving");
     }

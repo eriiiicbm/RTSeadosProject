@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  isTesting: 1
+  isTesting: 0
   cameraFocus: {fileID: 7917082309746535190, guid: e1f36da0ccb79084483fd57a94361bf0,
     type: 3}
   zoomSpeed: 6

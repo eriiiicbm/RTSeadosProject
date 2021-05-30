@@ -45,8 +45,9 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
 
     private void Start()
     {
+        base.Start();
      SpawnButtons();
-audioList.Insert(9,spawnedSound);
+audioList.Insert(3,spawnedSound);
     }
 
     public void SpawnButtons()
@@ -143,7 +144,7 @@ audioList.Insert(9,spawnedSound);
         }
 
         Debug.Log("Producting");
-        PlayListSoundEffect(9,1f,true);
+        PlayListSoundEffect(3,1f,true);
         GameObject unitInstance = Instantiate(currentUnit.gameObject, unitSpawnPoint.position, unitSpawnPoint.rotation);
         NetworkServer.Spawn(unitInstance, connectionToClient);
         

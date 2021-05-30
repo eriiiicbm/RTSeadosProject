@@ -177,7 +177,7 @@ public class Building : RTSBase
 
         if (!(base.CurrentHealth >= base.MaxHealth)) return;
         builded = true;
-        PlayListSoundEffect(8,1f,true);
+        PlayListSoundEffect(2,1f,true);
         StartCoroutine(nameof(Builded));
     }
 

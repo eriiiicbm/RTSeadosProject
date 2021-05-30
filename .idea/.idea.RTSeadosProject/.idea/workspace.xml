@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="" />
+    <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/Scene_MenuMultiplayerv2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,26 +84,26 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/TeamColorSetterv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Networking/RTSNetworkManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitProjectilev3.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/ComponentAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/AreaDamage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MeleeUnit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/DistanceUnit.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/TutorialOnKey.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Tower.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UnitStates.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/BuildingButtonv2.cs" />
       <option value="$PROJECT_DIR$/Assets/CartoonFX/Scipts/Colorizer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/Fridge.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/MainMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/MainMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />

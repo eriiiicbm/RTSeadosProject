@@ -32,7 +32,7 @@ public class RTSBase : NetworkBehaviour
     {
 audioList.Insert(0,deadSound); 
 audioList.Insert(1,hitSound);  
-audioList.Insert(4,healSound);  
+audioList.Insert(2,healSound);  
 
 
     }
@@ -88,7 +88,7 @@ audioList.Insert(4,healSound);
 
         if (damageAmount<=0)
         {
-            PlayListSoundEffect(4,1,false);
+            PlayListSoundEffect(2,1,false);
         }else{
         PlayListSoundEffect(1,1,true);
         } currentHealth = Mathf.Min(Mathf.Max(currentHealth - damageAmount, 0), MaxHealth);

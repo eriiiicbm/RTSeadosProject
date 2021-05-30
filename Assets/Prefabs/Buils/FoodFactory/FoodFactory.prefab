@@ -195,6 +195,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   deadSound: {fileID: 0}
   hitSound: {fileID: 0}
+  healSound: {fileID: 0}
   unitStates: 0
   audioList: []
   buildTime: 0
@@ -410,7 +411,7 @@ PrefabInstance:
     - target: {fileID: 8309465093329681362, guid: d4f818c7441a55341adcf690f48bd941,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.83
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 8309465093329681362, guid: d4f818c7441a55341adcf690f48bd941,
         type: 3}
@@ -643,6 +644,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 483639966292465865, guid: 5476db7541ba43c4d96ed8d9b728a242,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3605872412906743868, guid: 5476db7541ba43c4d96ed8d9b728a242,
         type: 3}
       propertyPath: m_RootOrder
@@ -656,7 +662,7 @@ PrefabInstance:
     - target: {fileID: 3605872412906743868, guid: 5476db7541ba43c4d96ed8d9b728a242,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.67
+      value: 0.82
       objectReference: {fileID: 0}
     - target: {fileID: 3605872412906743868, guid: 5476db7541ba43c4d96ed8d9b728a242,
         type: 3}

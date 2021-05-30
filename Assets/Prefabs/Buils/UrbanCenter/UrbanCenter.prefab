@@ -260,6 +260,7 @@ MonoBehaviour:
   buildingButtonTemplate: {fileID: 267681169135266736, guid: 3e8da26e936fdc34f9fa31103a60a42a,
     type: 3}
   unitQueue: []
+  spawnedSound: {fileID: 8300000, guid: 4ce76af72c57d1940a6383ae61e4e42f, type: 3}
 --- !u!114 &-7691358590833232676
 MonoBehaviour:
   m_ObjectHideFlags: 0

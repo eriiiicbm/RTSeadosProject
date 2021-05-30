@@ -73,5 +73,6 @@ public class MainMenu : MonoBehaviour
         NetworkManager.singleton.networkAddress = hostAddress;
         NetworkManager.singleton.StartClient();
             landingPagePanel.SetActive(false);
+            
     }
 }

@@ -29,13 +29,21 @@ public class RTSNetworkManagerv2 : NetworkManager
     {
         base.OnClientConnect(conn);
         ClientOnConnected?.Invoke();
-        
+        foreach (var player in Players)
+        {
+            player.PlayListSoundEffect(5,1f,true);
+        }
     }
 
     public override void OnClientDisconnect(NetworkConnection conn)
     {
         base.OnClientDisconnect(conn);
         ClientOnDisconnected?.Invoke();
+        
+        foreach (var player in Players)
+        {
+            player.PlayListSoundEffect(6,1f,true);
+        }
 
     }
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PortableFridge
   m_EditorClassIdentifier: 
   isMoralUp: 0
-  entityType: 8
+  entityType: 2
   maxHealth: 2000
   expirationVelocity: 2
   damageMoral: 0
@@ -22,14 +22,14 @@ MonoBehaviour:
   preview: {fileID: 0}
   prefab: {fileID: 947953591945672596, guid: f21b0342ba5d486418f87b46b8606e0f, type: 3}
   moral: 2500
-  defaultStoppingDistance: 4
+  defaultStoppingDistance: 6.11
   velocity: 5.75
   currentTarget: {fileID: 0}
   effectRadious: 5
   recoverySpeed: 0.25
   damage: 0
-  attackRange: 0
-  attackTimer: 0
+  attackRange: 5.22
+  attackTimer: 1.38
   proyectile: {fileID: 0}
   craftRadious: 0
   craftCompletedGO: {fileID: 0}

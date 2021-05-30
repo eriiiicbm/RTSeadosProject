@@ -151,6 +151,10 @@ MonoBehaviour:
   audioYouArePoor: {fileID: 8300000, guid: ad714a5db5eda1042be788d808a99630, type: 3}
   audioYouHaveMaxHouse: {fileID: 8300000, guid: d17c7f4e5db5dbe468d50c0523d337a0,
     type: 3}
+  audioYouHaveMcBurger: {fileID: 8300000, guid: 8e8843d0f246ff744b41e93893546eac,
+    type: 3}
+  onLobbyEnter: {fileID: 8300000, guid: 05509be575b969e478323e5c0903e2f4, type: 3}
+  onLobbyExit: {fileID: 8300000, guid: 3c3241bca3c28514698e2fb598405109, type: 3}
 --- !u!114 &8091097305547058836
 MonoBehaviour:
   m_ObjectHideFlags: 0

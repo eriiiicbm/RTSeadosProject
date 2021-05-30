@@ -156,6 +156,10 @@ public class Unit : RTSBase
     private void ServerHandleDie()
     {
       playerv2.Trops--;
+      if (rtsEntity.name.Equals("McBurger")){
+          
+              playerv2.Hero1 = false;
+      }
     }
 
   

@@ -31,6 +31,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     private Transform transformCanvas;
     [SyncVar] private float unitTimer;
     private float progressImageVelocity;
+    public AudioClip spawnedSound;
 
     #region Server
 
@@ -45,7 +46,7 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
     private void Start()
     {
      SpawnButtons();
-
+audioList.Insert(9,spawnedSound);
     }
 
     public void SpawnButtons()
@@ -142,8 +143,10 @@ public class UnitSpawnerv3 : Building, IPointerClickHandler
         }
 
         Debug.Log("Producting");
+        PlayListSoundEffect(9,1f,true);
         GameObject unitInstance = Instantiate(currentUnit.gameObject, unitSpawnPoint.position, unitSpawnPoint.rotation);
         NetworkServer.Spawn(unitInstance, connectionToClient);
+        
         Vector3 spawnOffset = Random.insideUnitSphere * spawnMoveRange;
         spawnOffset.y = unitSpawnPoint.position.y;
         Unit unitMovement = unitInstance.GetComponent<Unit>();

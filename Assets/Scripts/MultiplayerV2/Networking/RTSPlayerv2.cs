@@ -45,6 +45,9 @@ public class RTSPlayerv2 : NetworkBehaviour
     public AudioClip audioNoBuildingPermision;
     public AudioClip audioYouArePoor;
     public AudioClip audioYouHaveMaxHouse;
+    public AudioClip audioYouHaveMcBurger;
+    public AudioClip onLobbyEnter;
+    public AudioClip onLobbyExit;
 
     private void Start()
     {
@@ -52,6 +55,9 @@ public class RTSPlayerv2 : NetworkBehaviour
         audioList.Insert(1,audioNoBuildingPermision);
         audioList.Insert(2,audioYouArePoor);
         audioList.Insert(3,audioYouHaveMaxHouse);
+        audioList.Insert(4,audioYouHaveMcBurger);
+        audioList.Insert(5,onLobbyEnter);
+        audioList.Insert(6,onLobbyExit);
     }
 
     public Unit FindUnitById(int id)
@@ -214,6 +220,20 @@ Debug.Log("Set resources");
     {
         if (!CheckIfUserHasSpaceTrop()) return;
         Unit unit = FindUnitById(unitId);
+        if (unit.rtsEntity.name.Equals("McBurger")){
+            if (hero1)
+            {
+                PlayListSoundEffect(4, 1f, true);
+
+            }
+            else
+            {
+                hero1 = true;
+            }
+        }
+        {
+        }
+       
 
         if (!CheckIfUserHasResources(unit.prices))
         {

@@ -308,6 +308,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   deadSound: {fileID: 0}
   hitSound: {fileID: 0}
+  healSound: {fileID: 0}
   unitStates: 0
   audioList: []
   buildTime: 0
@@ -361,6 +362,7 @@ MonoBehaviour:
   buildingButtonTemplate: {fileID: 267681169135266736, guid: 3e8da26e936fdc34f9fa31103a60a42a,
     type: 3}
   unitQueue: []
+  spawnedSound: {fileID: 8300000, guid: 4ce76af72c57d1940a6383ae61e4e42f, type: 3}
 --- !u!114 &1040811745877512441
 MonoBehaviour:
   m_ObjectHideFlags: 0

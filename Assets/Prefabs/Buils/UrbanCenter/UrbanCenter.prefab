@@ -206,6 +206,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   deadSound: {fileID: 0}
   hitSound: {fileID: 0}
+  healSound: {fileID: 0}
   unitStates: 0
   audioList: []
   buildTime: 0

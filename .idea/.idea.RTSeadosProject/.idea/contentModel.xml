@@ -9,6 +9,19 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="CartoonFX" t="Include">
+          <e p="DemoRosources" t="Include">
+            <e p="DemoGUI.cs" t="Include" />
+            <e p="DemoReactivator.cs" t="Include" />
+            <e p="FPSCartoon.cs" t="Include" />
+          </e>
+          <e p="README.txt" t="Include" />
+          <e p="Scipts" t="Include">
+            <e p="Colorizer.cs" t="Include" />
+            <e p="LightCurves.cs" t="Include" />
+            <e p="ParticleSystemScaler.cs" t="Include" />
+          </e>
+        </e>
         <e p="DayNightSystem.cs" t="Include" />
         <e p="Editor" t="Include">
           <e p="ShowOnlyRelevantRTSEntityAttributes.cs" t="Include" />
@@ -267,7 +280,7 @@
           <e p="Notice.txt" t="Include" />
           <e p="Plugins" t="Include">
             <e p="Mono.Cecil" t="Include">
-              <e p="License.txt" t="Include" />
+              <e p="LICENSE.txt" t="Include" />
             </e>
           </e>
           <e p="README.txt" t="Include" />
@@ -328,7 +341,7 @@
               <e p="FizzySteamworks" t="Include">
                 <e p="BidirectionalDictionary.cs" t="Include" />
                 <e p="Dependencies" t="Include">
-                  <e p="License.txt" t="Include" />
+                  <e p="LICENSE.txt" t="Include" />
                   <e p="Steamworks.NET" t="Include">
                     <e p="autogen" t="Include">
                       <e p="isteamapplist.cs" t="Include" />
@@ -724,6 +737,7 @@
               <e p="TeamColorSetterv2.cs" t="Include" />
             </e>
             <e p="ResourcesDisplayv2.cs" t="Include" />
+            <e p="TutorialOnKey.cs" t="Include" />
             <e p="Unit" t="Include">
               <e p="UnitCommandGiverv2.cs" t="Include" />
               <e p="UnitFiringv2.cs" t="Include" />
@@ -843,6 +857,22 @@
                 <e p="FXWaterBasic.shader" t="Include" />
               </e>
             </e>
+          </e>
+          <e p="Image Effects (Pro Only)" t="Include">
+            <e p="_Sources" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="_BloomAndFlares" t="Include">
+                  <e p="Blend.shader" t="Include" />
+                  <e p="BlendForBloom.shader" t="Include" />
+                  <e p="BlurAndFlares.shader" t="Include" />
+                  <e p="BrightPassFilter.shader" t="Include" />
+                  <e p="BrightPassFilter2.shader" t="Include" />
+                  <e p="LensFlareCreate.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="ImageEffectBase.cs" t="Include" />
+            <e p="ImageEffects.cs" t="Include" />
           </e>
           <e p="Utility" t="Include">
             <e p="ActivateTrigger.cs" t="Include" />

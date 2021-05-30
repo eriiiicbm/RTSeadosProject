@@ -198,7 +198,8 @@ MonoBehaviour:
   unitStates: 0
   audioList: []
   buildTime: 0
-  buildingPreview: {fileID: 6280296467146063287}
+  buildingPreview: {fileID: 4856965944896171192, guid: d4f818c7441a55341adcf690f48bd941,
+    type: 3}
   icon: {fileID: 21300000, guid: 5783171a63eb7704fa55489560ab0a4b, type: 3}
   price: 00000000000000009001000064000000
   id: 14
@@ -232,6 +233,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buildedFinishedSound: {fileID: 0}
   builded: 0
   instantiatedCanvas: {fileID: 6349227796455042210, guid: 9743dc6075cf6e44f852aef1a118fede,
     type: 3}

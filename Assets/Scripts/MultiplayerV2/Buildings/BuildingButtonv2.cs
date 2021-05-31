@@ -67,7 +67,13 @@ public class BuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     }
 
     public void OnPointerUp(PointerEventData eventData)
-    {
+    {  
+        if (eventData.button != PointerEventData.InputButton.Left)
+        {
+            return;
+        }
+
+        
         if (buildingPreviewInstance == null)
         {
             return;
@@ -85,6 +91,10 @@ public class BuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
     private void UpdateBuildingPreview()
     {
+        if (!Mouse.current.leftButton.isPressed ||   Mouse.current.rightButton.isPressed)
+        {
+            Destroy(buildingPreviewInstance);
+        }
         Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, floorMask))
         {
@@ -100,5 +110,9 @@ public class BuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         Color color = player.CanPlaceBuilding(buildingCollider, hit.point) ? Color.green : Color.red;
         Debug.Log($"color{color.ToString()}]");
         buildingRendererInstance.material.SetColor("_Color", color);
+        if ( Mouse.current.leftButton.isPressed &&  Mouse.current.rightButton.isPressed)
+        {
+            Destroy(buildingPreviewInstance);
+        }
     }
 }

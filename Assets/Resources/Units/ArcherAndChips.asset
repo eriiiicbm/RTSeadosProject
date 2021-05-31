@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf636b8228f3d346be8a0d449de608e, type: 3}
+  m_Name: ArcherAndChips
+  m_EditorClassIdentifier: 
+  isMoralUp: 0
+  entityType: 6
+  maxHealth: 2000
+  expirationVelocity: 2.5
+  damageMoral: 0
+  prices: 320000000a0000000000000000000000
+  description: 
+  preview: {fileID: 0}
+  prefab: {fileID: 5726599420013825769, guid: 9a2546bd221e3114aa5025940063cb70, type: 3}
+  moral: 3500
+  defaultStoppingDistance: 1
+  velocity: 8.5
+  currentTarget: {fileID: 0}
+  effectRadious: 0
+  recoverySpeed: 0
+  damage: 175
+  attackRange: 28
+  attackTimer: 3
+  proyectile: {fileID: 3370176331153901490, guid: c0b9490ae1569514397d92793ea0a052,
+    type: 3}
+  craftRadious: 0
+  craftCompletedGO: {fileID: 0}
+  craftUnCompletedGO: {fileID: 0}
+  buildRenderer: {fileID: 0}
+  buildTime: 6
+  canCraft: 0
+  productionUnits:
+  - {fileID: 0}
+  curretUnit: {fileID: 0}
+  descriptionText: {fileID: 0}
+  descriptionPosition: 0
+  currentProduction: {fileID: 0}
+  nameText: {fileID: 0}
+  namePosition: 0
+  unitState: 0
+  emotionalState: 0
+  typeOfResourceThatCanHave: 0

@@ -17,3 +17,8 @@ public enum EntityType {
 
 }
 
+public enum BuffedStatus
+{
+    Buffed,Debuffed,Nothing
+}
+

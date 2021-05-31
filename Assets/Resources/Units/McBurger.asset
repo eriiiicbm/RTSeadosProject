@@ -35,7 +35,7 @@ MonoBehaviour:
   craftCompletedGO: {fileID: 0}
   craftUnCompletedGO: {fileID: 0}
   buildRenderer: {fileID: 0}
-  buildTime: 15
+  buildTime: 10
   canCraft: 0
   productionUnits: []
   curretUnit: {fileID: 0}

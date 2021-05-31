@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1574284116683360882}
   - component: {fileID: -9164034360352102420}
   - component: {fileID: -6867231159102809324}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Substace X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 2
 --- !u!1001 &1373308511278184201
 PrefabInstance:

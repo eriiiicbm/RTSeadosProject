@@ -9,6 +9,7 @@ TagManager:
   - Target
   - wareHouse
   - Floor
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Unit
   - Minimap
   - Floor
-  - 
+  - Resources
   - 
   - 
   - 

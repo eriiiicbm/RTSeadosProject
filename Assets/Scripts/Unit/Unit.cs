@@ -15,7 +15,8 @@ public class Unit : RTSBase
     [SyncVar] public float expirationVelocity;
     [SyncVar]  public float time;
     [SyncVar] float velocity;
-
+    [SyncVar (hook = nameof(HandleBuffedStatus))]
+   public BuffedStatus buffedStatus;
     [SyncVar(hook = nameof(HandleMoralUpdated))]
     public float moral;
 
@@ -34,9 +35,11 @@ public class Unit : RTSBase
     [SerializeField] private float chaseRange = 10f;
     public event Action<float, float> ClientOnMoralUpdated;
     public event Action ServerOnLostMoral;
-    private bool alteratedState;
-    public float defaultDistance = 2;
+     public float defaultDistance = 2;
     [SerializeField] private AudioClip movementSound;
+    [SerializeField] private GameObject nerfEffect;
+    [SerializeField] private GameObject buffEffect;
+    
     public Targeter GetTargeter()
     {
         return targeter;
@@ -50,7 +53,7 @@ public class Unit : RTSBase
     public void Start()
     {
         base.Start();
-        audioList.Insert(2,movementSound);  
+        audioList.Insert(3,movementSound);  
 
         StartStuff();
     }
@@ -62,7 +65,7 @@ public class Unit : RTSBase
     public void DealMoralDamage(float damageAmount)
     {
         moral = Mathf.Max(moral - damageAmount, 0);
-
+        StartCoroutine(nameof(MoralEfect));
         //ServerOnLostMoral?.Invoke();
     }
 
@@ -95,6 +98,16 @@ public class Unit : RTSBase
         time = rtsEntity.BuildTime;
         chaseRange = rtsEntity.AttackRange;
         expirationVelocity = rtsEntity.ExpirationVelocity;
+        if (buffEffect==null)
+        {
+            buffEffect = transform.Find("Buff").gameObject;
+        }
+        if (nerfEffect==null)
+        {
+            nerfEffect = transform.Find("Nerf").gameObject;
+        }
+
+        buffedStatus = BuffedStatus.Nothing;
     }
 
     public override void OnStartServer()
@@ -143,6 +156,10 @@ public class Unit : RTSBase
     private void ServerHandleDie()
     {
       playerv2.Trops--;
+      if (rtsEntity.name.Equals("McBurger")){
+          
+              playerv2.Hero1 = false;
+      }
     }
 
   
@@ -181,7 +198,7 @@ private void NavMeshToTarget()
         {
             return;
         }
-        PlayListSoundEffect(2,1,false);
+        PlayListSoundEffect(3,1,false);
     // PlaySEIfNotPlaying(movementSound,1f);
         if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
         {
@@ -220,7 +237,7 @@ private void NavMeshToTarget()
 
          
             unitStates = UnitStates.Walk;
-         PlayListSoundEffect(2,1,false);
+         PlayListSoundEffect(3,1,false);
         navMeshAgent.SetDestination(hit.position);
         Debug.Log("Moving");
     }
@@ -275,15 +292,22 @@ private void NavMeshToTarget()
     private void HandleMoralUpdated(float oldMoral, float newMoral)
     {
         ClientOnMoralUpdated?.Invoke(newMoral, maxMoral);
-        if (isServer)
-        {
+      
          
             StartCoroutine(nameof(MoralEfect));
 
-        }} 
+         } 
     private void HandleMaxMoralUpdated(float oldMaxMoral, float newMaxMoral)
     {
         ClientOnMoralUpdated?.Invoke(moral, newMaxMoral);
+    }
+
+    public void HandleBuffedStatus(BuffedStatus previousStatus,BuffedStatus newStatus)
+    {
+         Debug.Log("  buffed status updated");
+        buffEffect.SetActive(newStatus==BuffedStatus.Buffed);
+        nerfEffect.SetActive(newStatus==BuffedStatus.Debuffed);
+ 
     }
 
 
@@ -297,17 +321,16 @@ private void NavMeshToTarget()
     }
      IEnumerator MoralEfect()
     { 
-        //todo aura
-        if (GetComponent<Unit>() == null) yield return 0;
+         if (GetComponent<Unit>() == null) yield return 0;
 
         PassiveAbility passiveAbility = GetComponent<PassiveAbility>();
         UnitCombat unitCombat = GetComponent<UnitCombat>();
         MoralDamage moralDamage = GetComponent<MoralDamage>();
 
-        if (moral < maxMoral * 0.25 && !alteratedState)
+        if (moral < maxMoral * 0.25  )
         {
-            alteratedState = true;
-
+            buffedStatus = BuffedStatus.Debuffed;
+ 
             velocity = rtsEntity.Velocity * 0.5f;
             navMeshAgent.speed = velocity;
 
@@ -325,10 +348,11 @@ private void NavMeshToTarget()
             yield return 0;
         }
 
-        if (moral < maxMoral * 0.25 && moral < maxMoral * 0.75 && alteratedState)
+        if (moral < maxMoral * 0.25 && moral < maxMoral * 0.75   )
         {
-            alteratedState = false;
-
+            
+            buffedStatus = BuffedStatus.Nothing;
+ 
             velocity = rtsEntity.Velocity;
             navMeshAgent.speed = velocity;
 
@@ -346,10 +370,9 @@ private void NavMeshToTarget()
             yield return 0;
         }
 
-        if (moral > maxMoral * 0.75 && !alteratedState)
+        if (moral > maxMoral * 0.75  )
         {
-            alteratedState = true;
-
+             buffedStatus = BuffedStatus.Buffed;
             velocity = rtsEntity.Velocity * 1.5f;
             navMeshAgent.speed = velocity;
 
@@ -368,6 +391,7 @@ private void NavMeshToTarget()
         }
 
         yield return new WaitForEndOfFrame();
+        HandleBuffedStatus(BuffedStatus.Nothing,buffedStatus);
     }
 
     public IEnumerator MoveState()

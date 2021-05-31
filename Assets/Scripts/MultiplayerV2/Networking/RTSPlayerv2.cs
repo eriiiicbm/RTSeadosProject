@@ -15,8 +15,9 @@ public class RTSPlayerv2 : NetworkBehaviour
     [SerializeField] private List<Unit> myUnits = new List<Unit>();
     [SerializeField] private List<Building> myBuildings = new List<Building>();
     private Color teamColor = new Color();
+    [HideInInspector] public List<AudioClip> audioList= new List<AudioClip>( );
 
-    public SyncList<int> resources = new SyncList<int>(){600,350,1200,400};
+    public SyncList<int> resources = new SyncList<int>(){600,350,2200,500};
 
     [SyncVar]
     [SerializeField] private int trops = 0;
@@ -40,6 +41,25 @@ public class RTSPlayerv2 : NetworkBehaviour
     public static event Action ClientOnInfoUpdated;
     public static event Action<SyncList<int>> ClientOnResourcesUpdated;
     public static event Action<bool> AuthorityOnPartyOwnerStateUpdated;
+    public AudioClip audioLimitTropes;
+    public AudioClip audioNoBuildingPermision;
+    public AudioClip audioYouArePoor;
+    public AudioClip audioYouHaveMaxHouse;
+    public AudioClip audioYouHaveMcBurger;
+    public AudioClip onLobbyEnter;
+    public AudioClip onLobbyExit;
+
+    private void Start()
+    {
+        audioList.Insert(0,audioLimitTropes);
+        audioList.Insert(1,audioNoBuildingPermision);
+        audioList.Insert(2,audioYouArePoor);
+        audioList.Insert(3,audioYouHaveMaxHouse);
+        audioList.Insert(4,audioYouHaveMcBurger);
+        audioList.Insert(5,onLobbyEnter);
+        audioList.Insert(6,onLobbyExit);
+    }
+
     public Unit FindUnitById(int id)
     {
         return units.FirstOrDefault(unit => unit.GetId() == id);
@@ -200,6 +220,20 @@ Debug.Log("Set resources");
     {
         if (!CheckIfUserHasSpaceTrop()) return;
         Unit unit = FindUnitById(unitId);
+        if (unit.rtsEntity.name.Equals("McBurger")){
+            if (hero1)
+            {
+                PlayListSoundEffect(4, 1f, true);
+
+            }
+            else
+            {
+                hero1 = true;
+            }
+        }
+        {
+        }
+       
 
         if (!CheckIfUserHasResources(unit.prices))
         {
@@ -253,6 +287,8 @@ Debug.Log("here before boom 1");
         if (!CanPlaceBuilding(buildingCollider, point))
         {
             Debug.Log("Cant build here");
+            PlayListSoundEffect(1,1,true);
+
             return;
         }
 
@@ -278,6 +314,8 @@ Debug.Log("here before boom 1");
         {
             if (resources[i] - prices[i] >= 0) continue;
             Debug.Log("You are poor");
+            PlayListSoundEffect(2,1,true);
+
             return false;
         }
 
@@ -307,6 +345,7 @@ Debug.Log("here before boom 1");
         }
  
         Debug.Log("Your food can't rest");
+        PlayListSoundEffect(0,1,true);
         return false;
     }
 
@@ -327,6 +366,8 @@ Debug.Log("here before boom 1");
         if (numHouse < maxNumHouse) return true;
 
         Debug.Log("Much house");
+        PlayListSoundEffect(3,1,true);
+
         return false;
     }
 
@@ -511,4 +552,23 @@ Debug.Log("This is");
     }
 
     #endregion
+    
+    [ClientRpc]
+    public void PlayListSoundEffect(int position,float pitch,bool overwrite)
+    {
+        if (position>=audioList.Count || position <0)
+        {
+            return;
+        }
+        if (overwrite)
+        {
+            SoundManager._instance.PlaySE(audioList[position],pitch);
+      
+        }
+        else
+        {
+            SoundManager._instance.PlaySEIfNotPlaying(audioList[position],pitch);
+        }
+    }
+
 }

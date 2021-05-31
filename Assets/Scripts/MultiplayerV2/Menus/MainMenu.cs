@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject landingPagePanel = null;
     [SerializeField] public bool useSteam = false;
     public TMP_InputField text;
-
+    public   List<string> playerNames;
     protected Callback<LobbyCreated_t> lobbyCreated;
     protected Callback<GameLobbyJoinRequested_t> gameLobbyJoinRequested;
     protected Callback<LobbyEnter_t> lobbyEntered;
@@ -51,7 +51,9 @@ public class MainMenu : MonoBehaviour
         SteamMatchmaking.SetLobbyData(new CSteamID(callback.m_ulSteamIDLobby),"HostAddress",SteamUser.GetSteamID().ToString());
       //  text.text = $"{SteamMatchmaking.GetLobbyData(new CSteamID(callback.m_ulSteamIDLobby),"HostAddress")}    user id {SteamUser.GetSteamID().ToString()}  csteamid {new CSteamID(callback.m_ulSteamIDLobby).ToString()}  :F {new CSteamID(callback.m_ulSteamIDLobby).m_SteamID} ";
         text.text = $"{SteamMatchmaking.GetLobbyData(new CSteamID(callback.m_ulSteamIDLobby),"HostAddress")} ";
-
+        CSteamID ds;
+        
+        playerNames.Add(SteamFriends.GetPersonaName() );
     }
 
     private void OnGameLobbyJoinRequested(GameLobbyJoinRequested_t callback)
@@ -71,5 +73,6 @@ public class MainMenu : MonoBehaviour
         NetworkManager.singleton.networkAddress = hostAddress;
         NetworkManager.singleton.StartClient();
             landingPagePanel.SetActive(false);
+            
     }
 }

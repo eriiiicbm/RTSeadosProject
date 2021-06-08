@@ -285,6 +285,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   deadSound: {fileID: 8300000, guid: c97e9f978b76b6542a8c370013a5adb8, type: 3}
   hitSound: {fileID: 8300000, guid: d76a39ee0964f524dbd1ef325280f097, type: 3}
+  healSound: {fileID: 0}
   unitStates: 0
   audioList: []
   currentTargeteable: {fileID: 0}

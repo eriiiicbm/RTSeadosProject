@@ -125,8 +125,11 @@ public class Unit : RTSBase
 
         StartStuff();
         navMeshAgent.stoppingDistance = rtsEntity.AttackRange;
+        if (connectionToClient!=null)
+        {
+            playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
 
-        playerv2 = connectionToClient.identity.GetComponent<RTSPlayerv2>();
+        }
 
         StartCoroutine(nameof(ExpirationEffect));
 

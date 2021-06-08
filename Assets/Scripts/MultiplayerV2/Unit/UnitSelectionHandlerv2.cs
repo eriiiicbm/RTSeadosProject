@@ -1,10 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Mirror;
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class UnitSelectionHandlerv2 : MonoBehaviour
 
@@ -52,14 +56,25 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
 
     private void Update()
     {
+        if ( EventSystem.current.currentSelectedGameObject!=null)
+        {
+            if (EventSystem.current.IsPointerOverGameObject() && EventSystem.current.currentSelectedGameObject.GetComponent<Button>()!=null)
+            {
+                return;
+            }
+        }
+    
+        
         if (NetworkClient.connection==null)
         {
             return;
         }
-      
-
+ 
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
+          
+          
+
             StartSelectionArea();
         }
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
@@ -88,6 +103,8 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
             }
 
             SelectedUnits.Clear();
+            
+            ActionsMenu._instance.TurnDestroyMenu(false);
             SelectedBuildings.Clear();
         }
 
@@ -137,7 +154,7 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
             }
 
             SelectedUnits.Add(unit);
-            CheckIfVilager();
+             CheckIfVilager();
             Debug.Log("case 1");
             build:
             if (!hit.collider.TryGetComponent<Building>(out Building building))
@@ -246,10 +263,26 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
             }
         }
     }
+    [ContextMenu("DestroySelected")]
+     public void CmdDestroySelected()
+    {
+        Debug.Log("destroying");
+        foreach (var unit in SelectedUnits)
+        {
+            Debug.Log($"Destroying {unit.name}");
+            unit.CmdDestroy();
+            
+
+        }
+    }
 
     private void AuthorityHandleUnitDespawned(Unit unit)
     {
         SelectedUnits.Remove(unit);
+        if (SelectedUnits.Count==0)
+        {
+            ActionsMenu._instance.TurnDestroyMenu(false);
+        }
     }
 
     [Client]

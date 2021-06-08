@@ -105,6 +105,14 @@ audioList.Insert(2,healSound);
         PlayListSoundEffect(0,1,true);
     }
 
+    [Command]
+    public void CmdDestroy()
+    {
+       DealDamage(int.MaxValue);
+       Debug.Log($"Unit health {currentHealth}");
+
+    }
+
     //todo refactor this method
     [Server]
     public void DealDamage(float damageAmount, bool hitSound)

@@ -1341,9 +1341,10 @@ MonoBehaviour:
   - {fileID: 4134074402336445218, guid: 06e6a74ba84993f48aa4f75cb8c54991, type: 3}
   - {fileID: 4134074402336445218, guid: 06e6a74ba84993f48aa4f75cb8c54991, type: 3}
   - {fileID: 4134074402336445218, guid: 06e6a74ba84993f48aa4f75cb8c54991, type: 3}
+  - {fileID: 8335747702613979503, guid: 5b08a59fe7d3155478d441f0e96713e7, type: 3}
   gameOverHandler: {fileID: 1883506953350536586, guid: 9fd13280fb076794b81ae6244c8d7872,
     type: 3}
-  minNumberOfPlayers: 2
+  minNumberOfPlayers: 1
   gameplaySceneName: TestRTS1v2
 --- !u!114 &530741865
 MonoBehaviour:

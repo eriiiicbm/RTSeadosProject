@@ -51,6 +51,11 @@ public class RTSPlayerv2 : NetworkBehaviour
 
     private void Start()
     {
+     PutAudios();
+    }
+
+    public void PutAudios()
+    {
         audioList.Insert(0,audioLimitTropes);
         audioList.Insert(1,audioNoBuildingPermision);
         audioList.Insert(2,audioYouArePoor);

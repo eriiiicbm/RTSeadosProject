@@ -275,6 +275,20 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
 
         }
     }
+  [ContextMenu("SelectAllUnits")]
+  [Client]
+     public void SelectAllUnits()
+    {
+        foreach (Unit unit in player.GetMyUnits())
+        {
+            if (SelectedUnits.Contains(unit))
+            {
+                continue;
+            }
+            SelectedUnits.Add(unit);
+            unit.Select();
+        } 
+    }
 
     private void AuthorityHandleUnitDespawned(Unit unit)
     {

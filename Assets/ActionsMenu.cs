@@ -10,7 +10,7 @@ public class ActionsMenu : MonoBehaviour
     public GameObject interactionMenu;
 
     private UnitSelectionHandlerv2 unitSelectionHandlerv2;
-    //0  delete, 1 open close
+    //0  delete, 1, selectall 2 open close
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +28,11 @@ public class ActionsMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!menuActive)
+        {
+            return;
+        } 
+        TurnMenuOn();
     }
 
     public void TurnDestroyMenu(bool state)
@@ -50,12 +54,16 @@ public class ActionsMenu : MonoBehaviour
     public void TurnMenuOn()
     {
         TurnDestroyMenu(unitSelectionHandlerv2.SelectedUnits.Count!=0);
+        interactionMenu.transform.GetChild(1).gameObject.SetActive(true);
+
         menuActive = true;
     }
     
     public void TurnMenuOff()
     {
         TurnDestroyMenu(false);
+        interactionMenu.transform.GetChild(1).gameObject.SetActive(false);
+
         menuActive = false;
     }
 }

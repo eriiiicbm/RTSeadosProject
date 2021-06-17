@@ -18,43 +18,10 @@ public class Villager : Unit
         InvokeRepeating("build", buildRate, buildRate);
         InvokeRepeating("recolect", buildRate, buildRate);
         StartCoroutine(nameof(PickResourcesState));
-        StartCoroutine(nameof(BuildState));
+  //      StartCoroutine(nameof(BuildState));
     }
 
-   [ServerCallback]
-    private void FixedUpdate()
-    {
-        if (target != null)
-        {
-            Debug.Log("objetivo: " + target.gameObject.name);
-
-            if (target.gameObject.GetComponent<Building>() != null)
-            {
-                Building build = target.gameObject.GetComponent<Building>();
-
-                Debug.Log("pasa por aqui i autoridad: " + build.hasAuthority);
-
-                if (build.connectionToClient.connectionId == connectionToClient.connectionId && build.CurrentHealth != build.MaxHealth)
-                {
-                    building = build;
-                    resource = null;
-                    return;
-                }
-            }
-
-            if (target.gameObject.GetComponent<Resource>() != null)
-            {
-                resource = target.gameObject.GetComponent<Resource>();
-                building = null;
-                return;
-            }
-
-            resource = null;
-            building = null;
-        }
-
-        
-    }
+ 
 
     [HideInInspector]
     public Resource resource;
@@ -124,16 +91,63 @@ public class Villager : Unit
         building.SendMessage("CraftPoint");
     }
 
+    public void VillagerStuff()
+    {
+      
+
+        if (target == null) return;
+        Debug.Log("objetivo: " + target.gameObject.name);
+
+        if (target.gameObject.GetComponent<Building>() != null)
+        {
+            Building build = target.gameObject.GetComponent<Building>();
+
+            Debug.Log("pasa por aqui i autoridad: " + build.hasAuthority);
+
+            if (build.connectionToClient.connectionId == connectionToClient.connectionId && build.CurrentHealth != build.MaxHealth)
+            {
+                building = build;
+                resource = null;
+                return;
+            }
+        }
+
+        if (target.gameObject.GetComponent<Resource>() != null)
+        {
+            resource = target.gameObject.GetComponent<Resource>();
+            building = null;
+            return;
+        }
+
+        resource = null;
+        building = null;
+    }
     public override IEnumerator IdleState()
     {
-        while (unitStates== UnitStates.Idle) {
+        StartCoroutine((base.IdleState()));
 
+        while (unitStates== UnitStates.Idle) {
+            VillagerStuff();
 
 
             yield return 0;
         }
         yield return new WaitForEndOfFrame();
     }
+
+    public override IEnumerator WalkState()
+    {
+        StartCoroutine((base.WalkState()));
+        
+        while (unitStates== UnitStates.Walk) {
+            VillagerStuff();
+
+
+            yield return 0;
+        } 
+
+    }
+
     public IEnumerator PickResourcesState() {
         while (unitStates == UnitStates.PickResources)
         {
@@ -145,7 +159,7 @@ public class Villager : Unit
         GoToNextState();
         
     }
-    public IEnumerator BuildState()
+    public IEnumerator BuildingState()
     {
         while (unitStates == UnitStates.Building)
         {

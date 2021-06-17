@@ -11,8 +11,7 @@ using Random = System.Random;
 
 public class Unit : RTSBase
 {
-    [SerializeField] public Targetable currentTargeteable;
-    [SyncVar] public float expirationVelocity;
+     [SyncVar] public float expirationVelocity;
     [SyncVar]  public float time;
     [SyncVar] float velocity;
     [SyncVar (hook = nameof(HandleBuffedStatus))]
@@ -108,6 +107,8 @@ public class Unit : RTSBase
         }
 
         buffedStatus = BuffedStatus.Nothing;
+        
+        accessibleMethodStatesList.Add(nameof(WalkState));
     }
 
     public override void OnStartServer()
@@ -167,11 +168,7 @@ public class Unit : RTSBase
 
   
     protected Targetable target;
-    [ServerCallback]
-    public virtual void Update()
-    {
-      NavMeshToTarget();
-    }
+    
 
 [Server]
 private void NavMeshToTarget()
@@ -397,15 +394,45 @@ private void NavMeshToTarget()
         HandleBuffedStatus(BuffedStatus.Nothing,buffedStatus);
     }
 
-    public IEnumerator MoveState()
+    public virtual  IEnumerator WalkState()
     {
+ 
         while (unitStates == UnitStates.Walk)
-        {
+        {         
+            Debug.Log("State Move");
+
+            NavMeshToTarget();
             yield return 0;
         }
 
         yield return new WaitForEndOfFrame();
     }
+    public override  IEnumerator IdleState()
+    {
+        StartCoroutine((base.IdleState()));
+
+        while (unitStates == UnitStates.Idle)
+        {
+            Debug.Log("State idle");
+            yield return 0;
+        }
+        GoToNextState();
+        yield return new WaitForEndOfFrame();
+    }
+    public  override IEnumerator DeadState()
+    {
+        StartCoroutine((base.DeadState()));
+
+        while (unitStates == UnitStates.Dead)
+        {
+            Debug.Log("State dead");
+
+            yield return 0;
+        }
+
+        yield return new WaitForEndOfFrame();
+    }
+    
 
    
 }

@@ -267,9 +267,10 @@ MonoBehaviour:
   animator: {fileID: 0}
   deadSound: {fileID: 8300000, guid: 53b9f3197aeca3446b77d08a0850a9f0, type: 3}
   hitSound: {fileID: 8300000, guid: d76a39ee0964f524dbd1ef325280f097, type: 3}
+  healSound: {fileID: 0}
+  accessibleMethodStatesList: []
   unitStates: 0
   audioList: []
-  currentTargeteable: {fileID: 0}
   expirationVelocity: 0
   time: 0
   buffedStatus: 0
@@ -315,6 +316,9 @@ MonoBehaviour:
   nerfEffect: {fileID: 0}
   buffEffect: {fileID: 0}
   damage: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
   attackSound: {fileID: 8300000, guid: b13687a710c75714080e2ff2773fe2a0, type: 3}
 --- !u!114 &2945748873727102925
 MonoBehaviour:

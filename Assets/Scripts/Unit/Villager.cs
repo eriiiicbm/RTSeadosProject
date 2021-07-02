@@ -15,8 +15,8 @@ public class Villager : Unit
         buildRate = rtsEntity.AttackTimer;
         range = rtsEntity.AttackRange;
 
-        InvokeRepeating("build", buildRate, buildRate);
-        InvokeRepeating("recolect", buildRate, buildRate);
+        InvokeRepeating(nameof(Build), buildRate, buildRate);
+        InvokeRepeating(nameof(Recolect), buildRate, buildRate);
         StartCoroutine(nameof(PickResourcesState));
   //      StartCoroutine(nameof(BuildState));
     }
@@ -25,7 +25,7 @@ public class Villager : Unit
 
     [HideInInspector]
     public Resource resource;
-    public void recolect() {
+    public void Recolect() {
         if (resource == null)
             return;
 
@@ -62,7 +62,7 @@ public class Villager : Unit
 
     [HideInInspector]
     public Building building;
-    public void build()
+    public void Build()
     {
         if (building == null)
             return;
@@ -123,27 +123,26 @@ public class Villager : Unit
         building = null;
     }
     public override IEnumerator IdleState()
-    {
-        StartCoroutine((base.IdleState()));
-
+    { 
         while (unitStates== UnitStates.Idle) {
             VillagerStuff();
 
 
-            yield return 0;
+            yield return new WaitForEndOfFrame();
         }
+        GoToNextState();
         yield return new WaitForEndOfFrame();
     }
 
     public override IEnumerator WalkState()
     {
         StartCoroutine((base.WalkState()));
-        
+         
         while (unitStates== UnitStates.Walk) {
             VillagerStuff();
 
 
-            yield return 0;
+            yield return new WaitForEndOfFrame();
         } 
 
     }
@@ -152,7 +151,7 @@ public class Villager : Unit
         while (unitStates == UnitStates.PickResources)
         {
           
-            yield return 0;
+            yield return new WaitForEndOfFrame();
 
         }
         yield return new WaitForEndOfFrame();
@@ -164,7 +163,7 @@ public class Villager : Unit
         while (unitStates == UnitStates.Building)
         {
 
-            yield return 0;
+            yield return new WaitForEndOfFrame();
 
         }
         yield return new WaitForEndOfFrame();

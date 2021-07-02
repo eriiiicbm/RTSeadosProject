@@ -345,7 +345,8 @@ private void NavMeshToTarget()
                 passiveAbility.recoverySpeed = rtsEntity.RecoverySpeed * 0.90f;
             }
 
-            yield return 0;
+            yield return new WaitForEndOfFrame();
+
         }
 
         if (moral < maxMoral * 0.25 && moral < maxMoral * 0.75   )
@@ -367,7 +368,7 @@ private void NavMeshToTarget()
                 passiveAbility.recoverySpeed = rtsEntity.RecoverySpeed;
             }
 
-            yield return 0;
+            yield return new WaitForEndOfFrame();
         }
 
         if (moral > maxMoral * 0.75  )
@@ -387,7 +388,7 @@ private void NavMeshToTarget()
                 passiveAbility.recoverySpeed = rtsEntity.RecoverySpeed * 1.10f;
             }
 
-            yield return 0;
+            yield return new WaitForEndOfFrame();
         }
 
         yield return new WaitForEndOfFrame();
@@ -402,7 +403,7 @@ private void NavMeshToTarget()
             Debug.Log("State Move");
 
             NavMeshToTarget();
-            yield return 0;
+            yield return new WaitForEndOfFrame();
         }
 
         yield return new WaitForEndOfFrame();
@@ -414,7 +415,7 @@ private void NavMeshToTarget()
         while (unitStates == UnitStates.Idle)
         {
             Debug.Log("State idle");
-            yield return 0;
+            yield return new WaitForEndOfFrame();
         }
         GoToNextState();
         yield return new WaitForEndOfFrame();
@@ -427,7 +428,7 @@ private void NavMeshToTarget()
         {
             Debug.Log("State dead");
 
-            yield return 0;
+            yield return new WaitForEndOfFrame();
         }
 
         yield return new WaitForEndOfFrame();

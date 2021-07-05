@@ -16,7 +16,8 @@ public class UnitCombat : Unit
     private  AudioClip attackSound;
     float attackTimer;
 
-    // Start is called before the first frame update
+    public bool automaticAttack=true;
+// Start is called before the first frame update
     void Start()
     {
         base.Start();
@@ -116,6 +117,10 @@ public class UnitCombat : Unit
         while (unitStates == UnitStates.Idle)
         {
             Debug.Log("now detectenemy");
+            if(!automaticAttack)
+            {
+                yield return 0;
+            }
             DetectEnemy(attackDistance);
             yield return 0;
         }

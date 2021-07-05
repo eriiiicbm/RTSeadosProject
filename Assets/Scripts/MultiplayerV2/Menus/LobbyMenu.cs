@@ -12,7 +12,7 @@ public class LobbyMenu : MonoBehaviour
     [SerializeField] private GameObject lobbyUI ;
     [SerializeField] private Button startGameButton  ;
     [SerializeField] private TMP_Text[] playerNameTexts = new TMP_Text[4];
-
+    [SerializeField] private TMP_Dropdown gameModeSelect;
     private void Start()
     {
         RTSNetworkManagerv2.ClientOnConnected += HandleClientConnected;
@@ -56,7 +56,8 @@ public class LobbyMenu : MonoBehaviour
 
     public void StartGame()
     {
-        NetworkClient.connection.identity.GetComponent<RTSPlayerv2>().CmdStartGame();
+         Gamemode.TryParse(gameModeSelect.captionText.text, out Gamemode currentGamemode);
+         NetworkClient.connection.identity.GetComponent<RTSPlayerv2>().CmdStartGame(currentGamemode);
     }
 
     public void LeaveLobby()
@@ -72,6 +73,7 @@ public class LobbyMenu : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
+ 
     
       
  

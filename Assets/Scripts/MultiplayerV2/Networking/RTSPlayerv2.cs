@@ -210,14 +210,14 @@ Debug.Log("Set resources");
     }
 
     [Command]
-    public void CmdStartGame()
+    public void CmdStartGame(Gamemode currentGameMode)
     {
         if (!isPartyOwner)
         {
             return;
         }
 
-        ((RTSNetworkManagerv2)NetworkManager.singleton).StartGame();
+        ((RTSNetworkManagerv2)NetworkManager.singleton).StartGame(currentGameMode);
     }
 
     [Command]

@@ -154,13 +154,26 @@ isGameInProgress = false;
         
     }
 
-    public void StartGame()
+    public void StartGame(Gamemode currentGamemode)
     {
+        Debug.Log($"Current Gamemode {currentGamemode.ToString()}");
          if (Players.Count<minNumberOfPlayers)
         {
             return;
         }
 
+         switch (currentGamemode)
+         {
+             case Gamemode.Standard:
+                
+                 break;
+             case  Gamemode.Rush:
+                 Time.timeScale = 2;
+                 Debug.Log("Timescale ÇÇÇ2");
+                 break;
+             default:
+                 break;
+         }
          isGameInProgress = true;
          ServerChangeScene(gameplaySceneName);
 

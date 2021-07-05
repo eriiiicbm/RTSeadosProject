@@ -22,3 +22,9 @@ public enum BuffedStatus
     Buffed,Debuffed,Nothing
 }
 
+public enum Gamemode
+{
+    Standard,Rush
+}
+
+

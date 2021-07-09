@@ -98,6 +98,13 @@ public class PauseMenuBehaviour : MainMenuBehaviour
         pauseMenu.SetActive(true);
         pauseMenu.BroadcastMessage("OnLanguageChanged");
         optionsMenuIntern.SetActive(false);
+        wikiMenu.SetActive(false);
+    }
+
+    public void OpenWiki()
+    {
+        pauseMenu.SetActive(false);
+        wikiMenu.SetActive(true);
     }
 
     public void ForcePause()

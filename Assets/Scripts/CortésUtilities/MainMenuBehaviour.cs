@@ -11,6 +11,7 @@ public class MainMenuBehaviour : MonoBehaviour
     public GameObject optionsMenuPez;
     public GameObject optionsMenuMamut;
     public GameObject optionsMenuIntern;
+    public GameObject wikiMenu;
  
 
     public Button mainButton;

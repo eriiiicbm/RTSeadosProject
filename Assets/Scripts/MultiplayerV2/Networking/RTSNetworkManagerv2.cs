@@ -30,7 +30,7 @@ public class RTSNetworkManagerv2 : NetworkManager
         base.OnClientConnect(conn);
         ClientOnConnected?.Invoke();
         foreach (var player in Players)
-        {
+        {  player.PutAudios();
             player.PlayListSoundEffect(5,1f,true);
         }
     }
@@ -41,7 +41,7 @@ public class RTSNetworkManagerv2 : NetworkManager
         ClientOnDisconnected?.Invoke();
         
         foreach (var player in Players)
-        {
+        {   player.PutAudios();
             player.PlayListSoundEffect(6,1f,true);
         }
 
@@ -112,18 +112,10 @@ isGameInProgress = false;
         }
         else
         {
+
+          //  player.SetDisplayName(mainMenu.playerNames[Players.IndexOf(player)]);
             Debug.Log($"{conn.address} + {conn.identity}");
-            if (player.isServer)
-            {
-             
-                player.SetDisplayName(
-                    SteamFriends.GetPersonaName());
-            }
-            else
-            {
-                //mainMenu.playerNames;
-                //todo  player.SetDisplayName();
-            }
+           
         }
       
         player.SetPartyOwner(Players.Count==1);
@@ -162,13 +154,26 @@ isGameInProgress = false;
         
     }
 
-    public void StartGame()
+    public void StartGame(Gamemode currentGamemode)
     {
+        Debug.Log($"Current Gamemode {currentGamemode.ToString()}");
          if (Players.Count<minNumberOfPlayers)
         {
             return;
         }
 
+         switch (currentGamemode)
+         {
+             case Gamemode.Standard:
+                
+                 break;
+             case  Gamemode.Rush:
+                 Time.timeScale = 2;
+                 Debug.Log("Timescale ÇÇÇ2");
+                 break;
+             default:
+                 break;
+         }
          isGameInProgress = true;
          ServerChangeScene(gameplaySceneName);
 

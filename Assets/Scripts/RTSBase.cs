@@ -16,7 +16,7 @@ public class RTSBase : NetworkBehaviour
     [SerializeField] private AudioClip deadSound;
     [SerializeField] private AudioClip hitSound;
     [SerializeField] private AudioClip healSound;
-
+    public List<string> accessibleMethodStatesList;
     [SyncVar(hook = nameof(HandleStatesUpdated))]
     public UnitStates unitStates = UnitStates.Idle;
 
@@ -33,6 +33,8 @@ public class RTSBase : NetworkBehaviour
 audioList.Insert(0,deadSound); 
 audioList.Insert(1,hitSound);  
 audioList.Insert(2,healSound);  
+accessibleMethodStatesList.Add(nameof(IdleState));
+accessibleMethodStatesList.Add(nameof(DeadState));
 
 
     }
@@ -53,8 +55,8 @@ audioList.Insert(2,healSound);
         prefab = rtsEntity.Prefab;
         currentHealth = maxHealth;
 
-        GoToNextState();
-        playerv2 = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
+        StartCoroutine(nameof(IdleState));
+         playerv2 = NetworkClient.connection.identity.GetComponent<RTSPlayerv2>();
 
      }
 
@@ -103,6 +105,14 @@ audioList.Insert(2,healSound);
         StartCoroutine(nameof(DeadAnim));
 
         PlayListSoundEffect(0,1,true);
+    }
+
+    [Command]
+    public void CmdDestroy()
+    {
+       DealDamage(int.MaxValue);
+       Debug.Log($"Unit health {currentHealth}");
+
     }
 
     //todo refactor this method
@@ -158,6 +168,7 @@ audioList.Insert(2,healSound);
 
         ResetAllTriggers();
         animator.SetTrigger(newState.ToString());
+         GoToNextState();
 
     }
 
@@ -205,8 +216,7 @@ audioList.Insert(2,healSound);
 
         yield return new WaitForEndOfFrame();
         yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
-        animator.Play("Dead anim played");
-
+        
         NetworkServer.Destroy(gameObject);
 
         
@@ -220,11 +230,17 @@ audioList.Insert(2,healSound);
 
   
 
-    public void GoToNextState()
+    public    void GoToNextState()
     {
         string methodName = this.unitStates.ToString() + "State";
         Debug.Log("STATE METHOD NAME " + methodName);
-        SendMessage(methodName);
+        if (accessibleMethodStatesList.Contains(methodName))
+        {
+            SendMessage(methodName);
+            return;
+        } 
+        Debug.Log("The class doesnt have " + methodName);
+        
     }
 
     public override void OnStartClient()
@@ -242,6 +258,12 @@ audioList.Insert(2,healSound);
     {
         Debug.LogWarning("OverrideThisMethod before use it");
         yield return new WaitForEndOfFrame();
+        GoToNextState();
+    } 
+    public virtual IEnumerator DeadState()
+    {
+        Debug.LogWarning("OverrideThisMethod before use it");
+        yield return new WaitForEndOfFrame();
     }
 
     private void ResetAllTriggers()
@@ -256,8 +278,5 @@ audioList.Insert(2,healSound);
         }
     }
 
-    public virtual void Update()
-    {
-        
-    }
+    
 }

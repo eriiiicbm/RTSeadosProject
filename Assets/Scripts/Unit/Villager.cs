@@ -15,50 +15,17 @@ public class Villager : Unit
         buildRate = rtsEntity.AttackTimer;
         range = rtsEntity.AttackRange;
 
-        InvokeRepeating("build", buildRate, buildRate);
-        InvokeRepeating("recolect", buildRate, buildRate);
+        InvokeRepeating(nameof(Build), buildRate, buildRate);
+        InvokeRepeating(nameof(Recolect), buildRate, buildRate);
         StartCoroutine(nameof(PickResourcesState));
-        StartCoroutine(nameof(BuildState));
+  //      StartCoroutine(nameof(BuildState));
     }
 
-   [ServerCallback]
-    private void FixedUpdate()
-    {
-        if (target != null)
-        {
-            Debug.Log("objetivo: " + target.gameObject.name);
-
-            if (target.gameObject.GetComponent<Building>() != null)
-            {
-                Building build = target.gameObject.GetComponent<Building>();
-
-                Debug.Log("pasa por aqui i autoridad: " + build.hasAuthority);
-
-                if (build.connectionToClient.connectionId == connectionToClient.connectionId && build.CurrentHealth != build.MaxHealth)
-                {
-                    building = build;
-                    resource = null;
-                    return;
-                }
-            }
-
-            if (target.gameObject.GetComponent<Resource>() != null)
-            {
-                resource = target.gameObject.GetComponent<Resource>();
-                building = null;
-                return;
-            }
-
-            resource = null;
-            building = null;
-        }
-
-        
-    }
+ 
 
     [HideInInspector]
     public Resource resource;
-    public void recolect() {
+    public void Recolect() {
         if (resource == null)
             return;
 
@@ -95,7 +62,7 @@ public class Villager : Unit
 
     [HideInInspector]
     public Building building;
-    public void build()
+    public void Build()
     {
         if (building == null)
             return;
@@ -124,33 +91,79 @@ public class Villager : Unit
         building.SendMessage("CraftPoint");
     }
 
-    public override IEnumerator IdleState()
+    public void VillagerStuff()
     {
-        while (unitStates== UnitStates.Idle) {
+      
 
+        if (target == null) return;
+        Debug.Log("objetivo: " + target.gameObject.name);
 
+        if (target.gameObject.GetComponent<Building>() != null)
+        {
+            Building build = target.gameObject.GetComponent<Building>();
 
-            yield return 0;
+            Debug.Log("pasa por aqui i autoridad: " + build.hasAuthority);
+
+            if (build.connectionToClient.connectionId == connectionToClient.connectionId && build.CurrentHealth != build.MaxHealth)
+            {
+                building = build;
+                resource = null;
+                return;
+            }
         }
+
+        if (target.gameObject.GetComponent<Resource>() != null)
+        {
+            resource = target.gameObject.GetComponent<Resource>();
+            building = null;
+            return;
+        }
+
+        resource = null;
+        building = null;
+    }
+    public override IEnumerator IdleState()
+    { 
+        while (unitStates== UnitStates.Idle) {
+            VillagerStuff();
+
+
+            yield return new WaitForEndOfFrame();
+        }
+        GoToNextState();
         yield return new WaitForEndOfFrame();
     }
+
+    public override IEnumerator WalkState()
+    {
+        StartCoroutine((base.WalkState()));
+         
+        while (unitStates== UnitStates.Walk) {
+            VillagerStuff();
+
+
+            yield return new WaitForEndOfFrame();
+        } 
+
+    }
+
     public IEnumerator PickResourcesState() {
         while (unitStates == UnitStates.PickResources)
         {
           
-            yield return 0;
+            yield return new WaitForEndOfFrame();
 
         }
         yield return new WaitForEndOfFrame();
         GoToNextState();
         
     }
-    public IEnumerator BuildState()
+    public IEnumerator BuildingState()
     {
         while (unitStates == UnitStates.Building)
         {
 
-            yield return 0;
+            yield return new WaitForEndOfFrame();
 
         }
         yield return new WaitForEndOfFrame();

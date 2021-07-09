@@ -51,6 +51,11 @@ public class RTSPlayerv2 : NetworkBehaviour
 
     private void Start()
     {
+     PutAudios();
+    }
+
+    public void PutAudios()
+    {
         audioList.Insert(0,audioLimitTropes);
         audioList.Insert(1,audioNoBuildingPermision);
         audioList.Insert(2,audioYouArePoor);
@@ -205,14 +210,14 @@ Debug.Log("Set resources");
     }
 
     [Command]
-    public void CmdStartGame()
+    public void CmdStartGame(Gamemode currentGameMode)
     {
         if (!isPartyOwner)
         {
             return;
         }
 
-        ((RTSNetworkManagerv2)NetworkManager.singleton).StartGame();
+        ((RTSNetworkManagerv2)NetworkManager.singleton).StartGame(currentGameMode);
     }
 
     [Command]

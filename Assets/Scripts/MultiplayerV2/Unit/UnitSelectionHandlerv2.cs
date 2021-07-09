@@ -1,10 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Mirror;
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class UnitSelectionHandlerv2 : MonoBehaviour
 
@@ -22,7 +26,7 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
     int villagersNumber = 0;
 
     public List<Unit> SelectedUnits { get; } = new List<Unit>();
-[SerializeField]    public List<Building> SelectedBuildings { get; } = new List<Building>();
+    [SerializeField] public List<Building> SelectedBuildings { get; } = new List<Building>();
 
     private void Start()
     {
@@ -52,14 +56,26 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
 
     private void Update()
     {
-        if (NetworkClient.connection==null)
+        if (EventSystem.current.currentSelectedGameObject != null)
+        {
+            if (EventSystem.current.IsPointerOverGameObject() &&
+                EventSystem.current.currentSelectedGameObject.GetComponent<Button>() != null)
+            {
+                return;
+            }
+        }
+
+
+        if (NetworkClient.connection == null)
         {
             return;
         }
-      
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
+
+
+
             StartSelectionArea();
         }
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
@@ -88,6 +104,8 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
             }
 
             SelectedUnits.Clear();
+
+            ActionsMenu._instance.TurnDestroyMenu(false);
             SelectedBuildings.Clear();
         }
 
@@ -177,7 +195,8 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
                 SelectedUnits.Add(unit);
                 unit.Select();
             }
-        } 
+        }
+
         foreach (Building building in player.GetMyBuildings())
         {
             if (SelectedBuildings.Contains(building))
@@ -207,7 +226,7 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
         buildingsDisplay.SetActive(false);
 
         villagersNumber = 0;
-        if (SelectedBuildings.Count>0) return false;
+        if (SelectedBuildings.Count > 0) return false;
         foreach (Unit selectedUnit in SelectedUnits)
         {
             selectedUnit.Select();
@@ -247,9 +266,42 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
         }
     }
 
+    [ContextMenu("DestroySelected")]
+    public void CmdDestroySelected()
+    {
+        Debug.Log("destroying");
+        foreach (var unit in SelectedUnits)
+        {
+            Debug.Log($"Destroying {unit.name}");
+            unit.CmdDestroy();
+
+
+        }
+    }
+
+    [ContextMenu("SelectAllUnits")]
+    [Client]
+    public void SelectAllUnits()
+    {
+        foreach (Unit unit in player.GetMyUnits())
+        {
+            if (SelectedUnits.Contains(unit))
+            {
+                continue;
+            }
+
+            SelectedUnits.Add(unit);
+            unit.Select();
+        }
+    }
+
     private void AuthorityHandleUnitDespawned(Unit unit)
     {
         SelectedUnits.Remove(unit);
+        if (SelectedUnits.Count == 0)
+        {
+            ActionsMenu._instance.TurnDestroyMenu(false);
+        }
     }
 
     [Client]
@@ -262,4 +314,35 @@ public class UnitSelectionHandlerv2 : MonoBehaviour
     {
         isOneClick = ctx.ReadValueAsButton();
     }
+
+    public void ToggleAutomaticBehaviour(bool newState)
+    {
+        foreach (var unit in SelectedUnits)
+        {
+            UnitCombat unitCombat = unit.GetComponent<UnitCombat>();
+            if (unitCombat == null)
+            {
+                continue;
+            }
+
+            unitCombat.automaticAttack = newState;
+
+
+        }
+    }
+
+    public bool CheckIfAllSelectedUnitsHaveTheAutomaticBehaviour()
+    {
+
+        foreach (var unit in SelectedUnits)
+        {
+            if (unit.GetComponent<UnitCombat>()?.automaticAttack == false)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
+

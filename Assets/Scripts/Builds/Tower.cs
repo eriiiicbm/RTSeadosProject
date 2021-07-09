@@ -16,9 +16,9 @@ public class Tower : Building
     [SerializeField] private LayerMask layerMask = new LayerMask();
     private Transform lookAt;
 
-    public void detectEnemy(float atackRange)
+    public void DetectEnemy(float attackRange)
     {
-        Collider[] collider = Physics.OverlapSphere(this.gameObject.transform.position, atackRange, layerMask);
+        Collider[] collider = Physics.OverlapSphere(this.gameObject.transform.position, attackRange, layerMask);
         if (collider.Length == 0)
         {
             return;
@@ -99,7 +99,7 @@ public class Tower : Building
         if (!base.builded) return;
         Debug.Log("Tower is builded");
 
-        detectEnemy(attackRange);
+        DetectEnemy(attackRange);
     }
 
     private void OnDrawGizmosSelected()

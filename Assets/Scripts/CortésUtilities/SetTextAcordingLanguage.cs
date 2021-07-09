@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ public class SetTextAcordingLanguage : MonoBehaviour
     void Start()
     {
         GetComponent<Text>().text = GameManager.getStrings(textStrings)[numText];
+        MainMenuBehaviour.changeLanguage += OnLanguageChanged;
     }
 
     // Update is called once per frame
@@ -19,6 +21,12 @@ public class SetTextAcordingLanguage : MonoBehaviour
     {
         
     }
+
+    private void OnDestroy()
+    {
+        MainMenuBehaviour.changeLanguage -= OnLanguageChanged;
+    }
+
     public void OnLanguageChanged() {
 
         GetComponent<Text>().text = GameManager.getStrings(textStrings)[numText];

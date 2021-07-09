@@ -12,7 +12,7 @@ public class MainMenuBehaviour : MonoBehaviour
     public GameObject optionsMenuMamut;
     public GameObject optionsMenuIntern;
     public GameObject wikiMenu;
- 
+    public  static  Action changeLanguage;
 
     public Button mainButton;
     public Slider masterSlider;
@@ -163,6 +163,8 @@ public class MainMenuBehaviour : MonoBehaviour
         }
         Debug.Log("Current Language " + GameManager.language  );
           FindObjectOfType<SendMessagesAllLevel>()?.ChangeLanguage(); 
+          changeLanguage?.Invoke();
+          OnLanguageChanged();
    //     gameObject.SendMessageUpwards("OnLanguageChanged");
         GameObject.Find("LanguageText").GetComponent<Text>().text= GameManager.getStrings(textStringsMainMenu)[7] ;
 

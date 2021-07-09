@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/wikiMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/MainMenuBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/MainMenuBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SetTextAcordingLanguage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SetTextAcordingLanguage.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +44,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Menus/GameOverDisplayv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Minimapv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/JoinLobbyMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitSelectionHandlerv2.cs" />
@@ -94,6 +93,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SetTextAcordingLanguage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/MainMenuBehaviour.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />
@@ -161,6 +162,7 @@
       <workItem from="1621788224013" duration="10531000" />
       <workItem from="1621937864131" duration="6273000" />
       <workItem from="1621951462282" duration="17236000" />
+      <workItem from="1625843207704" duration="702000" />
     </task>
     <servers />
   </component>

@@ -4745,7 +4745,7 @@ PrefabInstance:
     - target: {fileID: 9221100780923022489, guid: 98d4a46d89f11b340b2512124c5125e4,
         type: 3}
       propertyPath: m_Name
-      value: NetowrkManager
+      value: NetworkManager
       objectReference: {fileID: 0}
     - target: {fileID: 9221100780923022492, guid: 98d4a46d89f11b340b2512124c5125e4,
         type: 3}

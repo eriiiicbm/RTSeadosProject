@@ -780,6 +780,8 @@
           </e>
           <e p="UnitStates.cs" t="Include" />
           <e p="UsefulEvents.cs" t="Include" />
+          <e p="wikiMenu.cs" t="Include" />
+          <e p="WikiSelectionMenu.cs" t="Include" />
         </e>
         <e p="ScriptTemplates" t="Include">
           <e p="50-Mirror__Network Manager-NewNetworkManager.cs.txt" t="Include" />

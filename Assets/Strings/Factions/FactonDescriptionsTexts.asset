@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13cca8ca58db5c439e7c15e51c6daa5, type: 3}
+  m_Name: FactonDescriptionsTexts
+  m_EditorClassIdentifier: 
+  stringsEn:
+  - ENGLISH VERSION
+  - ENGLISH VERSION 1
+  - ENGLISH VERSION 2
+  - ENGLISH VERSION 3
+  stringsEs:
+  - "Imagina un pu\xF1ado de comida grasienta, barbaricai chilona, con mazos i eso
+    es el condado. "
+  - Eres un fanatico de aquel que te gobierna aun que basicamente te considere mierda,
+    o alguien que lo considera mierda a el i al resto, eres del imperio.
+  - Unos putos hipis, amantes de las plantas.
+  - Unos putos hipis, amantes de las plantas.

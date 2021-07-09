@@ -19,7 +19,7 @@ MonoBehaviour:
   damageMoral: 0
   prices: 0000000000000000c800000032000000
   description: 
-  preview: {fileID: 0}
+  preview: {fileID: 21300000, guid: add3c48f403c71f4fa81eecb03e41196, type: 3}
   prefab: {fileID: 6508101106659302983, guid: 1def9626f1305574ba187a81c11f8807, type: 3}
   moral: 0
   defaultStoppingDistance: 2
@@ -41,10 +41,10 @@ MonoBehaviour:
   - {fileID: 2211274502225543473, guid: 03bd3e307d62c0243be7fc2729f26d0b, type: 3}
   - {fileID: 947953591945672596, guid: f21b0342ba5d486418f87b46b8606e0f, type: 3}
   curretUnit: {fileID: 0}
-  descriptionText: {fileID: 0}
+  descriptionText: {fileID: 11400000, guid: df2ff559d5373054ab0ca0aefdb18e84, type: 2}
   descriptionPosition: 0
   currentProduction: {fileID: 0}
-  nameText: {fileID: 0}
+  nameText: {fileID: 11400000, guid: 689f124a63c63bc42b8fbf49cdc2ba7c, type: 2}
   namePosition: 0
   unitState: 0
   emotionalState: 0

@@ -41,11 +41,11 @@ MonoBehaviour:
   productionUnits:
   - {fileID: 0}
   curretUnit: {fileID: 0}
-  descriptionText: {fileID: 0}
+  descriptionText: {fileID: 11400000, guid: d499f6a95cd85bd409deb5ca12bbc589, type: 2}
   descriptionPosition: 0
   currentProduction: {fileID: 0}
-  nameText: {fileID: 0}
-  namePosition: 0
+  nameText: {fileID: 11400000, guid: d499f6a95cd85bd409deb5ca12bbc589, type: 2}
+  namePosition: 22
   unitState: 0
   emotionalState: 0
   typeOfResourceThatCanHave: 0

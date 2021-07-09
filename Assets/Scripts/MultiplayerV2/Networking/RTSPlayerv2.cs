@@ -223,7 +223,7 @@ Debug.Log("Set resources");
     [Command]
     public void CmdTryCreateUnit(int unitId, UnitSpawnerv3 spawner)
     {
-        if (!CheckIfUserHasSpaceTrop()) return;
+         if (!CheckIfUserHasSpaceTrop()) return;
         Unit unit = FindUnitById(unitId);
         if (unit.rtsEntity.name.Equals("McBurger")){
             if (hero1)

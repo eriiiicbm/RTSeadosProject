@@ -122,8 +122,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8677641129081641293}
-        m_TargetAssemblyTypeName: wikiMenu, Assembly-CSharp
-        m_MethodName: changeInfo
+        m_TargetAssemblyTypeName: WikiMenu, Assembly-CSharp
+        m_MethodName: ChangeInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

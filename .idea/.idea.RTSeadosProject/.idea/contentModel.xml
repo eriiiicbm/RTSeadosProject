@@ -9,7 +9,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="ActionsMenu.cs" t="Include" />
         <e p="CartoonFX" t="Include">
           <e p="DemoRosources" t="Include">
             <e p="DemoGUI.cs" t="Include" />
@@ -22,7 +21,6 @@
             <e p="ParticleSystemScaler.cs" t="Include" />
           </e>
         </e>
-        <e p="ChatScript.cs" t="Include" />
         <e p="DayNightSystem.cs" t="Include" />
         <e p="Editor" t="Include">
           <e p="ShowOnlyRelevantRTSEntityAttributes.cs" t="Include" />

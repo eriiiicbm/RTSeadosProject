@@ -17,10 +17,13 @@
       <Path>Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0</Path>
       <Path>Library/PackageCache/com.unity.probuilder@4.5.0</Path>
       <Path>Library/PackageCache/com.unity.progrids@3.0.3-preview.6</Path>
+      <Path>Library/PackageCache/com.unity.render-pipelines.core@10.4.0</Path>
       <Path>Library/PackageCache/com.unity.render-pipelines.core@10.5.0</Path>
       <Path>Library/PackageCache/com.unity.render-pipelines.universal@10.5.0</Path>
+      <Path>Library/PackageCache/com.unity.searcher@4.3.1</Path>
       <Path>Library/PackageCache/com.unity.searcher@4.3.2</Path>
       <Path>Library/PackageCache/com.unity.settings-manager@1.0.3</Path>
+      <Path>Library/PackageCache/com.unity.shadergraph@10.4.0</Path>
       <Path>Library/PackageCache/com.unity.shadergraph@10.5.0</Path>
       <Path>Library/PackageCache/com.unity.terrain-tools@3.0.2-preview.3</Path>
       <Path>Library/PackageCache/com.unity.test-framework@1.1.24</Path>
@@ -35,7 +38,6 @@
       <Path>BUILDS</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
-      <Path>Temp</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>
     </explicitExcludes>

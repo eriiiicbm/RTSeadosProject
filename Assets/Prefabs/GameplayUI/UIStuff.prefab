@@ -712,8 +712,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95122442942d3b046b8d1aa94c5b912a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titel: {fileID: 8709191744249777845}
-  descripcio: {fileID: 6039660315784905387}
+  title: {fileID: 8709191744249777845}
+  description: {fileID: 6039660315784905387}
   prices: {fileID: 5637925994004748326}
   type: {fileID: 4842943953742008161}
   tecnicAspects1: {fileID: 2469404573970002182}
@@ -739,6 +739,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1e31afce5091712408a1f2aac869e65d, type: 2}
   buttonEntity: {fileID: 9158964602422492853, guid: bbb5ae7ad3b165849aca68f8f6ea5ce8,
     type: 3}
+  factionTitles: {fileID: 11400000, guid: 3ff2829a8007f684e923decfc55a99b7, type: 2}
+  factionTitlePosition: 0
+  factionDescriptions: {fileID: 11400000, guid: ba012511973238748aab05427b704d97,
+    type: 2}
+  factionDescriptionPosition: 0
   titelS: CONDADO DE MC BURGUER
   descriptionS: "Imagina un pu\xF1ado de comida grasienta, barbarica y chilona, que
     solo pienzan en luchar, eso es el condado aqui i ahora."
@@ -833,6 +838,7 @@ GameObject:
   - component: {fileID: 5924431919740617311}
   - component: {fileID: 6643465570462589774}
   - component: {fileID: 3518986855591652697}
+  - component: {fileID: 7085234495117518566}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -901,6 +907,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: ALIANZA SANA
+--- !u!114 &7085234495117518566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570671408397128479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b7c4e89afe22e49a1b46b526209fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numText: 2
+  textStrings: {fileID: 11400000, guid: 3ff2829a8007f684e923decfc55a99b7, type: 2}
 --- !u!1 &1601573963706079272
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +996,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5746686208657847718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637208695338639207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b7c4e89afe22e49a1b46b526209fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numText: 15
+  textStrings: {fileID: 11400000, guid: 2c3854d9a46c65c4e9192e309b35c888, type: 2}
 --- !u!1 &1638515641860867980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,6 +1809,7 @@ GameObject:
   - component: {fileID: 8971299867683944064}
   - component: {fileID: 7842511658941393995}
   - component: {fileID: 1575531294753256976}
+  - component: {fileID: 3692436769883030519}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1843,6 +1878,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'IMPERIO DE '
+--- !u!114 &3692436769883030519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2317903195386268752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b7c4e89afe22e49a1b46b526209fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numText: 1
+  textStrings: {fileID: 11400000, guid: 3ff2829a8007f684e923decfc55a99b7, type: 2}
 --- !u!1 &2375674565476734941
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,8 +2408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95122442942d3b046b8d1aa94c5b912a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titel: {fileID: 8709191744249777845}
-  descripcio: {fileID: 6039660315784905387}
+  title: {fileID: 8709191744249777845}
+  description: {fileID: 6039660315784905387}
   prices: {fileID: 5637925994004748326}
   type: {fileID: 4842943953742008161}
   tecnicAspects1: {fileID: 2469404573970002182}
@@ -2373,8 +2422,7 @@ MonoBehaviour:
   buttonEntity: {fileID: 9158964602422492853, guid: bbb5ae7ad3b165849aca68f8f6ea5ce8,
     type: 3}
   titelS: ALIANZA SANA
-  descriptionS: Unos putos hipis, amantes de las plantas. Tu dejate bendecir por
-    la golden ella te guiara
+  descriptionS: Unos putos hipis, amantes de las plantas.
   factionLogo: {fileID: 21300000, guid: a222b585429f05b4784f8e801558c4f6, type: 3}
 --- !u!1 &3382577948285860606
 GameObject:
@@ -2647,6 +2695,7 @@ GameObject:
   - component: {fileID: 7731612456863526948}
   - component: {fileID: 7664565147940923424}
   - component: {fileID: 3655202296164442556}
+  - component: {fileID: 2894191690859458984}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2715,6 +2764,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: CONDADO DE MC BURGUER
+--- !u!114 &2894191690859458984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3774537727430104060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b7c4e89afe22e49a1b46b526209fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numText: 0
+  textStrings: {fileID: 11400000, guid: 3ff2829a8007f684e923decfc55a99b7, type: 2}
 --- !u!1 &3872054433573328864
 GameObject:
   m_ObjectHideFlags: 0
@@ -2880,7 +2943,7 @@ GameObject:
   - component: {fileID: 3324315687413672751}
   - component: {fileID: 8709191744249777845}
   m_Layer: 5
-  m_Name: titel
+  m_Name: title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2946,7 +3009,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TITEL
+  m_Text: 'TITLE
+
+'
 --- !u!1 &4183650866428121381
 GameObject:
   m_ObjectHideFlags: 0
@@ -4660,8 +4725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95122442942d3b046b8d1aa94c5b912a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titel: {fileID: 8709191744249777845}
-  descripcio: {fileID: 6039660315784905387}
+  title: {fileID: 8709191744249777845}
+  description: {fileID: 6039660315784905387}
   prices: {fileID: 5637925994004748326}
   type: {fileID: 4842943953742008161}
   tecnicAspects1: {fileID: 2469404573970002182}
@@ -4676,8 +4741,7 @@ MonoBehaviour:
   titelS: 'IMPERIO DE '
   descriptionS: Eres un fanatico de aquel que te gobierna aun que basicamente te
     considere mierda, o alguien que lo considera mierda a el i al resto, eres del
-    imperio.\n Alguoien que seguramente no pueda hacer mas que dejar-se pegar hasta
-    que llegue la elite.
+    imperio.
   factionLogo: {fileID: 21300000, guid: a222b585429f05b4784f8e801558c4f6, type: 3}
 --- !u!1 &6364744730217060901
 GameObject:
@@ -6846,6 +6910,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7032de85a1d0e4f2d95923653af23f6a, type: 3}
+--- !u!1 &1637208695338639207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1589799074028500, guid: 7032de85a1d0e4f2d95923653af23f6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1638515642359694515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1559190348159273681 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224746876640235106, guid: 7032de85a1d0e4f2d95923653af23f6a,
@@ -7546,6 +7616,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -857
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129141802168221974, guid: 7032de85a1d0e4f2d95923653af23f6a,
+        type: 3}
+      propertyPath: numText
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7032de85a1d0e4f2d95923653af23f6a, type: 3}

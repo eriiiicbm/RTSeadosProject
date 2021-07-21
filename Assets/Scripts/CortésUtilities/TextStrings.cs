@@ -17,6 +17,7 @@ public class TextStrings : ScriptableObject
     // Update is called once per frame
     void Update()
     {
-        
+        var he = new Event()
+            ;
     }
 }

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13cca8ca58db5c439e7c15e51c6daa5, type: 3}
+  m_Name: BatiGasDescription
+  m_EditorClassIdentifier: 
+  stringsEn:
+  - Have you ever shaken a carbonated drink and opened it, not? Well done because
+    otherwise and if you squeeze it, a ball of concentrated gas would shoot out,
+    destroying everything around it. Or at least that is what I have been able to
+    observe here ... I have never had one of these and I doubt that I will now.
+  stringsEs:
+  - "\xBFHas agitado nunca una bebida con gas y la has abierto, no?? Bien hecho porque,
+    en caso contrario, y si adem\xE1s la apretases, saldr\xEDa disparada una bola
+    de gas concentrado que destruir\xEDa todo lo de alrededor. O al menos es lo que
+    he podido observar aqu\xED\u2026 Nunca he bebido una de estas y dudo que lo haga
+    ahora. "

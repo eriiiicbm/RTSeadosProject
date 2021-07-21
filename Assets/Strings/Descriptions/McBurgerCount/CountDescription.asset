@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13cca8ca58db5c439e7c15e51c6daa5, type: 3}
+  m_Name: CountDescription
+  m_EditorClassIdentifier: 
+  stringsEn:
+  - 'This, delicious hamburger with becon, or so it seems to me, seems to be the
+    head of the junk food group.  He is absurdly big and strong, and it seems that
+    he uses that force to subdue all those who oppose him. '
+  stringsEs:
+  - 'Esta, deliciosa hamburguesa con becon, o eso me parece a mi, parece ser el jefe
+    del grupo de comida basura. Es Absurdamente grande y fuerte, y parece que usa
+    esa fuerza para someter a todos aquellos que se le oponen. '

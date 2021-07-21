@@ -5,21 +5,25 @@ using UnityEngine.UI;
 
 public class WikiSelectionMenu : MonoBehaviour
 {
-    public Text titel, descripcio, prices, type, tecnicAspects1, tecnicAspects2;
+    public Text title, description, prices, type, tecnicAspects1, tecnicAspects2;
     public Image image;
     public GameObject buildList, unitsList;
     public List<RTSEntity> buils, units;
     public GameObject buttonEntity;
-    public string titelS, descriptionS;
+     public TextStrings factionTitles;
+    public int factionTitlePosition = 0;
+    public TextStrings factionDescriptions;
+    public int factionDescriptionPosition = 0;
     public Sprite factionLogo;
 
     public void ChangeFaction()
     {
-        setListEntitys(buils, buildList);
-        setListEntitys(units, unitsList);
-
-        titel.text = titelS;
-        descripcio.text = descriptionS;
+        SetListEntitys(buils, buildList);
+        SetListEntitys(units, unitsList);
+Debug.Log("aaaa GameManager.getStrings(factionTitles)[factionTitlePosition]" +  GameManager.getStrings(factionTitles)[factionTitlePosition]);
+        title.text = GameManager.getStrings(factionTitles)[factionTitlePosition];
+        description.text = GameManager.getStrings(factionDescriptions)[factionDescriptionPosition];
+        
         image.sprite = factionLogo;
 
         prices.text = "";
@@ -28,7 +32,7 @@ public class WikiSelectionMenu : MonoBehaviour
         tecnicAspects2.text = "";
     }
 
-    void setListEntitys(List<RTSEntity> entities, GameObject list)
+    void SetListEntitys(List<RTSEntity> entities, GameObject list)
     {
         for (int i = 0; i< list.transform.childCount; i++)
         {
@@ -41,11 +45,11 @@ public class WikiSelectionMenu : MonoBehaviour
 
             button.GetComponent<Image>().sprite = entity.Preview;
 
-            if(button.TryGetComponent<wikiMenu>(out wikiMenu wikiMenu))
+            if(button.TryGetComponent<WikiMenu>(out WikiMenu wikiMenu))
             wikiMenu.info = entity;
 
-            wikiMenu.titel = titel;
-            wikiMenu.desciption = descripcio;
+            wikiMenu.titel = title;
+            wikiMenu.desciption = description;
             wikiMenu.image = image;
             wikiMenu.Prices = prices;
             wikiMenu.type = type;

@@ -59,6 +59,10 @@ public class RTSEntity : ScriptableObject
     [HideInInspector] [SerializeField] ResourcesType typeOfResourceThatCanHave;
     public float DefaultStoppingDistance => defaultStoppingDistance;
 
+    public void a()
+    {
+        String description = GameManager.getStrings(descriptionText)[descriptionPosition];
+    }
     public string EntityName { get => entityName; set => entityName = value; }
     public int MaxHealth { get => maxHealth; set => maxHealth = value; }
     public float ExpirationVelocity { get => expirationVelocity; set => expirationVelocity = value; }

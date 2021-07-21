@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13cca8ca58db5c439e7c15e51c6daa5, type: 3}
   m_Name: TowerDescription
   m_EditorClassIdentifier: 
-  stringsEn: []
-  stringsEs: []
+  stringsEn:
+  - 
+  stringsEs:
+  - 

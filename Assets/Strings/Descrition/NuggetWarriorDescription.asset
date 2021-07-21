@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13cca8ca58db5c439e7c15e51c6daa5, type: 3}
   m_Name: NuggetWarriorDescription
   m_EditorClassIdentifier: 
-  stringsEn: []
-  stringsEs: []
+  stringsEn:
+  - They are a variant of the normal nugget that usually works as a villager, although
+    in this case they are armed and do not seem to pay attention to buildings or
+    resources, during battles they seem to function as basic soldiers.
+  stringsEs:
+  - "Son una variante del nugget normal que suele funcionar como aldeano, aunque
+    en este caso van armados y no parece prestar atenci\xF3n a construcciones ni
+    recursos, durante las batallas parecen funcionar como soldados b\xE1sicos."

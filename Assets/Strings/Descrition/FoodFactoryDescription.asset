@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13cca8ca58db5c439e7c15e51c6daa5, type: 3}
   m_Name: FoodFactoryDescription
   m_EditorClassIdentifier: 
-  stringsEn: []
-  stringsEs: []
+  stringsEn:
+  - "Por lo que hemos podido observar este parece ser el edificio de producci\xF3n
+    de soldados incluyendo soldados como los nuggets b\xE1sicos, los Barbaserkers
+    o los Warhotdogs."
+  stringsEs:
+  - From what we have been able to observe this seems to be the soldier production
+    building including soldiers such as the basic nuggets, the Barbaserkers or the
+    Warhotdogs.

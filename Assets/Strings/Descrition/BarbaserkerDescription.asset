@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: BarbaserkerDescription
   m_EditorClassIdentifier: 
   stringsEn:
-  - 
+  - The idiot H. spilled sauce in the observation box the other day. Apparently some
+    of the nuggets have been stained, we have found that they decompose faster, but
+    at the same time they do more damage, they are more aggressive, and they seem
+    to intimidate the rest. Besides, H. thinks they surely taste better, but no one
+    has dared to check it out.
   stringsEs:
-  - 
+  - "Al idiota de H. se le cayo salsa al recinte de observaciones el otro dia. Al
+    parecer algunos de los nuggets se han manchado, hemos detectado que se descomponen
+    m\xE1s r\xE1pido, pero al mismo tiempo hacen m\xE1s da\xF1o, son m\xE1s agresivos,
+    y parecen intimidar al resto. Adem\xE1s H. cree que seguro saben mejor, per\xF2
+    ning\xFA se ha atrevido a comprobarlo."

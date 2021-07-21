@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13cca8ca58db5c439e7c15e51c6daa5, type: 3}
   m_Name: FastFoodStandDescription
   m_EditorClassIdentifier: 
-  stringsEn: []
-  stringsEs: []
+  stringsEn:
+  - This building appears to be the building that serves as the government building
+    of the junk food group, from here the villagers can come out as well as the count.
+  stringsEs:
+  - "Este edificio parece ser el edificio que sirve como el edificio de gobierno
+    de el grupo de la comida basura, de aqu\xED pueden salir los aldeanos al igual
+    que el conde."

@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: CountDescription
   m_EditorClassIdentifier: 
   stringsEn:
-  - 
+  - 'This, delicious hamburger with becon, or so it seems to me, seems to be the
+    head of the junk food group.  He is absurdly big and strong, and it seems that
+    he uses that force to subdue all those who oppose him. '
   stringsEs:
-  - "Un gorila gigante con deliciosa carne bien echa en las entra\xF1as"
+  - 'Esta, deliciosa hamburguesa con becon, o eso me parece a mi, parece ser el jefe
+    del grupo de comida basura. Es Absurdamente grande y fuerte, y parece que usa
+    esa fuerza para someter a todos aquellos que se le oponen. '

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13cca8ca58db5c439e7c15e51c6daa5, type: 3}
+  m_Name: EmpireDescription
+  m_EditorClassIdentifier: 
+  stringsEn:
+  - "From what I have been able to see, their way of functioning there are two castes:
+    the slaves or as I call them, \u201Ctapas\u201D, which seem to be slaves captured
+    in their conquests, whom they have indoctrinated to be faithful to the empire
+    and the emperor, and the ruling class, people who will not have regret, having
+    to use the tapas to buy time, while they dress up to go gracefully to the battlefield."
+  stringsEs:
+  - "Por lo que he podido ver, su forma de funcionar existen dos castas los esclavos
+    o como yo los llamo, \u201Ctapas\u201D, que parecen ser esclavos capturados en
+    sus conquistas, a los que han adoctrinado para ser fieles al imperio i al emperador,
+    y la clase gobernante, gente que no  se lamentaran, de tener que usar a las tapas
+    para ganar tiempo, mientras ellos se engalanan para salir elegantes al campo
+    de batalla."

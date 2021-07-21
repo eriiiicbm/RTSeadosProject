@@ -15,8 +15,10 @@ MonoBehaviour:
   stringsEn:
   - They are a variant of the normal nugget that usually works as a villager, although
     in this case they are armed and do not seem to pay attention to buildings or
-    resources, during battles they seem to function as basic soldiers.
+    resources, during battles they seem to function as basic soldiers.                                                                                                                                   
+    .H
   stringsEs:
   - "Son una variante del nugget normal que suele funcionar como aldeano, aunque
     en este caso van armados y no parece prestar atenci\xF3n a construcciones ni
-    recursos, durante las batallas parecen funcionar como soldados b\xE1sicos."
+    recursos, durante las batallas parecen funcionar como soldados b\xE1sicos.                                                                                                                                   
+    .H"

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: FactionNames
   m_EditorClassIdentifier: 
   stringsEn:
+  - INTRODUCTION
   - MCBURGER COUNT
-  - THE EMPIRE STRIKES AGAIN
   - HEALTY ALLIANCE
-  - 3
+  - THE EMPIRE STRIKES AGAIN
   stringsEs:
+  - INTRODUCCION
   - CONDADO DE MC BURGER
-  - IMPERIO DE
   - ALIANZA SANA
-  - 3
+  - IMPERIO DE

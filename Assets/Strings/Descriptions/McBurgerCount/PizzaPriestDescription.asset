@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: PizzaPriestDescription
   m_EditorClassIdentifier: 
   stringsEn:
-  - A very crazy priest that belive in a very strange cult.
+  - These pizzas seem to be spiritual guides of the rest of the group, when they
+    get closer to the rest they regain the desire to fight, in addition to knowing
+    how to fight. As for the cult they serve, it seems to be a faith that sees pineapple
+    pizzas as heretics, a faith with which I strongly agree.                                                                                                                                    
+    .H
   stringsEs:
-  - Un sacerdote absurdamente loco que cree en un culto aun mas loco.
+  - "Estas pizzas parecen ser gu\xEDas espirituales del resto del grupo, al acercarse
+    al resto recuperan las ganas de luchar, adem\xE1s de que saben luchar. En cuanto
+    a el culto al que sirven parece ser una fe que ve como herejes a las pizzas con
+    pi\xF1a, fe con la que estoy muy deacuerdo.                                                                                                                                    
+    .H"

@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: TowerDescription
   m_EditorClassIdentifier: 
   stringsEn:
-  - 
+  - This building is basically a watchtower, which will shoot a drop of ketchup at
+    anyone other than your ally, that come close. The biggest question I have in
+    this regard, that I have not yet been able to resolve is, who squeezes the ketchup
+    so that the drop shoots out?                                                                                                                                    
+    .H
   stringsEs:
-  - 
+  - "Este edificio es b\xE1sicamente una torre de vigilancia, que disparara una gota
+    de ketchup a cualquiera que no sea su aliado y se acerque. \xBFLa mayor duda
+    que tengo al respecto que aun no he podido resolver es, quien aprieta el ketchup
+    para que salga la gota disparada?                                                                                                                                    
+    .H"

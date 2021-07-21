@@ -16,10 +16,12 @@ MonoBehaviour:
   - This seems like a basic building in all the different food groups, it somehow
     seems to prevent food spoilage or at least slow it down. They also seem to use
     these buildings as houses, so without them they cannot create any more food.
-    According to P. they are equal in all respects regardless of group.
+    According to P. they are equal in all respects regardless of group.                                                                                                                                   
+    .H
   stringsEs:
   - "Este parece un edificio b\xE1sico en todos los distintos grupos de comida, de
     alguna manera, parece evitar la descomposici\xF3n de la comida o al menos ralentizarla.
     Adem\xE1s parece que usan estos edificios como casas por lo que sin estos no
     pueden crear m\xE1s alimentos. Seg\xFAn P. son iguales en todos los aspectos
-    independientemente del grupo."
+    independientemente del grupo.                                                                                                                                   
+    .H"

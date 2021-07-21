@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: WarHotDogDescription
   m_EditorClassIdentifier: 
   stringsEn:
-  - 'This specimen appears to be a combination of a dog and a hot dog, being able
+  - This specimen appears to be a combination of a dog and a hot dog, being able
     to identify those same dog traits on the face. That said, although it does not
-    seem to do much damage, it is much faster than the rest of the specimens. '
+    seem to do much damage, it is much faster than the rest of the specimens.                                                                                                                                    
+    .H
   stringsEs:
   - "Este esp\xE9cimen parece ser una combinaci\xF3n entre perro y perrito caliente,
     pudiendo identificar esos mismos rasgos de perro en la cara. Dicho eso, aunque
     no parece hacer mucho da\xF1o, si que es mucho m\xE1s r\xE1pido que el resto
-    de ejemplares. "
+    de ejemplares.                                                                                                                                    
+    .H"

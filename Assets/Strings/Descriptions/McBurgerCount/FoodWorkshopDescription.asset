@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: FoodWorkshopDescription
   m_EditorClassIdentifier: 
   stringsEn:
-  - 
+  - This building looks just like the other food stall, but in this case it only
+    produces things in carts.                                                                                                                                   
+    .H
   stringsEs:
-  - 
+  - Este edificio parece igualito a el otro puesto de comida, pero en este caso solo
+    deja salir cosas en carros.                                                                                                                                   
+    .H

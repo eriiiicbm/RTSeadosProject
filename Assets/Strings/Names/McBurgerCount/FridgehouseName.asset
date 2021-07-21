@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FridgehouseName
   m_EditorClassIdentifier: 
   stringsEn:
-  - Fridgehouse
+  - FridgeHouse
   stringsEs:
-  - Fridgehouse
+  - FridgeHouse

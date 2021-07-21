@@ -16,10 +16,12 @@ MonoBehaviour:
   - Have you ever shaken a carbonated drink and opened it, not? Well done because
     otherwise and if you squeeze it, a ball of concentrated gas would shoot out,
     destroying everything around it. Or at least that is what I have been able to
-    observe here ... I have never had one of these and I doubt that I will now.
+    observe here ... I have never had one of these and I doubt that I will now.                                                                                                                                    
+    .H
   stringsEs:
   - "\xBFHas agitado nunca una bebida con gas y la has abierto, no?? Bien hecho porque,
     en caso contrario, y si adem\xE1s la apretases, saldr\xEDa disparada una bola
     de gas concentrado que destruir\xEDa todo lo de alrededor. O al menos es lo que
     he podido observar aqu\xED\u2026 Nunca he bebido una de estas y dudo que lo haga
-    ahora. "
+    ahora.                                                                                                                                     
+    .H"

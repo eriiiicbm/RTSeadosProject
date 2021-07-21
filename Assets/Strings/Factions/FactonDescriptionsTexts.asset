@@ -13,14 +13,55 @@ MonoBehaviour:
   m_Name: FactonDescriptionsTexts
   m_EditorClassIdentifier: 
   stringsEn:
-  - ENGLISH VERSION
-  - ENGLISH VERSION 1
-  - ENGLISH VERSION 2
-  - ENGLISH VERSION 3
+  - 'I introduce myself, I am the one who in these reports will be known as P.. My
+    partner H. and I    Edit for H.: Since P''s snooty can''t do it here without
+    boring the staff, I''ll summarize, the point here is that we didn''t decide on
+    which food was better so we did an experiment. We collected different types of
+    food, and a little bit of Substance X around here, a few days of observation
+    and, wala. Here are a handful of reports on the various species that have been
+    created, which determine that junk food is the best.   Re-edit for P.: "and who
+    determines that junk food is the best", wait what?          .P '
+  - Out of the three food groups that have been formed this is my favorite, sorry
+    but I can't be objective, I love junk food. Apart from that they seem to be a
+    group that governs itself with violence, and that attack their enemies in the
+    same way, with speed and force, knocking them down before they can react.                                                                                                                                      
+    .H
+  - "This group seems to be made up of a combination of vegetables and fruit among
+    others. I've been watching them for a while, and even though they don't seem
+    very strong, they will always be willing to fight and die for their queen, whom
+    they treat as\u2026 an idol?                                                                                                                                      
+    .H"
+  - "From what I have been able to see, their way of functioning there are two castes:
+    the slaves or as I call them, \u201Ctapas\u201D, which seem to be slaves captured
+    in their conquests, whom they have indoctrinated to be faithful to the empire
+    and the emperor, and the ruling class, people who will not have regret, having
+    to use the tapas to buy time, while they dress up to go gracefully to the battlefield.                                                                                                                                     
+    .H"
   stringsEs:
-  - "Imagina un pu\xF1ado de comida grasienta, barbaricai chilona, con mazos i eso
-    es el condado. "
-  - Eres un fanatico de aquel que te gobierna aun que basicamente te considere mierda,
-    o alguien que lo considera mierda a el i al resto, eres del imperio.
-  - Unos putos hipis, amantes de las plantas.
-  - Unos putos hipis, amantes de las plantas.
+  - "Me presento, soy el que en estos reportes conocer\xE1n como P.. Mi compa\xF1ero
+    H. i yo     Edit por H.: Dado que aqu\xED el estirado de P. no puede hacerlo
+    sin aburrir al personal, har\xE9 el resumen, el tema aqu\xED es que no nos decidimos
+    sobre qu\xE9 comida era mejor as\xED que hicimos un experimento. Recogimos distintos
+    tipos de comida, y un poquito de subst\xE0ncia X por aqu\xED, unos d\xEDas de
+    observaci\xF3n y, wala. He aqu\xED un pu\xF1ado de reportes sobre las distintas
+    especies que se han creado, y que determinan que la comida basura es la mejor.    
+    Re-edit por P.: \"y que determina que la comida basura es la mejor\", espera
+    que?  .P "
+  - De entre los tres grupos de comida que se han formado este es mi favorito, lo
+    siento pero no puedo ser objetivo, me encanta la comida basura. Aparte de eso
+    parecen ser un grupo que se gobierna a base de violencia, y que atacan a sus
+    enemigos, de la misma forma, con rapidez y fuerza, derribandolos antes que puedan
+    reaccionar.                                                                                                                                                                              
+    .H
+  - "Este grupo parece estar formado por una combinaci\xF3n de verduras y fruta entre
+    otras. He estado observ\xE1ndolos durante un tiempo, y aunque no parecen muy
+    fuertes, siempre estar\xE1n dispuestos a luchar y morir por su reina, a la cual
+    tratan como\u2026 \xBFuna idol?                                                                                                                                    
+    .H"
+  - "Por lo que he podido ver, su forma de funcionar existen dos castas los esclavos
+    o como yo los llamo, \u201Ctapas\u201D, que parecen ser esclavos capturados en
+    sus conquistas, a los que han adoctrinado para ser fieles al imperio i al emperador,
+    y la clase gobernante, gente que no  se lamentaran, de tener que usar a las tapas
+    para ganar tiempo, mientras ellos se engalanan para salir elegantes al campo
+    de batalla.                                                                                                                                   
+    .H"

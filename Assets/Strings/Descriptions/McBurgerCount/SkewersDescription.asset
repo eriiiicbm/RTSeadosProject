@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: SkewersDescription
   m_EditorClassIdentifier: 
   stringsEn:
-  - 'It is basically three pieces of meat pricked on a stick, yes, I don''t think
-    it''s very comfortable, that is, looking at the face of the one on the buttom
-    at all, although in the case of the one above it seems that he enjoys it. Other
-    than that it seems to do a lot of damage but is very slow and breaks down fairly
-    quickly. '
+  - It is basically three pieces of meat pricked on a stick, yes, I don't think it's
+    very comfortable, that is, looking at the face of the one on the buttom at all,
+    although in the case of the one above it seems that he enjoys it. Other than
+    that it seems to do a lot of damage but is very slow and breaks down fairly quickly.                                                                                                                                    
+    .H
   stringsEs:
   - "Esto b\xE1sicamente, son tres trozos de carne pinchados en un palo, eso s\xED,
     no creo que sea muy c\xF3modo es decir mira la cara del de abajo del todo, aunque
     en el caso del de m\xE1s arriba parece disfrutarlo. Aparte de eso parece hacer
-    mucho da\xF1o, pero es muy lento y se descompone bastante r\xE1pido. "
+    mucho da\xF1o, pero es muy lento y se descompone bastante r\xE1pido.                                                                                                                                    
+    .H"

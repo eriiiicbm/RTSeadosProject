@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: ArcherAndChipsDescription
   m_EditorClassIdentifier: 
   stringsEn:
-  - "Vale, esto es cripi, es decir estos tipos llevan, un mont\xF3n de patatas fritas
-    con caras, colgados en la espalda, y entonces los sacan y los usan como flechas,
-    y ah\xED viene lo peor porque esas flechas chill\xE1n al disparar-se, chill\xE1n\u2026
-    mucho\u2026"
-  stringsEs:
   - "Okay, this is crypi, i mean, these guys carry a lot of french fries with faces,
     hanging on their backs, and then they take them out and use them as arrows, and
     here comes the worst because those arrows scream when they are shoot, they scream
     \u2026 a lot of..."
+  stringsEs:
+  - "Vale, esto es cripi, es decir estos tipos llevan, un mont\xF3n de patatas fritas
+    con caras, colgados en la espalda, y entonces los sacan y los usan como flechas,
+    y ah\xED viene lo peor porque esas flechas chill\xE1n al disparar-se, chill\xE1n\u2026
+    mucho\u2026                                                                                                                                     
+    .H"

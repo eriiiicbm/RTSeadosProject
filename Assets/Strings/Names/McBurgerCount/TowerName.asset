@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TowerName
   m_EditorClassIdentifier: 
   stringsEn:
-  - Tower
+  - KetchuoTower
   stringsEs:
-  - Tower
+  - KetchupTower

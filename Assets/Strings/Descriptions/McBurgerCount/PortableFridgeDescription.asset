@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: PortableFridgeDescription
   m_EditorClassIdentifier: 
   stringsEn:
-  - 'This refrigerator apparently does the same function as its version in the form
+  - This refrigerator apparently does the same function as its version in the form
     of a building but with less efficiency and the ability to move, and in the same
-    way it seems to be in all the different groups with the same capacities. '
+    way it seems to be in all the different groups with the same capacities.                                                                                                                                    
+    .H
   stringsEs:
   - "Esta nevera por lo visto hace la misma funci\xF3n que su versi\xF3n en forma
     de edificio pero con menos eficacia y la capacidad de moverse, y de igual forma
-    parece estar en todos los distintos grupos con las mismas capacidades."
+    parece estar en todos los distintos grupos con las mismas capacidades.                                                                                                                                   
+    .H"

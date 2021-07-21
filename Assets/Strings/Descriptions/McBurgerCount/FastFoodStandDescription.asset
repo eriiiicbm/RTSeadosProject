@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stringsEn:
   - This building appears to be the building that serves as the government building
-    of the junk food group, from here the villagers can come out as well as the count.
+    of the junk food group, from here the villagers can come out as well as the count.                                                                                                                                   
+    .H
   stringsEs:
   - "Este edificio parece ser el edificio que sirve como el edificio de gobierno
     de el grupo de la comida basura, de aqu\xED pueden salir los aldeanos al igual
-    que el conde."
+    que el conde.                                                                                                                                   
+    .H"

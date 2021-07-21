@@ -44,8 +44,8 @@ public class WikiMenu : MonoBehaviour
                 tecnicAspects2.text = statsNames[11];
                 foreach(GameObject unit in info.ProductionUnits)
                 {
-                    if (unit.TryGetComponent<RTSBase>(out RTSBase unit2))
-                        tecnicAspects2.text += " ,"+unit2.rtsEntity.EntityName;
+                    //if (unit.TryGetComponent<RTSBase>(out RTSBase unit2))
+                      //  tecnicAspects2.text += " ,"+unit2.rtsEntity.EntityName;
                 }
                 break;
 

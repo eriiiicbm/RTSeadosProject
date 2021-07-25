@@ -10,41 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf636b8228f3d346be8a0d449de608e, type: 3}
-  m_Name: ArcherAndChips
+  m_Name: NuggetWarriior
   m_EditorClassIdentifier: 
   isMoralUp: 0
-  entityType: 6
-  maxHealth: 2000
-  expirationVelocity: 2.5
+  entityType: 2
+  maxHealth: 3000
+  expirationVelocity: 2.75
   damageMoral: 0
-  prices: 320000000a0000000000000000000000
+  prices: 140000000a0000000f00000000000000
   description: 
-  preview: {fileID: 21300000, guid: 74b52f88352c64b45b54f3f1b132eee1, type: 3}
-  prefab: {fileID: 5726599420013825769, guid: 9a2546bd221e3114aa5025940063cb70, type: 3}
-  moral: 3500
-  defaultStoppingDistance: 1
-  velocity: 8.5
+  preview: {fileID: 21300000, guid: 29a6e0859ce14c74aa2e5ff479c544ca, type: 3}
+  prefab: {fileID: 5651458107991866868, guid: 4616b647417188c4b82ca0d2eba93fe9, type: 3}
+  moral: 3000
+  defaultStoppingDistance: 2
+  velocity: 6
   currentTarget: {fileID: 0}
   effectRadious: 0
   recoverySpeed: 0
-  damage: 175
-  attackRange: 28
-  attackTimer: 3
-  proyectile: {fileID: 3370176331153901490, guid: c0b9490ae1569514397d92793ea0a052,
-    type: 3}
+  damage: 180
+  attackRange: 4
+  attackTimer: 2
+  proyectile: {fileID: 0}
   craftRadious: 0
   craftCompletedGO: {fileID: 0}
   craftUnCompletedGO: {fileID: 0}
   buildRenderer: {fileID: 0}
   buildTime: 6
   canCraft: 0
-  productionUnits:
-  - {fileID: 0}
+  productionUnits: []
   curretUnit: {fileID: 0}
-  descriptionText: {fileID: 11400000, guid: f7bd4449032d10244bb467478e142619, type: 2}
+  descriptionText: {fileID: 11400000, guid: 4541758946ce98541b4e54f96e4641fc, type: 2}
   descriptionPosition: 0
   currentProduction: {fileID: 0}
-  nameText: {fileID: 11400000, guid: 3fb40db619db4eb4fb3d55fdff08550c, type: 2}
+  nameText: {fileID: 11400000, guid: 2c5d795978fcff940b28eadd7729b387, type: 2}
   namePosition: 0
   unitState: 0
   emotionalState: 0

@@ -10,41 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf636b8228f3d346be8a0d449de608e, type: 3}
-  m_Name: Tower
+  m_Name: PizzaPriest
   m_EditorClassIdentifier: 
   isMoralUp: 0
-  entityType: 7
-  maxHealth: 2000
-  expirationVelocity: 0
-  damageMoral: 0
-  prices: 0000000000000000c800000014000000
+  entityType: 5
+  maxHealth: 3000
+  expirationVelocity: 2.75
+  damageMoral: 1
+  prices: 1e0000000f0000000000000000000000
   description: 
-  preview: {fileID: 21300000, guid: 62a2c590ffc918842b270ae9f3679983, type: 3}
-  prefab: {fileID: 3722049469362960980, guid: 95d74b3e50c21bf4bb579498ce47d32c, type: 3}
-  moral: 0
+  preview: {fileID: 21300000, guid: 80ddc69d7e3f2fa44878320308e4cd8d, type: 3}
+  prefab: {fileID: 7290073556559787900, guid: 8c02bf8a536297e4a95053845a09202b, type: 3}
+  moral: 4000
   defaultStoppingDistance: 2
   velocity: 6
   currentTarget: {fileID: 0}
-  effectRadious: 0
-  recoverySpeed: 0
-  damage: 50
-  attackRange: 15
-  attackTimer: 1
-  proyectile: {fileID: 8734694017325873992, guid: 04856c9b21e15e84399cad08e93c25c8,
-    type: 3}
-  craftRadious: 5
+  effectRadious: 5
+  recoverySpeed: 0.5
+  damage: 180
+  attackRange: 5
+  attackTimer: 2
+  proyectile: {fileID: 0}
+  craftRadious: 0
   craftCompletedGO: {fileID: 0}
   craftUnCompletedGO: {fileID: 0}
   buildRenderer: {fileID: 0}
   buildTime: 10
   canCraft: 0
-  productionUnits:
-  - {fileID: 0}
+  productionUnits: []
   curretUnit: {fileID: 0}
-  descriptionText: {fileID: 11400000, guid: fb89244a84e5a514c822ceb0d4ed1776, type: 2}
+  descriptionText: {fileID: 11400000, guid: 08627c3c1b3b9d24f9a0e3ee8c59be57, type: 2}
   descriptionPosition: 0
   currentProduction: {fileID: 0}
-  nameText: {fileID: 11400000, guid: 955875b22fd489c44a1daaf1a645b855, type: 2}
+  nameText: {fileID: 11400000, guid: fc90f82841da7e245ac8b27d765743e6, type: 2}
   namePosition: 0
   unitState: 0
   emotionalState: 0

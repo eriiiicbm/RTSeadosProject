@@ -10,39 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf636b8228f3d346be8a0d449de608e, type: 3}
-  m_Name: Barbaserker
+  m_Name: Cherry
   m_EditorClassIdentifier: 
   isMoralUp: 0
-  entityType: 2
-  maxHealth: 3000
-  expirationVelocity: 3.5
-  damageMoral: 0.25
-  prices: 230000000f0000000000000000000000
+  entityType: 4
+  maxHealth: 1800
+  expirationVelocity: 8
+  damageMoral: 0
+  prices: 0f0000000a0000000000000000000000
   description: 
-  preview: {fileID: 21300000, guid: dad4fad76d94b7141981ba5334c954ca, type: 3}
-  prefab: {fileID: 5651458107991866868, guid: 2cfe77dacd0414843af2b33b0c4092b5, type: 3}
-  moral: 5000
+  preview: {fileID: 0}
+  prefab: {fileID: 0}
+  moral: 3500
   defaultStoppingDistance: 2
-  velocity: 7
+  velocity: 6.5
   currentTarget: {fileID: 0}
-  effectRadious: 2
+  effectRadious: 0
   recoverySpeed: 0
-  damage: 250
-  attackRange: 4
+  damage: 0
+  attackRange: 6.5
   attackTimer: 2
   proyectile: {fileID: 0}
   craftRadious: 0
   craftCompletedGO: {fileID: 0}
   craftUnCompletedGO: {fileID: 0}
   buildRenderer: {fileID: 0}
-  buildTime: 8
+  buildTime: 6
   canCraft: 0
   productionUnits: []
   curretUnit: {fileID: 0}
-  descriptionText: {fileID: 11400000, guid: 516236addc34dc54a8b883b737e986fd, type: 2}
+  descriptionText: {fileID: 0}
   descriptionPosition: 0
   currentProduction: {fileID: 0}
-  nameText: {fileID: 11400000, guid: e54f889e90b764b42bd0af55e19f9416, type: 2}
+  nameText: {fileID: 0}
   namePosition: 0
   unitState: 0
   emotionalState: 0

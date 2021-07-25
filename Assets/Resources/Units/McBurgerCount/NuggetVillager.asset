@@ -10,41 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf636b8228f3d346be8a0d449de608e, type: 3}
-  m_Name: Skewers
+  m_Name: NuggetVillager
   m_EditorClassIdentifier: 
   isMoralUp: 0
-  entityType: 2
-  maxHealth: 2500
-  expirationVelocity: 2.5
+  entityType: 4
+  maxHealth: 2000
+  expirationVelocity: 10
   damageMoral: 0
-  prices: 1e0000000f0000000000000000000000
+  prices: 140000000a0000000000000000000000
   description: 
-  preview: {fileID: 21300000, guid: 73142d338b04f7e40803241231a294e5, type: 3}
-  prefab: {fileID: 4134074402336445218, guid: 0b8029faa8c89ee45bf43bc5c70c94eb, type: 3}
+  preview: {fileID: 21300000, guid: fdb7276f69f37614d87ce0c342b4fe6a, type: 3}
+  prefab: {fileID: 4134074402336445218, guid: 06e6a74ba84993f48aa4f75cb8c54991, type: 3}
   moral: 3000
   defaultStoppingDistance: 2
-  velocity: 5.75
+  velocity: 6
   currentTarget: {fileID: 0}
   effectRadious: 0
   recoverySpeed: 0
-  damage: 190
-  attackRange: 7
-  attackTimer: 3
+  damage: 0
+  attackRange: 6.5
+  attackTimer: 2
   proyectile: {fileID: 0}
   craftRadious: 0
   craftCompletedGO: {fileID: 0}
   craftUnCompletedGO: {fileID: 0}
   buildRenderer: {fileID: 0}
-  buildTime: 6
+  buildTime: 4
   canCraft: 0
-  productionUnits:
-  - {fileID: 0}
+  productionUnits: []
   curretUnit: {fileID: 0}
-  descriptionText: {fileID: 11400000, guid: 3e23548646091094aa35b8b0d5aef5f4, type: 2}
-  descriptionPosition: 1
+  descriptionText: {fileID: 11400000, guid: 4fe0ddab69a5ee94abbacbc5176f0f9f, type: 2}
+  descriptionPosition: 0
   currentProduction: {fileID: 0}
-  nameText: {fileID: 11400000, guid: 331998a69b5cb4a4a85a12f89b42745c, type: 2}
-  namePosition: 2
+  nameText: {fileID: 11400000, guid: 1e8cd2716e43bb043b029b817237b290, type: 2}
+  namePosition: 0
   unitState: 0
   emotionalState: 0
   typeOfResourceThatCanHave: 0

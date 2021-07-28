@@ -14,6 +14,7 @@ public class ChatScript : NetworkBehaviour
 	{
 		TxtTexto = GameObject.Find ("TxtTexto").GetComponent < Text>();
 		inputField = GameObject.Find ("input").GetComponent<InputField> ();
+		
 	}
 	
 	// Update is called once per frame
@@ -25,21 +26,24 @@ public class ChatScript : NetworkBehaviour
 			TxtTexto = GameObject.Find ("TxtTexto").GetComponent < Text>();
 			inputField = GameObject.Find ("input").GetComponent<InputField> ();
 			chatGameObject = inputField.transform.parent.gameObject;
+			chatGameObject.SetActive(isChatActive);
+
 		}
 		if (!isLocalPlayer)
 			return;
-
-
-		if(Input.GetKeyDown(KeyCode.Return))
+//todo use the new input system here
+		if (Input.GetKeyDown(KeyCode.T))
 		{
-			if(inputField.text != "")
-			{
-				string message = inputField.text;
-				inputField.text = "";
-
-				CmdSendText (message);
-			}
+			isChatActive = !isChatActive;
+			chatGameObject.SetActive(isChatActive);
 		}
+
+		if (!Input.GetKeyDown(KeyCode.Return)) return;
+		if (inputField.text == "") return;
+		string message = inputField.text;
+		inputField.text = "";
+
+		CmdSendText ("<" + connectionToClient.identity.GetComponent<RTSPlayerv2>().GetDisplayName()+ "> "  + message);
 	}
 
 	[Command]

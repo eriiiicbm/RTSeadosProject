@@ -4,8 +4,15 @@
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/TextStrings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/TextStrings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Strings/TutorialTexts.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Strings/TutorialTexts.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChatScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChatScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Strings/Names/AllianceName.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Strings/Names/AllianceName.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Strings/Names/CountyName.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Strings/Names/CountyName.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Strings/Names/EmpireName.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Strings/Names/EmpireName.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +51,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitSelectionHandlerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/LobbyMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/RTSFoodManager.cs" />
@@ -95,6 +101,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/MainMenuBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/TextStrings.cs" />
+      <option value="$PROJECT_DIR$/Assets/ChatScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />
@@ -163,6 +170,7 @@
       <workItem from="1621937864131" duration="6273000" />
       <workItem from="1621951462282" duration="17236000" />
       <workItem from="1625843207704" duration="702000" />
+      <workItem from="1627498422454" duration="1636000" />
     </task>
     <servers />
   </component>

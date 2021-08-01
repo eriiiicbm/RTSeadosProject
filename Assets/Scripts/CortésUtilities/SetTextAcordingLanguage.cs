@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,7 +29,18 @@ public class SetTextAcordingLanguage : MonoBehaviour
     }
 
     public void OnLanguageChanged() {
+        if (GetComponent<Text>()!=null)
+        {
+         
+            GetComponent<Text>().text = GameManager.getStrings(textStrings)[numText];
 
-        GetComponent<Text>().text = GameManager.getStrings(textStrings)[numText];
+        }
+        if (GetComponent<TMP_Text>()!=null)
+        {
+         
+            GetComponent<TMP_Text>().text = GameManager.getStrings(textStrings)[numText];
+
+        }
+        
     }
 }

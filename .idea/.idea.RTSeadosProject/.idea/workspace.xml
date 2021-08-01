@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChatScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChatScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Strings/Names/AllianceName.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Strings/Names/AllianceName.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Strings/Names/CountyName.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Strings/Names/CountyName.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Strings/Names/EmpireName.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Strings/Names/EmpireName.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Strings/TutorialTexts.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Strings/TutorialTexts.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +163,7 @@
       <workItem from="1621937864131" duration="6273000" />
       <workItem from="1621951462282" duration="17236000" />
       <workItem from="1625843207704" duration="702000" />
-      <workItem from="1627498422454" duration="1636000" />
+      <workItem from="1627498422454" duration="6784000" />
     </task>
     <servers />
   </component>

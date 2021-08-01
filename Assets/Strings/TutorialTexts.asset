@@ -16,17 +16,17 @@ MonoBehaviour:
   - 
   - 
   stringsEs:
-  - "\xA1Hola compa\xF1eros amantes de los juegos de estrategia en tiempo real! \\n
-    Este es un peque\xF1o tutorial. \xA1L\xE9elo si quieres dominar a tu enemigo
-    en la primera partida!  \\n -> Tu objetivo es destruir el n\xFAcleo enemigo (base
-    principal). -> Cosecha los 4 tipos de recursos (piedra, madera, sustancia X e
-    ingredientes) para crear un ej\xE9rcito poderoso. -> Seleccione sus tropas haciendo
-    clic o arrastrando el cursor con el clic izquierdo y d\xE9les \xF3rdenes con
-    el clic derecho. -> Cuando tengas unidades seleccionadas, haz clic derecho en
-    un enemigo para atacarlo o haz clic en el terreno para mover tus unidades. ->
-    Tus aldeanos son las \xFAnicas unidades que pueden construir edificios. Necesitas
-    edificios para crear unidades. -> Su primer edificio deber\xEDa ser el puesto
-    de comida r\xE1pida. All\xED solo se puede capacitar a los aldeanos. -> La mayor\xEDa
-    de los edificios pueden crear diferentes tipos de unidades. -> Hay muchos recursos
-    ocultos en el mapa. \xA1Encu\xE9ntralos y cosechalos para vencer a tus enemigos! 
-    \xA1\xA1Buena suerte!!"
+  - "\xA1Hola <space=5em> <br>  compa\xF1eros amantes de los juegos <br>  de estrategia
+    en tiempo real! \\n  /n Este es un peque\xF1o tutorial. \xA1L\xE9elo si quieres
+    dominar a tu enemigo en la primera partida!  \\n -> Tu objetivo es destruir el
+    n\xFAcleo enemigo (base principal). -> Cosecha los 4 tipos de recursos (piedra,
+    madera, sustancia X e ingredientes) para crear un ej\xE9rcito poderoso. -> Seleccione
+    sus tropas haciendo clic o arrastrando el cursor con el clic izquierdo y d\xE9les
+    \xF3rdenes con el clic derecho. -> Cuando tengas unidades seleccionadas, haz
+    clic derecho en un enemigo para atacarlo o haz clic en el terreno para mover
+    tus unidades. -> Tus aldeanos son las \xFAnicas unidades que pueden construir
+    edificios. Necesitas edificios para crear unidades. -> Su primer edificio deber\xEDa
+    ser el puesto de comida r\xE1pida. All\xED solo se puede capacitar a los aldeanos.
+    -> La mayor\xEDa de los edificios pueden crear diferentes tipos de unidades.
+    -> Hay muchos recursos ocultos en el mapa. \xA1Encu\xE9ntralos y cosechalos para
+    vencer a tus enemigos!  \xA1\xA1Buena suerte!!"

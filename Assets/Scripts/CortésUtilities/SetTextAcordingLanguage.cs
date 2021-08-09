@@ -13,7 +13,7 @@ public class SetTextAcordingLanguage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Text>().text = GameManager.getStrings(textStrings)[numText];
+       SetText();
         MainMenuBehaviour.changeLanguage += OnLanguageChanged;
     }
 
@@ -29,6 +29,12 @@ public class SetTextAcordingLanguage : MonoBehaviour
     }
 
     public void OnLanguageChanged() {
+       SetText();
+        
+    }
+
+    public void SetText()
+    {
         if (GetComponent<Text>()!=null)
         {
          
@@ -41,6 +47,5 @@ public class SetTextAcordingLanguage : MonoBehaviour
             GetComponent<TMP_Text>().text = GameManager.getStrings(textStrings)[numText];
 
         }
-        
     }
 }

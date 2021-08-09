@@ -128,6 +128,7 @@ isGameInProgress = false;
         if (SceneManager.GetActiveScene().name.StartsWith(sceneName))
         {
             Debug.Log("valid scene");
+           
             GameOverHandlerv2 gameOverHandlerInstance = Instantiate(gameOverHandler);
             NetworkServer.Spawn(gameOverHandlerInstance.gameObject);
             foreach (var player in Players)
@@ -161,6 +162,16 @@ isGameInProgress = false;
         {
             return;
         }
+
+         if (Players.Count==1)
+         {
+             if (NetworkClient.isLocalClient)
+             {
+
+                 OnServerAddPlayer(new NetworkConnectionToClient(3000, false, 1));
+                 Debug.Log("AI ADDED");
+             }
+         }
 
          switch (currentGamemode)
          {

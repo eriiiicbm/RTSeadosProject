@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Strings/TutorialTexts.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Strings/TutorialTexts.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChatScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChatScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SetTextAcordingLanguage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SetTextAcordingLanguage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +45,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitSelectionHandlerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/LobbyMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/RTSFoodManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/ResourcesDisplayv2.cs" />
@@ -83,18 +83,19 @@
       <option value="$PROJECT_DIR$/Assets/CartoonFX/Scipts/Colorizer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/Fridge.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/MainMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SetTextAcordingLanguage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/MainMenuBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/TextStrings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SetTextAcordingLanguage.cs" />
       <option value="$PROJECT_DIR$/Assets/ChatScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/PlayerAI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />
@@ -163,7 +164,8 @@
       <workItem from="1621937864131" duration="6273000" />
       <workItem from="1621951462282" duration="17236000" />
       <workItem from="1625843207704" duration="702000" />
-      <workItem from="1627498422454" duration="6784000" />
+      <workItem from="1627498422454" duration="8049000" />
+      <workItem from="1628072264469" duration="4916000" />
     </task>
     <servers />
   </component>

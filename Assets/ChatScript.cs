@@ -12,8 +12,8 @@ public class ChatScript : NetworkBehaviour
 	public float secondsDisplayed = 2f;
 	void Start () 
 	{
-		TxtTexto = GameObject.Find ("TxtTexto").GetComponent < Text>();
-		inputField = GameObject.Find ("input").GetComponent<InputField> ();
+		TxtTexto = GameObject.Find ("TxtTexto")?.GetComponent < Text>();
+		inputField = GameObject.Find ("input")?.GetComponent<InputField> ();
 		
 	}
 	
@@ -23,8 +23,12 @@ public class ChatScript : NetworkBehaviour
 		//TODO AVOID THIS
 		if (inputField==null)
 		{
-			TxtTexto = GameObject.Find ("TxtTexto").GetComponent < Text>();
-			inputField = GameObject.Find ("input").GetComponent<InputField> ();
+			TxtTexto = GameObject.Find ("TxtTexto")?.GetComponent < Text>();
+			inputField = GameObject.Find ("input")?.GetComponent<InputField> ();
+			if (inputField==null)
+			{
+				return;
+			}
 			chatGameObject = inputField.transform.parent.gameObject;
 			chatGameObject.SetActive(isChatActive);
 

@@ -614,6 +614,7 @@
           </e>
           <e p="version.txt" t="Include" />
         </e>
+        <e p="PlayerAI.cs" t="Include" />
         <e p="Prefabs" t="Include">
           <e p="Plugins" t="Include">
             <e p="AssetUsageDetector" t="Include">

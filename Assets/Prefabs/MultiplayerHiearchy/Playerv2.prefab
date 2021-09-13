@@ -56,6 +56,8 @@ GameObject:
   - component: {fileID: 7088982587513476843}
   - component: {fileID: 8091097305547058836}
   - component: {fileID: 2054919089918452810}
+  - component: {fileID: 4689786783587829950}
+  - component: {fileID: -5715863456207861924}
   m_Layer: 0
   m_Name: Playerv2
   m_TagString: Untagged
@@ -93,7 +95,7 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   visible: 0
-  m_AssetId: 
+  m_AssetId: b1913d173afa11b4da16d6ef9bd03a38
   hasSpawned: 0
 --- !u!114 &7088982587513476843
 MonoBehaviour:
@@ -112,15 +114,10 @@ MonoBehaviour:
   cameraTransform: {fileID: 5167589719713410488}
   buildings:
   - {fileID: 1164019021932799192, guid: 1def9626f1305574ba187a81c11f8807, type: 3}
-  - {fileID: 7158041827773910725, guid: 05444f3a8c42111448905051658d48ad, type: 3}
-  - {fileID: 8917135491928365060, guid: 6c9f4711e10fadc4a96a9ff60a0f6ab5, type: 3}
   - {fileID: 8496475827853168161, guid: d69f154243017534b83af99b42a97603, type: 3}
   - {fileID: 2154621944659824137, guid: 06aab8909717c664eb21bd5a36a0d573, type: 3}
   - {fileID: 7100767405781893154, guid: 95d74b3e50c21bf4bb579498ce47d32c, type: 3}
   - {fileID: 5683830269503721512, guid: 439da96688641d64db856588504a6eb9, type: 3}
-  - {fileID: 5420493816838377146, guid: ae0b58e4514b7c64096a99cc6e3a6992, type: 3}
-  - {fileID: 901695133488945128, guid: e5950ebad5966e446bce262cf41e122c, type: 3}
-  - {fileID: -8355729088920819036, guid: f46ab509685563344b2db45124c45bb4, type: 3}
   units:
   - {fileID: 4543389441489971279, guid: cf67cc1f3acf9ee43b9b257d85f3bc1e, type: 3}
   - {fileID: 853259452964910958, guid: 2cfe77dacd0414843af2b33b0c4092b5, type: 3}
@@ -140,6 +137,9 @@ MonoBehaviour:
   myUnits: []
   myBuildings: []
   audioList: []
+  connection:
+    m_From: 0
+    m_To: 0
   trops: 0
   maxTrops: 6
   tropsInProduction: 0
@@ -156,6 +156,7 @@ MonoBehaviour:
     type: 3}
   onLobbyEnter: {fileID: 8300000, guid: 05509be575b969e478323e5c0903e2f4, type: 3}
   onLobbyExit: {fileID: 8300000, guid: 3c3241bca3c28514698e2fb598405109, type: 3}
+  lastOperationWorked: 0
 --- !u!114 &8091097305547058836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +197,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  secondsDisplayed: 2
+--- !u!114 &4689786783587829950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3469301206258772433}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3de672b2ebb48e4498f377e0a980e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  currentState: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1088
+  isTimeOut: 0
+  timeOut: 5
+--- !u!114 &-5715863456207861924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3469301206258772433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 0
+  sendInterval: 0.05
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  bufferTimeMultiplier: 3
+  bufferSizeLimit: 64
+  catchupThreshold: 6
+  catchupMultiplier: 0.1
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!1 &4489970262673483055
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +305,10 @@ MonoBehaviour:
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
+    ModeOverride: 0
     LensShift: {x: 0, y: 0}
+    GateFit: 2
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

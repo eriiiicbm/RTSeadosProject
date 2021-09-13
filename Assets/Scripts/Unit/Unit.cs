@@ -213,8 +213,7 @@ private void NavMeshToTarget()
             unitStates = UnitStates.Idle;   
         }
     }
-
-    [Command]
+    [Command(requiresAuthority = false)]
     public void CmdMove(Vector3 position)
     {
         ServerMove(position);

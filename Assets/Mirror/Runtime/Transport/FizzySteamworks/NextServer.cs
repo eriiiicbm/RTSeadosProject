@@ -1,3 +1,4 @@
+#if !DISABLESTEAMWORKS
 using Steamworks;
 using System;
 using System.Linq;
@@ -87,7 +88,7 @@ namespace Mirror.FizzySteam
         OnConnected.Invoke(connectionId);
         Debug.Log($"Client with SteamID {clientSteamID} connected. Assigning connection id {connectionId}");
       }
-      else if (param.m_info.m_eState == ESteamNetworkingConnectionState.k_ESteamNetworkingConnectionState_ClosedByPeer)
+      else if (param.m_info.m_eState == ESteamNetworkingConnectionState.k_ESteamNetworkingConnectionState_ClosedByPeer || param.m_info.m_eState == ESteamNetworkingConnectionState.k_ESteamNetworkingConnectionState_ProblemDetectedLocally)
       {
         if (connToMirrorID.TryGetValue(param.m_hConn, out int connId))
         {
@@ -109,7 +110,7 @@ namespace Mirror.FizzySteam
       Debug.Log($"Client with ConnectionID {connId} disconnected.");
     }
 
-    public bool Disconnect(int connectionId)
+    public void Disconnect(int connectionId)
     {
       if (connToMirrorID.TryGetValue(connectionId, out HSteamNetConnection conn))
       {
@@ -118,12 +119,10 @@ namespace Mirror.FizzySteam
         steamIDToMirrorID.Remove(connectionId);
         connToMirrorID.Remove(connectionId);
         OnDisconnected(connectionId);
-        return true;
       }
       else
       {
         Debug.LogWarning("Trying to disconnect unknown connection id: " + connectionId);
-        return false;
       }
     }
 
@@ -205,3 +204,4 @@ namespace Mirror.FizzySteam
     }
   }
 }
+#endif // !DISABLESTEAMWORKS

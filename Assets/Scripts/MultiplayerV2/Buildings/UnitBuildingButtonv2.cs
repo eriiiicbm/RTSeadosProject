@@ -31,13 +31,14 @@ public class UnitBuildingButtonv2 : MonoBehaviour, IPointerDownHandler, IPointer
         if (unit != null)
         {
             unit.prices = unit.rtsEntity.Prices;
+            iconImage.sprite = unit.preview;
+            priceText.text = $"{unit.rtsEntity.Prices[0]} I\n" +
+                             $"{unit.rtsEntity.Prices[1]} X\n" +
+                             $"{unit.rtsEntity.Prices[2]} W\n" +
+                             $"{unit.rtsEntity.Prices[3]} S";
         }
 
-        iconImage.sprite = unit.preview;
-        priceText.text = $"{unit.rtsEntity.Prices[0]} I\n" +
-                         $"{unit.rtsEntity.Prices[1]} X\n" +
-                         $"{unit.rtsEntity.Prices[2]} W\n" +
-                         $"{unit.rtsEntity.Prices[3]} S";
+     
     }
 
     private void Start()

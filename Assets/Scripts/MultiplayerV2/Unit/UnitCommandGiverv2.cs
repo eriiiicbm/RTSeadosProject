@@ -90,7 +90,7 @@ public class UnitCommandGiverv2 : MonoBehaviour
 
     }
 
-    private void TryMove(Vector3 point)
+    public void TryMove(Vector3 point)
     {
         unitSelectionHandler.ClearVillager();
 
@@ -100,7 +100,7 @@ public class UnitCommandGiverv2 : MonoBehaviour
         }
     }
 
-    private void TryTarget(Targetable target)
+    public void TryTarget(Targetable target)
     {
         foreach (Unit unit in unitSelectionHandler.SelectedUnits)
         {

@@ -26,8 +26,8 @@ public class Targeter : NetworkBehaviour
       GameOverHandler.ServerOnGameOver -= ServerHandleGameOver;  }
 
 
+  [Command(requiresAuthority = false)]
 
-  [Command]
     public void CmdSetTarget(GameObject targetGameObject)
     {
         if (!targetGameObject.TryGetComponent<Targetable>(out Targetable newTarget ))

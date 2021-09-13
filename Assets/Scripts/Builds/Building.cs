@@ -191,6 +191,10 @@ public class Building : RTSBase
     {
         while (!builded)
         {
+            if (craftCompletedGO== null ||  craftUncompletedGO==null)
+            {
+                yield return 0;
+            }
             craftUncompletedGO.SetActive(true);
             craftCompletedGO.SetActive(false);
 

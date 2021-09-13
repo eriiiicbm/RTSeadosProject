@@ -66,7 +66,7 @@ public class Villager : Unit
     {
         if (building == null)
             return;
-
+Debug.Log("building not null");
         Vector3 currentPosition = transform.position, targetPosition = building.transform.position;
 
         float distance = Mathf.Sqrt(
@@ -81,6 +81,7 @@ public class Villager : Unit
         {
             building = null;
             unitStates = UnitStates.Idle;
+            Debug.Log("BUILDING COMPLETE");
             return;
         }
   

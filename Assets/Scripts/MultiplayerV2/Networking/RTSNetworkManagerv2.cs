@@ -94,6 +94,7 @@ public class RTSNetworkManagerv2 : NetworkManager
 Players.Clear();
 isGameInProgress = false;
     }
+ 
 
     public override void OnServerAddPlayer(NetworkConnection conn)
     {
@@ -119,7 +120,24 @@ isGameInProgress = false;
         }
       
         player.SetPartyOwner(Players.Count==1);
-    
+        if (!CheckIfThereIsAServerPlayer())
+        {
+            return;
+        }
+        
+    }
+
+    public bool CheckIfThereIsAServerPlayer()
+    {
+        foreach (var VARIABLE in Players)
+        {
+            if (VARIABLE.isServer)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public override void OnServerSceneChanged(string sceneName)
@@ -148,9 +166,18 @@ isGameInProgress = false;
 
                 }  
                 player.GetComponent<CameraController>().ReferenceFocus();
+                if (!player.isServer||player.GetIsPartyOwner())
+                {
+                  
+                }else{
+                
+                       player.GetComponent<PlayerAI>().enabled = true;
+                }
+
+             
             }
             
-           
+         
         }
         
     }
@@ -168,7 +195,7 @@ isGameInProgress = false;
              if (NetworkClient.isLocalClient)
              {
 
-                 OnServerAddPlayer(new NetworkConnectionToClient(3000, false, 1));
+                 OnServerAddPlayer(new NetworkConnectionToClient(3000 ));
                  Debug.Log("AI ADDED");
              }
          }

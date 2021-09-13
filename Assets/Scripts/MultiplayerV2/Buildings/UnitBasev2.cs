@@ -9,11 +9,17 @@ public class UnitBasev2 : Building
     [SerializeField] public  static  event Action<int> ServerOnPlayerDie;
     [SerializeField] public  static  event Action<UnitBasev2> ServerOnBaseSpawned;
     [SerializeField] public  static  event Action<UnitBasev2> ServerOnBaseDespawned;
- 
+
+    public override void Start()
+    {
+        base.Start();
+        builded = true;
+    }
 
     #region Server
     public override void OnStartServer()
     {
+     
         base.OnStartServer();
         ServerOnRTSDie += ServerHandleDie;
         ServerOnBaseSpawned?.Invoke(this);

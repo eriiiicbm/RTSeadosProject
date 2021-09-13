@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Mirror;
+using UnityEditor.MemoryProfiler;
 using UnityEngine;
 
 public class RTSPlayerv2 : NetworkBehaviour
@@ -16,7 +17,7 @@ public class RTSPlayerv2 : NetworkBehaviour
     [SerializeField] private List<Building> myBuildings = new List<Building>();
     private Color teamColor = new Color();
     [HideInInspector] public List<AudioClip> audioList= new List<AudioClip>( );
-
+    public Connection connection;
     public SyncList<int> resources = new SyncList<int>(){600,350,2200,500};
 
     [SyncVar]
@@ -120,10 +121,18 @@ public class RTSPlayerv2 : NetworkBehaviour
     {
         return myUnits;
     }
+    public List<Unit> GetUnits()
+    {
+        return new List<Unit>(units);
+    }
 
     public List<Building> GetMyBuildings()
     {
         return myBuildings;
+    } 
+    public List<Building> GetBuildings()
+    {
+        return new List<Building>(buildings);
     }
 
     public bool CanPlaceBuilding(BoxCollider buildingCollider, Vector3 point)
@@ -220,7 +229,7 @@ Debug.Log("Set resources");
         ((RTSNetworkManagerv2)NetworkManager.singleton).StartGame(currentGameMode);
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     public void CmdTryCreateUnit(int unitId, UnitSpawnerv3 spawner)
     {
          if (!CheckIfUserHasSpaceTrop()) return;
@@ -254,10 +263,16 @@ Debug.Log("Set resources");
       
     }
 
-    [Command]
+    [SyncVar] public bool lastOperationWorked;
+    [Command(requiresAuthority = false)] 
     public void CmdTryPlaceBuilding(int buildingId, Vector3 point)
     {
         Building buildingToPlace = null;
+        if (buildings.Length==0)
+        {
+            lastOperationWorked = false;    
+            return;
+        }
         foreach (var building in buildings)
         {
             if (building.GetId() == buildingId)
@@ -271,19 +286,19 @@ Debug.Log("here before boom 1");
         if (buildingToPlace == null)
         {
             Debug.LogWarning("Building to place is null");
-            return;
+            lastOperationWorked = false;
         }
 
         if (!CheckIfUserHasResources(buildingToPlace.GetPrice()))
         {
             Debug.LogWarning("You are poor");
 
-            return;
+            lastOperationWorked= false;
         }
         Debug.Log("here before boom 2");
         if(buildingToPlace.GetComponent<Fridge>() != null)
         {
-            if (!connectionToClient.identity.GetComponent<RTSPlayerv2>().AddHouse()) return;
+            if (!connectionToClient.identity.GetComponent<RTSPlayerv2>().AddHouse()) lastOperationWorked= false;
         }
 
         BoxCollider buildingCollider = buildingToPlace.GetComponent<BoxCollider>();
@@ -294,7 +309,7 @@ Debug.Log("here before boom 1");
             Debug.Log("Cant build here");
             PlayListSoundEffect(1,1,true);
 
-            return;
+            lastOperationWorked=  false;
         }
 
         RestPriceToResources(buildingToPlace.GetPrice());
@@ -305,6 +320,7 @@ Debug.Log("here before boom 1");
         Debug.LogWarning("Build success in " + point);
  
         NetworkServer.Spawn(buildingInstance, connectionToClient);
+        lastOperationWorked = true;
     }
 
     public bool CheckIfUserHasResources(List<int> prices)

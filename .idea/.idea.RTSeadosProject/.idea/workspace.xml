@@ -2,11 +2,707 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f846c702-d0fd-4b01-b858-3ddefc67d239" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/InterestManagement/Distance/DistanceInterestManagementCustomRange.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/InterestManagement/Distance/DistanceInterestManagementCustomRange.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/InterestManagement/Match.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/InterestManagement/Match/MatchInterestManagement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/InterestManagement/Match/MatchInterestManagement.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/InterestManagement/Scene.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/InterestManagement/Scene/SceneInterestManagement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/InterestManagement/Scene/SceneInterestManagement.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkMatch.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkMatch.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransform2k/NetworkTransform.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransform2k/NetworkTransformBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransform2k/NetworkTransformChild.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransform2k/NetworkTransformSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransform2k/NetworkTransformSnapshot.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Empty.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPoint.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPoint/CompilationFinishedLogger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPoint/CompilationFinishedLogger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPoint/EnterPlayModeHook.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPoint/EnterPlayModeHook.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/CompiledAssemblyFromFile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/CompiledAssemblyFromFile.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/ILPostProcessorAssemblyResolver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/ILPostProcessorAssemblyResolver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/ILPostProcessorFromFile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/ILPostProcessorFromFile.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/ILPostProcessorHook.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/ILPostProcessorHook.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/ILPostProcessorLogger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/ILPostProcessorLogger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/ILPostProcessorReflectionImporter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/ILPostProcessorReflectionImporter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/ILPostProcessorReflectionImporterProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPointILPostProcessor/ILPostProcessorReflectionImporterProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Logger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Unity.Mirror.CodeGen.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/WeaverLists.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/WeaverLists.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Batching.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Batching/Batcher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Batching/Batcher.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Batching/Unbatcher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Batching/Unbatcher.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ApiConnector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ApiUpdater.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/Ball.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/BallManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/BaseApi.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/Events.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/Extensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ICoroutineRunner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/IRequestCreator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/IUnityEqualCheck.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/InstantiateNetworkManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/JsonStructs.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ListServer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ListServerBaseApi.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ListServerClientApi.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ListServerJson.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ListServerServerApi.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/Logger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/NetworkManagerListServer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/NetworkManagerListServerPong.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/Player.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/QuickListServerDebug.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/QuitButtonHUD.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/RequestCreator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ServerListManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ServerListUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ServerListUIItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Mathd.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Mathd.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/SnapshotInterpolation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/SnapshotInterpolation/Snapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/SnapshotInterpolation/Snapshot.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/SnapshotInterpolation/SnapshotInterpolation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/SnapshotInterpolation/SnapshotInterpolation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamRemotePlay.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/NonAlloc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/NonAlloc/KcpClientConnectionNonAlloc.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/NonAlloc/KcpClientConnectionNonAlloc.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/NonAlloc/KcpClientNonAlloc.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/NonAlloc/KcpClientNonAlloc.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/NonAlloc/KcpServerConnectionNonAlloc.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/NonAlloc/KcpServerConnectionNonAlloc.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/NonAlloc/KcpServerNonAlloc.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/NonAlloc/KcpServerNonAlloc.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/kcp/Pool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/kcp/Pool.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation/Scripts/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation/Scripts/AssemblyInfo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation/Scripts/Extensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation/Scripts/Extensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation/Scripts/IPEndPointNonAlloc.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation/Scripts/IPEndPointNonAlloc.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation/VERSION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Empty.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RTSeadosProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChatScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChatScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SetTextAcordingLanguage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SetTextAcordingLanguage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Authenticators/BasicAuthenticator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Authenticators/BasicAuthenticator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Authenticators/TimeoutAuthenticator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Authenticators/TimeoutAuthenticator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/ApiConnector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/ApiConnector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ApiConnector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/BaseApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/BaseApi.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/BaseApi.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/Events.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/Events.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/Events.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/Extensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/Extensions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/Extensions.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/ICoroutineRunner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/ICoroutineRunner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ICoroutineRunner.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/IRequestCreator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/IRequestCreator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/IRequestCreator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/IUnityEqualCheck.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/IUnityEqualCheck.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/IUnityEqualCheck.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/JsonStructs.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/JsonStructs.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/JsonStructs.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/Logger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/Logger.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/Logger.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/RequestCreator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Core/RequestCreator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/RequestCreator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/ListServer.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransform2k.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/ListServer/ListServer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/ListServer/ListServer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ListServer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/ListServer/ListServerBaseApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/ListServer/ListServerBaseApi.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ListServerBaseApi.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/ListServer/ListServerClientApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/ListServer/ListServerClientApi.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ListServerClientApi.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/ListServer/ListServerJson.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/ListServer/ListServerJson.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ListServerJson.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/ListServer/ListServerServerApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/ListServer/ListServerServerApi.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ListServerServerApi.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Mirror.Cloud.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation/Scripts/where-allocations.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/Mirror.Cloud.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/README.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/LICENSE.md.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/version.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Cloud/version.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/CompilerSymbols/PreprocessorDefine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/CompilerSymbols/PreprocessorDefine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/Discovery/NetworkDiscoveryBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/Discovery/NetworkDiscoveryBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/Discovery/NetworkDiscoveryHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/Discovery/NetworkDiscoveryHUD.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/Experimental/NetworkLerpRigidbody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/Experimental/NetworkLerpRigidbody.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/Experimental/NetworkRigidbody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/Experimental/NetworkRigidbody.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/Experimental/NetworkRigidbody2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/Experimental/NetworkRigidbody2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/Experimental/NetworkTransform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/Experimental/NetworkTransform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/Experimental/NetworkTransformChild.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/Experimental/NetworkTransformChild.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/InterestManagement/Distance/DistanceInterestManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/InterestManagement/Distance/DistanceInterestManagement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/InterestManagement/SpatialHashing/SpatialHashingInterestManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/InterestManagement/SpatialHashing/SpatialHashingInterestManagement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkLobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkLobbyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkLobbyPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkLobbyPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkMatchChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkMatchChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkOwnerChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkOwnerChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkPingDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkPingDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkProximityChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkProximityChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkRoomManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkRoomManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkRoomPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkRoomPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkSceneChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkSceneChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransform.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransform.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransform2k/NetworkTransform.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransformBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransformBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransform2k/NetworkTransformBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransformChild.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransformChild.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Components/NetworkTransform2k/NetworkTransformChild.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/EnterPlayModeSettingsCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/EnterPlayModeSettingsCheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/LogLevelWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty/LogLevelWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/LogLevelWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty/LogLevelWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Logging.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty/Logging.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Logging/LogLevelWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty/Logging/LogLevelWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Logging/LogLevelWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty/Logging/LogLevelWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Logging/LogLevelsGUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty/Logging/LogLevelsGUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Logging/LogLevelsGUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty/Logging/LogLevelsGUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Logging/LogSettingsEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty/Logging/LogSettingsEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Logging/LogSettingsEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty/Logging/LogSettingsEditor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Logging/NetworkLogSettingsEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty/Logging/NetworkLogSettingsEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Logging/NetworkLogSettingsEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty/Logging/NetworkLogSettingsEditor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Mirror.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Mirror.Editor.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/ScriptableObjectUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty/ScriptableObjectUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/ScriptableObjectUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Empty/ScriptableObjectUtility.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/CompilationFinishedHook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPoint/CompilationFinishedHook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/CompilationFinishedHook.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/EntryPoint/CompilationFinishedHook.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Extensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Helpers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Helpers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Log.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Log.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Logger.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Mirror.Weaver.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Mirror.Weaver.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Unity.Mirror.CodeGen.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/CommandProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/CommandProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/GenericArgumentResolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Empty/GenericArgumentResolver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/GenericArgumentResolver.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Empty/GenericArgumentResolver.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/MessageClassProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Empty/MessageClassProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/MessageClassProcessor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Empty/MessageClassProcessor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/MethodProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/MethodProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/MonoBehaviourProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/MonoBehaviourProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/NetworkBehaviourProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/NetworkBehaviourProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/PropertySiteProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/PropertySiteProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/ReaderWriterProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/ReaderWriterProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/RpcProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/RpcProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/ServerClientAttributeProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/ServerClientAttributeProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/SyncDictionaryProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Empty/SyncDictionaryProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/SyncDictionaryProcessor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Empty/SyncDictionaryProcessor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/SyncEventProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Empty/SyncEventProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/SyncEventProcessor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Empty/SyncEventProcessor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/SyncListProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Empty/SyncListProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/SyncListProcessor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Empty/SyncListProcessor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/SyncObjectInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/SyncObjectInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/SyncObjectProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/SyncObjectProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/SyncVarProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/SyncVarProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/TargetRpcProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Processors/TargetRpcProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Empty/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Program.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Empty/Program.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Readers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Readers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Resolvers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Resolvers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/TypeReferenceComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/TypeReferenceComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Weaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Weaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/WeaverExceptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/WeaverExceptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/WeaverTypes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/WeaverTypes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Writers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Editor/Weaver/Writers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Scripts/ZoneHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Scripts/ZoneHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Basic/Prefabs/PlayerUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Basic/Prefabs/PlayerUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Basic/Scenes/Example.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Basic/Scenes/Example.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Basic/Scripts/BasicNetManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Basic/Scripts/BasicNetManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Benchmark/Prefabs/Monster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Benchmark/Prefabs/Monster.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Benchmark/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Benchmark/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Chat/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Chat/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Chat/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Chat/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Prefabs/ListServer Canvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Prefabs/ListServer Canvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Prefabs/ServerListItem.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Prefabs/ServerListItem.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/ApiUpdater.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/ApiUpdater.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ApiUpdater.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/InstantiateNetworkManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/InstantiateNetworkManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/InstantiateNetworkManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/Mirror.Examples.Cloud.GUI.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/Mirror.Examples.Cloud.GUI.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation/Scripts/where-allocations.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/NetworkManagerListServer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/NetworkManagerListServer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/NetworkManagerListServer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/QuickListServerDebug.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/QuickListServerDebug.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/QuickListServerDebug.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/QuitButtonHUD.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/QuitButtonHUD.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/QuitButtonHUD.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/ServerListManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/ServerListManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ServerListManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/ServerListUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/ServerListUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ServerListUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/ServerListUIItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/GUI/Scripts/ServerListUIItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/ServerListUIItem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/PhysicsMaterials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/PhysicsMaterials/BallMaterial.physicsMaterial2D" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/PhysicsMaterials/BallMaterial.physicsMaterial2D.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Prefabs/Ball.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Prefabs/Ball.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Prefabs/NetworkManagerPong.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Prefabs/NetworkManagerPong.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Prefabs/Racket.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Prefabs/Racket.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scenes/ListServerLobbyScenePong.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scenes/ListServerLobbyScenePong.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation/LICENSE.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scenes/PongGameScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scenes/PongGameScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/where-allocation/VERSION.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scripts/Ball.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scripts/Ball.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/Ball.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scripts/BallManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scripts/BallManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/BallManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scripts/Mirror.Examples.Cloud.Pong.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scripts/Mirror.Examples.Cloud.Pong.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scripts/NetworkManagerListServerPong.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scripts/NetworkManagerListServerPong.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/NetworkManagerListServerPong.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scripts/Player.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Scripts/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Empty/Cloud/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Sprites/Ball.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Sprites/Ball.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Sprites/DottedLine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Sprites/DottedLine.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Sprites/Racket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Sprites/Racket.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Sprites/WallHorizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Sprites/WallHorizontal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Sprites/WallVertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/PongWithListServer/Sprites/WallVertical.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/TanksWithListServer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/TanksWithListServer/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/TanksWithListServer/Prefabs/TanksNetworkManager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/TanksWithListServer/Prefabs/TanksNetworkManager.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/TanksWithListServer/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/TanksWithListServer/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/TanksWithListServer/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/TanksWithListServer/Scenes/ListServerLobbySceneTanks.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Cloud/TanksWithListServer/Scenes/ListServerLobbySceneTanks.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Prefabs/Icosphere.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Prefabs/Icosphere.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Prefabs/Prize.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Prefabs/Prize.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleMatches/Prefabs/MatchController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleMatches/Prefabs/MatchController.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleMatches/Prefabs/MatchPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleMatches/Prefabs/MatchPlayer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleMatches/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleMatches/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleMatches/Scripts/CanvasController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleMatches/Scripts/CanvasController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleMatches/Scripts/MatchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleMatches/Scripts/MatchController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleMatches/Scripts/MatchNetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleMatches/Scripts/MatchNetworkManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Room/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Room/Scenes/OfflineScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Room/Scripts/NetworkRoomManagerExt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Room/Scripts/NetworkRoomManagerExt.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Tanks/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Tanks/Scenes/Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Tanks/Scripts/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Tanks/Scripts/Projectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Light.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Light.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/ClientScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/ClientScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Compression.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Compression.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Extensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/InterestManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/InterestManagement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/LocalConnections.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/LocalConnections.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/MessagePacking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/MessagePacking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Messages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Messages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkAuthenticator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkAuthenticator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkConnectionToClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkConnectionToClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkConnectionToServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkConnectionToServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkIdentity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkIdentity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkLoop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkLoop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkManagerHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkManagerHUD.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkReaderPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkReaderPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkStartPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkStartPosition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkTime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkTime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkVisibility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkVisibility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkWriterPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkWriterPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Pool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Pool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/SyncDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/SyncDictionary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/SyncList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/SyncList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/SyncSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/SyncSet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FallbackTransport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FallbackTransport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/BidirectionalDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/BidirectionalDictionary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/LICENSE.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/README.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/README.md.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/CallbackDispatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/CallbackDispatcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/CallbackDispatcher.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/CallbackDispatcher.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/CallbackIdentity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/CallbackIdentity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/CallbackIdentity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/CallbackIdentity.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/ISteamMatchmakingResponses.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/ISteamMatchmakingResponses.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/ISteamMatchmakingResponses.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/ISteamMatchmakingResponses.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/InteropHelp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/InteropHelp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/InteropHelp.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/InteropHelp.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/Packsize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/Packsize.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/Packsize.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/Packsize.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/Steam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/Steam.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/Steam.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/Steam.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/Version.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/Version.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/Version.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/Version.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/NativeMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/NativeMethods.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/NativeMethods.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/NativeMethods.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/SteamCallbacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/SteamCallbacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/SteamCallbacks.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/SteamCallbacks.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/SteamConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/SteamConstants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/SteamConstants.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/SteamConstants.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/SteamEnums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/SteamEnums.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/SteamEnums.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/SteamEnums.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/SteamStructs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/SteamStructs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/SteamStructs.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/SteamStructs.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamapplist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamapplist.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamapplist.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamapplist.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamapps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamapps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamapps.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamapps.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamclient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamclient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamclient.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamclient.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamfriends.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamfriends.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamfriends.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamfriends.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserver.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserver.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverapps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverapps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverapps.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverapps.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverclient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverclient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverclient.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverclient.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverhttp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverhttp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverhttp.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverhttp.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverinventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverinventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverinventory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverinventory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameservernetworking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameservernetworking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameservernetworking.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameservernetworking.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameservernetworkingsockets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameservernetworkingsockets.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameservernetworkingsockets.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameservernetworkingsockets.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameservernetworkingutils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameservernetworkingutils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameservernetworkingutils.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameservernetworkingutils.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverstats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverstats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverstats.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverstats.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverugc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverugc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverugc.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverugc.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverutils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverutils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamgameserverutils.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamgameserverutils.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamhtmlsurface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamhtmlsurface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamhtmlsurface.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamhtmlsurface.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamhttp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamhttp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamhttp.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamhttp.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteaminput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteaminput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteaminput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteaminput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteaminventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteaminventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteaminventory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteaminventory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteammatchmaking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteammatchmaking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteammatchmaking.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteammatchmaking.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteammusic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteammusic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteammusic.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteammusic.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteammusicremote.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteammusicremote.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteammusicremote.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteammusicremote.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamnetworking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamnetworking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamnetworking.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamnetworking.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamnetworkingmessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamnetworkingmessages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamnetworkingmessages.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamnetworkingmessages.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamnetworkingsockets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamnetworkingsockets.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamnetworkingsockets.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamnetworkingsockets.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamnetworkingutils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamnetworkingutils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamnetworkingutils.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamnetworkingutils.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamparentalsettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamparentalsettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamparentalsettings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamparentalsettings.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamremoteplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamremoteplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamremoteplay.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamremoteplay.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamremotestorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamremotestorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamremotestorage.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamremotestorage.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamscreenshots.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamscreenshots.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamscreenshots.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamscreenshots.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamugc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamugc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamugc.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamugc.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamunifiedmessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamunifiedmessages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamunifiedmessages.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamunifiedmessages.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamuser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamuser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamuser.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamuser.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamuserstats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamuserstats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamuserstats.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamuserstats.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamutils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamutils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamutils.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamutils.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamvideo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamvideo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/autogen/isteamvideo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/autogen/isteamvideo.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/redist.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/redist/steam_appid.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/redist/steam_appid.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/MatchmakingTypes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/MatchmakingTypes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/MatchmakingTypes/gameserveritem_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/MatchmakingTypes/gameserveritem_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/MatchmakingTypes/gameserveritem_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/MatchmakingTypes/gameserveritem_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/MatchmakingTypes/servernetadr_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/MatchmakingTypes/servernetadr_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/MatchmakingTypes/servernetadr_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/MatchmakingTypes/servernetadr_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClient.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClient.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClient/SteamAPIWarningMessageHook_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClient/SteamAPIWarningMessageHook_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClient/SteamAPIWarningMessageHook_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClient/SteamAPIWarningMessageHook_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClient/SteamAPI_CheckCallbackRegistered_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClient/SteamAPI_CheckCallbackRegistered_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClient/SteamAPI_CheckCallbackRegistered_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClient/SteamAPI_CheckCallbackRegistered_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClient/SteamAPI_PostAPIResultInProcess_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClient/SteamAPI_PostAPIResultInProcess_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClient/SteamAPI_PostAPIResultInProcess_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClient/SteamAPI_PostAPIResultInProcess_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClientPublic.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClientPublic.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClientPublic/CGameID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClientPublic/CGameID.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClientPublic/CGameID.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClientPublic/CGameID.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClientPublic/CSteamID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClientPublic/CSteamID.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClientPublic/CSteamID.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClientPublic/CSteamID.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClientPublic/HAuthTicket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClientPublic/HAuthTicket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamClientPublic/HAuthTicket.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamClientPublic/HAuthTicket.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamDatagramTickets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamDatagramTickets.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamDatagramTickets/SteamDatagramHostedAddress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamDatagramTickets/SteamDatagramHostedAddress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamDatagramTickets/SteamDatagramHostedAddress.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamDatagramTickets/SteamDatagramHostedAddress.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamDatagramTickets/SteamDatagramRelayAuthTicket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamDatagramTickets/SteamDatagramRelayAuthTicket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamDatagramTickets/SteamDatagramRelayAuthTicket.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamDatagramTickets/SteamDatagramRelayAuthTicket.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamFriends.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamFriends.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamFriends/FriendsGroupID_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamFriends/FriendsGroupID_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamFriends/FriendsGroupID_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamFriends/FriendsGroupID_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamHTMLSurface.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamHTMLSurface.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamHTMLSurface/HHTMLBrowser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamHTMLSurface/HHTMLBrowser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamHTMLSurface/HHTMLBrowser.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamHTMLSurface/HHTMLBrowser.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamHTTP.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamHTTP.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamHTTP/HTTPCookieContainerHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamHTTP/HTTPCookieContainerHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamHTTP/HTTPCookieContainerHandle.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamHTTP/HTTPCookieContainerHandle.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamHTTP/HTTPRequestHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamHTTP/HTTPRequestHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamHTTP/HTTPRequestHandle.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamHTTP/HTTPRequestHandle.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInput.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInput.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInput/InputActionSetHandle_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInput/InputActionSetHandle_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInput/InputActionSetHandle_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInput/InputActionSetHandle_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInput/InputAnalogActionHandle_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInput/InputAnalogActionHandle_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInput/InputAnalogActionHandle_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInput/InputAnalogActionHandle_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInput/InputDigitalActionHandle_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInput/InputDigitalActionHandle_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInput/InputDigitalActionHandle_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInput/InputDigitalActionHandle_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInput/InputHandle_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInput/InputHandle_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInput/InputHandle_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInput/InputHandle_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInventory.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInventory.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInventory/SteamInventoryResult_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInventory/SteamInventoryResult_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInventory/SteamInventoryResult_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInventory/SteamInventoryResult_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInventory/SteamInventoryUpdateHandle_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInventory/SteamInventoryUpdateHandle_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInventory/SteamInventoryUpdateHandle_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInventory/SteamInventoryUpdateHandle_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInventory/SteamItemDef_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInventory/SteamItemDef_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInventory/SteamItemDef_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInventory/SteamItemDef_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInventory/SteamItemInstanceID_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInventory/SteamItemInstanceID_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamInventory/SteamItemInstanceID_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamInventory/SteamItemInstanceID_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamMatchmaking.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamMatchmaking.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamMatchmaking/HServerListRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamMatchmaking/HServerListRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamMatchmaking/HServerListRequest.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamMatchmaking/HServerListRequest.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamMatchmaking/HServerQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamMatchmaking/HServerQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamMatchmaking/HServerQuery.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamMatchmaking/HServerQuery.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworking.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworking.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworking/SNetListenSocket_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworking/SNetListenSocket_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworking/SNetListenSocket_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworking/SNetListenSocket_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworking/SNetSocket_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworking/SNetSocket_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworking/SNetSocket_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworking/SNetSocket_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingSockets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingSockets.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingSockets/ISteamNetworkingConnectionSignaling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingSockets/ISteamNetworkingConnectionSignaling.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingSockets/ISteamNetworkingConnectionSignaling.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingSockets/ISteamNetworkingConnectionSignaling.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingSockets/ISteamNetworkingSignalingRecvContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingSockets/ISteamNetworkingSignalingRecvContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingSockets/ISteamNetworkingSignalingRecvContext.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingSockets/ISteamNetworkingSignalingRecvContext.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/FSteamNetworkingSocketsDebugOutput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/FSteamNetworkingSocketsDebugOutput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/FSteamNetworkingSocketsDebugOutput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/FSteamNetworkingSocketsDebugOutput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/HSteamListenSocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/HSteamListenSocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/HSteamListenSocket.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/HSteamListenSocket.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/HSteamNetConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/HSteamNetConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/HSteamNetConnection.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/HSteamNetConnection.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/HSteamNetPollGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/HSteamNetPollGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/HSteamNetPollGroup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/HSteamNetPollGroup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingConfigValue_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingConfigValue_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingConfigValue_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingConfigValue_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingErrMsg.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingErrMsg.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingErrMsg.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingErrMsg.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingIPAddr.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingIPAddr.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingIPAddr.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingIPAddr.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingIdentity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingIdentity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingIdentity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingIdentity.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingMessage_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingMessage_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingMessage_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingMessage_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingMicroseconds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingMicroseconds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingMicroseconds.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingMicroseconds.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingPOPID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingPOPID.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamNetworkingtypes/SteamNetworkingPOPID.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamNetworkingTypes/SteamNetworkingPOPID.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteStorage.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamRemoteStorage.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteStorage/PublishedFileId_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamRemoteStorage/PublishedFileId_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteStorage/PublishedFileId_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamRemoteStorage/PublishedFileId_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteStorage/PublishedFileUpdateHandle_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamRemoteStorage/PublishedFileUpdateHandle_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteStorage/PublishedFileUpdateHandle_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamRemoteStorage/PublishedFileUpdateHandle_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteStorage/UGCFileWriteStreamHandle_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamRemoteStorage/UGCFileWriteStreamHandle_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteStorage/UGCFileWriteStreamHandle_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamRemoteStorage/UGCFileWriteStreamHandle_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteStorage/UGCHandle_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamRemoteStorage/UGCHandle_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteStorage/UGCHandle_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamRemoteStorage/UGCHandle_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteplay.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteplay/RemotePlaySessionID_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamRemotePlay/RemotePlaySessionID_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamRemoteplay/RemotePlaySessionID_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamRemotePlay/RemotePlaySessionID_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamScreenshots.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamScreenshots.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamScreenshots/ScreenshotHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamScreenshots/ScreenshotHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamScreenshots/ScreenshotHandle.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamScreenshots/ScreenshotHandle.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/AccountID_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/AccountID_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/AccountID_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/AccountID_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/AppId_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/AppId_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/AppId_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/AppId_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/DepotId_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/DepotId_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/DepotId_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/DepotId_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/ManifestId_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/ManifestId_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/ManifestId_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/ManifestId_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/PartyBeaconID_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/PartyBeaconID_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/PartyBeaconID_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/PartyBeaconID_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/RTime32.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/RTime32.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/RTime32.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/RTime32.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/SiteId_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/SiteId_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/SiteId_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/SiteId_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/SteamAPICall_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/SteamAPICall_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/SteamAPICall_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/SteamAPICall_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/SteamIPAddress_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/SteamIPAddress_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamTypes/SteamIPAddress_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamTypes/SteamIPAddress_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamUGC.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamUGC.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamUGC/UGCQueryHandle_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamUGC/UGCQueryHandle_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamUGC/UGCQueryHandle_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamUGC/UGCQueryHandle_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamUGC/UGCUpdateHandle_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamUGC/UGCUpdateHandle_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamUGC/UGCUpdateHandle_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamUGC/UGCUpdateHandle_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamUnifiedMessages.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamUnifiedMessages.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamUnifiedMessages/ClientUnifiedMessageHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamUnifiedMessages/ClientUnifiedMessageHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamUnifiedMessages/ClientUnifiedMessageHandle.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamUnifiedMessages/ClientUnifiedMessageHandle.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamUserStats.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamUserStats.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamUserStats/SteamLeaderboardEntries_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamUserStats/SteamLeaderboardEntries_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamUserStats/SteamLeaderboardEntries_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamUserStats/SteamLeaderboardEntries_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamUserStats/SteamLeaderboard_t.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamUserStats/SteamLeaderboard_t.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/SteamUserStats/SteamLeaderboard_t.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/SteamUserStats/SteamLeaderboard_t.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/Steam_api_common.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/Steam_api_common.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/Steam_api_common/HSteamPipe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/Steam_api_common/HSteamPipe.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/Steam_api_common/HSteamPipe.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/Steam_api_common/HSteamPipe.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/Steam_api_common/HSteamUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/Steam_api_common/HSteamUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Steamworks.NET/types/Steam_api_common/HSteamUser.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Runtime/types/Steam_api_common/HSteamUser.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/steam_api.bundle.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/steam_api.bundle.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/steam_api.bundle/Contents.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/steam_api.bundle/Contents.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/steam_api.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/steam_api.bundle/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/steam_api.bundle/Contents/Info.plist.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/steam_api.bundle/Contents/Info.plist.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/steam_api.bundle/Contents/MacOS.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/steam_api.bundle/Contents/MacOS.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/steam_api.bundle/Contents/MacOS/libsteam_api.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/steam_api.bundle/Contents/MacOS/libsteam_api.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/steam_api.bundle/Contents/MacOS/libsteam_api.dylib.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/steam_api.bundle/Contents/MacOS/libsteam_api.dylib.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/x86.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/x86.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/x86/libsteam_api.so" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/x86/libsteam_api.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/x86/libsteam_api.so.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/x86/libsteam_api.so.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/x86/steam_api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/x86/steam_api.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/x86/steam_api.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/x86/steam_api.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/x86_64.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/x86_64.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/x86_64/libsteam_api.so" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/x86_64/libsteam_api64.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/x86_64/libsteam_api.so.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/x86_64/libsteam_api64.so.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/x86_64/steam_api64.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/x86_64/steam_api64.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/x86_64/steam_api64.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/Plugins/x86_64/steam_api64.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/FizzySteamworks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/FizzySteamworks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/IServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/IServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/LegacyClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/LegacyClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/LegacyCommon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/LegacyCommon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/LegacyServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/LegacyServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/NextClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/NextClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/NextCommon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/NextCommon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/NextServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/NextServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Scripts/Steamworks.NET/SteamManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/Scripts/Steamworks.NET/SteamManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/version.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/version.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/MirrorTransport/KcpTransport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/MirrorTransport/KcpTransport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/VERSION" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/KcpClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/KcpClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/KcpClientConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/KcpClientConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/KcpConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/KcpConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/KcpServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/KcpServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/KcpServerConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/highlevel/KcpServerConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/kcp/Kcp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/kcp/Kcp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/kcp/Segment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/kcp/Segment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/kcp2k.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/KCP/kcp2k/kcp2k.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/LatencySimulation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/LatencySimulation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/MiddlewareTransport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/MiddlewareTransport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/MultiplexTransport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/MultiplexTransport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/SimpleWebTransport/Client/StandAlone/ClientHandshake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/SimpleWebTransport/Client/StandAlone/ClientHandshake.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/SimpleWebTransport/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/SimpleWebTransport/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/SimpleWebTransport/SimpleWebTransport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/SimpleWebTransport/SimpleWebTransport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Logger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Empty/Logger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Logger.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Empty/Logger.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Empty/Message.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Message.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Empty/Message.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/NetworkStreamExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/NetworkStreamExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/SafeQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Empty/SafeQueue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/SafeQueue.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Empty/SafeQueue.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Server.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/ThreadExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Empty/ThreadExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/ThreadExtensions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/Empty/ThreadExtensions.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy/VERSION" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/TelepathyTransport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Telepathy/TelepathyTransport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Transport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/Transport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Runtime/Utils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Runtime/Utils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Version.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Version.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerAI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerAI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buils/FridgeHouse/FridgeHouse.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buils/FridgeHouse/FridgeHouse.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buils/Tower/Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Buils/Tower/Tower.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/Playerv2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MultiplayerHiearchy/Playerv2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/ChipArrowv2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/ChipArrowv2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/Ketchup drop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/Ketchup drop.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/proyectileGas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/proyectileGas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptTemplates/50-Mirror__Network Manager-NewNetworkManager.cs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptTemplates/50-Mirror__Network Manager-NewNetworkManager.cs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptTemplates/51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptTemplates/51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptTemplates/52-Mirror__Network Behaviour-NewNetworkBehaviour.cs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptTemplates/52-Mirror__Network Behaviour-NewNetworkBehaviour.cs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptTemplates/53-Mirror__Network Observer-NewNetworkObserver.cs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptTemplates/53-Mirror__Network Observer-NewNetworkObserver.cs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptTemplates/54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptTemplates/54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptTemplates/55-Mirror__Network Room Player-NewNetworkRoomPlayer.cs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptTemplates/55-Mirror__Network Room Player-NewNetworkRoomPlayer.cs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptTemplates/56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptTemplates/56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/Targeter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/Targeter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,27 +721,46 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/9f/ad32491f/Logger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/GameOverDisplayv2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/49/69a7bf93/Stack`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DayNightSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/UI/InputSystemUIInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/25E9AFC1-4763-4A5C-A855-AB83FAB425DD/80/08f246b9/DockArea.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/18/6c015956/IntPtr.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/270875AA-2574-4A3B-8D4F-4EE5DC922B56/49/6b832928/RenderChainCommand.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/270875AA-2574-4A3B-8D4F-4EE5DC922B56/4a/b8349197/IMGUIContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/89/9a15fddb/List`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/LobbyMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Mirror/Runtime/Transport/FizzySteamworks/FizzySteamworks.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/57/3ffb50ad/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/270875AA-2574-4A3B-8D4F-4EE5DC922B56/de/40ee070a/UIRenderDevice.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/270875AA-2574-4A3B-8D4F-4EE5DC922B56/00/6834ea63/UIRRepaintUpdater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/7c/4b93d343/Debug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/a5/615348e6/EqualityComparer`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/270875AA-2574-4A3B-8D4F-4EE5DC922B56/b5/9230154a/RenderChain.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/9f/ad32491f/Logger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/270875AA-2574-4A3B-8D4F-4EE5DC922B56/31/01dbbedb/Panel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/UI/InputSystemUIInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/270875AA-2574-4A3B-8D4F-4EE5DC922B56/72/9e086a3c/VisualTreeUpdater.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/351E49E2-A5BF-4FD6-BEAB-B458CE2255F3/3d/24c944f9/HashSet`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/270875AA-2574-4A3B-8D4F-4EE5DC922B56/58/04d56591/UIElementsUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CFC1AD89-0650-411E-946C-FF2E6F276711/cd/4694dd31/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6FCFDD16-2B5D-4836-BEF3-C96F53194DB6/c6/e139bac3/Stack`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/25E9AFC1-4763-4A5C-A855-AB83FAB425DD/1e/775e1fb8/PlayModeView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/LobbyMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/270875AA-2574-4A3B-8D4F-4EE5DC922B56/1f/60b68b77/UIEventRegistration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CFC1AD89-0650-411E-946C-FF2E6F276711/db/2f7f44a9/ProfilerMarker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6DDF8EAC-3856-492A-B1B8-CF42618915CC/29/da291f3e/GUIUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/25E9AFC1-4763-4A5C-A855-AB83FAB425DD/22/210f17d0/HostView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/78/b260dec5/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/25E9AFC1-4763-4A5C-A855-AB83FAB425DD/9b/9872a00a/GameView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Multiplayer/Minimap.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/LobbyMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/RTSFoodManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/ResourcesDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MeleUnit.cs" />
@@ -59,43 +774,44 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/HealthDisplayv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/PasiveHability.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/MoralDisplayv2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Mirror/Examples/Tanks/Scripts/Projectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineExample.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RTSEntity.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/Targeter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/PassiveAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SoundManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/TeamColorSetterv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Networking/RTSNetworkManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitProjectilev3.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/ComponentAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/AreaDamage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/MeleeUnit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/DistanceUnit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/TutorialOnKey.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Tower.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UnitStates.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/BuildingButtonv2.cs" />
       <option value="$PROJECT_DIR$/Assets/CartoonFX/Scipts/Colorizer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Habilitis/Fridge.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Menus/MainMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RTSBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Unit/UnitCombat.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/MainMenuBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/TextStrings.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SetTextAcordingLanguage.cs" />
       <option value="$PROJECT_DIR$/Assets/ChatScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/PlayerAI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Unit/UnitCommandGiverv2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSNetworkManagerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Builds/Building.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBuildingButtonv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Unit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitBasev2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Multiplayer/Combat/Targeter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit/Villager.cs" />
+      <option value="$PROJECT_DIR$/Assets/PlayerAI.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s1Y0oECWP1F89SVVFGoVPFojxu" />
@@ -106,12 +822,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.7398844" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.4787053" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
@@ -123,10 +840,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26176">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="26176" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -165,7 +882,11 @@
       <workItem from="1621951462282" duration="17236000" />
       <workItem from="1625843207704" duration="702000" />
       <workItem from="1627498422454" duration="8049000" />
-      <workItem from="1628072264469" duration="4916000" />
+      <workItem from="1628072264469" duration="13852000" />
+      <workItem from="1629211390086" duration="23611000" />
+      <workItem from="1630689204081" duration="7217000" />
+      <workItem from="1631376490498" duration="6319000" />
+      <workItem from="1631392355955" duration="7874000" />
     </task>
     <servers />
   </component>
@@ -199,19 +920,6 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Buildings/UnitSpawnerv3.cs</url>
-          <line>78</line>
-          <properties documentPath="C:\Users\Usuario\Documents\GitHub\RTSeadosProject\Assets\Scripts\MultiplayerV2\Buildings\UnitSpawnerv3.cs" initialLine="44" containingFunctionPresentation="method 'AddUnitToTheQueue'">
-            <startOffsets>
-              <option value="2648" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2649" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/CortésUtilities/SoundManager.cs</url>
           <line>27</line>
           <properties documentPath="C:\Users\Usuario\Documents\GitHub\RTSeadosProject\Assets\Scripts\CortésUtilities\SoundManager.cs" initialLine="27" containingFunctionPresentation="method 'isSEPlaying'">
@@ -224,7 +932,26 @@
           </properties>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/MultiplayerV2/Networking/RTSPlayerv2.cs</url>
+          <line>69</line>
+          <properties documentPath="C:\Users\Usuario\Documents\GitHub\RTSeadosProject\Assets\Scripts\MultiplayerV2\Networking\RTSPlayerv2.cs" initialLine="68" containingFunctionPresentation="method 'FindUnitById'">
+            <startOffsets>
+              <option value="2410" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2411" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history>
+      <element expression="(int)" />
+    </find-history>
   </component>
 </project>

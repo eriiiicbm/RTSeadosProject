@@ -104,7 +104,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   colorRenderers:
-  - {fileID: 0}
+  - {fileID: 4055806269732724252}
   - {fileID: 2206949746610612090}
   - {fileID: 2536830532887276586}
 --- !u!114 &912334962267162819
@@ -122,7 +122,7 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   visible: 0
-  m_AssetId: 
+  m_AssetId: 06aab8909717c664eb21bd5a36a0d573
   hasSpawned: 0
 --- !u!114 &2154621944659824137
 MonoBehaviour:
@@ -148,6 +148,7 @@ MonoBehaviour:
   deadSound: {fileID: 0}
   hitSound: {fileID: 0}
   healSound: {fileID: 0}
+  accessibleMethodStatesList: []
   unitStates: 0
   audioList: []
   buildTime: 0
@@ -275,6 +276,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -668,6 +670,12 @@ PrefabInstance:
 --- !u!4 &4389891745972530621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7479183878331570160, guid: c9db41ba9153c7d40afa22c9c0bf7d79,
+    type: 3}
+  m_PrefabInstance: {fileID: 6568325597847927373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4055806269732724252 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7164803716609746001, guid: c9db41ba9153c7d40afa22c9c0bf7d79,
     type: 3}
   m_PrefabInstance: {fileID: 6568325597847927373}
   m_PrefabAsset: {fileID: 0}

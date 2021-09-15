@@ -2,11 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using AssetUsageDetectorNamespace;
-using Cinemachine;
+ using Cinemachine;
 using Mirror;
-using UnityEditor.MemoryProfiler;
-using UnityEngine;
+ using UnityEngine;
 using UnityEngine.InputSystem;
 using Random = System.Random;
 
@@ -284,7 +282,7 @@ public class PlayerAI : NetworkBehaviour
         while (this.currentState == AIStates.BuildingBuildings)
         {
             List<Building> buildings = GetNonBuildedBuildings();
-            if (buildings == null|| buildings.IsEmpty()  )
+            if (buildings == null|| buildings.Capacity==0  )
             {
                 SetARandomState();
                 Debug.Log("The isnt buildings to build");
@@ -342,7 +340,7 @@ public class PlayerAI : NetworkBehaviour
         Wait = 1,
         PickingResources = 2,
         CommandingUnits = 5,
-        SelectingUnits = 6,
+        SelectingUnits = 6, 
         PlacingBuildings = 3,
         BuildingBuildings = 4
     }
@@ -385,7 +383,13 @@ public class PlayerAI : NetworkBehaviour
         }
 
         unit.name += unitGameplayId  + "   "+  connectionToClient.connectionId;
+        
         unitGameplayId++;
+        UnitCombat unitCombat = unit.GetComponent<UnitCombat>();
+        if (unitCombat!=null)
+        {
+            unitCombat.automaticAttack = true;
+        }
         rtsPlayerv2.GetMyUnits().Add(unit);
     }
 

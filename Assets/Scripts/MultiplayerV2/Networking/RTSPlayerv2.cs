@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Mirror;
-using UnityEditor.MemoryProfiler;
-using UnityEngine;
+ using UnityEngine;
 
 public class RTSPlayerv2 : NetworkBehaviour
 {
@@ -17,8 +16,7 @@ public class RTSPlayerv2 : NetworkBehaviour
     [SerializeField] private List<Building> myBuildings = new List<Building>();
     private Color teamColor = new Color();
     [HideInInspector] public List<AudioClip> audioList= new List<AudioClip>( );
-    public Connection connection;
-    public SyncList<int> resources = new SyncList<int>(){600,350,2200,500};
+     public SyncList<int> resources = new SyncList<int>(){600,350,2200,500};
 
     [SyncVar]
     [SerializeField] private int trops = 0;

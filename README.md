@@ -26,5 +26,5 @@ The main mechanics are:
    ![buff](https://i.ibb.co/G7WKyhr/buff.gif)
 ## Gameplay
 
-   [![Gameplay](https://i.ibb.co/YZSNsWL/unnamed.png)](https://www.youtube.com/watch?v=ek1j272iAmc)
+   [![Gameplay](https://i.ibb.co/YZSNsWL/unnamed.png)](https://drive.google.com/file/d/1pIRTbpWstjJ8MoKduW5ypt_UIMwg-sko/view?usp=sharing)
 

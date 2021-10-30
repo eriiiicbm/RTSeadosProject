@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MultiplayerForStructure/TestRTS1v2.unity
     guid: 1eeeaa98e2925f84fa2d0682a8175229
   - enabled: 1
-    path: Assets/Scenes/LoadingScreen.unity
+    path: Assets/SceneLoadingSystem/LoadingScreen.unity
     guid: a8f2bcf8cdf7e8940982c483fa7dd3a7
   - enabled: 0
     path: Assets/Scenes/TestMenu.unity
